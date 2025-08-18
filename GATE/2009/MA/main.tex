@@ -1,0 +1,864 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc} 
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\usepackage{float}
+%\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\title{GATE MA 2009}
+\author{EE25BTECH11030-AVANEESH}
+
+\begin{document}
+
+\maketitle
+ 
+\textbf{1 - 20 carry one mark each.}
+
+\begin{enumerate}
+
+%1
+\item The dimension of the vector space $V = \{ A = (a_{ij})_{n\times n} : a_{ij} \in \mathbb{C},\ a_{ij} = - a_{ji} \}$ over $\mathbb{R}$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $n^2$
+    \item $n^2-1$
+    \item $n^2-n$
+    \item $n^2/2$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%2
+\item The minimal polynomial associated with the matrix
+$\myvec{
+0 & 0 & 3 \\
+1 & 0 & 2 \\
+0 & 1 & 1}$
+is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $x^3-x^2-2x-3$
+    \item $x^3-x^2+2x-3$
+    \item $x^3-x^2-3x-3$
+    \item $x^3-x^2+3x-3$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%3
+\item For the function $f(z) = \sin \left( \frac{1}{\cos(1/z)} \right)$, the point $z=0$ is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item a removable singularity
+    \item a pole
+    \item an essential singularity
+    \item a non-isolated singularity
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%4
+\item Let $f(z) = \sum_{n=0}^\infty z^n$ for $z \in \mathbb{C}$. If $C:|z-i|=2$, then
+$$
+\oint_C \frac{f(z)}{(z-i)^{16}} dz =\ 
+$$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $2\pi i (1+15i)$
+    \item $2\pi i (1-15i)$
+    \item $4\pi i (1+15i)$
+    \item $2\pi i$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%5
+\item For what values of $\alpha$ and $\beta$, the quadrature formula $\int_{-1}^{1} f(x)\,dx = \alpha f(-1) + f(\beta)$ is exact for all polynomials of degree $\leq 1$?
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\alpha = 1, \beta = 1$
+    \item $\alpha = -1, \beta = 1$
+    \item $\alpha = 1, \beta = -1$
+    \item $\alpha = -1, \beta = -1$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%6
+\item Let $f: [0,4] \to \mathbb{R}$ be a three times continuously differentiable function. Then the value of $f[1,2,3,4]$ is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $\frac{f''(\xi)}{3}$, for some $\xi\in(0,4)$
+    \item $\frac{f''(\xi)}{6}$, for some $\xi\in(0,4)$
+    \item $\frac{f'''(\xi)}{3}$, for some $\xi\in(0,4)$
+    \item $\frac{f'''(\xi)}{6}$, for some $\xi\in(0,4)$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%7
+\item Which one of the following is \textbf{TRUE}?
+\begin{enumerate}
+    \item Every linear programming problem has a feasible solution.
+    \item If a linear programming problem has an optimal solution then it is unique.
+    \item The union of two convex sets is necessarily convex.
+    \item Extreme points of the disk $x^2+y^2 \leq 1$ are the points on the circle $x^2+y^2 = 1$.
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%8
+\item The dual of the linear programming problem: Minimize $c^T x$ subject to $Ax \geq b$ and $x \geq 0$ is
+\begin{enumerate}
+    \item Maximize $b^T w$ subject to $A^T w \geq c$, $w \geq 0$
+    \item Maximize $b^T w$ subject to $A^T w \leq c$, $w \geq 0$
+    \item Maximize $b^T w$ subject to $A^T w \leq c$, $w$ unrestricted
+    \item Maximize $b^T w$ subject to $A^T w \geq c$, $w$ unrestricted
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%9
+\item The resolvent kernel for the integral equation $u(x) = F(x) + \int e^{t-x} u(t) dt$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\cos(x-t)$
+    \item $1$
+    \item $e^{-x}$
+    \item $e^{2(t-x)}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%10
+\item Consider the metrics $d_2(f,g) = \left( \int |f(t)-g(t)|^2 dt \right)^{1/2}$ and $d_\infty(f,g) = \sup |f(t)-g(t)|$ on the space $X = C[a,b]$ of all real-valued continuous functions on $[a,b]$. Which is TRUE?
+\begin{enumerate}
+    \item Both $(X, d_2)$ and $(X, d_\infty)$ are complete.
+    \item $(X, d_2)$ is complete, but $(X, d_\infty)$ is not complete.
+    \item $(X, d_\infty)$ is complete, but $(X, d_2)$ is not complete.
+    \item Both are NOT complete.
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%11
+\item A function $f:\mathbb{R}\to\mathbb{R}$ need NOT be Lebesgue measurable if
+\begin{enumerate}
+    \item $f$ is monotone
+    \item $\{x : f(x)\geq a\}$ is measurable for all $a\in\mathbb{Q}$
+    \item $\{x : f(x)=a\}$ is measurable for all $a\in\mathbb{R}$
+    \item For each open set $G \subset \mathbb{R}$, $f^{-1}(G)$ is measurable
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%12
+\item Let $\{e_n\}$ be an orthonormal sequence in a Hilbert space $H$, and let $x \neq 0 \in H$. Then
+\begin{enumerate}
+    \item $\lim_{n\to\infty}\langle x, e_n\rangle$ does not exist
+    \item $\lim_{n\to\infty}\langle x, e_n\rangle = \|x\|$
+    \item $\lim_{n\to\infty}\langle x, e_n\rangle = 1$
+    \item $\lim_{n\to\infty}\langle x, e_n\rangle = 0$
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%13
+\item The subspace $\mathbb{Q}\times[0,1]$ of $\mathbb{R}^2$ (with the usual topology) is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item dense in $\mathbb{R}^2$
+    \item connected
+    \item separable
+    \item compact
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%14
+\item $\mathbb{Z}_2[x]/\langle x^2 + x^2 + 1\rangle$ is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item a field with 8 elements
+    \item a field with 9 elements
+    \item an infinite field
+    \item NOT a field
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%15
+\item The number of elements of a principal ideal domain can be
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 15
+    \item 25
+    \item 35
+    \item 36
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%16
+\item Let $F, G, H$ be pairwise independent with $P(F)=P(G)=P(H)=1/3$ and $P(F\cap G\cap H)=1/4$. The probability that at least one event among F, G and H occurs is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $11/12$
+    \item $7/12$
+    \item $5/12$
+    \item $3/4$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%17
+\item Let $X$ be a random variable such that $E(X^2)=E(X)=1$. Then $E(X^{100})=$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 0
+    \item 1
+    \item $2^{100}$
+    \item $2^{100}+1$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%18
+\item For which of the following distribution, the weak law of large numbers NOT hold?
+\begin{enumerate}
+\begin{multicols}{4}
+    \item Normal
+    \item Gamma
+    \item Beta
+    \item Cauchy
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%19
+\item If $D=\frac{d}{dx}$, then the value of $\frac{1}{(xD+1)}(x^{-1})$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\log x$
+    \item $\frac{\log x}{x}$
+    \item $\frac{\log x}{x^2}$
+    \item $\frac{\log x}{x^3}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%20
+\item The equation $(\alpha x y^3 + y\cos x)dx + (x^2y^2 + \beta\sin x)dy=0$ is exact for
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $\alpha=\frac{3}{2},\,\beta=1$
+    \item $\alpha=1,\,\beta=\frac{3}{2}$
+    \item $\alpha=1,\,\beta=1$
+    \item $\alpha=1,\,\beta=\frac{2}{3}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+\end{enumerate}
+
+\vspace{0.6cm}
+\textbf{21 - 60 carry two marks each.}
+
+\begin{enumerate}[leftmargin=0pt, align=left, start=21]
+
+%21
+\item If $A=
+\myvec{
+1 & 0 & 0 \\
+0 & -1+i\sqrt{3} & 0 \\
+0 & 0 & 1+2i
+}$, then the trace of $A^{102}$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 0
+    \item 1
+    \item 2
+    \item 3
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%22
+\item Which of the following matrices is NOT diagonalizable?
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\myvec{1 & 1 \\ 1 & 2}$
+    \item $\myvec{1 & 0 \\ 3 & 2}$
+    \item $\myvec{0 & -1 \\ 1 & 0}$
+    \item $\myvec{1 & 1 \\ 0 & 1}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%23
+\item Let $V$ be the column space of $A=\myvec{1 & -1 \\ 1 & 2\\ 1 & -1}$. The orthogonal projection of $\myvec{0 \\ 1 \\ 0}$ on $V$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\myvec{0 \\ 1 \\ 0}$
+    \item $\myvec{0 \\ 0 \\ 1}$
+    \item $\myvec{1 \\ 1 \\ 0}$
+    \item $\myvec{1 \\ 0 \\ 1}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%24
+\item Let $\sum_{n=-\infty}^\infty a_n (z+1)^n$ be the Laurent series expansion of $f(z)=\sin\brak(\frac{z}{z+1})$. Then $a_2=$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 1
+    \item 0
+    \item $\cos(1)$
+    \item $\frac{-1}{2}\sin(1)$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%25
+\item Let $u(x,y)$ be the real part of an entire function $f(z)=u(x,y)+iv(x,y)$ for $z=x+iy\in\mathbb{C}$.If $C$ is the positively oriented boundary of a rectangular region $R$ in $\mathbb{R}^2$. Then
+$$
+\oint_C \frac{\partial u}{\partial y}dx + \frac{\partial u}{\partial x}dy =
+$$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 1
+    \item 0
+    \item $2\pi$
+    \item $\pi$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%26
+\item Let $\varphi:[0,1]\to\mathbb{R}$ be three times continuously differentiable. Suppose that the iterates $x_{n+1} = \varphi(x_n)$, $n\geq0$ converge to the fixed point $\xi$ of $\varphi$. If the order of convergence is three then
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $\varphi'(\xi)=0,\,\varphi''(\xi)=0$
+    \item $\varphi'(\xi)\neq 0,\,\varphi''(\xi)=0$
+    \item $\varphi'(\xi)=0,\,\varphi''(\xi)\neq 0$
+    \item $\varphi'(\xi)\neq 0,\,\varphi''(\xi)\neq 0$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%27
+\item Let $f:[0,2]\to\mathbb{R}$ be twice continuously differentiable. If $\int_0^2 f(x)dx = 2f(1)$, the error in the approximation is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $\frac{f'(5)}{12}$ for some $\xi\in(0,2)$
+    \item $\frac{f'(5)}{2}$ for some $\xi\in(0,2)$
+    \item $\frac{f''(\xi)}{3}$ for some $\xi\in(0,2)$
+    \item $\frac{f''(\xi)}{6}$ for some $\xi\in(0,2)$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%28
+\item For fixed $t\in\mathbb{R}$, consider: Max $z=3x+4y$, $x+y\leq100$, $x+3y\leq t$, $x,y\geq0$. The maximum value $z=400$ for $t=$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 50
+    \item 100
+    \item 200
+    \item 300
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%29
+\item Minimize $z=2x_1-x_2+x_3+5x_4+2x_5$, subject to:
+\[
+\begin{array}{l}
+x_1-2x_4+x_5=6 \\
+x_2+x_4-4x_5=3 \\
+x_3+3x_1+2x_5=10 \\
+x_j\geq0,\,j=1,\ldots,5
+\end{array}
+\]
+is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 28
+    \item 19
+    \item 10
+    \item 9
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%30
+\item Using the Hungarian method, the optimal value of the assignment problem whose cost matrix is given by 
+$$
+\myvec{
+5 & 23 & 14 & 8 \\
+10 & 25 & 1 & 23 \\
+35 & 16 & 15 & 12 \\
+16 & 23 & 11 & 7
+}
+$$
+is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 29
+    \item 52
+    \item 26
+    \item 44
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%31
+\item Which of the following sequence $\{f_n\}_{n=1}^\infty$ of functions does NOT converge uniformly on $[0,1]$?
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $f_n(x)=e^{-x}/n$
+    \item $f_n(x)=(1-x)^n$
+    \item $f_n(x)=(x^2+nx)/n$
+    \item $f_n(x)=\sin\brak(nx+n)/n$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%32
+\item Let $E=\{(x,y)\in\mathbb{R}^2: 0<x<y\}$. Then
+$$
+\iint_E y e^{-(x+y)} dx\, dy =
+$$
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $\frac{1}{4}$
+    \item $\frac{3}{2}$
+    \item $\frac{4}{3}$
+    \item $\frac{3}{4}$
+    \end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%33
+\item Let
+$$
+f_n(x) = \frac{1}{n}\sum_{k=0}^n \sqrt{k(n-k)}\myvec{n\\k} x^k (1-x)^{n-k}
+$$
+on $x\in[0,1]$, $n=1,2,...$. If $\lim_{n\to\infty} f_n(x) = f(x)$ for $x\in[0,1]$, then the maximum of $f(x)$ on $[0,1]$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $1$
+    \item $\frac{1}{2}$
+    \item $\frac{1}{3}$
+    \item $\frac{1}{4}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%34
+\item Let $f:\brak(c_{00},\|\cdot\|_1)\to\mathbb{C}$ be a non-zero continuous linear functional. The number of Hahn-Banach extensions to $(\ell^1, \|\cdot\|_1)$ is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item one
+    \item two
+    \item three
+    \item infinite
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%35
+\item If $I:\brak(\ell^1,\|\cdot\|_2)\to\brak(\ell^1,\|\cdot\|_1)$ is the identity map, then
+\begin{enumerate}
+    \item both $I$ and $I^{-1}$ are continuous
+    \item $I$ is continuous but $I^{-1}$ is not continuous
+    \item $I^{-1}$ is continuous but $I$ is not continuous
+    \item neither $I$ nor $I^{-1}$ is continuous
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%36
+\item Consider the topology $\tau=\{G\subseteq \mathbb{R} : \mathbb{R}\setminus G$ is compact in $\brak(\mathbb{R},\tau_u)\}\cup\{\phi,\mathbb{R}\}$ on $\mathbb{R}$, where $\tau_u$ is the usual topology on $\mathbb{R}$ and $\phi$ is the empty set. Then $(\mathbb{R},\tau)$ is
+\begin{enumerate}
+    \item a connected Hausdorff space
+    \item connected but NOT Hausdorff
+    \item Hausdorff but NOT connected
+    \item neither connected nor Hausdorff
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%37
+\item Let \\ $\tau_1=\{G\subseteq\mathbb{R}:G$ is finite or $\mathbb{R}\setminus G$ is finite$\}$\\ and \\ $\tau_2=\{G\subseteq \mathbb{R}:G$ is countable or $\mathbb{R}\setminus G$ is countable$\}$. \\
+Then:
+\begin{enumerate}
+    \item neither $\tau_1$ not $\tau_2$ is a topology on $\mathbb{R}$
+    \item $\tau_1$ is a topology on $\mathbb{R}$ but $\tau_2$ is NOT a topology on $\mathbb{R}$
+    \item $\tau_2$ is a topology on $\mathbb{R}$ but $\tau_1$ is NOT a topology on $\mathbb{R}$
+    \item both are topologies on $\mathbb{R}$
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%38
+\item Which one of the following ideals of the ring $\mathbb{Z}[i]$ of Gaussian integers is NOT maximal?
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\langle1+i\rangle$
+    \item $\langle1-i\rangle$
+    \item $\langle2+i\rangle$
+    \item $\langle3+i\rangle$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%39
+\item If $Z(G)$ denotes the centre of a group $G$ , then the order of the quotient group $G/Z(G)$ cannot be
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 4
+    \item 6
+    \item 15
+    \item 25
+    \end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%40
+\item Which group is NOT cyclic?
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $\operatorname{Aut}(\mathbb{Z}_4)$
+    \item $\operatorname{Aut}(\mathbb{Z}_6)$
+    \item $\operatorname{Aut}(\mathbb{Z}_8)$
+    \item $\operatorname{Aut}(\mathbb{Z}_{10})$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%41
+\item Let $X$ be a non-negative integer valued random variable with $E(X^2)=3$ and $E(X)=1$. Then
+$$
+\sum_{i=1}^\infty i P(X\geq i) =
+$$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%42
+\item Let $X$ be a random variable with probability density function $f\in\{f_o,f_1\}$, where 
+$$
+f_o(x)=
+\begin{cases}
+2x,& \text{if } 0<x<1\\
+0,& \text{otherwise}
+\end{cases}
+$$
+and
+$$
+f_1(x)=
+\begin{cases}
+3x^2,&\text{if } 0<x<1\\
+0,& \text{otherwise}
+\end{cases}
+$$
+For testing the null hypothesis $H_o:f\equiv f_1$ at level of significance $\alpha=0.19$, the power of the most powerful test is 
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 0.729
+    \item 0.271
+    \item 0.615
+    \item 0.385
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%43
+\item Let $X$ and $Y$ be independent and identically distributed $U(0,1)$ random variables. Then $P\brak{Y <\brak{X-1/2}^2}=$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $1/12$
+    \item $1/4$
+    \item $1/3$
+    \item $2/3$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%44
+\item Let $X$ and $Y$ be Banach spaces and let $T:X\to Y$ be a linear map. Consider the statements:\\
+P: If $x_n\to x$ in $X$  then $Tx_n\to Tx$ in $Y$.\\
+Q: If $x_n\to x$ in $X$ and $Tx_n\to y$ in $Y$ then $Tx=y$.\\
+Then
+\begin{enumerate}
+    \item P implies Q and Q implies P
+    \item P implies Q but Q does not imply P
+    \item Q implies P but P does not imply Q
+    \item neither $P$ implies $Q$ nor $Q$ implies $P$
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%45
+\item If $y(x)=x$ is a solution of the differential equation $y'' - \brak{\frac{2}{x^2}+\frac{1}{x}}\brak{xy^1-y}=0$, $0<x<\infty$, then its general solution is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $(\alpha+\beta e^{-2x})x$
+    \item $(\alpha+\beta e^{2x})x$
+    \item $\alpha x + \beta e^x$
+    \item $(\alpha e^x + \beta)x$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%46
+\item Let $P_n(x)$ be the Legendre polynomial of degree $n$ such that $P_n(1)=1, n=1,2,...$. If $$\int_{-1}^1\brak{\sum_{j=1}^n\sqrt{j\brak{2j+1}} P_j(x)}^2dx=20$$ then $n=$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 2
+    \item 3
+    \item 4
+    \item 5
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%47
+\item The integral surface satisfying the equation $y\frac{\partial z}{\partial x}+x\frac{\partial z}{\partial y}=x^2+y^2$ and passing through the curve $x=1-t$, $y=1+t$, $z=1+t^2$ is
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $z=xy+\frac{1}{2}(x^2-y^2)^2$
+    \item $z=xy+\frac{1}{4}(x^2-y^2)^2$
+    \item $z=xy+\frac{1}{8}(x^2-y^2)^2$
+    \item $z=xy+\frac{1}{16}(x^2-y^2)^2$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%48
+\item For the diffusion problem $u_t=u_{xx}$, $0<x<\pi$, $t>0$, $u(0,t)=0$, $u(\pi,t)=0$ and $u(x,0)=3\sin 2x$ the solution is given by
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $3e^{-t}\sin 2x$
+    \item $3e^{-4t}\sin 2x$
+    \item $3e^{-9t}\sin 2x$
+    \item $3e^{-2t}\sin 2x$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%49
+\item A simple pendulum, consisting of a bob of mass $m$ connected with a string of length $a$, is oscillating in a vertical plane. If the string is making an angle $\theta$ with the vertical, then the expression for the Lagrangian is given as
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $ma^2\brak{\dot{\theta}^2 - \frac{2g}{a}\sin^2\frac{\theta}{2}}$
+    \item $2mga\sin^2\frac{\theta}{2}$
+    \item $ma^2\brak{\frac{\dot{\theta}^2}{2}- \frac{2g}{a}\sin^2\frac{\theta}{2}}$
+    \item $\frac{ma^2}{2}\brak{\dot{\theta}^2 - \frac{2g}{a}\cos\theta}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%50
+\item The extremal of the functional $\int_0^1\brak{y+x^2+\frac{y'^2}{4}}dx$, $y(0)=0$, $y(1)=0$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $4(x^2-x)$
+    \item $3(x^2-x)$
+    \item $2(x^2-x)$
+    \item $x^2-x$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)\\
+\textbf{Common Data Questions}\\
+\\
+\textbf{Common Data Questions 51 and 52:}\\
+\\
+Let T:$\mathbb{R}^3\rightarrow \mathbb{R}^3$ be the linear transformation defined by $$T(x_1,x_2,x_3)=(x_1+3x_2+2x_3,3x_1+4x_2+x_3,2x_1+x_2-x_3)$$
+%51
+\item The dimension of the range space of $T^2$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 0
+    \item 1
+    \item 2
+    \item 3
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%52
+\item The dimension of the null space of $T^3$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item 0
+    \item 1
+    \item 2
+    \item 3
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)\\
+\textbf{Common Data for Questions 53 and 54:}\\
+\\
+Let $y_1(x)=1+x$ and $y_2(x)=e^x$ be two solutions of $y''(x)+P(x)y'(x)+Q(x)y(x)=0$.\\
+%53
+\item  $P(x)=$
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $1+x$
+    \item $-1-x$
+    \item $\frac{1+x}{x}$
+    \item $\frac{-1-x}{x}$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%54
+\item The set of initial conditions for which there is NO solution is:
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $y(0)=2$, $y'(0)=1$
+    \item $y(1)=0$, $y'(1)=1$
+    \item $y(1)=1$, $y'(1)=0$
+    \item $y(2)=1$, $y'(2)=2$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)\\
+\textbf{Common Data for Questions 55 and 56:}\\
+\\
+Let $X$ and $Y$ be random variables having the joint probability density function\\
+$$f(x,y)=
+\begin{cases}
+\frac{1}{\sqrt{2\pi y}}e^{\frac{-1}{2y}(x-y)^2},& \text{if }-\infty<x<\infty,0<y<1\\
+0,& otherwise
+\end{cases}$$
+
+%55
+\item The variance of $X$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $1/12$
+    \item $1/4$
+    \item $7/12$
+    \item $5/12$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%56
+\item The covariance between $X$ and $Y$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $1/3$
+    \item $1/4$
+    \item $1/16$
+    \item $1/12$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)\\
+\textbf{Linked Answer Questions}\\
+\\
+\textbf{Statement for Linked Answer Questions 57 and 58:}\\
+\\
+Consider the function $f(z)=\frac{e^{iz}}{z(z^2+1)}$\\
+%57
+\item
+The residue of $f$ at the isolated singular point in the upper half-plane $\{z=x+iy\,\epsilon\,\mathbb{C}:y>0\}$ is:
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $-\frac{1}{2}e$
+    \item $\frac{1}{2}e$
+    \item $e^{-2}$
+    \item $1$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%58
+\item The Cauchy Principal Value of the integral
+$
+PV\int_{-\infty}^\infty \frac{\sin x}{x^2+1}\,dx
+$
+is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $-2\pi(1+2e^{-1})$
+    \item $\pi(1 - e^{-1})$
+    \item $2\pi(1 + e)$
+    \item $-\pi(1+e^{-1})$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)\\
+\textbf{Statement for Linked Answer Questions 59 and 60 :}\\
+\\
+Let $f(x,y)=kxy-x^3y-xy^3$ for $(x,y)\,\epsilon\,\mathbb{R}^2$, where $k$ is a real constant. The directional derivative of $f$ at the point $(1,2)$ in the direction of the unit vector $u=\brak{\frac{-1}{\sqrt{2}},\frac{1}{\sqrt{2}}}$ is $\frac{15}{\sqrt{2}}$\\
+%59
+\item The value of k is 
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $2$
+    \item $4$
+    \item $1$
+    \item $-2$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+%60
+\item The value of $f$ at a local minimum in the rectangular region $R=\left\{(x,y)\in\mathbb{R}^2: |x|\leq\frac{3}{2}, |y|\leq\frac{3}{2}\right\}$ is
+\begin{enumerate}
+\begin{multicols}{4}
+    \item $-2$
+    \item $-3$
+    \item $-7$
+    \item $0$
+\end{multicols}
+\end{enumerate}
+\hfill (GATE MA 2009)
+
+
+\end{enumerate}
+\begin{center}
+\textbf{END OF QUESTION PAPER}
+\end{center}
+
+\end{document}

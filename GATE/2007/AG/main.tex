@@ -1,0 +1,1164 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+
+%--- PREAMBLE ---
+% Workaround for conflict between amsmath and txfonts
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc} % Modern input encoding
+\usepackage[T1]{fontenc}    % Font encoding for better output
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage{tkz-euclide}
+\usepackage{gvv} % Note: This is a non-standard package and requires gvv.sty file
+\usepackage{xparse}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[breaklinks=true]{hyperref} % Should be loaded last
+
+% --- THEOREM DEFINITIONS & CUSTOM COMMANDS ---
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\theoremstyle{remark}
+
+\begin{document}
+\title{GATE 2007 AG}
+\author{AI25BTECH11028 - R.MANOHAR}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\subsection*{1-25 carry one mark each}
+
+\begin{enumerate}
+
+\item  An ellipsoidal object has three axes measuring 40 cm, 20 cm and 20 cm respectively.
+The volume of the object is
+\begin{multicols}{4}
+  \begin{enumerate}
+  \item 4.23 litres
+ \item 8.38 litres
+ \item 12.63 litres
+  \item 17.05 litres
+\end{enumerate}  
+\end{multicols}
+\hfill(GATE AG 2007)
+ 
+\item 
+\begin{align*}
+\frac{\omega}{(s + a)^2 + \omega^2} &\quad \text{is the Laplace Transform of}
+\end{align*}
+\begin{multicols}{2}
+\begin{enumerate}
+  
+  \item $\exp(-at) \sin \omega t$
+  
+  \item $\sin \omega t$
+  
+   \item $\exp(-at) \sinh \omega t$
+  
+  \item $\sinh \omega t$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  For station X, the maximum one day rainfall with 25 years return period is 100 mm.
+The probability of a one day rainfall equal to or greater than 100 mm at station X occurring at least once in 15 successive years is
+\begin{multicols}{4}
+\begin{enumerate}
+  \item 0.458
+  \item 0.500
+  \item 0.637
+  \item 0.990
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item 
+
+y(0) = 0 and using Euler's method with step size h = 0.1 solution of the differential equation
+\begin{align*}
+\frac{dy}{dx} &= 2xy + 1
+\end{align*}
+gives the value of
+y(0.3)  =  ?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.3101
+    \item 0.3142
+    \item 0.6202
+    \item 4.080
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item Integrating the function
+\begin{align*}
+f(x) &= 1 + e^{-x} \sin(4x)
+\end{align*}
+over the interval [0, 1] using Simpson's $\frac{1}{3}$ rule gives Result =  ?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1.021
+    \item 1.091
+    \item 1.321
+    \item 2.642
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  A lubricating oil with high viscosity index is desirable for tractor engine due to
+
+\begin{enumerate}
+    \item More variation of viscosity with temperature
+    \item Less variation of viscosity with temperature
+    \item High pour point
+    \item High cloud point
+\end{enumerate}
+\hfill(GATE AG 2007)
+
+\item  In a tractor cab, the temperature comfort zone for the tractor operator is between
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 287 and 290 K
+    \item 288 and 293 K
+    \item 291 and 297 K
+    \item 295 and 301 K
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  As per ASABE standards, the three-point hitch of a two-wheel drive tractor with a maximum drawbar power of 45 kW comes under the category
+\begin{multicols}{4}
+\begin{enumerate}
+    \item I
+    \item II
+    \item III
+    \item IV
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  As compared to diesel, the heating value and exhaust emissions such as CO, CO\textsubscript{2} and smoke density of biodiesel when used in compression ignition engine are
+\begin{multicols}{4}
+\begin{enumerate}
+    \item Lower and higher respectively
+    \item Lower and lower respectively
+    \item Higher and lower respectively
+    \item Higher and higher respectively
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item 
+The theoretical percentage variation in speed of a chain as it leaves an 8 teeth sprocket rotating at  a uniform velocity is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.0
+    \item 7.9
+    \item 29.3
+    \item 34.3
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  The angle between the lines AB and BC whose respective bearings are $35^\circ$ and $140^\circ$ is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $75^\circ$
+    \item $115^\circ$
+    \item $175^\circ$
+    \item $185^\circ$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  A fluid in which shear stress is more than the yield value and proportional to the rate of shear strain is called
+\begin{multicols}{4}
+\begin{enumerate}
+    \item Newtonian fluid
+     \item  Ideal plastic fluid
+    \item Non-Newtonian fluid
+    \item Real fluid
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  When the water level in a well is at a depth of 7 m from the surface, the most suitable pump to lift water for irrigation is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item Submersible pump
+    \item Axial flow pump
+    \item Horizontal centrifugal pump
+    \item Reciprocating pump
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  The specific gravity and void ratio of a soil sample are $G$ and $e$ respectively. The hydraulic gradient is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\dfrac{G - 1}{1 + e}$
+    
+    \item $\dfrac{1 - G}{1 + e}$
+    \item $\dfrac{G + 1}{1 - e}$
+    
+    \item $\dfrac{1 + G}{1 + e}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  A soil 0.8 m deep has volumetric water content of 0.12. The quantity of water needed to bring the volumetric water content to 0.30 is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.144 m of water
+    \item 0.336 m of water
+    \item 0.180 m of water
+    \item 0.420 m of water
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A heater is placed in front of a continuous countercurrent dryer. Air at 40\degree C and 70\% RH is fed into the heater from which the air exits at 65\degree C. If saturation vapour pressure at 40\degree C and 65\degree C are 0.074 bar and 0.250 bar respectively, then relative humidity of the air coming out of the heater and entering the dryer is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 21\%
+    \item 27\%
+    \item 32\%
+    \item 38\%
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  Crushing efficiency of any grinder rarely exceeds
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1\%
+    \item 5\%
+    \item 10\%
+    \item 20\%
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  Bacterial population in milk increases 200 times in 18 hours of storage at 20\degree C. The increase in population in 3 hours of storage at the same temperature is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1.34 times
+    \item 2.42 times
+    \item 7.02 times
+    \item 14.14 times
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  A vegetable oil is flowing through a vertical wall as a film. The density and viscosity of the oil are 920 kg/m$^3$ and 0.28 Pa·s respectively. If the average velocity of the film is 0.05 m/s, the thickness of the film is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.14 mm
+    \item 0.36 mm
+    \item 1.76 mm
+    \item 2.16 mm
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item  Air at 101.325 kPa pressure is used to dry a vegetable material at 52\degree C. Saturation pressure of water at 52\degree C is 13.51 kPa. If the mass transfer coefficient for the case of equimolar counter diffusion ($k_y'$) is $4.79 \times 10^{-4}$ kg·mole·m$^{-1}$·s$^{-1}$·mole fraction$^{-1}$, then the mass transfer coefficient for the case of diffusion through non-diffusing gas ($k_y$) in kg·mole·m$^{-2}$·s$^{-1}$·mole fraction$^{-1}$ is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $4.96 \times 10^{-4}$
+    \item $5.14 \times 10^{-4}$
+    \item $7.83 \times 10^{-4}$
+    \item $1.02 \times 10^{-3}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+
+ \subsection*{Q.21 TO Q.75 carry two marks each}
+
+\item  An oil engine works on the ideal diesel cycle with a compression ratio of 18:1. The constant pressure energy addition ceases at 10\% of the stroke. The intake pressure and temperature are 100 kPa and 300 K respectively. The hourly air consumption is 100 m$^3$. If the ratio of specific heats is 1:4,the maximum temperature in the cycle is 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 953.3 K
+    \item 1334.6 K
+    \item 2154.5 K
+    \item 2573.9 K
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  While testing a tractor, the airborne sound intensity is increased so that the root mean square sound pressure is doubled. The corresponding increase in sound pressure level to the reference sound pressure of $2 \times 10^-5$ Pa is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 2 dB
+    \item 4 dB
+    \item 6 dB
+    \item 8 dB
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A piston with 50 mm diameter and length 50 mm is to be moved at a velocity of 0.25 m s$^-1$ in a hydraulic cylinder with 50.2 mm diameter. The cylinder is full of oil with a kinetic viscosity of $9 \times 10^-4$ m$^2$ s$^-1$ and a density of 880 kg m$^-3$. Assuming pressure difference between inside and outside of the cylinder as zero, the force required to move the piston is 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 7.772 N
+    \item 15.543 N
+    \item 76.243 N
+    \item 152.476 N
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A single phase 230 V electric motor while running at 1400 rpm develops a torque of 3.1 Nm. If the phase angle between the voltage and current is            and the power efficiency of the motor is 80\%, the amount of electric current drawn by the electric motor is
+\begin{multicols}{4}
+ \begin{enumerate}
+     \item 2.470 A
+     \item 3.135 A
+     \item 4.810 A
+     \item 5.512 A
+ \end{enumerate}   
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  The mechanical efficiency of a power tiller engine developing 7.5 kW is 80\%. The calorific value of diesel is 45 MJ kg$^-1$.If the indicated thermal efficiency is 35\%, the brake specific fuel consumption of the engine is 
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.135 kg kW$^-1$h$^-1$ 
+        \item 0.245  kg kW$^-1$h$^-1$ 
+        \item  0.228  kg kW$^-1$h$^-1$ 
+        \item 0.286  kg kW$^-1$h$^-1$ 
+    \end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A tractor engine developing 30 kW rejects heat at the rate of 0.58 kW per kW of engine output. A water cooling system is to be insatlled in the tractor. The expected temperature rise as air moves through the radiator is 20 K. The frontal area of the fradiator is limited to 0.16 m$^2$. If density of air is 1.29 kg m$^-3$ and specific heat of air is 1.0 kJ kg$^-1$ K$^-1$, the amount of air to be blown per unit time through the radiator frontal area is 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item  0.674 m$^3$s$^-1$
+    \item  0.870 m$^3$s$^-1$
+    \item  1.162 m$^3$s$^-1$
+    \item  1.502 m$^3$s$^-1$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A two-wheel drive tractor weighing 20kN has a wheel base of 2.1 m with a static weight distribution of 35\% and 65\% at the front and rear axles respectively. On a level ground, the tractor moves at a speed of 4 km h$^-1$. Considering small steer angle, the cornering force acting on each of the front tyre for a turning radius of 1.8 m is
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.244 kN
+        \item 0.454 kN
+        \item 0.489 kN
+        \item 0.907 kN
+    \end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item
+ A tractor drawn rotary cultivator in concurrent revolution mode is to be operated at a depth of 150 mm and at a forward speed of 3.6 km h$^-1$ . The radius of working set is 280 mm. The number of blades, which would cut identical path is 3. The working width of the cultivator is 1.8 m. The cultivator is to be powered from the tractor PTO running at 540 rpm through a suitable gearbox. For getting a tilling pitch of 74.1 mm, the suitable gear ratio is 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1:2
+    \item 1:1.5
+    \item 1.5:1
+    \item 2:1
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A solar photovoltaic system comprising solar photovoltaic array, inverter and a motor-pump unit is installed for supplying drinking water in a village. There are 24 modules in the array and each module contains 36 number of cells of size $104 \times 104 mm$ with a conversion efficiency of 12.8\%. The global solar radiation incident normally on the cells is 945 W m$^-2$. The power consumed in lifting the water is found to be 435 W. If the pump-motor unit efficiency is 45\%, the efficiency of the inverter is 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item  56.21\%
+    \item  69.42\%
+    \item  80.25\%
+    \item  85.52\%
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+  \item A farmer has a choice of buying a 4 bottom $\times$ 41 cm mould board plough for Rs 8570 or a 5 bottom $\times$ 45 cm mould board plough for Rs 12000. Each plough has a life of 15 years. Neglect salvage value, interest charges and other costs on the ploughs. With either plough the operating speed is 6.5 km h$^{-1}$ and field efficiency is 82\%. Assume that the cost per hectare for tractor energy to be same for both the ploughs. If the labor cost is Rs 10 per hour, the minimum number of hectares that would justify the purchase of the larger plough (i.e., break even point) is  
+\begin{multicols}{4}
+\begin{enumerate}
+    \item  73.7
+    \item  89.9
+    \item  737.7
+    \item  899.4
+\end{enumerate}
+    
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A flange mounted shear pin is used on a shaft as a safety device. The steel shear pin has a diameter of 2.38 mm and is to be mounted on the flange of a shaft rotating at 650 rpm. The maximum power transmitted by the shaft is 4.5 kW. If the shear strength of the material of pin is 310 MPa, the radial distance of its mounting is
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 5.02 mm
+    \item 11.98 mm
+    \item 47.94 mm
+    \item 301.20 mm
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+
+\item A right hand offset disk harrow is operating with front and rear gang angles of 15$^\circ$ and 21$^\circ$ respectively. The centers of the two gangs are 2.45 m and 4.25 m behind a transverse line through the hitch point on the tractor drawbar. The horizontal soil force components are: $L_f = 3.1$ kN, $S_f = 2.65$ kN, $L_r = 3.35$ kN, and $S_r = 2.65$ kN. The amount of offset of the center of cut with respect to the hitch point is
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.740 m
+    \item 0.795 m
+    \item 0.968 m
+    \item 1.006 m
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A gravity feed type liquid fertilizer distributor has fixed orifices for metering. Liquid is supplied from a top vented tank with a height of 460 mm. The bottom of the tank is 610 mm above the ground and the ends of the delivery tube are 75 mm below the ground level. The metering heads (including orifices) are just below the tank, but the delivery tubes are small enough so that each one remains full of liquid between the orifice and the outlet end (thereby producing a negative pressure head on the orifice). The ratio between flow rates when the tank is full and when it is filled to a height of only 25 mm is  
+
+\begin{multicols}{4}
+\begin{enumerate}
+
+    \item 1.27
+    \item 1.61
+    \item 2.31
+    \item 4.28
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A 6 bladed forage blower operates at 540 rpm. For a feed rate of $6.5\times 10^{4}$ kg h$^{-1}$, the mass of corn silage carried on each impeller blade is  
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.334 kg
+    \item 2.006 kg
+    \item 12.037 kg
+    \item 20.060 kg
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A flat leather belt with $9\times 250$ mm cross section is used to drive a cast iron pulley of diameter 0.90 m running at 336 rpm. The active arc of contact on the smaller pulley is 120$^\circ$. The belt weighs 980 kg m$^{-3}$. Coefficient of friction between the leather and cast iron is 0.35. Centrifugal tension experienced by the belt is  
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 5.5 N
+    \item 56.4 N
+    \item 552.8 N
+    \item 2211.2 N
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A strain gauge of 120 $\Omega$ nominal resistance and 2.1 gauge factor is mounted on a tensile steel member. The longitudinal axis of the strain gauge is along the length of the member. Young's modulus of steel is $2.1\times 10^{11}$ Pa. The change in resistance of the gauge is 0.08064 $\Omega$. The stress experienced by the steel member is  
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $67.2\times 10^{6}$ Pa
+    \item $141.1\times 10^{6}$ Pa
+    \item $268.8\times 10^{6}$ Pa
+    \item $296.4\times 10^{6}$ Pa
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item In a four bar linkage, the fixed link is horizontal and has a length of 60 mm. The crank makes an angle of $30^\circ$ with the fixed link and is attached to one end of the fixed link. The lengths of crank, coupler, and follower links are 20, 70, and 50 mm respectively. For the open chain configuration, the angle of coupler with respect to the horizontal is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 2 degrees
+    \item 32 degrees
+    \item 122 degrees
+    \item 152 degrees
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item The left limb of a U-tube manometer is connected to a pipe in which water flows and the right limb containing mercury is open to the atmosphere. The center of the pipe is 200 mm below the level of mercury in the right limb and difference of mercury levels in the two limbs is 300 mm. The pressure in the pipe line is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 19 kPa
+    \item 29 kPa
+    \item 39 kPa
+    \item 49 kPa
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A hydraulically efficient trapezoidal drainage channel has to be designed for draining 400 ha of land with a drainage coefficient of 20 mm. If the recommended side slope and depth are 2:1 and 1.06 m respectively, the bottom width is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.25 m
+    \item 0.50 m
+    \item 0.75 m
+    \item 1.00 m
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item An unconfined aquifer is pumped at a constant rate of $10 \ \text{l s}^{-1}$. Steady state drawdowns measured at radial distances of 30 m and 60 m are 0.80 m and 0.70 m, respectively. Original thickness of aquifer is 30 m. Transmissibility of the aquifer is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 19 m$^2$ d$^{-1}$
+    \item 760 m$^2$ d$^{-1}$
+    \item 952 m$^2$ d$^{-1}$
+    \item 982 m$^2$ d$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A centrifugal pump delivers 30 l s$^{-1}$ of water against static suction and delivery heads of 6 m and 10 m respectively. The length and diameter of delivery pipe are 100 m and 100 mm respectively. The outlet of delivery pipe is submerged. Friction factor for the pipe is 0.03. If the minor losses in the delivery pipe amount to 1.0 m, pressure at delivery end of the pump is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 327 kPa
+    \item 385 kPa
+    \item 680 kPa
+    \item 984 kPa
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item The areas within the contour lines at the site of a proposed reservoir and dam are as follows:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Contour, m} & 20 & 22 & 24 & 26 & 28 & 30 & 32 \\
+\hline
+\textbf{Area, m$^2$} & 100 & 220 & 600 & 1800 & 4500 & 10000 & 25000 \\
+\hline
+\end{tabular}
+\end{table}
+
+If 20 m R.L.\ represents the bottom of the reservoir and 32 m R.L.\ represents the water surface, the volume of water in the reservoir obtained by the trapezoidal formula is
+\begin{multicols}{4}
+
+\begin{enumerate}
+\item 21110 m$^3$
+\item 32220 m$^3$
+\item 42220 m$^3$
+\item 59340 m$^3$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item In a sub-surface drainage system, tile drains are laid with a slope of 0.28\% to carry a peak discharge of 3 litre s$^{-1}$ per drain. If the Manning's $n$ is 0.011, the practical diameter of tile required is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 50 mm
+\item 75 mm
+\item 100 mm
+\item 150 mm
+\end{enumerate}
+\end{multicols}
+
+\hfill(GATE AG 2007)
+
+\item A recharge well of 300 mm diameter is constructed in a confined aquifer of 1000 m${^2}$d${^-1}$ transmissibility. From the top of impermeable bed, the water level in the well is $50\ \text{m}$ and the height of constant water level is $40\ \text{m}$. The constant water level occurs at a distance of $150\ \text{m}$ from the center of the well. The possible maximum recharge rate is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item $3.16\ \text{m}^3\ \text{min}^{-1}$
+\item $6.32\ \text{m}^3\ \text{min}^{-1}$
+\item $9.48\ \text{m}^3\ \text{min}^{-1}$
+\item $12.64\ \text{m}^3\ \text{min}^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item The discharge through a $90^\circ$ V-notch for a head of $0.5\ \text{m}$ and coefficient of discharge of $0.6$ is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0.25\ \text{m}^3\ \text{s}^{-1}$
+\item $0.50\ \text{m}^3\ \text{s}^{-1}$
+\item $0.65\ \text{m}^3\ \text{s}^{-1}$
+\item $0.75\ \text{m}^3\ \text{s}^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item A cohesive soil has an angle of shearing of $15^\circ$ and a cohesion of $35\ \text{kPa}$. The value of lateral pressure in the cell for failure to occur at a total stress of $300\ \text{kPa}$ during the triaxial test is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item $59.58\ \text{kPa}$
+\item $122.92\ \text{kPa}$
+\item $140.41\ \text{kPa}$
+\item $230.34\ \text{kPa}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item The normal annual rainfall at stations I, II, III and IV in a basin are 155, 150, 120 and 105 cm respectively. In the year 2000, stations I, II and III received annual rainfalls of 156, 140 and 104 cm respectively. Estimated value of rainfall at station IV during the year 2000 is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 98.2 cm
+\item 105.0 cm
+\item 133.3 cm
+\item 141.7 cm
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item The maximum rainfall with a return period of 25 years is given below for a watershed having a time of concentration of $47.65$ minutes:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Time (min)} & 10 & 20 & 30 & 40 & 60 \\
+\hline
+\textbf{Rainfall depth (mm)} & 52.50 & 55.00 & 57.50 & 60.00 & 65.00 \\
+\hline
+\end{tabular}
+\end{table}
+
+In this watershed, $2.0\ \text{km}^2$ area has cultivated sandy soil $(C = 0.2)$ and the remaining $3.0\ \text{km}^2$ has cultivated clay soil $(C = 0.7)$. The peak rate of runoff from the watershed is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $4.29\ \text{m}^3\ \text{s}^{-1}$
+\item $5.41\ \text{m}^3\ \text{s}^{-1}$
+\item $42.99\ \text{m}^3\ \text{s}^{-1}$
+\item $54.13\ \text{m}^3\ \text{s}^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A drop spillway is subjected to horizontal and vertical forces of $40.8\ \text{kN}$ and $36.5\ \text{kN}$ respectively. The area of plane of sliding is $10\ \text{m}^2$. Angle of internal friction and cohesive resistance of foundation material are $25^\circ$ and $4.9\ \text{kPa}$ respectively. The factor of safety against sliding is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 0.53
+\item 0.61
+\item 1.62
+\item 1.86
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item The soil loss from a field with $5\%$ slope and for crop management factor of $0.25$ is $44.80\ \text{Mg ha}^{-1}$. Contouring along with crop management factor of $0.15$ is adopted as the soil conservation measure in the field. The changed soil loss from the field is
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1.61\ \text{Mg ha}^{-1}$
+\item $2.68\ \text{Mg ha}^{-1}$
+\item $16.12\ \text{Mg ha}^{-1}$
+\item $26.87\ \text{Mg ha}^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A field is irrigated by construting $100 m$ long furrows spaced at 0.75 m apart. The advance time to the end of furrows was $30 min$ with an inflow rate $2\ \ {litre s}^{-1}$. After that the inflow rate was cutback to  $0.5\ \text{litre s}^{-1}$ and continued for one hour. The average depth of irrigation is 
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $2.4 cm$
+        \item $7.2 cm$
+        \item $9.0 cm$
+        \item $18.0 cm$
+    \end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A sprinkler system consists of two 192 m long laterals. On each lateral, sixteen sprinklers are located at an interval of 12 m. The spacing between the laterals is 10 m. The required capacity (in litre s$^{-1}$) of sprinkler system for application rate of 1.0 cm h$^{-1}$ is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 5.33
+    \item 10.66
+    \item 14.22
+    \item 17.06
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A 50 km long canal with an average width of 25 m is used for irrigation. Mean daily evaporation as measured from a Class A evaporation pan is 5 mm d$^{-1}$. Considering the pan coefficient as 0.80, the mean daily evaporation loss from this canal is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 5.00 $\times$ 10$^{3}$ m$^{3}$ d$^{-1}$
+    \item 6.25 $\times$ 10$^{3}$ m$^{3}$ d$^{-1}$
+    \item 5.00 $\times$ 10$^{4}$ m$^{3}$ d$^{-1}$
+    \item  6.25 $\times$ 10$^{4}$ m$^{3}$ d$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item To deliver 1.3 litre min$^{-1}$ discharge, the operating pressure of a 3 m long, 3 mm diameter bubbler tube is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1.64 kPa
+    \item 16.46 kPa
+    \item 164.61 kPa
+    \item 1646.20 kPa
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Dry bulb and wet bulb temperatures of air fed into a dryer are found to be 60 $^{\circ}$C and 35 $^{\circ}$C respectively. Saturation humidity at wet bulb temperature is 0.0365 kg H$_2$O kg dry air$^{-1}$. If specific heat capacities of dry air and water vapour are 1.008 and 1.915 kJ kg$^{-1}$ K$^{-1}$ respectively and latent heat of vaporization at wet bulb temperature is 2.42 MJ kg$^{-1}$ then humidity ratio of air is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item  0.0193 kg H$_2$O kg dry air$^{-1}$
+   \item 0.0256 kg H$_2$O kg dry air$^{-1}$
+    \item 0.0225 kg H$_2$O kg dry air$^{-1}$
+    \item 0.0275 kg H$_2$O kg dry air$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A refrigerator with a COP of 3.2 uses 2.4 kg min$^{-1}$ refrigerant extracting 150 kJ kg$^{-1}$ heat in the evaporator. Assuming compressor efficiency of 85\% the minimum size of the motor is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.5 hp
+    \item 1.5 hp
+    \item 2.0 hp
+    \item 3.0 hp
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item If thermal conductivity, mass diffusivity, equimolar mass transfer coefficient based on concentration gradient, density and specific heat capacity of air are 0.03 W m$^{-1}$ K$^{-1}$, 2.4 $\times$ 10$^{-5}$ m$^{2}$ s$^{-1}$, 0.3 m s$^{-1}$, 1.0 kg m$^{-3}$ and 1.0 kJ kg$^{-1}$ K$^{-1}$ respectively, then convective heat transfer coefficient of air is
+\begin{multicols}{2}
+\begin{enumerate}
+    \item 7.43 W m$^{-2}$ K$^{-1}$
+    \item 348.12 W m$^{-2}$ K$^{-1}$
+    \item 74.27 W m$^{-2}$ K$^{-1}$
+    \item 794.39 W m$^{-2}$ K$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  At 65 $^{\circ}$C, Henderson constants $C$ and $n$ are 7.4 $\times$ 10$^{-4}$ K$^{-1}$ and 0.56 respectively. The equilibrium moisture content corresponding to 40\% relative humidity is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 38\% (wet basis)
+    \item 87\% (wet basis)
+    \item 78\% (dry basis)
+    \item 358\% (dry basis)
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  Effectiveness of countercurrent heat exchanger is given by
+\begin{align*}
+\varepsilon &= 
+\frac{1 - \exp\left[-NTU\left(1 - \frac{C_{\min}}{C_{\max}}\right)\right]}
+{1 - \frac{C_{\min}}{C_{\max}} 
+\exp\left[-NTU\left(1 - \frac{C_{\min}}{C_{\max}}\right)\right]}
+\end{align*}
+
+If same liquid at the same flow rate is used as heating and cooling media through a countercurrent double tube heat exchanger then effectiveness is given by
+\begin{multicols}{2}
+\begin{enumerate}
+    \item  $\frac{NTU - 1}{NTU}$
+    
+    \item $\frac{NTU - 1}{NTU+1}$
+    \item $\frac{NTU}{NTU+1}$
+    
+    \item $\frac{NTU - 1}{NTU+2}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item  A pulse mill grinds Bengal gram of 2 mm volume-surface mean diameter to powder of 100 $\mu$m volume-surface mean diameter. The ratio of Rittinger's to Kick's constant in the grinding operation is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.317 kWh kg$^{-1}$
+    \item 315.34 $\mu$m
+    \item 3.15 mm
+    \item 152.793 kWh ton$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Angle of internal friction for rice grain is 27$^{\circ}$, bulk density of rice at 14\% moisture content is 833 kg m$^{-3}$ and coefficient of friction between rice and concrete wall is 0.5. For a silo of 5 m diameter and 20 m height, the ratio between the lateral pressures at the bottom of the silo obtained by Rankine and Janssen formulae is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1.63
+    \item 3.16
+    \item 6.13
+    \item 9.47
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Assuming psychrometric ratio to be unity, milk of 50\% total solids is spray dried to powder of 5\% moisture content on dry basis. Dry bulb and wet bulb temperatures of the inlet air to the spray dryer are 200 $^{\circ}$C and 50 $^{\circ}$C respectively. Latent heat of vaporization at the wet bulb temperature is 2393 kJ kg$^{-1}$. Assuming no sensible heating of powder the outlet air temperature is 80 $^{\circ}$C. If inlet air absolute humidity was 0.015 kg H$_2$O kg dry air$^{-1}$, then kg of dry air required per kg feed is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 4.7
+    \item 5.9
+    \item 7.4
+    \item 9.5
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Peas of 1.1 cm diameter are dried by air at 65.8 $^{\circ}$C in a packed bed drier. The void fraction of the bed is 0.35 and the bed has a diameter of 0.5 m and a height of 0.8 m. The flow rate and the viscosity of air are 0.12 kg s$^{-1}$ and 2.03 $\times$ 10$^{-5}$ Pa s respectively. Reynolds number for the packed bed is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 13
+    \item 340
+    \item 908
+    \item 1359
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A rectangular fin of length 12 cm, width 22 cm and thickness 1.5 cm is connected to a tube at a temperature of 0 $^{\circ}$C. The thermal conductivity of the fin material is 150 W m$^{-1}$ K$^{-1}$. The tip of the fin is not insulated. Air at a temperature of 5 $^{\circ}$C is in contact with the fin. The heat transfer coefficient between the fin and the air is 25 W m$^{-2}$ K$^{-1}$. The rate of heat transfer is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 3.33 W
+    \item 6.63 W
+    \item 9.13 W
+    \item 15.23 W
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item In order to reduce heat loss, a steam line with a tube diameter of 1.0 cm is insulated with a material having thermal conductivity of 0.108 W m$^{-1}$ K$^{-1}$. Heat is dissipated from the outer surface of the insulating material by natural convection with a heat transfer coefficient of 12 W m$^{-2}$ K$^{-1}$ into the ambient at a constant temperature. The heat loss becomes maximum when the thickness of insulation is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.5 mm
+    \item 2 mm
+    \item 4 mm
+    \item 6.5 mm
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Air carrying particles of density of 700 kg m$^{-3}$ and average diameter of 25 $\mu$m enters a cyclone of 0.7 m diameter at a tangential velocity of 30 m s$^{-1}$ at 0.35 m. The density and viscosity of air are 1.1614 kg m$^{-3}$ and 1.85 $\times$ 10$^{-5}$ Pa s respectively. The terminal radial velocity of the particle is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.17 m s$^{-1}$
+    \item 1.69 m s$^{-1}$
+    \item 3.37 m s$^{-1}$
+    \item 16.52 m s$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A long cylindrical piece of meat having a diameter of 0.02 m containing 80\% moisture is being frozen with air at $-30^{\circ}$C. Initial temperature of the meat is $-2.5^{\circ}$C (freezing point). The heat transfer coefficient of the freezer unit is 20 W m$^{-2}$ K$^{-1}$. If density of the unfrozen meat is 1050 kg m$^{-3}$ and the thermal conductivity of the frozen meat is 1.025 W m$^{-1}$ K$^{-1}$, the latent heat of fusion for water is 335 kJ kg$^{-1}$, shape factors P and R are (1/4) and (1/16) respectively, the freezing time is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.158 h
+    \item 0.373 h
+    \item 0.464 h
+    \item 2.12 h
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A single effect evaporator is used to concentrate 5000 kg h$^{-1}$ of a 1.5 wt\% sugar solution entering at 50 $^{\circ}$C to a concentration of 2 wt\% at 101.325 kPa. Steam supplied is saturated at 169.06 kPa (115 $^{\circ}$C). The overall heat transfer coefficient is 1550 W m$^{-2}$ K$^{-1}$. The boiling point of solution is the same as that of water. The specific heat of the feed is 4.21 kJ kg$^{-1}$ K$^{-1}$. The latent heat of water at 100 $^{\circ}$C is 2257.06 kJ kg$^{-1}$ and the latent heat of steam at 115 $^{\circ}$C is 2216.52 kJ kg$^{-1}$. The required surface area for heat transfer is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 6.9 m$^{2}$
+    \item 10.7 m$^{2}$
+    \item 13.9 m$^{2}$
+    \item 46.3 m$^{2}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item In a cold store of 30 m $\times$ 15 m $\times$ 15 m size, 4000 tonnes of potato having the specific heat of 3.62 kJ kg$^{-1}$ K$^{-1}$ and heat of respiration of 20 W m$^{-3}$ is kept at 30 $^{\circ}$C. Potato is required to be cooled to 2 $^{\circ}$C in 30 days. Neglecting other sources of heat, the capacity of the refrigeration plant required is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 6 TR
+    \item 38 TR
+    \item 44 TR
+    \item 83 TR
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item A diatomic, adiabatically compressible fluid having the molecular mass of 16 is flowing through a nozzle at a temperature of 20 $^{\circ}$C. If the velocity of the fluid is 430 m s$^{-1}$, the Mach Number is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.93
+    \item 0.97
+    \item 1.03
+    \item 1.07
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\begin{center}
+\textbf{Common Data Questions}
+\end{center}
+\textbf{Common Data for Questions 71, 72, 73:}
+
+A 35 kW two-wheel drive tractor weighing 20 kN is fitted with 6-16 8PR tyre at the front axle and 13.6-28 12PR tyre at the rear axle. The ratio of section height and section width for all tyres is 0.75. The tractor has a wheel base of 2.1 m and the center of gravity is located 0.7 m ahead of the rear axle center on a horizontal plane. The tractor is to be towed on a level ground having sandy clay loam soil at 10\% moisture content with a cone index of 1200 kPa.
+
+\item The wheel numeric for each of the rear wheels is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 39.50
+    \item 58.17
+    \item 79.01
+    \item 116.37
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Rolling resistance of each of the front wheels is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.244 kN
+    \item 0.354 kN
+    \item 0.575 kN
+    \item 0.707 kN
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item If the same tractor is to be towed on a level ground with compacted dry clay soil, the force required for towing is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.27 kN
+    \item 0.40 kN
+    \item 0.53 kN
+    \item 0.80 kN
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\textbf{Common Data for Questions 74, 75:}
+
+
+A discharge of $10 \, \text{m}^3 \, \text{s}^{-1}$ passes through a 4 m wide rectangular channel at a depth of 1.25 m. The slope of the channel is $9.08 \times 10^{-3}$.
+
+
+\item The specific energy of flowing water is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 1.25 m
+\item 1.45 m
+\item 2.25 m
+\item 3.25 m
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item The depth for minimum specific energy is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 0.56 m
+\item 0.66 m
+\item 0.86 m
+\item 1.06 m
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+ 
+\textbf{Linked Answer Questions: Q.76 to Q.85 carry two marks each}
+
+
+\textbf{Statement for Linked Answer Questions 76 \& 77:}
+
+A flat plate solar collector with an absorber area of $1.0 \times 1.5 \, \text{m}$ receives a solar flux of $850 \, \text{W} \, \text{m}^{-2}$ on the top cover. The indicated solar flux absorbed in the absorber plate is $600 \, \text{W} \, \text{m}^{-2}$. The ambient temperature is 297 K. The heat loss coefficients of the collector at the side, bottom and top are 0.35, 0.65 and $3.50 \, \text{W} \, \text{m}^{-2} \, \text{K}^{-1}$ respectively with a collector heat-removal factor of 0.85. The collector fluid temperature is 333 K.
+
+\item Useful heat gain rate for the collector is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 558.45 W
+\item 604.35 W
+\item 657.01 W
+\item 711.02 W
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Instantaneous collector efficiency is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 43.80\%
+\item 47.40\%
+\item 51.53\%
+\item 55.76\%
+\end{enumerate}
+\end{multicols}
+
+\textbf{Statement for Linked Answer Questions 78 \& 79:}
+
+
+
+A field sprayer having a boom with 20 nozzles spaced 0.46 m apart is to be designed for a maximum application rate of $750 \, \text{litre ha}^{-1}$ at 520 kPa pressure. The forward speed of travel is $6.5 \, \text{km h}^{-1}$. Neglect field losses and assume that $10\%$ of the pump output is bypassed.
+
+
+
+\item The required pump capacity is
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item 67.95 litre min$^{-1}$
+\item 82.22 litre min$^{-1}$
+\item 74.75 litre min$^{-1}$
+\item 83.06 litre min$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item If mechanical agitation requires $375 \, \text{W}$ input power and the pump efficiency is $70\%$, the maximum power input required is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 720 W
+\item 879 W
+\item 1095 W
+\item 1403 W
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\textbf{Statement for Linked Answer Questions 80 \& 81:}
+
+
+
+A 4-h unit hydrograph (UH) is used to derive S-hydrograph. The ordinates of 4-h UH are given below:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Time (h) & 0 & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 \\
+\hline
+4-h UH ordinates ($\text{m}^3 \, \text{s}^{-1}$) & 0 & 20 & 80 & 130 & 150 & 130 & 90 & 52 & 27 & 15 & 5 & 0 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\item Equilibrium discharge and its time of occurrence for the derived S-hydrograph are
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 150 m$^{3}$ s$^{-1}$ and 16 h
+\item 380 m$^{3}$ s$^{-1}$ and 16 h
+\item 699 m$^{3}$ s$^{-1}$ and 40 h
+\item 699 m$^{3}$ s$^{-1}$ and 44 h
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\item Area of watershed is
+
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 215.98 km$^{2}$
+\item 251.61 km$^{2}$
+\item 547.15 km$^{2}$
+\item 1006.47 km$^{2}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\textbf{Statement for Linked Answer Questions 82 \& 83:}
+
+\textit{Bacillus stearothermophilus} has a z value of $10.20^\circ$C at a reference temperature of $121^\circ$C.
+
+\item The activation energy for the destruction of \textit{Bacillus stearothermophilus} is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 327.56 MJ kg mole$^{-1}$
+\item 298.95 MJ kg mole$^{-1}$
+\item 208.35 MJ kg mole$^{-1}$
+\item 75.62 MJ kg mole$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item The z value of the same organism at a reference temperature of $135^\circ$C is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 9.73$^\circ$C
+\item 10.20$^\circ$C
+\item 10.95$^\circ$C
+\item 11.15$^\circ$C
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+\textbf{Statement for Linked Answer Questions 84 \& 85:}
+
+Ice cream at a temperature of $-18^\circ$C is being transported through a refrigerated truck having outside dimensions of 6 m length, 3 m width and 2 m height. The truck is traveling at a speed of 90 km h$^{-1}$ on a highway where the air temperature is $45^\circ$C. The truck is insulated in a way such that the outside surface temperature of the truck is maintained at $15^\circ$C. Assume that there is no heat transfer from the front and back of the truck.
+
+Properties of air at $30^\circ$C are: $\rho = 1.1514\mathrm\ {kg\,m}^{-3}$, $\mu = 1.86\times 10^{-5}\,\mathrm{Pa\,s}$, $C_p = 1.007\,\mathrm{kJ\,kg}^{-1}\,\mathrm{K}^{-1}$, $k = 0.0265\,\mathrm{W\,m}^{-1}\,\mathrm{K}^{-1}$.
+
+Use the relation: $Nu = 0.036\,Re^{0.8} Pr^{0.33}$.
+
+
+\item The average heat transfer coefficient of the system is
+\begin{multicols}{4}
+\begin{enumerate}
+\item 22.06 W m$^{-2}$ K$^{-1}$
+\item 30.52 W m$^{-2}$ K$^{-1}$
+\item 49.56 W m$^{-2}$ K$^{-1}$
+\item 53.18 W m$^{-2}$ K$^{-1}$
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+\item The rate of heat transfer at the four surfaces is
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item 47.8 kW
+\item 86.1 kW
+\item 95.7 kW
+\item 114.7 kW
+\end{enumerate}
+\end{multicols}
+\hfill(GATE AG 2007)
+
+
+
+\begin{center}
+\textbf{END OF THE QUESTION PAPER}
+\end{center}
+
+\end{enumerate}
+\end{document}
+
+

@@ -1,0 +1,862 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\title{
+ASSIGNMENT 1: GATE 2013 \\
+AG : Agricultural Engineering}
+\author{EE25BTECH11047 - Ravula Shashank Reddy}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+\begin{enumerate}
+
+\item If $\mathbf P = \mathbf A\,\mathbf B$, where $\displaystyle \mathbf A = \myvec{2 & 1 \\ 3 & 0}$ and $\displaystyle \mathbf B = \myvec{1 & 3 & 0 \\ 2 & 1 & 2}$; then $\mathbf P$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\myvec{7 & 2\\ 9 & 0}$
+    \item $\myvec{4 & 7 & 2\\ 3 & 9 & 0}$ 
+    \item $\myvec{2 & 4\\ 3 & 9}$ 
+    \item $\myvec{2 & 4 & 7\\ 0 & 3 & 9}$
+\end{enumerate}
+\end{multicols}
+
+\item If $\mathbf C = \mathbf A \times \mathbf B$, where $\mathbf A = 2\,\mathbf i - \mathbf j + 3\,\mathbf k$ and $\mathbf B = \mathbf i + 2\,\mathbf j$; then $\mathbf C$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item  $-6\,\mathbf i + 3\,\mathbf j + 5\,\mathbf k$ 
+    \item  $6\,\mathbf i + 3\,\mathbf j - 5\,\mathbf k$ 
+    \item $-6\,\mathbf i + 2\,\mathbf j + 3\,\mathbf k$ 
+    \item $6\,\mathbf i + 2\,\mathbf j + 5\,\mathbf k$
+\end{enumerate}
+\end{multicols}
+
+\item The general solution of the differential equation is
+\begin{align*}
+\dfrac{d^2 y}{dx^2} - 3\dfrac{dy}{dx} - 4y = 0
+\end{align*}
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+  \item  $Ae^{x} + Be^{-4x}$
+  \item $Ae^{-x} + Be^{4x}$ 
+  \item $Ae^{x} + Be^{4x}$ 
+  \item $Ae^{-x} + Be^{-4x}$
+\end{enumerate}
+\end{multicols}
+
+\item Eigenvalues of the matrix $\myvec{2 & 1\\[2pt] 3 & 2}$ are\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+ \begin{enumerate}
+     \item  $\pm 2i$ 
+     \item  $2i\pm \sqrt{3}\,$
+     \item  $2 \pm i\sqrt3$
+     \item  $2 \pm \sqrt3$.
+ \end{enumerate}   
+\end{multicols}
+
+\item Poisson distribution having a mean of $5$ will have $\sqrt{5}$ as\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item  median 
+    \item mode
+    \item standard deviation
+    \item variance
+\end{enumerate}
+\end{multicols}
+
+\item During the testing of a spike-tooth type thresher for wheat crop, the throughput and the thresher capacity were found to be $750\,\mathrm{kg\,h^{-1}}$ and $445\,\mathrm{kg\,h^{-1}}$, respectively. The grain--straw ratio (grain:straw) of the crop is $1.5:1$. Material other than grain (MOG) collected at the main grain outlet is $0.5\%$. The total grain loss in percentage from all the sources will be\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.33
+    \item 0.50
+    \item 1.11
+    \item 1.61
+\end{enumerate}
+\end{multicols}
+
+\item The rear furrow wheel in a tractor mounted disc plough is provided to\
+
+\hfill(GATE EE 2025)
+
+\begin{enumerate}
+    \item reduce the frictional power loss 
+    \item maintain the uniform depth of cut
+    \item reduce the side draft 
+    \item improve the penetration of the plough.
+\end{enumerate}
+\item The cumulative discharge of a tractor mounted hydraulic sprayer having 7 nozzles is $2.0\,\mathrm{L\,min^{-1}}$ when the tractor is operated at $4\,\mathrm{km\,h^{-1}}$. If the nozzle spacing is $0.3\,\mathrm{m}$, the discharge in $\mathrm{L\,ha^{-1}}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1000.02
+    \item 285.72
+    \item 166.67
+    \item 142.86
+\end{enumerate}
+\end{multicols}
+
+\item A two-wheel drive tractor, while negotiating a terrain, indicates 100\% slip of one of the rear wheels. Under such a condition, the use of differential lock causes\
+
+\hfill(GATE EE 2025)
+
+\begin{enumerate}
+    \item equal speed and equal power distribution to both the drive wheels  
+    \item equal speed and equal torque distribution to both the drive wheels 
+    \item equal power and equal torque distribution to both the drive wheels 
+    \item equal speed and unequal power distribution to both the drive wheels.
+\end{enumerate}
+\vspace{0.3cm}
+\item A double acting hydraulic cylinder has a rod diameter equal to one-half the piston diameter. If the system pressure is maintained constant, the ratio of load carrying capacity of extension stroke to that of retraction stroke is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.75
+    \item 1.00
+    \item 1.33
+    \item 4.00
+\end{enumerate}
+\end{multicols}
+
+\item During a test, sound level was measured as $90\,\mathrm{dB}$ in the operator's cabin on a tractor. Taking reference sound pressure as $5\times10^{-2}\,\mathrm{N\,m^{-2}}$, the measured RMS sound pressure in $\mathrm{N\,m^{-2}}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $6.32$
+        \item $6.32\times10^{-1}$
+        \item $1.8\times10^{-3}$
+        \item $6.32\times10^{-10}$
+    \end{enumerate}
+\end{multicols}
+
+\item During land leveling of agricultural land for irrigation and drainage purposes, the acceptable deviation in elevation from the design value in metre is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.015
+    \item 0.025
+    \item 0.055
+    \item 0.150
+\end{enumerate}
+\end{multicols}
+
+\item The gridiron pipe drainage system is more economical than the herringbone pipe drainage system because\
+
+\hfill(GATE EE 2025)
+
+\begin{enumerate}
+     \item it is adopted in the fields which do not require complete drainage 
+     \item the number of main or sub-main lines is reduced 
+     \item the number of junctions and the double-drained area are reduced 
+     \item it has only main or sub-main lines.
+\end{enumerate}
+
+\item If the drainable porosity of a command area is 5\% and the design rate of drop of the water table is $0.25\,\mathrm{m\,day^{-1}}$, the drainage coefficient of the command area in $\mathrm{mm\,day^{-1}}$ will be 
+
+ \hfill(GATE EE 2025)
+ 
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 250
+        \item 12.5
+        \item 1.25
+        \item 0.0125
+    \end{enumerate}
+\end{multicols}
+\vspace{3cm}
+\item A soil has a void ratio of $0.75$ and a specific gravity of $2.66$. The value of critical hydraulic gradient at which quick sand condition will occur is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.95
+        \item 1.05
+        \item 2.09
+        \item 6.64
+    \end{enumerate}
+\end{multicols}
+
+\item The pressure that does not have any measurable influence on the void ratio or shearing resistance of the soil mass is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item pore water pressure
+    \item intergranular pressure 
+    \item capillary pressure 
+    \item  surcharge pressure.
+\end{enumerate}
+\end{multicols}
+
+\item The Rational method is used to estimate\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item runoff volume
+    \item peak runoff rate
+    \item runoff depth
+    \item direct surface runoff.
+\end{enumerate}
+\end{multicols} 
+
+\item Pan evaporation data recorded at a certain location over a period of one week are $4.0,\, 4.3,\, 4.6,\, 4.9,\, 5.12,\, 5.18,\, 6.21\,\mathrm{mm}$. If irrigation scheduling based on ratio of irrigation water (IW) to cumulative pan evaporation (CPE) is practiced, the depth of irrigation at an interval of a week for $\mathrm{IW/CPE}=0.9$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 3.60
+    \item 4.41
+    \item 5.59
+    \item 30.88
+\end{enumerate}
+\end{multicols}
+
+\item A $16\,\mathrm{m}$ high wind break is constructed to protect soil from wind erosion due to wind velocity of $18\,\mathrm{m\,s^{-1}}$ at $15\,\mathrm{m}$ height. The minimum wind velocity at $15\,\mathrm{m}$ height capable of moving the soil fraction is $8\,\mathrm{m\,s^{-1}}$. The angle of deviation of prevailing wind direction from the perpendicular to the wind break is $30^{\circ}$. The distance of full protection from the wind break in m is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 60.44
+    \item 104.69
+    \item 306.00
+    \item 530.01
+\end{enumerate}
+\end{multicols}
+
+\item Milk enters into the heating section of a high temperature short time (HTST) pasteurization plant at a temperature of $45^{\circ}\mathrm{C}$ and leaves at $72^{\circ}\mathrm{C}$. Hot water at temperature of $95^{\circ}\mathrm{C}$ enters counter-currently into the heat exchanger and leaves at $77^{\circ}\mathrm{C}$. The effectiveness of the heat exchanger is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.18
+    \item 0.36
+    \item 0.54
+    \item 0.84
+\end{enumerate}
+\end{multicols}
+
+\item The equation representing the heat of respiration ($q$) of fruits and vegetables as a function of temperature ($\theta$) with positive constants $a$ and $b$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $q = a e^{b\theta}$
+    \item $q = a e^{-b\theta}$
+    \item $q = aln(b\theta)$
+    \item $q = a + b\theta$.
+\end{enumerate}
+\end{multicols}
+
+\item For an initial spore load equal to 25 spores per container inoculated with \emph{Clostridium botulinum} having $D_{121}=0.25\,\mathrm{min}$, the spoilage probability of the container subjected to $F_{121}=1.5\,\mathrm{min}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $10^{-5}$ 
+    \item $10^{-6}$ 
+    \item $10^{-8}$ 
+    \item $10^{-9}$
+\end{enumerate}
+\end{multicols}
+
+\item Slope and intercept of the BET equation relating $[a_w/(1-a_w)]$ and $a_w$, where $a_w$ is water activity and $x$ is the moisture content on dry basis, are 18 and 2, respectively. The values of thermodynamic constant $C$ and BET monolayer moisture content $x_m$ (\%) are respectively\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 40 and 20 
+    \item 30 and 15 
+    \item 20 and 10 
+    \item 10 and 5
+\end{enumerate}
+\end{multicols}
+
+\item A cold storage chamber is constructed with 10 mm mortar, 200 mm brick, 100 mm insulation and 5 mm wood-board having thermal conductivities of 0.8, 1.5, 0.025 and $0.2\,\mathrm{W\,m^{-1}\,K^{-1}}$, respectively. The resistance of $4\,\mathrm{K\,m^2\,W^{-1}}$ is offered by\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item mortar 
+    \item brick 
+    \item insulation 
+    \item wood-board
+\end{enumerate}
+\end{multicols}
+
+\item The horse power of the motor running the compressor of a refrigerator having COP of 4.5 and extracting $200\,\mathrm{kJ\,kg^{-1}}$ of evaporating heat with $1.5\,\mathrm{kg\,min^{-1}}$ refrigerant flow rate is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.5
+    \item 1.0
+    \item 1.5
+    \item 2.0
+\end{enumerate}
+\end{multicols}
+
+
+\vspace{0.35em}
+\hrule
+\vspace{0.75cm}
+
+\item Given $f(x)= e^{-x^2}$ for $x=1.1,\,1.2,\,1.3,\,1.4,\ and\ 1.5$, evaluate $\displaystyle \int_{1.1}^{1.5} f(x)\,dx$ by Simpson's $\ 1/3$rd rule is \underline{\hspace{2.5cm}}
+
+\hfill(GATE EE 2025)
+
+\item A tractor operated single acting trailing type disc harrow has 8 discs on each gang. The gang angle of both the gangs is maintained at $35^{\circ}$. The horizontal component of resultant soil reaction force on each disc is $600\,\mathrm{N}$ and it makes an angle of $30^{\circ}$ with the gang axis. If the speed of operation is $6\,\mathrm{km\,h^{-1}}$, the required drawbar power in kW to operate the harrow will be \underline{\hspace{2.5cm}}. 
+
+\hfill(GATE EE 2025)
+
+\item A two-wheel drive tractor pulls an implement that has a draft force of $11.5\,\mathrm{kN}$. The total motion resistance of the tractor is $2.5\,\mathrm{kN}$. Under these circumstances, the slip of the drive wheels is 20\%. If the power loss in transmission is 20\%, the percentage of power lost in converting engine power into drawbar power is \underline{\hspace{2.5cm}}.
+
+\hfill(GATE EE 2025)
+
+\item An unconfined aquifer extends over an area of $1\,\mathrm{km^2}$ and has hydraulic conductivity, total porosity and specific retention of 20 m per day, 30\% and 10\%, respectively. After pumping some groundwater from this aquifer, the water table dropped to a depth of 20 m from the ground level. If the water table was initially at 14.5 m below the ground level, the change in groundwater storage in million cubic meters would be \underline{\hspace{2.5cm}}. 
+
+\hfill(GATE EE 2025)
+
+\item Two parallel canals 50 m apart fully penetrate a homogeneous unconfined aquifer resting on a horizontal impermeable layer. The aquifer has a hydraulic conductivity of $3\,\mathrm{m\,day^{-1}}$ and an effective porosity of $0.25$. One-dimensional steady groundwater flow occurs from the upper canal to the lower canal with the height of water levels in the canals 10 m and 8.5 m from the aquifer bottom, respectively. If a sediment layer of 4 cm thick with hydraulic conductivity of $1.2\times10^{-2}\,\mathrm{m\,day^{-1}}$ is ultimately deposited on the inflow face, the groundwater discharge per 1000 m width between the two canals in $\mathrm{m^{3}\,day^{-1}}$ will be \underline{\hspace{2.5cm}}. 
+
+\hfill(GATE EE 2025)
+
+\item The overall heat transfer coefficient based on the outside surface area of a tubular heat exchanger decreased due to fouling during operation from $1000\,\mathrm{W\,m^{-2}\,K^{-1}}$ to $800\,\mathrm{W\,m^{-2}\,K^{-1}}$. The fouling film coefficient of the heat exchanger in $\mathrm{W\,m^{-2}\,K^{-1}}$ is \underline{\hspace{2.5cm}}. 
+
+\hfill(GATE EE 2025)
+
+\item A high pressure dairy homogenizer operates under upstream and downstream pressures of 200 and 40 bar respectively homogenizing 30 L of whole milk per hour. Density and specific heat capacity of whole milk are $1030\,\mathrm{kg\,m^{-3}}$ and $3.8\,\mathrm{kJ\,kg^{-1}\,K^{-1}}$, respectively. Assuming complete energy conservation, the temperature rise of whole milk in $^{\circ}\mathrm{C}$ is \underline{\hspace{2.5cm}}.
+
+\hfill(GATE EE 2025)
+
+\item A fish fillet of 5 mm thickness having 85\% moisture (wet basis) is to be frozen using a plate freezer. The plates are at $-35^{\circ}\mathrm{C}$ and the heat transfer coefficient between the fillet and the freezer plates can be assumed to be $2.0\,\mathrm{W\,m^{-2}\,K^{-1}}$. The initial freezing temperature of fish is $-2.5^{\circ}\mathrm{C}$, latent heat of fusion is $330\,\mathrm{kJ\,kg^{-1}}$, density of fish is $1100\,\mathrm{kg\,m^{-3}}$ and thermal conductivity of frozen fish is $1.5\,\mathrm{W\,m^{-1}\,K^{-1}}$. The time required to freeze the fillet from the initial freezing temperature in hour(s) is \underline{\hspace{2.5cm}}.
+
+\hfill(GATE EE 2025)
+
+\vspace{0.75cm}
+\item Box 1 contains 15 balls out of which 3 are red. Box 2 contains 12 balls out of which 4 are red. If one ball is drawn at random from each box simultaneously, the probability of getting at least one red ball is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.07
+    \item 0.47
+    \item 0.53
+    \item 0.75
+\end{enumerate}
+\end{multicols}
+
+\item A hemispherical vessel of 300 mm diameter is completely filled with oil and water. If the oil layer is 50 mm deep on the top, the volume of water in the vessel in litres is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1.27
+    \item 3.73
+    \item 7.07
+    \item 14.14
+\end{enumerate}
+\end{multicols}
+
+\item A tractor mounted off-set type reciprocating mower is driven by the PTO shaft. The maximum inertia force of $3.2\,\mathrm{kN}$ occurs along the pitman at $32^{\circ}$ crank angle and $27^{\circ}$ pitman angle with the horizontal plane. The knives of the cutterbar are riveted to the slider. If each of the allowable tensile and compressive stresses of the slider material is $50\,\mathrm{MPa}$, the minimum cross-sectional area of the slider in $\mathrm{mm^{2}}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 29.05
+    \item 33.91
+    \item 54.27
+    \item 57.02
+\end{enumerate}
+\end{multicols}
+
+\item The flywheel of a hand operated chaff cutter with two cutting knives is rotated at 30 rpm and is connected to a worm gear assembly for driving the feed rollers. The number of teeth of the worm gear is 24 and number of starts (threads) of the worm is 2. If diameter of each of the feed rollers is 15 cm, the chaff length in mm will be\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 9.8
+    \item 12.8
+    \item 19.6
+    \item 39.2
+\end{enumerate}
+\end{multicols}
+
+\item A piston pump is driven by a 5 m diameter horizontal axis wind turbine for supplying water from a borehole with a total pump head of 10 m. The mean velocity of air is $18\,\mathrm{km\,h^{-1}}$ and the density of air is $1.29\,\mathrm{kg\,m^{-3}}$. The actual power coefficient of the wind turbine is 0.30 and the overall pump efficiency is 60\%. Neglecting the transmission losses, the expected pump discharge in $\mathrm{L\,s^{-1}}$ will be\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 2.90
+    \item 5.80 
+    \item 28.50
+    \item 32.27
+\end{enumerate}
+\end{multicols}
+
+\item A 4-cylinder, 4-stroke compression ignition engine has piston stroke of 10.5 cm and cylinder bore of 11 cm. At a mean piston speed of $7\,\mathrm{m\,s^{-1}}$, the developed brake mean effective pressure is $650\,\mathrm{kPa}$. The brake power in kW developed by the engine is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 39.40
+    \item 43.24
+    \item 86.48
+    \item 172.96
+\end{enumerate}
+\end{multicols}
+
+\item A centrifugal pump having an overall efficiency of 75\% requires 6 kW power at 1450 rpm to deliver water against a suction head of 5 m and a delivery head of 12 m. If the pump runs at 1650 rpm and frictional head losses are negligible, the total head developed by the pump in metres will be\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 22.01
+    \item 25.05
+    \item 29.35
+    \item 31.72
+\end{enumerate}
+\end{multicols}
+
+\item A 100 ha watershed received rainfall at a rate of $5\,\mathrm{cm\,h^{-1}}$ for 2 hours. If the runoff generated by the storm was at the rate of $1\,\mathrm{m^{3}\,s^{-1}}$ for 10 hours, the runoff coefficient for the watershed would be\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $3.6\times10^{-3}$ 
+    \item $6.0\times10^{-2}$
+    \item $ 0.36 $
+    \item 36
+\end{enumerate}
+\end{multicols}
+
+\item A 10 ha field has 1.2 m deep layer of sandy loam soil underlain by sandy soil up to a depth of 5 m. A pre-irrigation rainfall brings moisture content of the top 0.3 m layer to its field capacity. The moisture content of rest of the sandy loam layer remains at permanent wilting point. The volumetric moisture content at field capacity and permanent wilting point are 32 and 16\%, respectively for the sandy loam soil. The field is irrigated with a stream size of 240 L s$^{-1}$ for 24 hours. Considering the drainage from the sandy loam soil as deep percolation, application efficiency and deep percolation ratio in percent respectively are\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item  56.40 and 43.60
+    \item  69.44 and 30.56
+    \item  75.18 and 24.82
+    \item  92.60 and 7.40
+\end{enumerate}
+\end{multicols}
+
+\item A watershed, with an area of $360\,\mathrm{km^2}$, has a triangular shaped 4-h unit hydrograph with a base of 50 hours. The peak discharge of direct runoff hydrograph due to 3 cm of rainfall-excess in 4 hours from the watershed in $\mathrm{m^3\,s^{-1}}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 13.33
+    \item 40.00
+    \item 120.00
+    \item 160.00
+\end{enumerate}
+\end{multicols}
+
+\item A rotary dryer is used to dry $1200\,\mathrm{kg\,h^{-1}}$ of paddy containing 30\% moisture (wet basis) to give a product containing 15\% moisture (wet basis). Alternately, a portion of the dry product may be recycled and mixed with the fresh feed such that the mixed feed enters the dryer with moisture content of 20\% (wet basis). The moisture evaporation rate without recycle and the paddy recycle rate in $\mathrm{kg\,h^{-1}}$ respectively in the dryer are\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item 211.76 and 2400
+        \item 211.76 and 600 
+        \item 256.5 and 2400 
+        \item 256.5 and 600
+    \end{enumerate}
+\end{multicols}
+
+\item The work index of a material is 6.25. If 80\% of the feed and 80\% of the product pass through IS Sieve No. 340 (3.25 mm opening) and IS Sieve No. 40 (0.42 mm opening), respectively, the power consumed in kW to crush $5000\,\mathrm{kg\,h^{-1}}$ of sorghum is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 9.77
+        \item 20.49
+        \item 26.29
+        \item 32.29
+    \end{enumerate}
+\end{multicols}
+
+\item In a screen separator, the mass flow rates of feed, overflow and underflow are 150, 140 and $10\,\mathrm{kg\,h^{-1}}$, respectively. Mass fraction of material in the feed and overflow are 0.9 and 0.96, respectively. The effectiveness of separation in percentage is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 32
+        \item 42
+        \item 52
+        \item 62
+    \end{enumerate}
+\end{multicols}
+
+\item A milk fat globule of $2\,\mu\mathrm{m}$ diameter is rising in whole milk of density $1030\,\mathrm{kg\,m^{-3}}$ and coefficient of viscosity $10^{-3}$ Poise. If the fat density is $950\,\mathrm{kg\,m^{-3}}$, the time needed to rise 10 mm for this fat globule in min is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.57
+        \item 34.57
+        \item 35.57
+        \item 95.57
+    \end{enumerate}
+\end{multicols}
+
+ A $9\times20\,\mathrm{cm}$ fluted roller type seed drill is operated at a forward speed of $3\,\mathrm{km\,h^{-1}}$ in a field of size $120\,\mathrm{m} \times 90\,\mathrm{m}$. The effective ground wheel diameter of the seed drill is $0.5\,\mathrm{m}$ and the ratio of ground wheel rpm to the fluted roller rpm is 2. For one complete rotation of each fluted roller, $6.8\,\mathrm{g}$ seed is transferred from the seed box to the seed tube. The average time taken for each turn while operating length-wise is 50 s and the total time wasted in refilling the seed box for sowing the entire field is 40 min
+\item The seed rate in $\mathrm{kg\,ha^{-1}}$ will be\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 108.32
+        \item 122.55
+        \item 136.99
+        \item 240.71
+    \end{enumerate}
+\end{multicols}
+
+\item The actual field capacity of the machine in $\mathrm{ha\,h^{-1}}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.30
+        \item 0.32
+        \item 0.36
+        \item 0.40
+    \end{enumerate}
+\end{multicols}
+
+
+Specific heat capacity of dry air and water vapour are 1.005 and $1.88\,\mathrm{kJ\,kg^{-1}\,K^{-1}}$, respectively. In an energy conserving system, $1\,\mathrm{kg\,s^{-1}}$ air at $30^{\circ}\mathrm{C}$ with constant absolute humidity of $0.02\,\mathrm{kg\,water\,(kg\,dry\,air)^{-1}}$ is heated up to $65^{\circ}\mathrm{C}$. Water at the wet bulb temperature of air is then sprayed into the air so that the final temperature of the air--water vapour mixture is $40^{\circ}\mathrm{C}$. Latent heat of vaporization of water at $70^{\circ}\mathrm{C}$ and $40^{\circ}\mathrm{C}$ are 2334 and $2407\,\mathrm{kJ\,kg^{-1}}$, respectively.
+
+\item The thermal energy supplied per second during heating in kW is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 18.2
+        \item 36.5
+        \item 101.0
+        \item 166.8
+    \end{enumerate}
+\end{multicols}
+\vspace{3cm}
+\item The absolute humidity of the exhaust air from the spray chamber in kg water (kg dry air)$^{-1}$ is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.027
+        \item 0.029
+        \item 0.031
+        \item 0.033
+    \end{enumerate}
+\end{multicols}
+
+
+A two-wheel drive tractor weighing 21 kN has a wheel base of 2.1 m. The CG of the tractor is 0.7 m ahead of rear axle centre. The tractor is pulling a single-axle trailer with gross trailer weight of 50 kN on a leveled concrete road while maintaining the line of pull parallel to the ground surface. The tractor hitch point is 42 cm behind the rear axle centre and 52.5 cm above the ground surface. During operation, 20\% of the gross trailer weight is transferred to the tractor hitch point. If the coefficient of rolling resistance for each of the tractor and trailer wheels is taken as 0.04, and their ground reactions are assumed to pass through their respective wheel centres,
+
+\item the dynamic ground reaction against the tractor rear wheels in kN is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 14.0
+        \item 24.0
+        \item 24.5
+        \item 26.4
+    \end{enumerate}
+\end{multicols}
+
+\item the gross traction ratio developed by the tractor is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.061
+    \item 0.082
+    \item 0.108
+    \item 0.123
+\end{enumerate}
+\end{multicols}
+
+In an experimental setup, the discharge through a triangular notch is $0.0074\,\mathrm{m^{3}\,s^{-1}}$ at an operating head of $0.1\,\mathrm{m}$. The coefficient of discharge for the notch is 0.7. If the required discharge is $0.1\,\mathrm{m^{3}\,s^{-1}}$,
+
+\item the corresponding head in m is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.00015
+        \item 0.035
+        \item 0.283
+        \item 67.13
+    \end{enumerate}
+\end{multicols}
+
+\item the corresponding width of water surface in m is\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.80
+        \item 0.099
+        \item 0.00043
+        \item 0.00086
+    \end{enumerate}
+\end{multicols}
+
+\item If $3\le X\le 5$ and $8\le Y\le 11$ then which of the following options is TRUE?\
+
+\hfill(GATE EE 2025)
+
+    \begin{enumerate}
+        \item $\tfrac{3}{5}\;\le \tfrac{X}{Y}\le\;\tfrac{8}{5}$ 
+        \item $\tfrac{3}{11}\;\le \tfrac{X}{Y}\le\tfrac{5}{8}
+        $ 
+        \item $\tfrac{3}{11}\le \tfrac{X}{Y}\le\ \tfrac{8}{5}$ 
+        \item $\tfrac{3}{5}\le \tfrac{X}{Y}\le \tfrac{8}{11}$
+    \end{enumerate}
+
+\item The Headmaster \rule{2cm}{0.15mm} to speak to you.\\
+Which of the following options is incorrect to complete the above sentence?\
+
+\hfill(GATE EE 2025)
+
+\begin{enumerate}
+    \item is wanting 
+    \item wants 
+    \item want
+    \item was wanting
+\end{enumerate}
+
+\item Mahatama Gandhi was known for his humility as\
+
+\hfill(GATE EE 2025)
+
+\begin{enumerate}
+    \item he played an important role in humiliating exit of British from India.
+    \item he worked for humanitarian causes.
+    \item he displayed modesty in his interactions.
+    \item he was a fine human being.
+\end{enumerate}
+
+\item All engineering students should learn mechanics, mathematics and how to do computation.\
+\emph{I\quad\quad\quad\; II\quad\quad\quad\; III\quad\quad\quad\; IV}\\
+Which of the above underlined parts of the sentence is not appropriate?\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item I
+    \item II
+    \item III
+    \item IV
+\end{enumerate}
+\end{multicols}
+
+\item Select the pair that best expresses a relationship similar to that expressed in the pair:\\
+\emph{water: pipe::}\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item cart: road
+        \item electricity: wire
+        \item sea: beach 
+        \item music: instrument
+    \end{enumerate}
+\end{multicols}
+
+\item Velocity of an object fired directly in upward direction is given by $V=80-32t$, where $t$ (time) is in seconds. When will the velocity be between $32\,\mathrm{m\,s^{-1}}$ and $64\,\mathrm{m\,s^{-1}}$?\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $(1,3/2)$ 
+        \item $(1/2,1)$
+        \item $(1/2,3/2)$
+        \item $(1,3)$
+    \end{enumerate}
+\end{multicols}
+
+\item In a factory, two machines $M_1$ and $M_2$ manufacture 60\% and 40\% of the autocomponents respectively. Out of the total production, 2\% of $M_1$ and 3\% of $M_2$ are found to be defective. If a randomly drawn autocomponent from the combined lot is found defective, what is the probability that it was manufactured by $M_2$?\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 0.35
+        \item 0.45
+        \item 0.5
+        \item 0.4
+    \end{enumerate}
+\end{multicols}
+
+\item Following table gives data on tourists from different countries visiting India in the year 2011.\\
+\begin{tabular}{lc}
+\toprule
+Country & Number of Tourists \\
+\midrule
+USA & 2000 \\
+England & 3500 \\
+Germany & 1200 \\
+Italy & 1100 \\
+Japan & 2400 \\
+Australia & 2300 \\
+France & 1000 \\
+\bottomrule
+\end{tabular}\\
+Which two countries contributed to the one third of the total number of tourists who visited India in 2011?\
+\hfill(GATE EE 2025)
+\begin{enumerate}
+    \item USA and Japan 
+    \item USA and Australia
+    \item England and France 
+    \item Japan and Australia
+\end{enumerate}
+
+\item If $|{-}2X+9|=3$ then the possible value of $|{-}X|-X^2$ would be:\
+
+\hfill(GATE EE 2025)
+
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 30
+        \item $-30$
+        \item $-42$
+        \item 42
+    \end{enumerate}
+\end{multicols}
+
+\item All professors are researchers\\ Some scientists are professors\\
+Which of the given conclusions is logically valid and is inferred from the above arguments:\
+
+\hfill(GATE EE 2025)
+
+\begin{enumerate}
+    \item All scientists are researchers 
+    \item All professors are scientists 
+    \item Some researchers are scientists 
+    \item No conclusion follows
+\end{enumerate}
+\end{enumerate}
+
+\vfill
+\begin{center}
+\textbf{END OF THE QUESTION PAPER}
+\end{center}
+
+\end{document}

@@ -1,0 +1,1002 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc} 
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{xparse}
+\usepackage{color}                        
+\usepackage{array}                                            
+\usepackage{longtable}                                    
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}         
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\usepackage{float}
+%\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\title{GATE 2024 Data Science and Artificial Intelligence (DA)}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{General Aptitude (GA) Questions}
+\begin{enumerate}
+\item If `$\rightarrow$' denotes increasing order of intensity, then the meaning of the words \sbrak{\text{sick $\rightarrow$ infirm $\rightarrow$ moribund}} is analogous to [silly $\rightarrow$ \rule{2cm}{0.5mm} $\rightarrow$ daft]. Which one of the given options is appropriate to fill the blank?
+\begin{enumerate}
+\begin{multicols}{4}
+\item frown
+\item fawn
+\item vein
+\item vain
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item The 15 parts of the given figure are to be painted such that no two adjacent parts with shared boundaries (excluding corners) have the same color. The minimum number of colors required is  \rule{2cm}{0.5mm}.
+\begin{enumerate}
+\begin{multicols}{4}
+\item 4
+\item 3
+\item 5
+\item 6
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item How many 4-digit positive integers divisible by 3 can be formed using only the digits \cbrak{1, 3, 4, 6, 7}, such that no digit appears more than once in a number?
+\begin{enumerate}
+\begin{multicols}{4}
+\item 24
+\item 48
+\item 72
+\item 12
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item The sum of the following infinite series is $2+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{8}+\frac{1}{9}+\frac{1}{16}+\frac{1}{27}+\dots$
+\begin{enumerate}
+\begin{multicols}{4}
+\item $11/3$
+\item $7/2$
+\item $13/4$
+\item $9/2$
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item In an election, the share of valid votes received by the four candidates A, B, C, and D is represented by the pie chart shown. The total number of votes cast in the election were $1,15,000$, out of which 5,000 were invalid.
+\begin{align*}
+\text{Share of valid votes: A 40\%, B 25\%, C 20\%, D 15\%}
+\end{align*}
+Based on the data provided, the total number of valid votes received by the candidates B and C is  \rule{2cm}{0.5mm}.
+\begin{enumerate}
+\begin{multicols}{4}
+\item 45,000
+\item 49,500
+\item 51,750
+\item 54,000
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Thousands of years ago, some people began dairy farming. This coincided with a number of mutations in a particular gene that resulted in these people developing the ability to digest dairy milk.
+Based on the given passage, which of the following can be inferred?
+\begin{enumerate}
+\item All human beings can digest dairy milk.
+\item No human being can digest dairy milk.
+\item Digestion of dairy milk is essential for human beings.
+\item In human beings, digestion of dairy milk resulted from a mutated gene.
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item The probability of a boy or a girl being born is $1/2$. For a family having only three children, what is the probability of having two girls and one boy?
+\begin{enumerate}
+\begin{multicols}{4}
+\item 3/8
+\item $1/8$
+\item $1/4$
+\item $1/2$
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+\noindent Person 1 and Person 2 invest in three mutual funds A, B, and C. The amounts they invest in each of these mutual funds are given in the table below.
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hhline{~---}
+\multicolumn{1}{c|}{} & \textbf{Mutual fund A} & \textbf{Mutual fund B} & \textbf{Mutual fund C} \\ 
+\hhline{----}
+\textbf{Person 1} & \$20,000 & \$20,000 & \$10,000 \\ 
+\hhline{----}
+\textbf{Person 2} & \$20,000 & \$15,000 & \$15,000 \\ 
+\hhline{----}
+\end{tabular} 
+\end{center}
+
+
+\item  At the end of one year, the total amount that Person 1 gets is $\$500$ more than Person 2. The annual rate of return for the mutual funds B and C is 15\% each. What is the annual rate of return for the mutual fund A?
+\begin{multicols}{4}
+  \begin{enumerate}
+\item $7.5\%$
+\item $10\%$
+\item $15\%$
+\item $ 20\%$
+\end{enumerate}  
+\end{multicols}
+
+\hfill (GATE 2024 DA)
+
+
+\item Three different views of a dice are shown in the figure below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\columnwidth]{figs/fig1.png}
+    \caption{for q-9}
+    \label{fig:placeholder}
+\end{figure}
+The piece of paper that can be folded to make this dice is \_\_\_\_\_.
+\begin{enumerate}
+\begin{multicols}{2}
+\item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\columnwidth]{figs/fig2.png}
+    \caption{option a for q-9}
+    \label{fig:placeholder}
+\end{figure}
+\item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\columnwidth]{figs/fig3.png}
+    \caption{option b for q-9}
+    \label{fig:placeholder}
+\end{figure}
+\item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\columnwidth]{figs/fig4.png}
+    \caption{option c for q-9}
+    \label{fig:placeholder}
+\end{figure}
+\item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\columnwidth]{figs/fig5.png}
+    \caption{option d for q-9}
+    \label{fig:placeholder}
+\end{figure}
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+\item Visualize two identical right circular cones such that one is inverted over the other and they share a common circular base. If a cutting plane passes through the vertices of the assembled cones, what shape does the outer boundary of the resulting cross-section make?
+\begin{enumerate}
+\begin{multicols}{4}
+\item A rhombus
+\item A triangle
+\item An ellipse
+\item A hexagon
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+\end{enumerate}
+
+\hrulefill
+
+\textbf{Data Science and Artificial Intelligence (DA) Questions}
+\begin{enumerate}[resume]
+
+
+\item Consider the following statements:
+\begin{enumerate}[label=(\roman*)]
+    \item The mean and variance of a Poisson random variable are equal.
+    \item For a standard normal random variable, the mean is zero and the variance is one.
+\end{enumerate}
+
+Which ONE of the following options is correct?
+\begin{enumerate}
+\item Both (i) and (ii) are true
+\item (i) is true and (ii) is false
+\item (ii) is true and (i) is false
+\item Both (i) and (ii) are false
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Three fair coins are tossed independently. T is the event that two or more tosses result in heads. S is the event that two or more tosses result in tails. What is the probability of the event T $\cap$ S?
+\begin{enumerate}
+\begin{multicols}{4}
+\item 0
+\item 0.5
+\item 0.25
+\item 1
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the matrix $
+\myvec{2 & -1 \\
+3 & 1}
+$.
+Which ONE of the following statements is TRUE?
+\begin{enumerate}
+\item The eigenvalues of M are non-negative and real.
+\item The eigenvalues of M are complex conjugate pairs.
+\item One eigenvalue of M is positive and real, and another eigenvalue of M is zero.
+\item One eigenvalue of M is non-negative and real, and another eigenvalue of M is negative and real.
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider performing depth-first search (DFS) on an undirected and unweighted graph G starting at vertex s. For any vertex u in G, $d[u]$ is the length of the shortest path from s to u. Let (u, v) be an edge in G such that $d[u] < d[v]$. If the edge (u, v) is explored first in the direction from u to v during the above DFS, then (u, v) becomes a  \rule{2cm}{0.5mm} edge.
+\begin{enumerate}
+\begin{multicols}{4}
+\item tree
+\item cross
+\item back
+\item gray
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item For any twice differentiable function $f: \mathbb{R} \to \mathbb{R}$, if at some $x^* \in \mathbb{R}$, $f'(x^*) = 0$ and $f''(x^*) > 0$, then the function $f$ necessarily has a  \rule{2cm}{0.5mm} at $x = x^*$.
+Note: $\mathbb{R}$ denotes the set of real numbers.
+\begin{enumerate}
+\begin{multicols}{4}
+\item local minimum
+\item global minimum
+\item local maximum
+\item global maximum
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Match the items in Column 1 with the items in Column 2 in the following table:
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Column 1} & \textbf{Column 2} \\
+(p) First In First Out & (i) Stacks \\
+(q) Lookup Operation & (ii) Queues \\
+(r) Last In First Out & (iii) Hash Tables \\
+\end{tabular}
+\end{center}
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item (p) - (ii), (q) - (iii), (r) - (i)
+\item (p) - (ii), (q) - (i), (r) - (iii)
+\item (p) - (i), (q) - (ii), (r) - (iii)
+\item (p) - (i)
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the dataset with six datapoints: $\{(\boldsymbol{x}_1, y_1), (\boldsymbol{x}_2,y_2),\dots , (\boldsymbol{x}_6,y_6)\}$, where $\boldsymbol{x}_1 = [1 \quad 0]^T$, $\boldsymbol{x}_2 = [0 \quad 1]^T$, $\boldsymbol{x}_3 = [0 \quad -1]^T$ , $\boldsymbol{x}_4 = [-1 \quad 0]^T$, $\boldsymbol{x}_5 = [2 \quad 2]^T$ , $\boldsymbol{x}_6 = [-2 \quad -2]^T$ and the labels are given by $y_1 = y_2 = y_5 = 1$, and $y_3 = y_4 = y_6 = -1$. A hard margin linear support vector machine is trained on the above dataset. Which ONE of the following sets is a possible set of support vectors?
+\begin{multicols}{4}
+\begin{enumerate}
+
+\item $\{\boldsymbol{x}_1, \boldsymbol{x}_2, \boldsymbol{x}_5\}$
+\item $\{\boldsymbol{x}_3, \boldsymbol{x}_4, \boldsymbol{x}_5\}$
+\item $\{\boldsymbol{x}_4, \boldsymbol{x}_5\}$
+\item $\{\boldsymbol{x}_1, \boldsymbol{x}_2, \boldsymbol{x}_3, \boldsymbol{x}_4\}$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Match the items in Column 1 with the items in Column 2 in the following table:
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Column 1} & \textbf{Column 2} \\
+(p) Principal Component Analysis & (i) Discriminative Model \\
+(q) Naive Bayes Classification & (ii) Dimensionality Reduction \\
+(r) Logistic Regression & (iii) Generative Model \\
+\end{tabular}
+\end{center}
+\begin{multicols}{2}
+\begin{enumerate}
+\item (p) - (iii), (q) - (i), (r) - (ii)
+\item (p) - (ii), (q) - (i), (r) - (iii)
+\item (p) - (ii), (q) - (iii), (r) - (i)
+\item (p) - (iii), (q) - (ii), (r) - (i)
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Euclidean distance based k-means clustering alogorithm was run on a dataset of 100 points with k=3 .If the points $\myvec{1 \\ 1}$ and $\myvec{-1 \\ 1}$ are both part of cluster 3,then which one of the following point is neccesarily also part of cluster 3 ?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\myvec{0 \\ 0}$
+\item $\myvec{0 \\ 2}$
+\item $\myvec{2 \\ 0}$
+\item $\myvec{0 \\ 1}$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Given a dataset with $K$ binary-valued attributes (where $K > 2$) for a two-class classification task, the number of parameters to be estimated for learning a naïve Bayes classifier is  \rule{2cm}{0.5mm}.
+\begin{multicols}{4}
+\begin{enumerate}
+\item $2K + 1$
+\item $2K + 1$
+\item $2K+1 + 1$
+\item $K^2 + 1$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider performing uniform hashing on an open address hash table with load factor $\alpha = n/m < 1$, where $n$ elements are stored in the table with $m$ slots. The expected number of probes in an unsuccessful search is at most $\frac{1}{1-\alpha}$. Inserting an element in this hash table requires at most  \rule{2cm}{0.5mm} probes, on average.
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\ln ( \frac{1}{1-\alpha} )$
+\item $\frac{1}{1 - \alpha}$
+\item $1 + \frac{\alpha}{2}$
+\item $\frac{1}{1 + \alpha}$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item For any binary classification dataset, let $S_B \in \mathbb{R}^{d \times d}$ and $S_W \in \mathbb{R}^{d \times d}$ be the between-class and within-class scatter (covariance) matrices, respectively. The Fisher linear discriminant is defined by $u^* \in \mathbb{R}^d$, that maximizes $J(u) = \frac{u^T S_B u}{u^T S_W u}$. If $\lambda = J(u^*)$, $S_W$ is non-singular and $S_B \neq 0$, then $(u^*, \lambda)$ must satisfy which ONE of the following equations?
+Note: $\mathbb{R}$ denotes the set of real numbers.
+\begin{multicols}{4}
+\begin{enumerate}
+\item $S_W^{-1} S_B u^* = \lambda u^*$
+\item $S_W u^* = \lambda S_B u^*$
+\item $S_B S_W u^* = \lambda u^*$
+\item $u^{*T} u^* = \lambda^2$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $h_1$ and $h_2$ be two admissible heuristics used in $A^*$ search. Which ONE of the following expressions is always an admissible heuristic?
+\begin{enumerate}
+\begin{multicols}{4}
+\item $h_1 + h_2$
+\item $h_1 \times h_2$
+\item $h_1/h_2, (h_2 \neq 0)$
+\item $|h_1 - h_2|$
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider five random variables $U, V, W, X$, and $Y$ whose joint distribution satisfies:
+$P(U, V, W, X, Y) = P(U)P(V)P(W|U, V)P(X|W)P(Y|W)$.
+Which ONE of the following statements is FALSE?
+\begin{enumerate}
+\item $Y$ is conditionally independent of $V$ given $W$
+\item $X$ is conditionally independent of $U$ given $W$
+\item $U$ and $V$ are conditionally independent given $W$
+\item $Y$ and $X$ are conditionally independent given $W$
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the following statement: In adversarial search, $\alpha-\beta$ pruning can be applied to game trees of any depth where $\alpha$ is the (m)  \rule{2cm}{0.5mm} value choice we have formed so far at any choice point along the path for the MAX player and $\beta$ is the (n)  \rule{2cm}{0.5mm} value choice we have formed so far at any choice point along the path for the MIN player. Which ONE of the following choices of (m) and (n) makes the above statement valid?
+\begin{multicols}{2}
+\begin{enumerate}
+\item (m) = highest, (n) = highest
+\item (m) = lowest, (n) = highest
+\item (m) = highest, (n) = lowest
+\item (m) = lowest, (n) = lowest
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider a database that includes the following relations:
+Defender(name, rating, side, goals) \\
+Forward(name, rating, assists, goals) \\
+Team(name, club, price) \\
+Which ONE of the following relational algebra expressions checks that every name occurring in Team appears in either Defender or Forward, where $\phi$ denotes the empty set?
+\begin{enumerate}
+\item $\Pi_{name} (\text{Team}) \setminus (\Pi_{name} (\text{Defender}) \cap \Pi_{name} (\text{Forward})) = \phi$
+\item $(\Pi_{name} (\text{Defender}) \cap \Pi_{name} (\text{Forward})) \setminus \Pi_{name} (\text{Team}) = \phi$
+\item $\Pi_{name} (\text{Team}) \setminus (\Pi_{name} (\text{Defender}) \cup \Pi_{name} (\text{Forward})) = \phi$
+\item $(\Pi_{name} (\text{Defender}) \cup \Pi_{name} (\text{Forward})) \setminus \Pi_{name} (\text{Team}) = \phi$
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let the minimum, maximum, mean and standard deviation values for the attribute income of data scientists be \$46000, \$170000, \$96000, and \$21000, respectively. The z-score normalized income value of \$106000 is closest to which ONE of the following options?
+\begin{enumerate}
+\begin{multicols}{4}
+\item 0.217
+\item 0.476
+\item 0.623
+\item 2.304
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the following tree traversals on a full binary tree:
+(i) Preorder (ii) Inorder (iii) Postorder
+Which of the following traversal options is/are sufficient to uniquely reconstruct the full binary tree?
+\begin{multicols}{4}
+\begin{enumerate}
+\item (i) and (ii)
+\item (ii) and (iii)
+\item (i) and (iii)
+\item (ii) only
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $x$ and $y$ be two propositions. Which of the following statements is a tautology /are tautologies?
+\begin{multicols}{2}
+\begin{enumerate}
+\item $(\neg x \land y ) \implies (y \implies x)$
+\item $(x \land \neg y ) \implies (\neg x \implies y)$
+\item $(\neg x \land y ) \implies (\neg x \implies y)$
+\item $(x \land \neg y ) \implies (y \implies x)$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider sorting the following array of integers in ascending order using an in-place Quicksort algorithm that uses the last element as the pivot.
+[60 70 80 90 100]
+The minimum number of swaps performed during this Quicksort is \_\_\_\_\_\_.
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\itemConsider the following two tables named Raider and Team in a relational database maintained by a Kabaddi league. The attribute ID in table Team references the primary key of the Raider table, ID.
+\begin{center}
+\begin{tabular}{|c|l|c|c|}
+\hline
+\multicolumn{4}{|c|}{\textbf{Raider}} \\
+\hline
+\textbf{ID} & \textbf{Name} & \textbf{Raids} & \textbf{RaidPoints} \\
+\hline
+1 & Arjun & 200 & 250 \\
+2 & Ankush & 190 & 219 \\
+3 & Sunil & 150 & 200 \\
+4 & Reza & 150 & 190 \\
+5 & Pratham & 175 & 220 \\
+6 & Gopal & 193 & 215 \\
+\hline
+\end{tabular}
+\quad
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Team}} \\
+\hline
+\textbf{City} & \textbf{ID} & \textbf{BidPoints} \\
+\hline
+Jaipur & 2 & 200 \\
+Patna & 3 & 195 \\
+Hyderabad & 5 & 175 \\
+Jaipur & 1 & 250 \\
+Patna & 4 & 200 \\
+Jaipur & 6 & 200 \\
+\hline
+\end{tabular}
+\end{center}
+The SQL query described below is executed on this database:
+\begin{lstlisting}[language=SQL]
+SELECT *
+FROM Raider, Team
+WHERE Raider.ID=Team.ID AND City="Jaipur" AND RaidPoints > 200;
+\end{lstlisting}
+The number of rows returned by this query is \_\_\_\_\_\_.
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item fundamental operations in a double-ended queue D are:
+\begin{itemize}
+    \item \texttt{insertFirst(e)} -- Insert a new element e at the beginning of D.
+    \item \texttt{insertLast(e)} -- Insert a new element e at the end of D.
+    \item \texttt{removeFirst()} -- Remove and return the first element of D.
+    \item \texttt{removeLast()} -- Remove and return the last element of D.
+\end{itemize}
+In an empty double-ended queue, the following operations are performed:
+\begin{lstlisting}
+insertFirst(10)
+insertLast(32)
+a <- removeFirst()
+insertLast(28)
+insertLast(17)
+a <- removeFirst()
+a <- removeLast()
+\end{lstlisting}
+The value of a is  \rule{2cm}{0.5mm}.
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $f: \mathbb{R} \to \mathbb{R}$ be the function $f(x) = \frac{1}{1+e^{-x}}$.
+The value of the derivative of $f$ at $x$ where $f(x) = 0.4$ is  \rule{2cm}{0.5mm} (rounded off to two decimal places).
+Note: $\mathbb{R}$ denotes the set of real numbers.
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $f: \mathbb{R} \to \mathbb{R}$ be the function $f(x) = \frac{1}{1+e^{-x}}$.
+The value of the derivative of $f$ at $x$ where $f(x) = 0.4$ is  \rule{2cm}{0.5mm} (rounded off to two decimal places).
+Note: $\mathbb{R}$ denotes the set of real numbers.
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item The sample average of 50 data points is 40. The updated sample average after including a new data point taking the value of 142 is  \rule{2cm}{0.5mm}.
+
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the 3 $\times$ 3 matrix $M = \myvec{ 1 & 2 & 3 \\ 3 & 1 & 3 \\ 4 & 3 & 6}$.
+The determinant of $\brak{M^2 + 12M}$ is  \rule{2cm}{0.5mm}.
+
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item A fair six-sided die (with faces numbered 1, 2, 3, 4, 5, 6) is repeatedly thrown independently. What is the expected number of times the die is thrown until two consecutive throws of even numbers are seen?
+\begin{enumerate}
+\begin{multicols}{4}
+\item 2
+\item 4
+\item 6
+\item 8
+\end{multicols}
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $f: \mathbb{R} \to \mathbb{R}$ be a function. Note: $\mathbb{R}$ denotes the set of real numbers.
+$f(x) = \begin{cases} -x, & \text{if } x < -2 \\ ax^2 + bx + c, & \text{if } x \in [-2,2] \\ x, & \text{if } x > 2 \end{cases}$
+Which ONE of the following choices gives the values of $a, b, c$ that make the function $f$ continuous and differentiable?
+\begin{enumerate}
+\item $a = 1/4, b = 0, c = 1$
+\item $a = 1/2, b = 0, c = 0$
+\item $a = 0, b = 0, c = 0$
+\item $a = 1, b = 1, c = -4$
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the following Python code:
+\begin{lstlisting}[language=Python]
+def count(child_dict, i):
+    if i not in child_dict.keys():
+        return 1
+    ans = 1
+    for j in child_dict[i]:
+        ans += count(child_dict, j)
+    return ans
+
+child_dict = dict()
+child_dict[0] = [1,2]
+child_dict[1] = [3,4,5]
+child_dict[2] = [6,7,8]
+print(count(child_dict,0))
+\end{lstlisting}
+Which ONE of the following is the output of this code?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 6
+    \item 1
+    \item 8
+    \item 9
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the function computeS(X) whose pseudocode is given below:
+\begin{algorithmic}
+\STATE computeS(X)
+\STATE S[1] $\leftarrow$ 1
+\FOR{$i \leftarrow 2$ to $length(X)$}
+\STATE S[i] $\leftarrow$ 1
+\IF{$X[i - 1] \le X[i]$}
+\STATE S[i] $\leftarrow$ S[i] + S[i - 1]
+\ENDIF
+\ENDFOR
+\RETURN S
+\end{algorithmic}
+Which ONE of the following values is returned by the function computeS(X) for X = \sbrak{6, 3, 5, 4, 10}?
+\begin{multicols}{4}
+\begin{enumerate}
+\item \sbrak{1, 1, 2, 3, 4}
+\item \sbrak{1, 1, 2, 3, 3}
+\item \sbrak{1, 1, 2, 1, 2}
+\item \sbrak{1, 1, 2, 1, 5}
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $F(n)$ denote the maximum number of comparisons made while searching for an entry in a sorted array of size $n$ using binary search. Which ONE of the following options is TRUE?
+\begin{enumerate}
+\item $F(n) = F(\lfloor n/2 \rfloor) + 1$
+\item $F(n) = F(\lfloor n/2 \rfloor) + F(\lceil n/2 \rceil)$
+\item $F(n) = F(\lfloor n/2 \rfloor)$
+\item $F(n) = F(n - 1) + 1$
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the following Python function:
+\begin{lstlisting}[language=Python]
+def fun(D, s1, s2):
+    if s1 < s2:
+        D[s1], D[s2] = D[s2], D[s1]
+        fun(D, s1+1, s2-1)
+\end{lstlisting}
+What does this Python function fun() do? Select the ONE appropriate option below.
+\begin{enumerate}
+\item It finds the smallest element in D from index s1 to s2, both inclusive.
+\item It performs a merge sort in-place on this list D between indices s1 and s2, both inclusive.
+\item It reverses the list D between indices s1 and s2, both inclusive.
+\item It swaps the elements in D at indices s1 and s2, and leaves the remaining elements unchanged.
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the table below, where the $(i,j)^{th}$ element of the table is the distance between points $x_i$ and $x_j$. Single linkage clustering is performed on data points, $x_1, x_2, x_3, x_4, x_5$.
+\begin{center}
+\begin{tabular}{c|ccccc}
+ & $x_1$ & $x_2$ & $x_3$ & $x_4$ & $x_5$ \\
+\hline
+$x_1$ & 0 & 1 & 4 & 3 & 6 \\
+$x_2$ & 1 & 0 & 3 & 5 & 3 \\
+$x_3$ & 4 & 3 & 0 & 2 & 5 \\
+$x_4$ & 3 & 5 & 2 & 0 & 1 \\
+$x_5$ & 6 & 3 & 5 & 1 & 0 \\
+\end{tabular}
+\end{center}
+Which ONE of the following is the correct representation of the clusters produced?
+\begin{multicols}{2}
+\begin{enumerate}
+\item (Image of dendrogram A)
+\item (Image of dendrogram B)
+\item (Image of dendrogram C)
+\item (Image of dendrogram D)
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the two neural networks (NNs) shown in Figures 1 and 2, with $ReLU$ activation ($ReLU(z) = \max\{0, z\}, \forall z \in \mathbb{R}$). $\mathbb{R}$ denotes the set of real numbers. The connections and their corresponding weights are shown in the Figures. The biases at every neuron are set to 0. For what values of $p, q, r$ in Figure 2 are the two NNs equivalent, when $x_1, x_2, x_3$ are positive?
+% Placeholder for Figures 1 and 2
+\begin{multicols}{2}
+\begin{enumerate}
+\item $p = 36, q = 24, r = 24$
+\item $p = 24, q = 24, r = 36$
+\item $p = 18, q = 36, r = 24$
+\item $p = 36, q = 36, r = 36$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider a state space where the start state is number 1. The successor function for the state numbered n returns two states numbered n+1 and n+2. Assume that the states in the unexpanded state list are expanded in the ascending order of numbers and the previously expanded states are not added to the unexpanded state list. Which ONE of the following statements about breadth-first search (BFS) and depth-first search (DFS) is true, when reaching the goal state number 6?
+\begin{enumerate}
+\item BFS expands more states than DFS.
+\item DFS expands more states than BFS.
+\item Both BFS and DFS expand equal number of states.
+\item Both BFS and DFS do not reach the goal state number 6.
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the following sorting algorithms: (i) Bubble sort (ii) Insertion sort (iii) Selection sort. Which ONE among the following choices of sorting algorithms sorts the numbers in the array [4, 3, 2, 1, 5] in increasing order after exactly two passes over the array?
+\begin{multicols}{4}
+\begin{enumerate}
+\item (i) only
+\item (iii) only
+\item (i) and (iii) only
+\item (ii) and (iii) only
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Given the relational schema $R = (U,V, W, X, Y, Z)$ and the set of functional dependencies: $\{U \to V, U \to W, WX \to Y, WX \to Z, V \to X\}$. Which of the following functional dependencies can be derived from the above set?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $VW \to YZ$
+\item $WX \to YZ$
+\item $VW \to U$
+\item $VW \to Y$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Select all choices that are subspaces of $\mathbb{R}^3$. Note: $\mathbb{R}$ denotes the set of real numbers.
+\begin{enumerate}
+\item $\{\mathbf{x} = [x_1 \ x_2 \ x_3]^T \in \mathbb{R}^3: \mathbf{x} = \alpha [1 \ 1 \ 0]^T + \beta [1 \ 0 \ 0]^T, \alpha, \beta \in \mathbb{R}\}$
+\item $\{\mathbf{x} = [x_1 \ x_2 \ x_3]^T \in \mathbb{R}^3: \mathbf{x} = \alpha^2 [1 \ 2 \ 0]^T + \beta^2 [1 \ 0 \ 1]^T, \alpha, \beta \in \mathbb{R}\}$
+\item $\{\mathbf{x} = [x_1 \ x_2 \ x_3]^T \in \mathbb{R}^3: 5x_1 + 2x_3 = 0, 4x_1 - 2x_2 + 3x_3 = 0\}$
+\item $\{\mathbf{x} = [x_1 \ x_2 \ x_3]^T \in \mathbb{R}^3: 5x_1 + 2x_3 + 4 = 0\}$
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Which of the following statements is/are TRUE? Note: $\mathbb{R}$ denotes the set of real numbers.
+\begin{enumerate}
+\item There exist $M \in \mathbb{R}^{3 \times 3}$, $p \in \mathbb{R}^3$, and $q \in \mathbb{R}^3$ such that $Mx = p$ has a unique solution and $Mx = q$ has infinite solutions.
+\item There exist $M \in \mathbb{R}^{3 \times 3}$, $p \in \mathbb{R}^3$, and $q \in \mathbb{R}^3$ such that $Mx = p$ has no solutions and $Mx = q$ has infinite solutions.
+\item There exist $M \in \mathbb{R}^{2 \times 3}$, $p \in \mathbb{R}^2$, and $q \in \mathbb{R}^2$ such that $Mx = p$ has a unique solution and $Mx = q$ has infinite solutions.
+\item There exist $M \in \mathbb{R}^{3 \times 2}$, $p \in \mathbb{R}^3$, and $q \in \mathbb{R}^3$ such that $Mx = p$ has a unique solution and $Mx = q$ has no solutions.
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $\mathbb{R}$ be the set of real numbers, $U$ be a subspace of $\mathbb{R}^3$ and $M \in \mathbb{R}^{3 \times 3}$ be the matrix corresponding to the projection on to the subspace $U$. Which of the following statements is/are TRUE?
+\begin{enumerate}
+\item If $U$ is a 1-dimensional subspace of $\mathbb{R}^3$, then the null space of $M$ is a 1-dimensional subspace.
+\item If $U$ is a 2-dimensional subspace of $\mathbb{R}^3$, then the null space of $M$ is a 1-dimensional subspace.
+\item $M^2 = M$
+\item $M^3 = M$
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the function $f: \mathbb{R} \to \mathbb{R}$ where $\mathbb{R}$ is the set of all real numbers.
+$f(x) = \frac{x^4}{4} - \frac{2x^3}{3} - \frac{3x^2}{2} + 1$
+Which of the following statements is/are TRUE?
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x = 0$ is a local maximum of f
+\item $x = 3$ is a local minimum of f
+\item $x = -1$ is a local maximum of f
+\item $x = 0$ is a local minimum of f
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the directed acyclic graph (DAG) below:
+% Placeholder for DAG image
+Which of the following is/are valid vertex orderings that can be obtained from a topological sort of the DAG?
+\begin{multicols}{4}
+\begin{enumerate}
+\item P Q R S T U V
+\item P R Q V S U T
+\item P Q R S V U T
+\item P R Q S V T U
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let H, I, L, and N represent height, number of internal nodes, number of leaf nodes, and the total number of nodes respectively in a rooted binary tree. Which of the following statements is/are always TRUE?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $L \le I + 1$
+\item $H + 1 \le N \le 2^{H+1} - 1$
+\item $H \le I \le 2^H - 1$
+\item $H \le L \le 2^{H-1}$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider the following figures representing datasets consisting of two-dimensional features with two classes denoted by circles and squares.
+% Placeholder for dataset images
+Which of the following is/are TRUE?
+\begin{multicols}{2}
+\begin{enumerate}
+\item (i) is linearly separable.
+\item (ii) is linearly separable.
+\item (iii) is linearly separable.
+\item (iv) is linearly separable.
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let game(ball, rugby) be true if the ball is used in rugby and false otherwise. Let shape(ball, round) be true if the ball is round and false otherwise. Consider the following logical sentences:
+s1: $\forall \text{ball} \neg \text{{game\brak{ball, rugby}}} \implies \text{shape(ball, round)}$
+s2: $\forall \text{ball} \neg \text{shape\brak{(ball, round)}} \implies \text{game(ball, rugby)}$
+s3: $\forall \text{ball} \text{game\brak{ball, rugby)}} \implies \neg \text{shape(ball, round)}$
+s4: $\forall \text{ball} \text{shape\brak{ball, round)}} \implies \neg \text{game(ball, rugby)}$
+Which of the following choices is/are logical representations of the assertion, "All balls are round except balls used in rugby"?
+\begin{multicols}{4}
+\begin{enumerate}
+\item $s1 \land s3$
+\item $s1 \land s2$
+\item $s2 \land s3$
+\item $s3 \land s4$
+\end{enumerate}
+\end{multicols}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item An OTT company is maintaining a large disk-based relational database of different movies with the following schema:
+Movie(ID, CustomerRating)
+Genre(ID, Name)
+Movie\_Genre(MovieID, GenreID)
+Consider the following SQL query on the relation database above:
+\begin{lstlisting}[language=SQL]
+SELECT *
+FROM Movie, Genre, Movie_Genre
+WHERE 
+Movie.CustomerRating > 3.4 AND
+Genre.Name = ``Comedy'' AND
+Movie_Genre.MovieID = Movie.ID AND
+Movie_Genre.GenreID = Genre.ID;
+\end{lstlisting}
+This SQL query can be sped up using which of the following indexing options?
+\begin{enumerate}
+\item A B+ tree on all the attributes.
+\item Hash index on Genre.Name and B+ tree on the remaining attributes.
+\item Hash index on Movie.CustomerRating and B+tree on the remaining attributes.
+\item Hash index on all the attributes.
+\end{enumerate}
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Let $X$ be a random variable uniformly distributed in the interval [1, 3] and $Y$ be a random variable uniformly distributed in the interval [2, 4]. If X and Y are independent of each other, the probability P($X \ge Y$) is  \rule{2cm}{0.5mm} (rounded off to three decimal places).
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Let $X$ be a random variable exponentially distributed with parameter $\lambda > 0$. The probability density function of X is given by: $f_X(x) = \begin{cases} \lambda e^{-\lambda x}, & x \ge 0 \\ 0, & \text{otherwise} \end{cases}$. If $5E(X) = Var(X)$, where $E(X)$ and $Var(X)$ indicate the expectation and variance of $X$, respectively, the value of $\lambda$ is  \rule{2cm}{0.5mm} (rounded off to one decimal place).
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+
+\item Consider two events T and S. Let $\bar{T}$ denote the complement of the event T. The probability associated with different events are given as follows: $P(\bar{T}) = 0.6$, $P(S|T) = 0.3$, $P(S|\bar{T}) = 0.6$. Then, $P(T|S)$ is  \rule{2cm}{0.5mm} (rounded off to two decimal places).
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Consider a joint probability density function of two random variables X and Y $f_{X,Y}(x, y) = \begin{cases} 2xy, & 0 < x < 2, 0 < y < x \\ 0, & \text{otherwise} \end{cases}$. Then, $E[Y|X = 1.5]$ is  \rule{2cm}{0.5mm}.
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Evaluate the following limit: $\lim_{x\to0} \frac{\ln((x^2+1) \cos x)}{x^2} =  \rule{2cm}{0.5mm}$.
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Let $\boldsymbol{u} = [1 \ 2 \ 3 \ 4 \ 5]^T$, and let $\sigma_1, \sigma_2, \sigma_3, \sigma_4, \sigma_5$ be the singular values of the matrix $M = \boldsymbol{u}\boldsymbol{u}^T$ (where $\boldsymbol{u}^T$ is the transpose of $\boldsymbol{u}$). The value of $\sum_{i=1}^5 \sigma_i$ is  \rule{2cm}{0.5mm}.
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Details of ten international cricket games between two teams ``Green'' and ``Blue'' are given in Table C. This table consists of matches played on different pitches, across formats along with their winners. The attribute Pitch can take one of two values: spin-friendly (represented as S) or pace-friendly (represented as F). The attribute Format can take one of two values: one-day match (represented as O) or test match (represented as T). A cricket organization would like to use the information given in Table C to develop a decision-tree model to predict outcomes of future games between these two teams. To develop such a model, the computed Information Gain(C, Pitch) with respect to the Target is  \rule{2cm}{0.5mm} (rounded off to two decimal places).
+\begin{center}
+\textbf{Table C} \\
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Match Number} & \textbf{Pitch} & \textbf{Format} & \textbf{Winner (Target)} \\
+\hline
+1 & S & T & Green \\
+2 & S & T & Blue \\
+3 & F & O & Blue \\
+4 & S & O & Blue \\
+5 & F & T & Green \\
+6 & F & O & Blue \\
+7 & S & O & Green \\
+8 & F & T & Blue \\
+9 & F & O & Blue \\
+10 & S & O & Green \\
+\hline
+\end{tabular}
+\end{center}
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Given the two-dimensional dataset consisting of 5 data points from two classes (circles and squares) and assume that the Euclidean distance is used to measure the distance between two points. The minimum odd value of $k$ in $k$-nearest neighbor algorithm for which the diamond ($\diamond$) shaped data point is assigned the label square is  \rule{2cm}{0.5mm}.
+% Placeholder for the plot of data points.
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Given the following Bayesian Network consisting of four Bernoulli random variables and the associated conditional probability tables:
+% Placeholder for Bayesian network graph
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{$P(\cdot)$} \\
+\hline
+$U=0$ & 0.5 \\
+$U=1$ & 0.5 \\
+\hline
+\end{tabular}
+\quad
+\begin{tabular}{|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{$P(V|\cdot)$} \\
+\hline
+ & $V=0$ & $V=1$ \\
+\hline
+$U=0$ & 0.5 & 0.5 \\
+$U=1$ & 0.5 & 0.5 \\
+\hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{$P(W|\cdot)$} \\
+\hline
+ & $W=0$ & $W=1$ \\
+\hline
+$U=0$ & 1 & 0 \\
+$U=1$ & 0 & 1 \\
+\hline
+\end{tabular}
+\quad
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & & \multicolumn{2}{c|}{$P(Z|\cdot)$} \\
+\hline
+ & & $Z=0$ & $Z=1$ \\
+\hline
+$V=0$ & $W=0$ & 0.5 & 0.5 \\
+$V=0$ & $W=1$ & 1 & 0 \\
+$V=1$ & $W=0$ & 1 & 0 \\
+$V=1$ & $W=1$ & 0.5 & 0.5 \\
+\hline
+\end{tabular}
+\end{center}
+The value of $P(U=1, V=1, W=1, Z=1) =  \rule{2cm}{0.5mm}$ (rounded off to three decimal places).
+\hfill $\brak{\text{GATE 2024 DA}}$
+\bigskip
+
+\item Two fair coins are tossed independently. X is a random variable that takes a value of 1 if both tosses are heads and 0 otherwise. Y is a random variable that takes a value of 1 if at least one of the tosses is heads and 0 otherwise. The value of the covariance of X and Y is  \rule{2cm}{0.5mm} (rounded off to three decimal places).
+\hfill $\brak{\text{GATE 2024 DA}}$
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
