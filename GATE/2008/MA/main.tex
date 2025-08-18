@@ -1,0 +1,1324 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{multicol}
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\begin{center}
+    \LARGE \textbf{GATE 2008 MA}\\[0.5em]
+    \large \textbf{EE25BTECH11001 - AARUSH DILAWRI}
+\end{center}
+\begin{center}
+ \textbf{Q.1-Q.20 carry one mark each.}
+\end{center}
+\vspace{0.25em}
+\begin{enumerate}
+
+\item Consider the subspace \(W = \{[a]: a=0 \text{ if } i \text{ is even}\}\) of all \(10 \times 10\) real matrices. Then the dimension of \(W\) is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 25
+\item 50
+\item 75
+\item 100
+\end{enumerate}
+\end{multicols}
+
+\item Let \(S\) be the open unit disk and \(f: S \to \mathbb{C}\) be a real-valued analytic function with \(f(0) = 1\). Then the set \(\{z \in S: f(z) \neq 1\}\) is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item empty
+\item nonempty finite
+\item countably infinite
+\item uncountable
+\end{enumerate}
+\end{multicols}
+
+\item Let \(E = \{(x, y) \in \mathbb{R}^2: 0 \leq x \leq 1, 0 \leq y \leq x\}\). Then \(\displaystyle \iint_{E} f(x + y) \, dx\, dy\) is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item -1
+\item 0
+\item 1
+\item 2
+\end{enumerate}
+\end{multicols}
+
+\item For \((x,y) \in \mathbb{R}^2\), let
+\[
+f(x,y) = \begin{cases}
+\dfrac{2xy}{x^2 + y^2}, & (x,y) \neq (0,0), \\
+0, & (x,y) = (0,0).
+\end{cases}
+\]
+Then
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+\item \(f_x, f_y\) exist at \((0,0)\) and \(f\) is continuous at \((0,0)\)
+\item \(f_x, f_y\) exist at \((0,0)\) and \(f\) is discontinuous at \((0,0)\)
+\item \(f_x, f_y\) do not exist at \((0,0)\) and \(f\) is continuous at \((0,0)\)
+\item \(f_x, f_y\) do not exist at \((0,0)\) and \(f\) is discontinuous at \((0,0)\)
+\end{enumerate}
+
+\item Let \(y\) be a solution of \(y' = e^{2x} - 1\) on \([0,1]\) with \(y(0) = 0\). Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item \(y(x) > 0\) for \(x > 0\)
+\item \(y(x) < 0\) for \(x > 0\)
+\item \(y\) changes sign in \([0,1]\)
+\item \(y = 0\) for \(x > 0\)
+\end{enumerate}
+\end{multicols}
+
+\item For the equation
+\[
+x(x-1) y'' + \sin x\, y' + 2 x(x-1) y = 0,
+\]
+consider the statements:
+\begin{itemize}
+  \item \(P\): \(x=0\) is a regular singular point.
+  \item \(Q\): \(x=1\) is a regular singular point.
+\end{itemize}
+Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item both \(P\) and \(Q\) are true
+\item \(P\) is false but \(Q\) is true
+\item \(P\) is true but \(Q\) is false
+\item both \(P\) and \(Q\) are false
+\end{enumerate}
+\end{multicols}
+
+\item Let \(G = \mathbb{R} \setminus \{0\}\) and \(H = \{-1,1\}\) be groups under multiplication. The map \(\phi : G \to H\) defined by \(\phi(x) = \mathrm{sgn}(x)\) is
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+\item not a homomorphism
+\item a one-one homomorphism, which is not onto
+\item an onto homomorphism, which is not one-one
+\item an isomorphism
+\end{enumerate}
+
+
+\item For \(1 \leq p \leq \infty\), let \(\|\cdot\|_p\) denote the \(p\)-norm on \(\mathbb{R}^2\). If \(\|\cdot\|_p\) satisfies the parallelogram law, then \(p\) equals
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 1
+\item 2
+\item 3
+\item 4
+\end{enumerate}
+\end{multicols}
+
+\item The number of maximal ideals in \(\mathbb{Z}_{27}\) is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 0
+\item 1
+\item 2
+\item 3
+\end{enumerate}
+\end{multicols}
+
+\item Consider the initial value problem
+\begin{align}
+    \frac{dy}{dx} = f(x,y), \quad y(x) = y_0.
+\end{align}
+
+
+To compute the value \(y_1 = y(x+h)\), \(h>0\), equate \(y_1\) to the value of the straight line passing through \((x,y)\) with slope equal to the slope of the curve \(y(x)\) at \(x\), resulting in the method called
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item Euler's method
+\item Improved Euler's method
+\item Backward Euler's method
+\item Taylor series method of order 2
+\end{enumerate}
+\end{multicols}
+
+
+
+\item The solution of \(x u_x + y u_y = 0\) is of the form
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item \(f(y/x)\)
+\item \(f(x+y)\)
+\item \(f(x - y)\)
+\item \(f(x y)\)
+\end{enumerate}
+\end{multicols}
+
+\item If the partial differential equation \((x-1)^2 u_x + (y-2)^2 u_y + 2 x + 2 y u_x + 2 x y u = 0\) is parabolic in \(S \subset \mathbb{R}^2\) but not in \(\mathbb{R}^2 \setminus S\), then \(S\) is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item \(\{(x,y) \in \mathbb{R}^2 : x=1 \text{ or } y=2\}\)
+\item \(\{(x,y) \in \mathbb{R}^2 : x=1 \text{ and } y=2\}\)
+\item \(\{(x,y) \in \mathbb{R}^2 : x=1\}\)
+\item \(\{(x,y) \in \mathbb{R}^2 : y=2\}\)
+\end{enumerate}
+\end{multicols}
+
+\item Let \(E\) be a connected subset of \(\mathbb{R}\) with at least two elements. Then the number of elements in \(E\) is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item exactly two
+\item more than two but finite
+\item countably infinite
+\item uncountable
+\end{enumerate}
+\end{multicols}
+
+\item Let \(X\) be a non-empty set. Let \(\mathcal{I}_1\) and \(\mathcal{I}_2\) be two topologies on \(X\) such that \(\mathcal{I}_1\) is strictly contained in \(\mathcal{I}_2\). If \(I : (X, \mathcal{I}_1) \to (X, \mathcal{I}_2)\) is the identity map, then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+\item both \(I\) and \(I^{-1}\) are continuous
+\item both \(I\) and \(I^{-1}\) are not continuous
+\item \(I\) is continuous but \(I^{-1}\) is not continuous
+\item \(I\) is not continuous but \(I^{-1}\) is continuous
+\end{enumerate}
+
+
+\item Let \(X_1, X_2, \ldots, X_{10}\) be a random sample from \(N(80, 3^2)\) distribution. Define
+\begin{align}
+    S = \sum_{i=1}^{10} X_i, \quad T = \sum_{i=1}^{10} \frac{X_i - 80}{3}.
+\end{align}
+
+
+Then the value of \(E(ST)\), the expectation of the product, is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 0
+\item 1
+\item 10
+\item 3
+\end{enumerate}
+\end{multicols}
+
+\item Two distinguishable fair coins are tossed simultaneously. Given that one of them lands heads, the probability that the other lands tails is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item \(\dfrac{1}{3}\)
+\item \(\dfrac{1}{2}\)
+\item \(\dfrac{2}{3}\)
+\item 1
+\end{enumerate}
+\end{multicols}
+
+\item Let \(c \geq 2\) be the cost of the \((i,j)\)-th cell of an assignment problem. If a new cost matrix is generated by the elements \(c' = 2 + c\), then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+\item the optimal assignment plan remains unchanged and cost of assignment decreases
+\item the optimal assignment plan changes and cost of assignment decreases
+\item the optimal assignment plan remains unchanged and cost of assignment increases
+\item the optimal assignment plan changes and cost of assignment increases
+\end{enumerate}
+
+
+\item Let a primal linear programming problem admit an optimal solution. Then the corresponding dual problem
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+\item does not have a feasible solution
+\item has a feasible solution but does not have any optimal solution
+\item does not have a convex feasible region
+\item has an optimal solution
+\end{enumerate}
+
+
+\item In any system of particles, if internal forces are not assumed to come in pairs, the fact that the sum of internal forces is zero follows from
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+\item Newton's second law
+\item conservation of angular momentum
+\item conservation of energy
+\item principle of virtual displacement
+\end{enumerate}
+
+
+\item Let \(q_1, q_2, \ldots, q_n\) be the generalized coordinates and \(\dot{q}_1, \dot{q}_2, \ldots, \dot{q}_n\) be the generalized velocities in a conservative force field. Under a transformation, the new coordinate system has generalized coordinates \(Q_1, Q_2, \ldots\) and velocities \(\dot{Q}_1, \dot{Q}_2, \ldots\). Then the equation
+\begin{align}
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{q}_k} - \frac{\partial L}{\partial q_k} = 0
+\end{align}
+
+
+takes the form
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item \(\frac{d}{dt}\frac{\partial L'}{\partial \dot{Q}_k} - \frac{\partial L'}{\partial Q_k} = 0\)
+\item \(\frac{d}{dt}\frac{\partial L'}{\partial \dot{Q}_k} + \frac{\partial L'}{\partial Q_k} = 0\)
+\item \(-\frac{d}{dt}\frac{\partial L'}{\partial \dot{Q}_k} + \frac{\partial L'}{\partial Q_k} = 0\)
+\item \(\frac{\partial L'}{\partial \dot{Q}_k} - \frac{d}{dt}\frac{\partial L'}{\partial Q_k} = 0\)
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $T:\mathbb{R}^4 \to \mathbb{R}^4$ be the linear map satisfying
+\begin{align}
+    T(e_1) = e_2,\quad T(e_2) = e_3,\quad T(e_3) = 0,\quad T(e_4) = e_3,
+\end{align}
+
+
+where $\{e_1, e_2, e_3, e_4\}$ is the standard basis of $\mathbb{R}^4$. Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $T$ is idempotent
+\item $T$ is invertible
+\item Rank $T = 3$
+\item $T$ is nilpotent
+\end{enumerate}
+
+\end{multicols}
+
+\item
+Let 
+\begin{align}
+    M = \myvec{1 & 1 & 2 \\ 0 & 1 & 1 \\ 0 & 1 & 1}
+\end{align}
+
+and $V = \{ M x' : x \in \mathbb{R}^3 \}$. Then an orthonormal basis for $V$ is
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+    \item $\left\{ (1,0,0)',\, \myvec{0 \\ \frac{2}{\sqrt{5}} \\ \frac{1}{\sqrt{5}}},\, \myvec{\frac{2}{\sqrt{6}} \\ \frac{1}{\sqrt{6}} \\ \frac{1}{\sqrt{6}}} \right\}$
+    \item $\left\{ (1,0,0)',\, \myvec{0 \\ \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}} \right\}$
+    \item $\left\{ (1,0,0)',\, \myvec{\frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{3}}},\, \myvec{\frac{2}{\sqrt{6}} \\ \frac{1}{\sqrt{6}} \\ \frac{1}{\sqrt{6}}} \right\}$
+    \item $\left\{ (1,0,0)',\, (0,0,1)' \right\}$
+\end{enumerate}
+
+\item
+For any $n \in \mathbb{N}$, let $P_n$ denote the vector space of all polynomials with real coefficients and of degree at most $n$. Define $T:P_n \to P_{n+1}$ by
+\begin{align}
+    T(p)(x) = p'(x) - \int_0^x p(t) \, dt.
+\end{align}
+
+Then the dimension of the null space of $T$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $n$
+    \item $n+1$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+Let
+\begin{align}
+    M = \myvec{1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta}
+\end{align}
+
+
+where $0 < \theta < \frac{\pi}{2}$. Let $V = \{ u \in \mathbb{R}^3 : M u^2 = u' \}$. Then the dimension of $V$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+The number of linearly independent eigenvectors of the matrix
+\begin{align}
+   \myvec{2 & 2 & 0 & 0 \\ 2 & 1 & 0 & 0 \\ 0 & 0 & 3 & 0 \\ 0 & 0 & 0 & 4} 
+\end{align}
+
+is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $f$ be a bilinear transformation that maps $-1$ to $1$, $i$ to $\infty$, and $i$ to $0$. Then $f(1)$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-2$
+    \item $-1$
+    \item $i$
+    \item $-i$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+Which one of the following does NOT hold for all continuous functions $f : [-\pi, \pi] \rightarrow \mathbb{C}$?
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+    \item If $f(t) = f(-t)$ for each $t \in [-\pi, \pi]$, then $\int_{-\pi}^{\pi} f(t) \, dt = 2 \int_0^\pi f(t)\, dt$
+    \item If $f(t) = -f(-t)$ for each $t \in [-\pi, \pi]$, then $\int_{-\pi}^{\pi} f(t) \, dt = 0$
+    \item $\int_{-\pi}^{\pi} f(-t) \, dt = -\int_{-\pi}^{\pi} f(t)\, dt$
+    \item There exists an $a$ with $-\pi < a < \pi$ such that $\int_{-\pi}^{\pi} f(t)\, dt = 2\pi f(a)$
+\end{enumerate}
+
+\item
+Let $S$ be the positively oriented circle $|z-3i|=2$. Then the value of
+\begin{align}
+    \int_S \frac{dz}{z^2 + 4}
+\end{align}
+
+is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-\pi$
+    \item $2\pi$
+    \item $-i\pi$
+    \item $i\pi$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+Let $T$ be the closed unit disk and $\partial T$ be the unit circle. Then which one of the following holds for every analytic function $f : T \to \mathbb{C}$?
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+    \item $f$ attains its minimum and its maximum on $\partial T$
+    \item $f$ attains its minimum on $\partial T$ but need not attain its maximum on $\partial T$
+    \item $f$ attains its maximum on $\partial T$ but need not attain its minimum on $T$
+    \item $f$ need not attain its maximum on $\partial T$ and also need not attain its minimum on $T$
+\end{enumerate}
+
+\item
+Let $S$ be the disk $|z| < 3$ in the complex plane and let $f:S \to \mathbb{C}$ be an analytic function such that
+\begin{align}
+    f\left(\frac{\sqrt{2n}}{n^2+1}\right) = \frac{1+\sqrt{2n}}{n^2}
+\end{align}
+
+for each natural number $n$. Then $f(\sqrt{2})$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $3 - 2\sqrt{2}$
+    \item $3 + 2\sqrt{2}$
+    \item $2 - 3\sqrt{2}$
+    \item $2 + 3\sqrt{2}$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+Which one of the following statements holds?
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+    \item The series $\sum_{n=0}^{\infty} x^n$ converges for each $x \in [-1,1]$
+    \item The series $\sum_{n=0}^{\infty} x^n$ converges uniformly in $(-1,1)$
+    \item The series $\sum_{n=1}^{\infty} \frac{x^n}{n}$ converges for each $x \in [-1,1]$
+    \item The series $\sum_{n=1}^{\infty} \frac{x^n}{n}$ converges uniformly in $(-1,1)$
+\end{enumerate}
+
+\item
+For $x \in [-\pi, \pi]$, let
+\begin{align}
+    f(x) = (\pi + x)(\pi - x) \quad \text{and} \quad 
+g(x) = 
+\begin{cases}
+\cos\left(\frac{1}{x}\right) & \text{if } x \neq 0 \\
+0 & \text{if } x = 0
+\end{cases}.
+\end{align}
+
+Consider the statements\\
+$P$: The Fourier series of $f$ converges uniformly to $f$ on $[-\pi, \pi]$.\\
+$Q$: The Fourier series of $g$ converges uniformly to $g$ on $[-\pi, \pi]$. Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $P$ and $Q$ are true
+    \item $P$ is true but $Q$ is false
+    \item $P$ is false but $Q$ is true
+    \item both $P$ and $Q$ are false
+\end{enumerate}
+\end{multicols}
+
+
+\item
+Let $W = \{ (x, y, z) \in \mathbb{R}^3 : 1 \leq x^2 + y^2 + z^2 \leq 4 \}$ and $F: W \rightarrow \mathbb{R}^3$ be defined by
+\begin{align}
+    F(x, y, z) = \myvec{x \\ y \\ z} [x^2 + y^2 + z^2]^{3/2}
+\end{align}
+
+for $(x, y, z) \in W$. If $\partial W$ denotes the boundary of $W$ oriented by the outward normal $n$ to $W$, then 
+\begin{align}
+    \iint_{\partial W} F \cdot n \, dS
+\end{align}
+
+is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $4\pi$
+    \item $8\pi$
+    \item $12\pi$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+For each $n \in \mathbb{N}$, let $f_n : [0,1] \to \mathbb{R}$ be a measurable function such that $|f_n(t)| \leq \frac{1}{t}$ for all $t \in (0,1]$. Let $f : [0,1] \to \mathbb{R}$ be defined by $f(t) = 1$ if $t$ is irrational and $f(t) = -1$ if $t$ is rational. Assume that $f_n(t) \to f(t)$ as $n \to \infty$ for all $t \in [0,1]$. Then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item $f$ is not measurable
+    \item $f$ is measurable and $\int_{[0,1]} f_n \, d\mu \to 1$ as $n\to\infty$
+    \item $f$ is measurable and $\int_{[0,1]} f_n \, d\mu \to 0$ as $n\to\infty$
+    \item $f$ is measurable and $\int_{[0,1]} f_n \, d\mu \to -1$ as $n\to\infty$
+\end{enumerate}
+
+\item
+Let $y_1$ and $y_2$ be two linearly independent solutions of $y'' + (\sin x)y = 0$, $0 \leq x \leq 1$. Let $g(x) = W(y_1, y_2)(x)$ be the Wronskian of $y_1$ and $y_2$. Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $g' > 0$ on $[0,1]$
+    \item $g' < 0$ on $[0,1]$
+    \item $g'$ vanishes at only one point of $[0,1]$
+    \item $g'$ vanishes at all points of $[0,1]$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+One particular solution of $y^{(4)} - y'' - y' + y = -e^x$ is a constant multiple of
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $x e^x$
+    \item $x e^{-x}$
+    \item $x^2 e^x$
+    \item $x^2 e^{-x}$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+Let $a, b \in \mathbb{R}$. Let $y = \myvec{y_1 \\ y_2}$ be a solution of the system of equations
+\begin{align}
+    y_1' = y_2, \quad y_2' = a y_1 + b y_2.
+\end{align}
+
+Every solution $y(x) \to 0$ as $x \to \infty$ if
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $a < 0$, $b < 0$
+    \item $a < 0$, $b > 0$
+    \item $a > 0$, $b > 0$
+    \item $a > 0$, $b < 0$
+\end{enumerate}    
+\end{multicols}
+
+
+\item
+Let $G$ be a group of order $45$. Let $H$ be a $3$-Sylow subgroup of $G$ and $K$ be a $5$-Sylow subgroup of $G$. Then
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+    \item both $H$ and $K$ are normal in $G$
+    \item $H$ is normal in $G$ but $K$ is not normal in $G$
+    \item $H$ is not normal in $G$ but $K$ is normal in $G$
+    \item both $H$ and $K$ are not normal in $G$
+\end{enumerate}
+
+\item
+The ring $\mathbb{Z}[\sqrt{-11}]$ is
+\hfill{\text{GATE MA 2008}}
+\begin{enumerate}
+    \item a Euclidean Domain
+    \item a Principal Ideal Domain, but not a Euclidean Domain
+    \item a Unique Factorization Domain, but not a Principal Ideal Domain
+    \item not a Unique Factorization Domain
+\end{enumerate}
+
+\item
+Let $R$ be a Principal Ideal Domain and $a, b$ any two non-unit elements of $R$. Then the ideal generated by $a$ and $b$ is also generated by
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $a + b$
+    \item $ab$
+    \item $\gcd(a, b)$
+    \item $\operatorname{lcm}(a, b)$
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider the action of $S_4$, the symmetric group of order 4, on $\mathbb{Z}[X_1,X_2,X_3,X_4]$ given by
+\begin{align}
+    \sigma p(X_1,X_2,X_3,X_4) = p(X_{\sigma(1)}, X_{\sigma(2)}, X_{\sigma(3)}, X_{\sigma(4)}) \quad \text{for } \sigma \in S_4.
+\end{align}
+
+Let $H_S$ denote the cyclic subgroup generated by $(1423)$. Then the cardinality of the orbit $O_H(X_1X_3 + X_2X_4)$ of $H$ on the polynomial $X_1X_3 + X_2X_4$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $f: l^2 \to \mathbb{R}$ be defined by $f(x_1,x_2,\ldots) = \sum_{n=1}^\infty \frac{x_n^2}{n^2}$. Then $\| f \|$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1
+    \item $\frac{1}{2}$
+    \item 2
+    \item $\sqrt{2} - 1$
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider $\mathbb{R}^3$ with norm $\|\cdot\|$ and the linear transformation $T : \mathbb{R}^3 \to \mathbb{R}^3$ defined by the matrix
+\begin{align}
+    \myvec{1 & 1 & 3 \\ 1 & 3 & 3 \\ 1 & 3 & 3}.
+\end{align}
+
+Then the operator norm $\|T\|$ of $T$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 6
+    \item 7
+    \item 8
+    \item $\sqrt{42}$
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider $\mathbb{R}^2$ with norm $\|\cdot\|$, and let $Y = \{(y_1,y_2) \in \mathbb{R}^2 : y_1 + y_2 = 0\}$. If $g : Y \to \mathbb{R}$ is defined by $g(y_1,y_2) = y_2$ for $(y_1,y_2) \in Y$, then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item $g$ has no Hahn-Banach extension to $\mathbb{R}^2$
+    \item $g$ has a unique Hahn-Banach extension to $\mathbb{R}^2$
+    \item Every linear functional $f : \mathbb{R}^2 \to \mathbb{R}$ satisfying $f(-1,1) = 1$ is a Hahn-Banach extension of $g$ to $\mathbb{R}^2$
+    \item The functionals $f_1(x_1,x_2) = x_2$ and $f_2(x_1,x_2) = -x_1$ are both Hahn-Banach extensions of $g$ to $\mathbb{R}^2$
+\end{enumerate}
+
+
+\item
+Let $X$ be a Banach space and $Y$ be a normed linear space. Consider a sequence $(F_n)$ of bounded linear maps from $X$ to $Y$ such that for each fixed $x \in X$, the sequence $(F_n(x))$ is bounded in $Y$. Then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item For each fixed $x \in X$, the sequence $(F_n(x))$ is convergent in $Y$
+    \item For each fixed $n \in \mathbb{N}$, the set $\{F_n(x) : x \in X \}$ is bounded in $Y$
+    \item The sequence $(\|F_n\|)$ is bounded in $\mathbb{R}$
+    \item The sequence $(F_n)$ is uniformly bounded on $X$
+\end{enumerate}
+
+\item
+Let $H = L^2([0, \pi])$ with the usual inner product. For $n \in \mathbb{N}$, let
+\begin{align}
+    u_n(t) = \sqrt{\frac{2}{\pi}} \sin(n t), \quad t \in [0, \pi],
+\end{align}
+
+and $E = \{u_n : n \in \mathbb{N}\}$. Then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item $E$ is not a linearly independent subset of $H$
+    \item $E$ is a linearly independent subset of $H$, but is not an orthonormal subset of $H$
+    \item $E$ is an orthonormal subset of $H$, but is not an orthonormal basis for $H$
+    \item $E$ is an orthonormal basis for $H$
+\end{enumerate}
+
+
+\item
+Let $X = \mathbb{R}$ and let $\mathcal{I} = \{ U \subseteq X : X \setminus U \text{ is finite}\} \cup \{\emptyset, X\}$. The sequence $(1/n)_{n=1}^\infty$ in $(X, \mathcal{I})$ 
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item Converges to $0$ and not to any other point of $X$
+    \item Does not converge to $0$
+    \item Converges to each point of $X$
+    \item Is not convergent in $X$
+\end{enumerate}
+
+
+\item
+Let
+\begin{align}
+    E = \{(x,y) \in \mathbb{R}^2 : |x| \leq 1, |y| \leq 1 \}, \quad \text{and define } f : E \to \mathbb{R} \text{ by } f(x,y) = 1 + x^2 + y^2.
+\end{align}
+
+Then the range of $f$ is a
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item Connected open set
+    \item Connected closed set
+    \item Bounded open set
+    \item Closed and unbounded set
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $X = \{1,2,3\}$ and $\mathcal{I} = \{\emptyset, \{1\}, \{2\}, \{1,2\}, \{2,3\}, X\}$. The topological space $(X, \mathcal{I})$ has the property $P$ if for any two proper disjoint closed subsets $Y$ and $Z$ of $X$, there exist disjoint open sets $U, V$ such that $Y \subseteq U$ and $Z \subseteq V$. Then the space $(X, \mathcal{I})$
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item Is $T_1$ and satisfies $P$
+    \item Is $T_1$ and does not satisfy $P$
+    \item Is not $T_1$ and satisfies $P$
+    \item Is not $T_1$ and does not satisfy $P$
+\end{enumerate}
+\end{multicols}
+
+\item
+Which one of the following subsets of $\mathbb{R}$ (with the usual metric) is NOT complete?
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $[1,2] \cup [3,4]$
+    \item $[0, \infty)$
+    \item $[0,1)$
+    \item $\{0\} \cup \mathbb{N}$
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider the function
+\begin{align}
+    f(x) = 
+\begin{cases}
+k(x - \lfloor x \rfloor) & 0 \leq x < 2 \\
+0 & \text{otherwise}
+\end{cases}
+\end{align}
+
+where $\lfloor x \rfloor$ is the integral part of $x$. The value of $k$ for which $f$ is a probability density function of some random variable is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{1}{4}$
+    \item $\frac{1}{2}$
+    \item $1$
+    \item $2$
+\end{enumerate}
+\end{multicols}
+
+\item
+For two random variables $X$ and $Y$, the regression lines are given by $Y = 5X - 15$ and $X = 10Y - 35$. Then the regression coefficient of $X$ on $Y$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.1
+    \item 0.2
+    \item 5
+    \item 10
+\end{enumerate}
+\end{multicols}
+
+\item
+In an examination there are 80 questions each having four choices. Exactly one choice is correct and the other three are wrong. A student is awarded 1 mark for each correct answer, and -0.25 for each wrong answer. If a student ticks the answer of each question randomly, then the expected value of the total marks in the examination is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-15$
+    \item $0$
+    \item $5$
+    \item $20$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $X_1, X_2, \ldots, X_n$ be a random sample from a uniform distribution on $[0,\theta]$. Then the maximum likelihood estimator (MLE) of $\theta$ based on the sample is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $X_1$
+    \item $\frac{1}{n} \sum_{i=1}^n X_i$
+    \item $\min\{X_1, X_2, \ldots, X_n\}$
+    \item $\max\{X_1, X_2, \ldots, X_n\}$
+\end{enumerate}
+\end{multicols}
+
+\item
+The cost matrix of a transportation problem is given by
+\begin{align}
+    \myvec{
+1 & 2 & 3 & 4 \\
+4 & 3 & 2 & 0 \\
+0 & 2 & 2 & 1
+}
+\end{align}
+
+
+A feasible solution has $X_{12} = 6$, $X_{23} = 2$, $X_{24} = 6$, $X_{31} = 4$, $X_{33} = 6$. Then the solution is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item degenerate and basic
+    \item non-degenerate and basic
+    \item degenerate and non-basic
+    \item non-degenerate and non-basic
+\end{enumerate}
+\end{multicols}
+
+\item
+The maximum value of $z = 3x_1 - x_2$ subject to $2x_1 - x_2 \leq 1$, $x_1 \leq 3$, and $x_1, x_2 \geq 0$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0
+    \item 4
+    \item 6
+    \item 9
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider the problem of maximizing $z = 2x_1 + 3x_2 - 4x_3 + x_4$ subject to
+\begin{align}
+    \begin{cases}
+x_1 + x_2 + x_3 = 2, \\
+x_1 - x_2 + x_3 = 2, \\
+2x_1 + 3x_2 + 2x_3 - x_4 = 0, \\
+x_i \geq 0, \quad i=1,2,3,4.
+\end{cases}
+\end{align}
+
+
+Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $(1,0,1,4)$ is a basic feasible solution but $(2,0,0,4)$ is not
+    \item $(1,0,1,4)$ is not a basic feasible solution but $(2,0,0,4)$ is
+    \item Neither $(1,0,1,4)$ nor $(2,0,0,4)$ is a basic feasible solution
+    \item Both $(1,0,1,4)$ and $(2,0,0,4)$ are basic feasible solutions
+\end{enumerate}
+\end{multicols}
+
+\item
+In the closed system of a simple harmonic motion of a pendulum, let $H$ denote the Hamiltonian and $E$ be the total energy. Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $H$ is a constant and $H = E$
+    \item $H$ is a constant but $H \neq E$
+    \item $H$ is not constant but $H = E$
+    \item $H$ is not constant and $H \neq E$
+\end{enumerate}
+\end{multicols}
+
+\item
+The possible values of $a$ for which the variational problem
+\begin{align}
+    J[y(x)] = \int_0^1 (3y^2 + 2x^2 y')\, dx, \quad y(a) = 1,
+\end{align}
+
+has extremals are
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-1, 0$
+    \item $0, 1$
+    \item $-1, 1$
+    \item $-1, 0, 1$
+\end{enumerate}
+\end{multicols}
+
+\item
+The functional 
+\begin{align}
+    \int_0^1 (y^2 + x) \, dx,
+\end{align}
+
+given $y(1) = 1$, achieves its
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item weak maximum on all its extremals
+    \item weak minimum on all its extremals
+    \item weak maximum on some, but not on all of its extremals
+    \item weak minimum on some, but not on all of its extremals
+\end{enumerate}
+
+
+\item
+The integral equation
+\begin{align}
+    x(t) = \sin t + \lambda \int_0^1 (s^2 t^3 + e^{s^2 + r^2}) x(s) \, ds, \quad 0 \leq t \leq 1, \lambda \in \mathbb{R}, \lambda \neq 0,
+\end{align}
+
+has a solution for
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item all non-zero values of $\lambda$
+    \item no value of $\lambda$
+    \item only countably many positive values of $\lambda$
+    \item only countably many negative values of $\lambda$
+\end{enumerate}
+
+
+\item
+The integral equation
+\begin{align}
+    x(t) - \int_0^1 \cos t \, x(s) \, ds = \sinh t, \quad 0 < t \leq 1,
+\end{align}
+
+has
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item no solution
+    \item a unique solution
+    \item more than one but finitely many solutions
+    \item infinitely many solutions
+\end{enumerate}
+
+
+\item
+If 
+\begin{align}
+    y_{i+1} = y_i + h p(f,x,y,h), \quad i = 1,2,\ldots,
+\end{align}
+
+where
+\begin{align}
+    p(f,x,y,h) = a f(x,y) + b f(x+h, y + h f(x,y)),
+\end{align}
+
+is a second order accurate scheme to solve the initial value problem
+\begin{align}
+    \frac{dy}{dx} = f(x,y), \quad y(x) = y_0,
+\end{align}
+
+then $a$ and $b$, respectively, are
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $2$, $2$
+    \item $1$, $-1$
+    \item $2$, $1/2$
+    \item $h$, $-h$
+\end{enumerate}
+\end{multicols}
+
+\item
+If a quadrature formula 
+\begin{align}
+    \int_{-1}^1 f(x) \, dx \approx -3 f(-1) + K f(0) + f(1),
+\end{align}
+
+that approximates $\int_{-1}^1 f(x) \, dx$, is found to be exact for quadratic polynomials, then the value of $K$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 2
+    \item 1
+    \item 0
+    \item -1
+\end{enumerate}
+\end{multicols}
+
+\item
+If
+\begin{align}
+    \frac{279}{58} = a,
+\end{align}
+
+then the value of $a$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item -2
+    \item -1
+    \item 1
+    \item 2
+\end{enumerate}
+\end{multicols}
+
+\item
+Using the least squares method, if a curve 
+\begin{align}
+    y = a x^2 + b x + c
+\end{align}
+
+is fitted to the collinear data points $(-1,-3)$, $(1,1)$, $(3,5)$, and $(7,13)$, then the triplet $(a,b,c)$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $(-1, 2, 0)$
+    \item $(0, 2, -1)$
+    \item $(2, -1, 0)$
+    \item $(0, -1, 2)$
+\end{enumerate}
+\end{multicols}
+
+\item
+A quadratic polynomial $p(x)$ is constructed by interpolating the data points $(0,1)$, $(1,e)$, and $(2,e^2)$. If $\sqrt{e}$ is approximated by using $p(x)$, then its approximate value is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $(3 + 6 e - e^2)$
+    \item $(3 - 6 e + 2 e^2)$
+    \item $(3 - 6 e - e^2)$
+    \item $(3 + 6 e - 2 e^2)$
+\end{enumerate}
+\end{multicols}
+
+\item
+The characteristic curve of
+\begin{align}
+    2 y u_x + (2x + y^2) u_y = 0
+\end{align}
+
+passing through $(0,0)$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $y^2 = 2(e^x + x - 1)$
+    \item $y^2 = 2(e^x - x + 1)$
+    \item $y^2 = 2(e^x - x - 1)$
+    \item $y^2 = 2(e^x + x + 1)$
+\end{enumerate}
+\end{multicols}
+
+\item
+The initial value problem
+\begin{align}
+    u_t + u_x = 1, \quad u(s,s) = \sin s, \quad 0 \leq s \leq 1,
+\end{align}
+
+has
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item two solutions
+    \item a unique solution
+    \item no solution
+    \item infinitely many solutions
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $u(x,t)$ be the solution of 
+\begin{align}
+    u_{tt} - u_{xx} = 1, \quad x \in \mathbb{R}, \, t > 0,
+\end{align}
+
+with initial conditions
+\begin{align}
+    u(x,0) = 0, \quad u_t(x,0) = 0, \quad x \in \mathbb{R}.
+\end{align}
+
+Then $u\left(\frac{1}{2}, \frac{1}{2}\right)$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{1}{8}$
+    \item $-\frac{1}{8}$
+    \item $\frac{1}{4}$
+    \item $-\frac{1}{4}$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $X = C([0,1])$ with sup norm $\|\cdot\|$.
+
+Let $S = \{x \in X : \|x\| \leq 1\}$. Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $S$ is convex and compact
+    \item $S$ is not convex but compact
+    \item $S$ is convex but not compact
+    \item $S$ is neither convex nor compact
+\end{enumerate}
+\end{multicols}
+
+\item
+Which one of the following is true?
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item $C([0,1])$ is dense in $X$
+    \item $X$ is dense in $L^0([0,1])$
+    \item $X$ has a countable basis
+    \item There is a sequence in $X$ which is uniformly Cauchy on $[0,1]$ but does not converge uniformly on $[0,1]$
+\end{enumerate}
+
+
+\item
+Let $I = \{x \in X : x(0) = 0\}$. Then
+\hfill{\text{GATE MA 2008}}
+
+\begin{enumerate}
+    \item $I$ is not an ideal of $X$
+    \item $I$ is an ideal, but not a prime ideal of $X$
+    \item $I$ is a prime ideal, but not a maximal ideal of $X$
+    \item $I$ is a maximal ideal of $X$
+\end{enumerate}
+
+
+\item
+Let $X = C'([0,1])$ and $Y = C([0,1])$, both with the sup norm. Define $F: X \to Y$ by $F(x) = x + x'$ and $f(x) = x(1) + x'(1)$ for $x \in X$. Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $F$ and $f$ are continuous
+    \item $F$ is continuous and $f$ is discontinuous
+    \item $F$ is discontinuous and $f$ is continuous
+    \item $F$ and $f$ are discontinuous
+\end{enumerate}
+\end{multicols}
+
+\item
+Then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $F$ and $f$ are closed maps
+    \item $F$ is a closed map and $f$ is not a closed map
+    \item $F$ is not a closed map and $f$ is a closed map
+    \item Neither $F$ nor $f$ is a closed map
+\end{enumerate}
+\end{multicols}
+
+\item
+Let
+\begin{align}
+   N =
+\begin{pmatrix}
+\frac{4}{5} & \frac{3}{5} & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}. 
+\end{align}
+
+Then $N$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item non-invertible
+    \item skew-symmetric
+    \item symmetric
+    \item orthogonal
+\end{enumerate}
+\end{multicols}
+
+\item
+If $M$ is any $3 \times 3$ real matrix, then $\operatorname{trace}(N M N')$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $(\operatorname{trace}(N))^2 \operatorname{trace}(M)$
+    \item $2 \operatorname{trace}(N) + \operatorname{trace}(M)$
+    \item $\operatorname{trace}(M)$
+    \item $(\operatorname{trace}(N))^2 + \operatorname{trace}(M)$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $f(z) = \frac{\cos z - 1}{z}$ for non-zero $z \in \mathbb{C}$ and $f(0) = 0$. Also, let $g(z) = \sinh z$ for $z \in \mathbb{C}$. Then $f(z)$ has a zero at $z=0$ of order
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0
+    \item 1
+    \item 2
+    \item greater than 2
+\end{enumerate}
+\end{multicols}
+
+\item
+Then $g(z)/ (z f(z))$ has a pole at $z=0$ of order
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1
+    \item 2
+    \item 3
+    \item greater than 3
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $n \geq 3$ be an integer. Let $y$ be the polynomial solution of
+\begin{align}
+    (1 - x^2) y'' - 2 x y' + n(n-1) y = 0
+\end{align}
+
+satisfying $y(1) = 1$. Then the degree of $y$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $n$
+    \item $n-1$
+    \item Less than $n-1$
+    \item Greater than $n+1$
+\end{enumerate}
+\end{multicols}
+
+\item
+If
+\begin{align}
+    I = \int y(x) \, x \, dx \quad \text{and} \quad J = \int y(x) \, x^2 \, dx,
+\end{align}
+
+then
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $I \neq 0$, $J \neq 0$
+    \item $I \neq 0$, $J = 0$
+    \item $I = 0$, $J \neq 0$
+    \item $I = 0$, $J = 0$
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider the boundary value problem
+\begin{align}
+    u_{xx} + u_{yy} = 0, \quad x \in (0,\pi), \quad y \in (0,\pi),
+\end{align}
+
+with boundary conditions
+\begin{align}
+    u(x, 0) = u(x, \pi) = u(0, y) = 0.
+\end{align}
+
+Any solution of this boundary value problem is of the form
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sum_{n=1}^\infty a_n \sinh nx \sin ny$
+    \item $\sum_{n=1}^\infty a_n \cosh nx \sin ny$
+    \item $\sum_{n=1}^\infty a_n \sinh nx \cos ny$
+    \item $\sum_{n=1}^\infty a_n \cosh nx \cos ny$
+\end{enumerate}
+\end{multicols}
+
+\item
+If an additional boundary condition
+\begin{align}
+    u_x(\pi, y) = \sin y
+\end{align}
+
+is satisfied, then 
+\begin{align}
+    u\left(x, \frac{\pi}{2}\right)
+\end{align}
+
+is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{\pi}{2} \frac{e^x - e^{-x}}{e^\pi + e^{-\pi}}$
+    \item $\frac{\pi (e^x + e^{-x})}{e^\pi - e^{-\pi}}$
+    \item $\frac{\pi (e^x - e^{-x})}{e^\pi + e^{-\pi}}$
+    \item $\frac{\pi}{2} \frac{e^x + e^{-x}}{e^\pi + e^{-\pi}}$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let a random variable $X$ follow the exponential distribution with mean 2. Define
+\begin{align}
+    Y = [X - 2 \mid X > 2].
+\end{align}
+
+The value of $P(Y \geq t)$ is
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $e^{-t/2}$
+    \item $e^{-2t}$
+    \item $\frac{1}{2} e^{-t/2}$
+    \item $\frac{1}{2} e^{-t}$
+\end{enumerate}
+\end{multicols}
+
+\item
+The value of $E(Y)$ is equal to
+\hfill{\text{GATE MA 2008}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{1}{4}$
+    \item $\frac{1}{2}$
+    \item $1$
+    \item $2$
+\end{enumerate}
+\end{multicols}
+
+
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,753 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+                                
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\begin{center}
+\LARGE \textbf{Assignment 1: GATE 2018 MA}\\[2pt] 
+\large EE25BTECH11061-- Vankudoth Sainadh
+\end{center}
+
+\begin{enumerate}
+    \item ``The dress \underline{\hspace{2cm}} her so well that they all immediately \underline{\hspace{2cm}} her on her appearance." 
+    
+    \hfill{\brak{\text{GATE MA 2018}}}
+    
+    The word that best fill blanks in the above sentence are
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item complemented, complemented
+            \item complimented, complemented
+            \item complimented, complimented
+            \item complemented, complimented
+        \end{multicols}
+    \end{enumerate}
+
+    \item ``The judge's standing in the legal community, though shaken by false allegations of wrongdoing, remained \underline{\hspace{2cm}}."
+    
+    \hfill{\brak{\text{GATE MA 2018}}} 
+   
+    The word that best fill blanks in the above sentence are
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item undiminished
+            \item damaged
+            \item illegal
+            \item uncertain
+        \end{multicols}
+    \end{enumerate}
+
+\item Find the missing group of letters in the following series: BC, FGH, LMNO, \underline{\hspace{2cm}} \\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+    \begin{multicols}{4}
+        \item UVWXY
+        \item TUVWX
+        \item STUVW
+        \item RSTUV
+    \end{multicols}
+\end{enumerate}
+
+    \item The perimeters of a circle, a square and an equilateral triangle are equal. Which one of the following statements is true?
+    
+    \hfill{\brak{\text{GATE MA 2018}}}
+    \begin{enumerate}
+        \item The circle has the largest area.
+        \item The square has the largest area.
+        \item The equilateral triangle has the largest area.
+        \item All the three shapes have the same area.
+    \end{enumerate}
+
+    \item The value of the expression $\frac{1}{1+\log_u vw} + \frac{1}{1+\log_v wu} + \frac{1}{1+\log_w uv}$ is \underline{\hspace{2cm}}.
+    
+    \hfill{\brak{\text{GATE MA 2018}}}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $-1$
+            \item $0$
+            \item $1$
+            \item $3$
+        \end{multicols}
+    \end{enumerate}
+
+   \item Forty students watched films A, B and C over a week. Each student watched either only one film or all three. Thirteen students watched film A, sixteen students watched film B and nineteen students watched film C. How many students watched all three films? \nolinebreak
+   
+   \hfill\mbox{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+    \begin{multicols}{4}
+        \item $0$
+        \item $2$
+        \item $4$
+        \item $8$
+    \end{multicols}
+\end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}[start=7]
+    \item A wire would enclose an area of $1936 \, \text{m}^2$, if it is bent into a square. The wire is cut into two pieces. The longer piece is thrice as long as the shorter piece. The long and the short pieces are bent into a square and a circle, respectively. Which of the following choices is closest to the sum of the areas enclosed by the two pieces in square meters? \nolinebreak
+    
+    \hfill\mbox{\brak{\text{GATE MA 2018}}}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $1096$
+            \item $1111$
+            \item $1243$
+            \item $2486$
+        \end{multicols}
+    \end{enumerate}
+\newpage
+    \item A contract is to be completed in $52$ days and $125$ identical robots were employed, each operational for $7$ hours a day. After $39$ days, five-seventh of the work was completed. How many additional robots would be required to complete the work on time, if each robot is now operational for $8$ hours a day? \nolinebreak
+    
+    \hfill\mbox{\brak{\text{GATE MA 2018}}}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $50$
+            \item $89$
+            \item $146$
+            \item $175$
+        \end{multicols}
+    \end{enumerate}
+
+    \item A house has a number which needs to be identified. The following three statements are given that can help in identifying the house number. \nolinebreak
+    
+    \hfill\mbox{\brak{\text{GATE MA 2018}}}
+
+    i. If the house number is a multiple of $3$, then it is a number from $50$ to $59$. \\
+    ii. If the house number is NOT a multiple of $4$, then it is a number from $60$ to $69$. \\
+    iii. If the house number is NOT a multiple of $6$, then it is a number from $70$ to $79$.
+
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $54$
+            \item $65$
+            \item $66$
+            \item $76$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+\begin{enumerate}[start=10]
+    \item An unbiased coin is tossed six times in a row and four different such trials are conducted. One trial implies six tosses of the coin. If H stands for head and T stands for tail, the following are the observations from the four trials: \newline (1) HTHTHT (2) TTHHHT (3) HTTHHT (4) HHHT\_\_ \_\_. \vspace{0.3cm}\newline Which statement describing the last two coin tosses of the fourth trial has the highest probability of being correct? \nolinebreak
+    
+    \hfill\mbox{\brak{\text{GATE MA 2018}}}
+    \begin{enumerate}
+                \item Two T will occur.
+            \item One H and one T will occur.
+            \item Two H will occur.
+            \item One H will be followed by one T.
+        
+    \end{enumerate}
+
+\newpage
+
+
+
+
+\item The principal value of $\brak{-1}^{\brak{-2i/\pi}}$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $e^{2}$
+\item $e^{2i}$
+\item $e^{-2i}$
+\item $e^{-2}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $f\colon \mathbb{C}\to \mathbb{C}$ be an entire function with $f\brak{0}=1$, $f\brak{1}=2$ and $f'\brak{0}=0$. If there exists $M>0$ such that $\abs{f''\brak{z}}\le M$ for all $z\in \mathbb{C}$, then $f\brak{2}=$ 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $2$
+\item $5$
+\item $2+5i$
+\item $5+2i$
+\end{multicols}
+\end{enumerate}
+
+\item In the Laurent series expansion of $f\brak{z}=\dfrac{1}{z\brak{z-1}}$ valid for $\abs{z-1}>1$, the coefficient of $\dfrac{1}{z-1}$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $-2$
+\item $-1$
+\item $0$
+\item $1$
+\end{multicols}
+\end{enumerate}
+
+\item Let $X$ and $Y$ be metric spaces, and let $f\colon X\to Y$ be a continuous map. For any subset $S$ of $X$, which one of the following statements is true? \hfill{\brak{\text{GATE MA 2018}}}
+
+\begin{enumerate}
+
+\item \text{If $S$ is open, then $f\brak{S}$ is open}
+\item \text{If $S$ is connected, then $f\brak{S}$ is connected}
+\item \text{If $S$ is closed, then $f\brak{S}$ is closed}
+\item \text{If $S$ is bounded, then $f\brak{S}$ is bounded}
+
+\end{enumerate}
+
+\item The general solution of the differential equation $x y'= y+\sqrt{x^{2}+y^{2}}$ for $x>0$ is given by \newline \brak{\text{with an arbitrary positive constant $k$ }}
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\begin{enumerate}
+
+\item $k y^{2}= x+\sqrt{x^{2}+y^{2}}$
+\item $k x^{2}= x+\sqrt{x^{2}+y^{2}}$
+\item $k x^{2}= y+\sqrt{x^{2}+y^{2}}$
+\item $k y^{2}= y+\sqrt{x^{2}+y^{2}}$
+\end{enumerate}
+
+\item Let $p_n\brak{x}$ be the polynomial solution of the differential equation
+\begin{align*}
+\frac{d}{dx}\brak{\brak{1- x^2}y'} + n\brak{n+ 1}y = 0
+\end{align*}
+with $p_n\brak{1} = 1$ for $n = 1, 2, 3, \ldots$. If
+\begin{align*}
+\frac{d}{dx}\brak{p_{n+2}\brak{x}- p_n\brak{x}} = \alpha_n\,p_{n+1}\brak{x},
+\end{align*}
+then $\alpha_n$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{4}
+\item $2n$
+\item $2n+ 1$
+\item $2n+ 2$
+\item $2n+ 3$
+\end{multicols}
+\end{enumerate}
+
+\item In the permutation group $S_{6}$, the number of elements of order $8$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{4}
+\item $0$
+\item $1$
+\item $2$
+\item $4$
+\end{multicols}
+\end{enumerate}
+\newpage
+\item Let $R$ be a commutative ring with $1$ \brak{\text{unity}} which is not a field. Let $I \subset R$ be a proper ideal
+such that every element of $R$ not in $I$ is invertible in $R$. Then the number of maximal ideals of
+$R$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{4}
+\item $1$
+\item $2$
+\item $3$
+\item \text{infinite}
+\end{multicols}
+\end{enumerate}
+
+\item Let $f\colon \mathbb{R} \to \mathbb{R}$ be a twice continuously differentiable function. The order of convergence of
+the secant method for finding root of the equation $f\brak{x} = 0$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{1+\sqrt{5}}{2}$
+\item $\dfrac{2}{1+\sqrt{5}}$
+\item $\dfrac{1+\sqrt{5}}{3}$
+\item $\dfrac{3}{1+\sqrt{5}}$
+\end{multicols}
+\end{enumerate}
+
+\item The Cauchy problem $u\,u_x + y\,u_y = x$ with $u\brak{x, 1} = 2x$, when solved using its characteristic
+equations with an independent variable $t$, is found to admit of a solution in the form
+\begin{align*}
+x &= \frac{3}{2}\,s e^{t} - \frac{1}{2}\,s e^{-t},\quad
+y = e^{t},\quad
+u = f\brak{s, t}.
+\end{align*}
+Then $f\brak{s, t}$ is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\dfrac{3}{2}\,s e^{t} + \dfrac{1}{2}\,s e^{-t}$
+\item $\dfrac{1}{2}\,s e^{t} + \dfrac{3}{2}\,s e^{-t}$
+\item $\dfrac{1}{2}\,s e^{t} - \dfrac{3}{2}\,s e^{-t}$
+\item $\dfrac{3}{2}\,s e^{t} - \dfrac{1}{2}\,s e^{-t}$
+\end{multicols}
+\end{enumerate}
+
+\item An urn contains four balls, each ball having equal probability of being white or black. Three
+black balls are added to the urn. The probability that five balls in the urn are black is
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{2}{7}$
+\item $\dfrac{3}{8}$
+\item $\dfrac{1}{2}$
+\item $\dfrac{5}{7}$
+\end{multicols}
+\end{enumerate}
+
+\item For a linear programming problem, which one of the following statements is FALSE? \\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\item If a constraint is an equality, then the corresponding dual variable is unrestricted in sign
+\item Both primal and its dual can be infeasible
+\item If primal is unbounded, then its dual is infeasible
+\item Even if both primal and dual are feasible, the optimal values of the primal and the dual can differ
+\end{enumerate}
+
+\item Let $A =
+\myvec{ a & 2f & 0 \\[2pt] 2f & b & 3f \\[2pt] 0 & 3f & c }$, where $a, b, c, f$ are real numbers and $f \ne 0$. The geometric multiplicity of the largest eigenvalue of $A$ equals \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Consider the subspaces
+\begin{align*}
+W_1 &= \{\brak{x_1, x_2, x_3} \in \mathbb{R}^3 \colon x_1 = x_2 + 2x_3\},\\
+W_2 &= \{\brak{x_1, x_2, x_3} \in \mathbb{R}^3 \colon x_1 = 3x_2 + 2x_3\}
+\end{align*}
+of $\mathbb{R}^3$. Then the dimension of $W_1 + W_2$ equals \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\newpage
+\item Let $V$ be the real vector space of all polynomials of degree less than or equal to $2$ with real
+coefficients. Let $T \colon V \to V$ be the linear transformation given by
+\begin{align*}
+T\brak{p} = 2p+ p',\quad \text{for } p \in V,
+\end{align*}
+where $p'$ is the derivative of $p$. Then the number of nonzero entries in the Jordan canonical
+form of a matrix of $T$ equals \underline{\hspace{2cm}}. 
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $I = [2, 3)$, $J$ be the set of all rational numbers in the interval $[4, 6]$, $K$ be the Cantor
+\brak{\text{ternary}} set, and let $L = \{7 + x \colon x \in K\}$. Then the Lebesgue measure of the set $I \cup J \cup L$
+equals \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $u\brak{x, y, z} = x^2 - 2y + 4z^2$ for $\brak{x, y, z} \in \mathbb{R}^3$. Then the directional derivative of $u$ in the
+direction $\dfrac{3}{5}\,\hat{\imath}- \dfrac{4}{5}\,\hat{k}$ at the point $\brak{5, 1, 0}$ is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item If the Laplace transform of $y\brak{t}$ is given by $Y\brak{s} = \mathcal{L}\brak{y\brak{t}} =
+\dfrac{5}{2\brak{s- 1}} - \dfrac{2}{s- 2} + \dfrac{1}{2\brak{s- 3}}$,
+then $y\brak{0} + y'\brak{0} = $ \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item The number of regular singular points of the differential equation
+\begin{align*}
+\bigl[(x-1)^2 \sin x\bigr]\,y'' \;+\; \bigl[\cos x\,\sin(x-1)\bigr]\,y' \;+\; (x-1)\,y \;=\; 0.
+\end{align*}
+
+in the interval $\brak{0, \dfrac{\pi}{2}}$ is equal to \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $F$ be a field with $49$ elements and let $K$ be a subfield of $F$ with $7$ elements. Then the
+dimension of $F$ as a vector space over $K$ is \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $C\brak{[0, 1]}$ be the real vector space of all continuous real valued functions on $[0, 1]$, and let
+$T$ be the linear operator on $C\brak{[0, 1]}$ given by
+\begin{align*}
+\brak{Tf}\brak{x} = \int_{0}^{1} \sin\brak{x+ y}\, f\brak{y}\, dy,\quad x \in [0, 1].
+\end{align*}
+Then the dimension of the range space of $T$ equals \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $a \in \brak{-1, 1}$ be such that the quadrature rule $\int_{-1}^{1} f\brak{x}\, dx \approx f\brak{-a} + f\brak{a}$
+is exact for all polynomials of degree less than or equal to $3$. Then $3a^2 = $ \underline{\hspace{2cm}}.\\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+
+\item Let $X$ and $Y$ have joint probability density function given by
+\begin{align*}
+f_{X,Y}\brak{x, y} =
+\begin{cases}
+2, & 0 \le x \le 1- y,\ 0 \le y \le 1,\\
+0, & \text{otherwise.}
+\end{cases}
+\end{align*}
+If $f_Y$ denotes the marginal probability density function of $Y$, then $f_Y\brak{1/2} = $ \underline{\hspace{2cm}}. \\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+
+\item Let the cumulative distribution function of the random variable $X$ be given by
+\begin{align*}
+F_X\brak{x} =
+\begin{cases}
+0, & x < 0,\\
+x, & 0 \le x < 1/2,\\
+\brak{1 + x}/2, & 1/2 \le x < 1,\\
+1, & x \ge 1.
+\end{cases}
+\end{align*}
+Then $P\brak{X = 1/2} = $ \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $\{X_j\}$ be a sequence of independent Bernoulli random variables with $P\brak{X_j = 1} = 1/4$
+and let $Y_n = \dfrac{1}{n}\,\sum_{j=1}^{n} X_j^2$. Then $Y_n$ converges, in probability, to \underline{\hspace{2cm}}. 
+\hfill{\brak{\text{GATE MA 2018}}}
+
+
+\item Let $\Gamma$ be the circle given by $z = 4e^{i\theta}$, where $\theta$ varies from $0$ to $2\pi$. Then
+\begin{align*}
+\oint_{\Gamma} \frac{e^{z}}{z^2 - 2z}\, dz =
+\end{align*}
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $2\pi i\brak{e^{2} - 1}$
+\item $\pi i\brak{1 - e^{2}}$
+\item $\pi i\brak{e^{2} - 1}$
+\item $2\pi i\brak{1 - e^{2}}$
+\end{multicols}
+\end{enumerate}
+
+\item The image of the half plane $\Re\brak{z} + \Im\brak{z} > 0$ under the map $w = \dfrac{z - 1}{z + i}$ is given by 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $Re\brak{w} > 0$
+\item $Im\brak{w} > 0$
+\item $\abs{w} > 1$
+\item $\abs{w} < 1$
+\end{multicols}
+\end{enumerate}
+
+\item Let $D \subset \mathbb{R}^2$ denote the closed disc with center at the origin and radius $2$. Then
+\begin{align*}
+\iint_{D} e^{-\brak{x^2 + y^2}}\, dx\, dy =
+\end{align*}
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\pi\brak{1 - e^{-4}}$
+\item $\dfrac{\pi}{2}\brak{1 - e^{-4}}$
+\item $\pi\brak{1 - e^{-2}}$
+\item $\dfrac{\pi}{2}\brak{1 - e^{-2}}$
+\end{multicols}
+\end{enumerate}
+
+\item Consider the polynomial $p\brak{X} = X^{4} + 4$ in the ring $\mathbb{Q}[X]$ of polynomials in the variable $X$
+with coefficients in the field $\mathbb{Q}$ of rational numbers. Then \hfill{\brak{\text{GATE MA 2018}}}\
+\begin{enumerate}
+\item \text{the set of zeros of $p\brak{X}$ in $\mathbb{C}$ forms a group under multiplication}
+\item \text{$p\brak{X}$ is reducible in the ring $\mathbb{Q}[X]$}
+\item \text{the splitting field of $p\brak{X}$ has degree $3$ over $\mathbb{Q}$}
+\item \text{the splitting field of $p\brak{X}$ has degree $4$ over $\mathbb{Q}$}
+\end{enumerate}
+
+\item Which one of the following statements is true? 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\item \text{Every group of order $12$ has a non-trivial proper normal subgroup}
+\item \text{Some group of order $12$ does not have a non-trivial proper normal subgroup}
+\item \text{Every group of order $12$ has a subgroup of order $6$}
+\item \text{Every group of order $12$ has an element of order $12$}
+\end{enumerate}
+
+\item For an odd prime $p$, consider the ring $\mathbb{Z}\brak{\sqrt{-p}} = \{a + b\sqrt{-p} \colon a, b \in \mathbb{Z}\} \subseteq \mathbb{C}$. Then the
+element $2$ in $\mathbb{Z}\brak{\sqrt{-p}}$ is 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item \text{a unit}
+\item \text{a square}
+\item \text{a prime}
+\item \text{irreducible}
+\end{multicols}
+\end{enumerate}
+\newpage
+\item Consider the following two statements:
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{align*}
+\text{P}\colon &\ \myvec{0 & 5\\ 0 & 7}\ \text{has infinitely many LU factorizations, where $L$ is lower triangular}\\
+&\ \text{with each diagonal entry $1$ and $U$ is upper triangular.}\\[4pt]
+\text{Q}\colon &\ \myvec{0 & 0\\ 2 & 5}\ \text{has no LU factorization, where $L$ is lower triangular with each diag-}\\
+&\ \text{onal entry $1$ and $U$ is upper triangular.}
+\end{align*}
+Then which one of the following options is correct?
+\begin{enumerate}
+\begin{multicols}{2}
+\item \text{P is TRUE and Q is FALSE}
+\item \text{Both P and Q are TRUE}
+\item \text{P is FALSE and Q is TRUE}
+\item \text{Both P and Q are FALSE}
+\end{multicols}
+\end{enumerate}
+
+\item If the characteristic curves of the partial differential equation $x\,u_{xx} + 2x^{2}u_{xy} = u_{x} - 1$ are
+$\mu\brak{x, y} = c_1$ and $\nu\brak{x, y} = c_2$, where $c_1$ and $c_2$ are constants, then 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\mu\brak{x, y} = x^{2} - y,\ \nu\brak{x, y} = y$
+\item $\mu\brak{x, y} = x^{2} + y,\ \nu\brak{x, y} = y$
+\item $\mu\brak{x, y} = x^{2} + y,\ \nu\brak{x, y} = x^{2}$
+\item $\mu\brak{x, y} = x^{2} - y,\ \nu\brak{x, y} = x^{2}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $f \colon X \to Y$ be a continuous map from a Hausdorff topological space $X$ to a metric space
+$Y$. Consider the following two statements:
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{align*}
+\text{P}\colon &\ f \text{ is a closed map and the inverse image } f^{-1}\brak{y} = \{x \in X \colon f\brak{x} = y\} \text{ is compact for each } y \in Y.\\
+\text{Q}\colon &\ \text{For every compact subset } K \subset Y, \text{ the inverse image } f^{-1}\brak{K} \text{ is a compact subset of } X.
+\end{align*}
+Which one of the following is true?
+\begin{enumerate}
+
+\item \text{Q implies P but P does NOT imply Q}
+\item \text{P implies Q but Q does NOT imply P}
+\item \text{P and Q are equivalent}
+\item \text{neither P implies Q nor Q implies P}
+
+\end{enumerate}
+
+\item Let $X$ denote $\mathbb{R}^2$ endowed with the usual topology. Let $Y$ denote $\mathbb{R}$ endowed with the co-finite
+topology. If $Z$ is the product topological space $Y \times Y$, then 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\item \text{the topology of $X$ is the same as the topology of $Z$}
+\item \text{the topology of $X$ is strictly coarser \brak{\text{weaker}} than that of $Z$}
+\item \text{the topology of $Z$ is strictly coarser \brak{\text{weaker}} than that of $X$}
+\item \text{the topology of $X$ cannot be compared with that of $Z$}
+\end{enumerate}
+
+\item Consider $\mathbb{R}^n$ with the usual topology for $n = 1, 2, 3$. Each of the following options gives
+topological spaces $X$ and $Y$ with respective induced topologies. In which option is $X$ homeomorphic to $Y$?
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\item $X = \{\brak{x, y, z} \in \mathbb{R}^3 \colon x^{2} + y^{2} = 1\},\ Y = \{\brak{x, y, z} \in \mathbb{R}^3 \colon z = 0,\ x^{2} + y^{2} \ne 0\}$
+\item $X = \{\brak{x, y} \in \mathbb{R}^{2} \colon y = \sin\brak{1/x},\ 0 < x \le 1\}\cup\{\brak{x, y} \in \mathbb{R}^{2} \colon x = 0,\ -1 \le y \le 1\},\ Y = [0, 1] \subset \mathbb{R}$
+\item $X = \{\brak{x, y} \in \mathbb{R}^{2} \colon y = x\sin\brak{1/x},\ 0 < x \le 1\},\ Y = [0, 1] \subset \mathbb{R}$
+\item $X = \{\brak{x, y, z} \in \mathbb{R}^3 \colon x^{2} + y^{2} = 1\},\ Y = \{\brak{x, y, z} \in \mathbb{R}^3 \colon x^{2} + y^{2} = z^{2} \ne 0\}$
+\end{enumerate}
+\newpage
+\item Let $\{X_i\}$ be a sequence of independent $\text{Poisson}\brak{\lambda}$ variables and let $W_n = \dfrac{1}{n}\sum_{i=1}^{n} X_i$. Then
+the limiting distribution of $\sqrt{n}\brak{W_n - \lambda}$ is the normal distribution with zero mean and variance
+given by
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{4}
+\item $1$
+\item $\sqrt{\lambda}$
+\item $\lambda$
+\item $\lambda^{2}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $X_1, X_2, \ldots, X_n$ be independent and identically distributed random variables with probability
+density function given by
+\begin{align*}
+f_X\brak{x;\theta} =
+\begin{cases}
+\theta e^{-\theta\brak{x- 1}}, & x \ge 1,\\
+0, & \text{otherwise.}
+\end{cases}
+\end{align*}
+Also, let $\bar{X} = \dfrac{1}{n}\sum_{i=1}^{n} X_i$. Then the maximum likelihood estimator of $\theta$ is
+
+\hfill(GATE MA 2018)
+\begin{enumerate}
+\begin{multicols}{4}
+\item $1/\bar{X}$
+\item $\brak{1/\bar{X}} - 1$
+\item $1/\brak{\bar{X} - 1}$
+\item $\bar{X}$
+\end{multicols}
+\end{enumerate}
+
+\item Consider the Linear Programming Problem \brak{\text{LPP}}:\\
+Maximize $\alpha x_1 + x_2$\\
+Subject to $2x_1 + x_2 \le 6$, $-x_1 + x_2 \le 1$, $x_1 + x_2 \le 4$, $x_1 \ge 0$, $x_2 \ge 0$,\\
+where $\alpha$ is a constant. If $\brak{3, 0}$ is the only optimal solution, then
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\alpha < -2$
+\item $-2 < \alpha < 1$
+\item $1 < \alpha < 2$
+\item $\alpha > 2$
+\end{multicols}
+\end{enumerate}
+
+\item Let $M_2\brak{\mathbb{R}}$ be the vector space of all $2 \times 2$ real matrices over the field $\mathbb{R}$. Define the linear
+transformation $S \colon M_2\brak{\mathbb{R}} \to M_2\brak{\mathbb{R}}$ by $S\brak{X} = 2X + X^{T}$, where $X^{T}$ denotes the transpose
+of the matrix $X$. Then the trace of $S$ equals \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Consider $\mathbb{R}^3$ with the usual inner product. If $d$ is the distance from $\brak{1, 1, 1}$ to the subspace
+$\text{span}\{(1, 1, 0), (0, 1, 1)\}$ of $\mathbb{R}^3$, then $3d^{2} = $ \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Consider the matrix $A = I_{9} - 2u u^{T}$ with $u = \dfrac{1}{3}\,[1, 1, 1, 1, 1, 1, 1, 1, 1]$, where $I_{9}$ is the $9 \times 9$
+identity matrix and $u^{T}$ is the transpose of $u$. If $\lambda$ and $\mu$ are two distinct eigenvalues of $A$, then
+$\abs{\lambda - \mu} = $ \underline{\hspace{2cm}}. \hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $f\brak{z} = z^{3} e^{z^{2}}$ for $z \in \mathbb{C}$ and let $\Gamma$ be the circle $z = e^{i\theta}$, where $\theta$ varies from $0$ to $4\pi$. Then
+\begin{align*}
+\frac{1}{2\pi i}\oint_{\Gamma} \frac{f'\brak{z}}{f\brak{z}}\, dz = \underline{\hspace{2cm}}.
+\end{align*}
+
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $S$ be the surface of the solid $V = \{(x, y, z) \colon 0 \le x \le 1,\ 0 \le y \le 2,\ 0 \le z \le 3\}$. Let $\hat{n}$ denote the unit
+outward normal to $S$ and let $\vec{F}\brak{x, y, z} = x\,\hat{\imath} + y\,\hat{\jmath} + z\,\hat{k}$, $(x, y, z) \in V$. Then the surface integral
+$\iint_{S} \vec{F} \cdot \hat{n}\, dS$ equals \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+\newpage
+\item Let $A$ be a $3\times 3$ matrix with real entries. If three solutions of the linear system of differential
+equations $\dot{x}\brak{t} = A x\brak{t}$ are given by
+\begin{align*}
+\myvec{ e^{t} - e^{2t} \\ -e^{t} + e^{2t} \\ e^{t} + e^{2t} },\quad
+\myvec{ -e^{2t} - e^{-t} \\ e^{2t} - e^{-t} \\ e^{2t} + e^{-t} },\quad
+\myvec{ e^{-t} + 2e^{t} \\ e^{-t} - 2e^{t} \\ -e^{-t} + 2e^{t} },
+\end{align*}
+then the sum of the diagonal entries of $A$ is equal to \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item If $y_1\brak{x} = e^{-x^{2}}$ is a solution of the differential equation $x y'' + \alpha y' + \beta x^{3} y = 0$ for some real numbers
+$\alpha$ and $\beta$, then $\alpha\beta = $ \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $L^{2}\brak{[0, 1]}$ be the Hilbert space of all real valued square integrable functions on $[0, 1]$ with
+the usual inner product. Let $\phi$ be the linear functional on $L^{2}\brak{[0, 1]}$ defined by
+\begin{align*}
+\phi\brak{f} = \int_{1/4}^{3/4} {3}{\sqrt{2}}\, f\, d\mu,
+\end{align*}
+where $\mu$ denotes the Lebesgue measure on $[0, 1]$. Then $\|\phi\| = $ \underline{\hspace{2cm}}.
+
+\hfill(GATE MA 2018)
+
+\item Let $U$ be an orthonormal set in a Hilbert space $H$ and let $x \in H$ be such that $\|x\| = 2$.
+Consider the set $E = \{\, u \in U \colon \abs{\langle x, u\rangle} \ge 1/4 \,\}$. Then the maximum possible number of elements in $E$ is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item If $p\brak{x} = 2 - \brak{x+ 1} + x\brak{x+ 1} - \beta x\brak{x+ 1}\brak{x- \alpha}$ interpolates the points $\brak{x, y}$ in the table\\
+$\begin{array}{c|c|c|c|c}
+x & -1 & 0 & 1 & 2\\ \hline
+y & 2 & 1 & 2 & -7
+\end{array}$\\
+then $\alpha + \beta = $ \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item If $\sin\brak{\pi x} = a_0 + \sum_{n=1}^{\infty} a_n \cos\brak{n\pi x}$ for $0 < x < 1$, then $\brak{a_0 + a_1}\pi = $ \underline{\hspace{2cm}}. \\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+
+\item For $n = 1, 2, \ldots$, let $f_n\brak{x} = \dfrac{2^{n} x^{n- 1}}{1 + x}$, $x \in [0, 1]$. Then $\displaystyle \lim_{n \to \infty} \int_{0}^{1} f_n\brak{x}\, dx = $ \underline{\hspace{2cm}}. \\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+
+\item Let $X_1, X_2, X_3, X_4$ be independent exponential random variables with mean $1$, $1/2$, $1/3$, $1/4$,
+respectively. Then $Y = \min\brak{X_1, X_2, X_3, X_4}$ has exponential distribution with mean equal to \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\item Let $X$ be the number of heads in $4$ tosses of a fair coin by Person $1$ and let $Y$ be the number of
+heads in $4$ tosses of a fair coin by Person $2$. Assume that all the tosses are independent. Then
+the value of $P\brak{X = Y}$ correct up to three decimal places is \underline{\hspace{2cm}}. \\ \makebox[\linewidth][r]{\brak{\text{GATE MA 2018}}}
+
+\item Let $X_1$ and $X_2$ be independent geometric random variables with the same probability
+mass function given by $P\brak{X = k} = p\brak{1 - p}^{k- 1}$, $k = 1, 2, \ldots$. Then the value of
+$P\brak{X_1 = 2 \mid X_1 + X_2 = 4}$ correct up to three decimal places is \underline{\hspace{2cm}}.
+
+\hfill(GATE MA 2018)
+\newpage
+\item A certain commodity is produced by the manufacturing plants $P_1$ and $P_2$ whose capacities are
+$6$ and $5$ units, respectively. The commodity is shipped to markets $M_1$, $M_2$, $M_3$ and $M_4$ whose
+requirements are $1$, $2$, $3$ and $5$ units, respectively. The transportation cost per unit from plant
+$P_i$ to market $M_j$ is as follows:\\[2pt]
+\begin{minipage}{\linewidth}
+\centering
+\begin{tabular}{c|c|c|c|c|c}
+& $M_1$ & $M_2$ & $M_3$ & $M_4$  \\ \hline
+$P_1$ & $1$ & $3$ & $5$ & $8$ & $6$\\ \hline
+$P_2$ & $2$ & $5$ & $6$ & $7$ & $5$\\ \hline
+ & $1$ & $2$ & $3$ & $5$ 
+\end{tabular}
+\end{minipage}\\[4pt]
+Then the optimal cost of transportation is \underline{\hspace{2cm}}. 
+
+\hfill{\brak{\text{GATE MA 2018}}}
+
+\end{enumerate}
+
+
+\end{document}
+```
+
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/91584593/2df4586e-bc4b-4c32-9800-b23ffdfc7591/ma-2018-p1.pdf
+
