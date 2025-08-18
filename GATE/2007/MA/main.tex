@@ -1,0 +1,1521 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{multicol}
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+
+
+\begin{center}
+    \LARGE \textbf{GATE 2007 MA}\\[0.5em]
+    \large \textbf{AI25BTECH11012 - UNNATHI GARIGE}
+\end{center}
+
+
+
+
+\begin{center}
+ \textbf{Q.1-Q.20 carry one mark each.}
+\end{center}
+\vspace{0.25em}
+
+\begin{enumerate}
+   
+
+\item Consider $\mathbb{R}^2$ with the usual topology. Let 
+\begin{align*}
+  S = \{(x, y) \in \mathbb{R}^2 : x \text{ is an integer} \}  
+\end{align*}
+ Then $S$ is  
+
+\hfill{\text{GATE MA 2007}}
+\begin{enumerate} 
+    \item open but NOT closed
+    \item both open and closed
+    \item neither open nor closed
+    \item closed but NOT open
+\end{enumerate}
+
+
+\item Suppose $X = \{ \alpha, \beta, \delta \}$. Let
+\begin{align*}
+\mathcal{T}_1 = \{\emptyset, X, \{\alpha\}, \{\alpha, \beta\} \} \quad \text{and} \quad \mathcal{T}_2 = \{\emptyset, X, \{\alpha\}, \{\beta, \delta\} \}.
+\end{align*}
+Then
+\hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+     \item both $\mathcal{T}_1 \cap \mathcal{T}_2$ and $\mathcal{T}_1 \cup \mathcal{T}_2$ are topologies
+    \item neither $\mathcal{T}_1 \cap \mathcal{T}_2$ nor $\mathcal{T}_1 \cup \mathcal{T}_2$ is a topology
+    \item $\mathcal{T}_1 \cup \mathcal{T}_2$ is a topology but $\mathcal{T}_1 \cap \mathcal{T}_2$ is NOT a topology
+    \item $\mathcal{T}_1 \cap \mathcal{T}_2$ is a topology but $\mathcal{T}_1 \cup \mathcal{T}_2$ is NOT a topology
+\end{enumerate}
+
+\item For a positive integer $n$, let $f_n : \mathbb{R} \to \mathbb{R}$ be defined by
+
+\begin{align*}
+f_n(x) = 
+\begin{cases}
+\frac{1}{4n + 5} & \text{if } 0 \leq x \leq n, \\
+0 & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+Then $\{f_n(x)\}$ converges to zero
+\hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item uniformly but NOT in $L^1$ norm
+    \item uniformly and also in $L^1$ norm
+    \item pointwise but NOT uniformly
+    \item in $L^1$ norm but NOT pointwise
+\end{enumerate}
+
+
+\item Let $P_1$ and $P_2$ be two projection operators on a vector space. \\ 
+Then 
+\hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item $P_1 + P_2$ is a projection if $P_1 P_2 = P_2 P_1 = 0$
+    \item $P_1 - P_2$ is a projection if $P_1 P_2 = P_2 P_1 = 0$
+    \item $P_1 + P_2$ is a projection
+    \item $P_1 - P_2$ is a projection
+\end{enumerate}
+
+
+
+\item Consider the system of linear equations         \hfill{\text{GATE MA 2007}}
+\begin{align*}
+x + y + z &= 3 ,\\ 
+x - y - z &= 4 , \\
+-5y + kz &= 6
+\end{align*}
+
+Then the value of $k$ for which this system has an infinite number of solutions is
+
+\begin{enumerate}
+    \item $k = -5$
+    \item $k = 0$
+    \item $k = 1$
+    \item $k = 3$
+\end{enumerate}
+
+
+
+\item Let             \hfill{\text{GATE MA 2007}}
+
+A = $\myvec{
+1 & 1 & 1 \\
+2 & 2 & 3 \\
+x & y & z}$
+
+and let $V = \{(x, y, z) \in \mathbb{R}^3 : \det(A) = 0\}$. Then the dimension of $V$ equals:
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$
+\end{enumerate}
+\end{multicols}
+
+
+ 
+\item Let  \hfill{\text{GATE MA 2007}}
+\begin{align*}
+ S = \{0\} \cup \left\{ \frac{1}{4n + 7} : n = 1, 2, \ldots \right\}   
+\end{align*} 
+Then the number of analytic functions which vanish only on $S$ is:   
+\begin{multicols}{4}
+\begin{enumerate}
+    \item infinite
+    \item $0$
+    \item $1$
+    \item $2$
+\end{enumerate}
+\end{multicols}
+ 
+
+\item It is given that $\sum_{n=0}^\infty a_n z^n$ converges at $z = 3 + i4$. Then the radius of convergence of the power series $\sum_{n=0}^\infty a_n z^n$ is:   \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\leq 5 $
+    \item $\geq 5$
+    \item $< 5$
+    \item $> 5$
+\end{enumerate}
+\end{multicols}
+
+
+\item The value of $\alpha$ for which $G = \langle \alpha, 1, 3, 9, 19, 27 \rangle$ is a cyclic group under multiplication modulo $56$ is:      \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $5 $
+    \item $15$
+    \item $25$
+    \item $35$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Consider $\mathbb{Z}_{24}$ as the additive group modulo $24$. Then the number of elements of order $8$ in the group $\mathbb{Z}_{24}$ is:
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+\end{multicols}
+
+ 
+\item Define $f : \mathbb{R}^2 \to \mathbb{R}$ by
+\begin{align*}
+f(x, y) =
+\begin{cases}
+1, & \text{if } xy = 0, \\
+2, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+If $S = \{(x, y) : f \text{ is continuous at the point } (x, y)\}$, then:
+\hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+    \item $S$ is open
+    \item $S$ is connected
+    \item $S = \emptyset$
+    \item $S$ is closed
+\end{enumerate}
+    
+
+
+
+\item Consider the linear programming problem
+\begin{align*}
+& \text{Maximize } z = c_1 x_1 + c_2 x_2, \quad c_1, c_2 > 0, \\
+& \text{subject to} \\
+& x_1 + x_2 \le 3 \\
+& 2x_1 + 3x_2 \le 4 \\
+& x_i \ge 0
+\end{align*}
+Then:
+\hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+\item  the primal has an optimal solution but the dual does NOT have an optimal solution
+\item  both the primal and the dual have optimal solutions
+\item the dual has an optimal solution but the primal does NOT have an optimal solution
+\item neither the primal nor the dual have optimal solutions
+\end{enumerate}
+
+
+\item Let 
+\begin{align*}
+  f(x) = x^{10} + x - 1, x \in \mathbb{R}  
+\end{align*}
+and let $x_k = k$, $k=0,1,2,\dots,10$. Then the value of the divided difference
+\begin{align*}
+f[x_0, x_1, x_2, \dots, x_{10}]
+\end{align*}
+is:
+\hfill{GATE MA 2007}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-1$
+    \item $0$
+    \item $1$
+    \item $10$
+\end{enumerate}
+\end{multicols}
+ 
+
+\item  Let $X, Y$ be jointly distributed random variables having the joint probability density function
+\begin{align*}
+f(x,y) = \begin{cases}
+1, & \text{if } 0 < x + y < 1, \\
+0, & \text{otherwise.}
+\end{cases}
+\end{align*}
+
+Then $P(Y \ge \max(X, 1 - X))$ is
+\hfill{\text{GATE MA 2007}}
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\tfrac{1}{2}$
+    \item $1$
+    \item $\tfrac{1}{4}$
+    \item $\tfrac{1}{6}$
+\end{enumerate}
+\end{multicols}
+
+
+\item Let $X_1, X_2, \dots$ be a sequence of independent and identically distributed chi-square random variables, each having 4 degrees of freedom. Define
+\begin{align*}
+S_n = \sum_{i=1}^n X_i
+\end{align*}
+If $\frac{S_n}{n} \to \mu$ as $n \to \infty$, then $\mu$ =
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $8$
+    \item $16$
+    \item $24$
+    \item $32$
+\end{enumerate}
+\end{multicols}
+ 
+
+
+\item  Let $\{E_n : n = 1, 2, \dots\}$ be a decreasing sequence of Lebesgue measurable sets on $\mathbb{R}$ and let $F$ be a Lebesgue measurable set on $\mathbb{R}$ such that $E_n \cap F = \emptyset$. Suppose that $F$ has Lebesgue measure 2 and the Lebesgue measure of $E_n$ equals \begin{align*}
+    \dfrac{2n + 2}{3n + 1}, n = 1, 2, \dots
+\end{align*}
+
+Then the Lebesgue measure of the set $\left(\bigcap_{n=1}^{\infty} E_n\right) \cup F$ equals
+\hfill{\text{GATE MA 2007}}
+
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\tfrac{5}{3}$
+    \item $2$
+    \item $\tfrac{7}{3}$
+    \item $\tfrac{8}{3}$
+\end{enumerate}
+\end{multicols}
+
+
+\item The extremum for the variational problem
+\begin{align*}
+\int_0^{\frac{\pi}{8}} ((y')^2 + 2yy' - 16y^2) \, dx, \quad y(0) = 0, \; y\left(\frac{\pi}{8}\right) = 1,
+\end{align*}
+occurs for the curve
+\hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+ \item  $y = \sin(4x)$
+ \item  $y = \sqrt{2} \sin(2x)$
+ \item $y = 1 - \cos(4x)$ 
+ \item $y = \dfrac{1 - \cos(8x)}{2}$
+\end{enumerate}
+
+
+\item Suppose $y_p(x) = x \cos(2x)$ is a particular solution of 
+\begin{align*}
+y'' + \alpha y = \sin(2x).
+\end{align*}
+Then the constant $\alpha$ equals \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-4$
+    \item $-2$
+    \item $2$
+    \item $4$
+\end{enumerate}
+\end{multicols}
+
+
+\item If $F(s) = \tan^{-1}(s) + k$ is the Laplace transform of some function  $f(t)$, $t \ge 0$, \\then $k =$   \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $-\pi$
+    \item $\dfrac{\pi}{2}$
+    \item $0$
+    \item $\dfrac{\pi}{2}$ 
+\end{enumerate}
+\end{multicols}
+ 
+
+\item Let
+\begin{align*}
+S = \{(0,1,1), (1,0,1), (-1,2,1)\} \subseteq \mathbb{R}^3.
+\end{align*}
+Suppose $\mathbb{R}^3$ is endowed with the standard inner product . Define 
+\begin{align*}
+M = \{x \in \mathbb{R}^3 : \langle x, y \rangle = 0 \text{ for all } y \in S\}
+\end{align*}
+Then the dimension of $M$ equals \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $3$ 
+\end{enumerate}
+\end{multicols}
+
+
+\newpage
+\begin{center}
+    \textbf{Q.21-Q.75 carry one mark each.}
+\end{center}
+\vspace{1em}
+
+\item Let $X$ be an uncountable set and let
+\begin{align*}
+\tau = \{U \subseteq X : X \setminus U \text{ is countable or } X \setminus U \text{ is finite} \}.
+\end{align*}
+Then the topological space $(X, \tau)$        \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item is separable
+    \item is Hausdorff
+    \item has a countable basis
+    \item has a countable basis at each point
+\end{enumerate}
+
+
+
+\item Suppose $(X, \tau)$ is a topological space. Let $\{S_\alpha\}_{\alpha \in A}$ be a sequence of subsets of $X$.\newline Then \hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+    \item $\left(S_1\bigcup S_2\right)^" = S_1^" \bigcup S_2^" $
+    \item $\left(\bigcap S_"\right)^" = \bigcap S_"$
+    \item $\overline{\bigcup S_"} = \bigcup_\alpha \overline{S_"}$
+    \item $\overline{S_1\bigcup S_2} = \overline{S_1} \cup \overline{S_2}$
+\end{enumerate}
+
+
+\item Let $(X, d)$ be a metric space. Consider the metric $\rho$ on $X$ defined by
+\begin{align*}
+\rho(x,y) = \min(d(x,y), 1), \quad x,y \in X.
+\end{align*}
+Suppose $\tau$ and $\tau_1$ are topologies on $X$ defined by $d$ and $\rho$ respectively. Then
+\hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+    \item $\tau_1$ is a proper subset of $\tau_2$
+    \item $\tau_2$ is a proper subset of $\tau_1$
+    \item neither $\tau_2$ nor $\tau_1$ is a subset of the other
+    \item $\tau_1 = \tau_2$
+\end{enumerate}
+
+
+
+\item A basis of the vector space 
+\begin{align*}
+W = \{(x,y,z,w) \in \mathbb{R}^4 : x + y + z = 0, y + z + w = 0, 2x + y - z + w = 0\}
+\end{align*}
+is  \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item $\{(1,1,1,1), (2,1,1,1)\}$
+    \item $\{(1,-1,0,1), (0,1,-1,0)\}$
+    \item $\{(1,0,-1,0), (2,1,1,1)\}$
+    \item $\{(1,0,-1,0), (0,1,-1,0)\}$
+\end{enumerate}
+
+
+\item Consider $\mathbb{R}^3$ with the standard inner product. Let
+\begin{align*}
+ S = \{(1,1,1), (2,-1,2), (-1,2,1)\}   
+\end{align*}
+
+For a subset $W$ of $\mathbb{R}^3$, let $L(W)$ denote the linear span of $W$ in $\mathbb{R}^3$. Then an orthonormal set $T$ with $L(S) = L(T)$ is  \hfill{\text{GATE MA 2007}}
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item $\left\{ \frac{1}{\sqrt{3}}(1,1,1), \frac{1}{\sqrt{6}}(1,0,-2), \frac{1}{\sqrt{2}}(1,-1,0) \right\}$ 
+        \item $\{(0,0,0), (0,1,0), (0,0,1)\}$
+        \item $\left\{ \frac{1}{\sqrt{3}}(1,1,1), \frac{1}{\sqrt{2}}(1,0,-1) \right\}$        \item $\left\{ \frac{1}{\sqrt{3}}(1,1,1), \frac{1}{\sqrt{2}}(1,-1,0) \right\}$
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Let $A$ be a $3 \times 3$ matrix. Suppose that the eigenvalues of $A$ are $-1, 0, 1$ with respective eigenvectors $(1, -1, 0)^T$, $(1, 1, -2)^T$ and $(1, 1, 1)^T$. \\Then $6A$ equals
+\hfill{\text{GATE MA 2007}}
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\myvec{ -1 & 5 & 2 \\ 5 & -1 & 2 \\ 2 & 2 & -1 }$
+        \item $\myvec{ 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 }$
+        \item $\myvec{ 1 & 5 & 3 \\ 5 & 1 & 3 \\ 3 & 3 & 3 }$
+        \item $\myvec{ -3 & 9 & 0 \\ 9 & -3 & 0 \\ 0 & 0 & 6}$ 
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Let $T:\mathbb{R}^3 \rightarrow \mathbb{R}^3$ be a linear transformation defined by
+\begin{align*}
+T((x, y, z)) = (x + y - z, x + y + z, y - z).
+\end{align*}
+
+Then the matrix of the linear transformation $T$ with respect to the ordered basis
+\begin{align*}
+    B = \{(0,1,0), (0,0,1), (1,0,0)\} of \mathbb{R}^3
+\end{align*}
+is \hfill{\text{GATE MA 2007}}
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\myvec{ 1 & 1 & 0 \\ 0 & -1 & 1 \\ 1 & 1 & 1 }$
+        \item $\myvec{ 1 & 0 & 1 \\ 1 & 1 & 1 \\ -1 & 0 & 1 }$
+        \item $\myvec{ 1 & -1 & 0 \\ 1 & -1 & 1 \\ 1 & 1 & 1  }$
+        \item $\myvec{ 1 & 1 & 1 \\ -1 & 0 & 1 \\ 1 & -1 & 0 }$ 
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Let $Y(x) = (y_1(x), y_2(x))^T$ and let
+\begin{align*}
+A = \myvec{ -3 & 1 \\ k & -1 }.
+\end{align*}
+Further, let $S$ be the set of values of $k$ for which all the solutions of the system of equations $Y'(x) = A Y(x)$ tend to zero as $x \rightarrow \infty$. 
+\\Then $S$ is given by      \hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\{k : k \leq -1\}$
+        \item $\{k : k \leq 3\}$
+        \item $\{k : k < -1\}$
+        \item  $\{k : k < 3\}$
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Let
+\begin{align*}
+u(x,y) = f(xe^y) + g(y^2 \cos y),
+\end{align*}
+where $f$ and $g$ are infinitely differentiable functions. Then the partial differential equation of minimum order satisfied by $u$ is 
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item  $u_x + x u_{xx} = u_y$
+        \item  $u_y + x u_{xx} = x u_y$
+        \item  $u_y - x u_{xx} = u_x$ 
+        \item  $u_y - x u_{xx} = x u_y$
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Let $C$ be the boundary of the triangle formed by the points $(1,0,0)$, $(0,1,0)$, $(0,0,1)$.\\
+Then the value of the line integral    \hfill{\text{GATE MA 2007}}
+\begin{align*}
+\oint_C -2y\,dx + (3x - 4y^2)\,dy + (z^2 + 3y)\,dz
+\end{align*}
+is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $4$
+\end{enumerate}
+\end{multicols}
+
+
+\item Let $X$ be a complete metric space and let $E \subset X$.
+\\Consider the following statements:   \hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+  \item $E$ is compact,
+  \item $E$ is closed and bounded,
+  \item $E$ is closed and totally bounded,
+  \item Every sequence in $E$ has a subsequence converging in $E$.
+\end{enumerate}
+
+
+Which one of the above statements does \textbf{NOT} imply all the other statements?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item a
+    \item b
+    \item c
+    \item d
+\end{enumerate}
+\end{multicols}
+
+
+\item Consider the series
+\begin{align*}
+\sum_{n=1}^{\infty} \frac{1}{n^2} \sin(nx).
+\end{align*}
+Then the series   \hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+  \item converges uniformly on $\mathbb{R}$
+  \item converges pointwise but NOT uniformly on $\mathbb{R}$
+  \item converges in $L^1$ norm to an integrable function on $[0, 2\pi]$ but does NOT converge uniformly on $\mathbb{R}$
+  \item does NOT converge pointwise
+\end{enumerate}
+
+
+
+\item Let $f(z)$ be an analytic function. Then the value of  \hfill{\text{GATE MA 2007}}
+\begin{align*}
+\int_0^{2\pi} f(e^{it}) \cos(t)\,dt
+\end{align*}
+equals  
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $2\pi f(0)$
+    \item $2\pi f'(0)$
+    \item $\pi f'(0)$
+\end{enumerate}
+\end{multicols}
+
+
+\item Let $G_1$ and $G_2$ be the images of the disc $\{ z \in \mathbb{C} : |z + 1| < 1 \}$ under the transformations
+\begin{align*}
+w = \frac{(1 - i)z + 2}{(1 + i)z + 2} \quad \text{and} \quad w = \frac{(1 + i)z + 2}{(1 - i)z + 2}
+\end{align*}
+respectively. Then     
+
+\begin{enumerate}
+   
+  \item $G_1 = \{w \in \mathbb{C} : \operatorname{Im}(w) < 0\}$ and $G_2 = \{w \in \mathbb{C} : \operatorname{Im}(w) > 0\}$
+  \item $G_1 = \{w \in \mathbb{C} : \operatorname{Im}(w) > 0\}$ and $G_2 = \{w \in \mathbb{C} : \operatorname{Im}(w) < 0\}$
+  \item $G_1 = \{w \in \mathbb{C} : |w| > 2\}$ and $G_2 = \{w \in \mathbb{C} : |w| < 2\}$
+  \item $G_1 = \{w \in \mathbb{C} : |w| < 2\}$ and $G_2 = \{w \in \mathbb{C} : |w| > 2\}$
+
+\end{enumerate}
+
+
+
+\item Let $f(z) = 2^z - 2^{-z}$. Then the maximum value of $|f(z)|$ on the unit disc 
+\begin{align*}
+D = \{ z \in \mathbb{C} : |z| \leq 1 \}
+\end{align*}
+equals      \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Let        \hfill{\text{GATE MA 2007}}
+\begin{align*}
+f(z) = \frac{1}{z^2 - 3z + 2}
+\end{align*}
+Then the coefficient of $\frac{1}{z}$ in the Laurent series expansion of $f(z)$ for $|z| > 2$ is  
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $3$
+    \item $5$
+\end{enumerate}
+\end{multicols}
+
+
+\item Let $f: \mathbb{C} \rightarrow \mathbb{C}$ be an arbitrary analytic function satisfying $f(0) = 0$ and $f(1) = 2$. Then  \hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+\item  there exists a sequence $\{z_n\}$ such that $|z_n| > n$ and $|f(z_n)| > n$
+\item there exists a sequence $\{z_n\}$ such that $|z_n| > n$ and $|f(z_n)| < n$
+\item there exists a bounded sequence $\{z_n\}$ such that $|f(z_n)| > n$
+\item there exists a sequence $\{z_n\}$ such that $z_n \rightarrow 0$ and $f(z_n) \rightarrow 2$
+\end{enumerate}
+
+
+\item Define $f : \mathbb{C} \rightarrow \mathbb{C}$ by
+\begin{align*}
+f(z) =
+\begin{cases}
+0, & \text{if } \text{Re}(z) = 0 \text{ or } \text{Im}(z) = 0,\\
+\frac{1}{z}, & \text{otherwise}.
+\end{cases}
+\end{align*}
+Then the set of points where $f$ is analytic is    
+\hfill{\text{GATE MA 2007}}
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\{z : \text{Re}(z) \neq 0 \text{ and } \text{Im}(z) \neq 0 \}$
+        \item $\{z : \text{Re}(z) \neq 0 \}$
+        \item $\{z : \text{Re}(z) \neq 0 \text{ or } \text{Im}(z) \neq 0 \}$
+        \item $\{z : \text{Im}(z) \neq 0 \}$ 
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Let $U(n)$ be the set of all positive integers less than $n$ and relatively prime to $n$. Then $U(n)$ is a group under multiplication modulo $n$. For $n = 248$, the number of elements in $U(n)$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $60$
+    \item $120$
+    \item $180$
+    \item $240$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Let $\mathbb{R}[x]$ be the polynomial ring in $x$ with real coefficients and let $I = \langle x^2 + 1 \rangle$ be the ideal generated by the polynomial $x^2 + 1$ in $\mathbb{R}[x]$. Then        \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+   
+\item $I$ is a maximal ideal
+\item  $I$ is a prime ideal but NOT a maximal ideal
+\item $I$ is NOT a prime ideal
+\item  $\mathbb{R}[x]/I$ has zero divisors
+\end{enumerate}
+
+
+
+    
+
+\item Consider $\mathbb{Z}5$ and $\mathbb{Z}{20}$ as rings modulo 5 and 20, respectively. Then the number of homomorphisms $\varphi: \mathbb{Z}5 \to \mathbb{Z}{20}$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $1$
+    \item $2$
+    \item $4$
+    \item $5$
+\end{enumerate}
+\end{multicols}
+
+
+\item Let $\mathbb{Q}$ be the field of rational numbers and consider $\mathbb{Z}_2$ as a field modulo 2. Let
+    \begin{align*}
+    f(x) = x^3 - 9x^2 + 9x + 3.
+    \end{align*}
+    Then $f(x)$ is
+  \hfill{\text{GATE MA 2007}} 
+\begin{enumerate}   
+  \item irreducible over $\mathbb{Q}$ but reducible over $\mathbb{Z}_2$
+  \item irreducible over both $\mathbb{Q}$ and $\mathbb{Z}_2$
+  \item reducible over $\mathbb{Q}$ but irreducible over $\mathbb{Z}_2$
+  \item educible over both $\mathbb{Q}$ and $\mathbb{Z}_2$
+ \end{enumerate}
+
+
+
+
+\item Let $\mathbb{Q}$ be the field of rational numbers and consider $\mathbb{Z}_2$ as a field modulo 2. Let
+    \begin{align*}
+    f(x) = x^3 - 9x^2 + 9x + 3.
+    \end{align*}
+    Then $f(x)$ is
+   \hfill{\text{GATE MA 2007}}  
+    \begin{enumerate}
+        
+       \item irreducible over $\mathbb{Q}$ but reducible over $\mathbb{Z}_2$
+        \item irreducible over both $\mathbb{Q}$ and $\mathbb{Z}_2$
+        \item reducible over $\mathbb{Q}$ but irreducible over $\mathbb{Z}_2$
+        \item reducible over both $\mathbb{Q}$ and $\mathbb{Z}_2$
+    \end{enumerate}
+ 
+
+\item Consider $\mathbb{Z}_5$ as a field modulo 5 and let   \hfill{\text{GATE MA 2007}}  
+   \begin{align*}
+    f(x) = x^4 + 4x^3 + 4x^2 + 4x + 1.
+    \end{align*}
+
+    Then the zeros of $f(x)$ over $\mathbb{Z}_5$ are 1 and 3 with respective multiplicity
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1 and 4
+    \item 2 and 3 
+    \item 2 and 2
+    \item  1 and 2
+\end{enumerate}
+\end{multicols}
+    
+ 
+\item Consider the Hilbert space   \hfill{\text{GATE MA 2007}}  
+    \begin{align*}
+    \ell^2 = \left\{ x = \{x_n\};\ x_n \in \mathbb{R},\ \sum x_n^2 < \infty \right\}.
+    \end{align*}
+
+    Let
+    \begin{align*}
+    E = \left\{ x = \{x_n\} \mid |x_n| < \frac{1}{n} \text{ for all } n \right\}
+    \end{align*}
+    be a subset of $\ell^2$. Then
+    
+    \begin{enumerate}
+        
+        \item $E^\circ = \left\{ x \mid |x_n| < \frac{1}{n} \text{ for all } n \right\}$
+        \item $E^\circ = E$
+        \item $E^\circ = \left\{ x \mid |x_n| < \frac{1}{n} \text{ for all but finitely many } n \right\}$
+        \item $E^\circ = \emptyset$
+    \end{enumerate}
+    
+
+   
+\item Let $X$ be a normed linear space and let $E_1, E_2 \subseteq X$. Define
+    \begin{align*}
+    E_1 + E_2 = \{x + y : x \in E_1, y \in E_2\}.
+    \end{align*}
+    Then $E_1 + E_2$ is:      \hfill{\text{GATE MA 2007}}
+   
+    \begin{enumerate}
+       
+        \item open if $E_1$ or $E_2$ is open
+        \item NOT open unless both $E_1$ and $E_2$ are open
+        \item closed if $E_1$ or $E_2$ is closed
+        \item closed if both $E_1$ and $E_2$ are closed
+    \end{enumerate}
+
+\item For each $a \in \mathbb{R}$, consider the linear programming problem:
+ 
+   \begin{flushleft}
+    \hspace{3cm} Max. $z = x_1 + 2x_2 + 3x_3 + 4x_4$
+   \end{flushleft}
+    \hspace{3cm} subject to \hfill{\text{GATE MA 2007}}
+    \begin{align*}
+        ax_1 + 2x_2 &\leq 1 \\
+        x_1 + 2x_2 + 3x_3 &\leq 2 \\
+        x_1, x_2, x_3, x_4 &\geq 0
+    \end{align*}
+    Let $S = \{a \in \mathbb{R} : \text{the given LP problem has a basic feasible solution}\}$. Then:
+    \begin{multicols}{2}
+    \begin{enumerate}
+        \item $S = \emptyset$
+        \item $S = \mathbb{R}$
+        \item $S = (0, \infty)$
+        \item $S = (-\infty, 0)$
+    \end{enumerate}
+    \end{multicols}
+    
+
+
+\item Consider the linear programming problem:\\
+   \hspace{3cm} Max. $z = x_1 + 5x_2 + 3x_3$
+   \hspace{3cm} subject to
+    \begin{align*}
+        2x_1 - 3x_2 + 5x_3 &\leq 3 \\
+        x_1 - x_2 &\leq 5 \\
+        x_1, x_2, x_3 &\geq 0
+    \end{align*}
+    Then the dual of this LP problem:
+     \hfill{\text{GATE MA 2007}}
+    
+    \begin{enumerate}
+        \item has a feasible solution but does NOT have a basic feasible solution
+        \item has a basic feasible solution
+        \item has infinite number of feasible solutions
+        \item has no feasible solution
+    \end{enumerate}
+    
+\item  Consider a transportation problem with two warehouses and two markets. The warehouse capacities are $a_1 = 2$ and $a_2 = 4$, and the market demands are $b_1 = 3$ and $b_2 = 3$. Let $x_{ij}$ be the quantity shipped from warehouse $i$ to market $j$, and $c_{ij}$ be the corresponding unit cost. Suppose that $c_{11} = 1$, $c_{21} = 1$, and $c_{22} = 2$. Then $(x_{11}, x_{12}, x_{21}, x_{22}) = (2, 0, 1, 3)$ is optimal for every:
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $c_{12} \in [1, 2]$
+        \item $c_{12} \in [0, 3]$
+        \item  $c_{12} \in [1, 3]$
+        \item $c_{12} \in [2, 4]$
+    \end{enumerate}
+    \end{multicols}
+
+
+\item The smallest degree of the polynomial that interpolates the data
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline      
+$x$     & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ \\
+\hline
+$f(x)$  & $-58$ & $-21$ & $-12$ & $-13$ & $-6$ & $27$ \\
+\hline
+
+\end{tabular}
+\caption{}
+\label{tab:Q51}
+\end{table}
+
+
+    is:   \hfill{\text{GATE MA 2007}}
+ \begin{multicols}{4}
+\begin{enumerate}
+    \item 3
+    \item 4
+    \item 5
+    \item 6
+\end{enumerate}
+\end{multicols}
+
+
+\item Suppose that $x_n$ is sufficiently close to 3. Which of the following iterations $x_{n+1} = g(x_n)$ will converge to the fixed point $x = 3$?
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $x_{n+1} = -16 + 6x_n + \dfrac{3}{x_n}$
+        \item $x_{n+1} = \sqrt{3 + 2x_n}$
+        \item $x_{n+1} = \dfrac{3}{x_n} - \dfrac{x_n}{2}$
+        \item $x_{n+1} = \dfrac{x_n^2 - 3}{2}$
+    \end{enumerate}
+    \end{multicols}
+
+
+\item Consider the quadrature formula:
+    \begin{align*}
+    \int_{x_1}^{x_2} f(x)\, dx \approx \dfrac{1}{2} \left[f(x_1) + f(x_2)\right],
+    \end{align*}
+    where $x_1$ and $x_2$ are quadrature points. Then the highest degree of the polynomial for which the above formula is exact equals: 
+    \hfill{\text{GATE MA 2007}}
+   \begin{multicols}{4}
+\begin{enumerate}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+\end{enumerate}
+\end{multicols}
+     
+
+\item Let $A$, $B$ and $C$ be three events such that:
+    \begin{align*}
+    P(A) = 0.4,\quad P(B) = 0.5,\quad P(A \cup B) = 0.6,\quad P(C) = 0.6,\quad \text{and } P(A \cap B \cap C^c) = 0.1.
+    \end{align*}
+    Then $P(A \cap B \cap C) =$
+    \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\dfrac{1}{2}$
+    \item  $\dfrac{1}{3}$
+    \item $\dfrac{1}{4}$
+    \item $\dfrac{1}{5}$  
+\end{enumerate}
+\end{multicols}
+        
+
+\item Consider two identical boxes $B_1$ and $B_2$, where the box $B_i$ ($i=1,2$) contains $i+1$ red and $5 - i + 1$ white balls. A fair die is cast. Let the number of dots shown on the top face of the die be $N$. If $N$ is even or 5, then two balls are drawn with replacement from the box $B_1$; otherwise, two balls are drawn with replacement from the box $B_2$. The probability that the two drawn balls are of different colours is: \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\dfrac{7}{25}$
+    \item  $\dfrac{9}{25}$
+    \item $\dfrac{12}{25}$ 
+    \item  $\dfrac{16}{25}$    
+\end{enumerate}
+\end{multicols}
+        
+
+
+\item Let $X_1, X_2, \ldots$ be a sequence of independent and identically distributed random variables with    
+\begin{align*}
+P(X_i = 1) = P(X_i = -1) = \frac{1}{2}.
+\end{align*}
+Suppose for the standard normal random variable $Z$, $P(-0.1 < Z \leq 0.1) = 0.08$. If $S_n = \sum_{i=1}^{n} X_i$, then
+
+\begin{align*}
+\lim P\left(\frac{S_n}{\sqrt{n}} > \frac{n}{10}\right) =
+\end{align*}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.42
+    \item 0.46
+    \item 0.5
+    \item 0.54  
+\end{enumerate}
+\end{multicols}
+
+
+
+\item  Let $X_1, X_2, \ldots, X_5$ be a random sample of size 5 from a population having standard normal distribution. Let 
+\begin{align*}
+\bar{X} = \frac{1}{5} \sum_{i=1}^{5} X_i \quad \text{and} \quad T = \sum_{i=1}^{5} (X_i - \bar{X})^2.
+\end{align*}
+Then $E(T^2 \bar{X}^2) =$ \hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 3
+    \item 3.6
+    \item 4.8
+    \item 5.2
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Let $x_1 = 3.5$, $x_2 = 7.5$ and $x_3 = 5.2$ be observed values of a random sample of size three from a population having uniform distribution over the interval $(\theta, \theta + 5)$, where $\theta \in (0, \infty)$ is unknown and is to be estimated. Then which of the following is NOT a maximum likelihood estimate of $\theta$?
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 2.4
+    \item 2.7
+    \item 3
+    \item 3.3
+\end{enumerate}
+\end{multicols}
+
+
+\item The value of 
+\begin{align*}
+\int_0^1 \int_y^1 x^2 e^{x^2} \, dx \, dy
+\end{align*}
+equals
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{1}{4}$
+    \item $\frac{1}{3}$
+    \item $\frac{1}{2}$
+    \item 1
+\end{enumerate}
+\end{multicols}
+
+
+
+\item 
+\begin{align*}
+\lim_{n \to \infty} \left[ (n+1) \int_0^1 x^n \ln(1+x) \, dx \right] =
+\end{align*}
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0
+    \item $\ln 2$
+    \item $\ln 3$
+    \item $\infty$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Consider the function $f \colon \mathbb{R} \to \mathbb{R}$ defined by
+\begin{align*}
+f(x) = 
+\begin{cases}
+x^4, & \text{if } x \text{ is rational}, \\
+2x^4 - 1, & \text{if } x \text{ is irrational}.
+\end{cases}
+\end{align*}
+Let $S$ be the set of points where $f$ is continuous. Then
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $S = \{1\}$
+    \item $S = \{-1\}$
+    \item $S = \{-1, 1\}$
+    \item $S = \emptyset$
+\end{enumerate}
+\end{multicols}
+
+
+\item For a positive real number $p$, let $\{f_n: n=1,2,\dots\}$ be a sequence of functions defined on $[0,1]$ by
+\begin{align*}
+f_n(x) =
+\begin{cases}
+n^{p+1} x, & 0 \leq x \leq \frac{1}{n} \\
+\frac{1}{n^p}, & \frac{1}{n} < x \leq 1.
+\end{cases}
+\end{align*}
+Let $f(x) = \lim\limits_{n \to \infty} f_n(x),\ x \in [0,1]$. Then, on $[0,1]$,
+\hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    
+\item $f$ is Riemann integrable \hspace{2cm}
+\item the improper integral $\int_0^1 f(x) dx$ converges for $p \geq 1$ 
+\item the improper integral $\int_0^1 f(x) dx$ converges for $p < 1$ \hspace{2cm}
+\item $f_n$ converges uniformly
+\end{enumerate}
+
+
+\item Which of the following inequality is NOT true for $x \in \left[ \frac{1}{4}, \frac{3}{4} \right]$
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item  $e^{-x} > \sum_{j=0}^{\infty} \frac{(-x)^j}{j!}$ \hspace{2cm}
+\item $e^{-x} < \sum_{j=0}^{\infty} \frac{(-x)^j}{j!}$ \\
+\item $e^{-x} = \sum_{j=0}^{\infty} \frac{(-x)^j}{j!}$ \hspace{2cm}
+\item $e^{-x} > \sum_{j=0}^{10} \frac{(-x)^j}{j!}$
+\end{enumerate}
+\end{multicols}
+
+\item Let $u(x,y)$ be the solution to the Cauchy problem
+\begin{align*}
+x u_x + u_y = 1, \quad u(x,0) = 2 \ln(x),\ x > 1.
+\end{align*}
+Then $u(e,1) =$
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item -1
+    \item 0
+    \item 1
+    \item $e$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Suppose
+\begin{align*}
+y(x) = \lambda \int_0^{2\pi} y(t) \sin(x + t)\, dt,\ x \in [0,2\pi]
+\end{align*}
+has eigenvalues $\lambda = \frac{1}{\pi}$ and $\lambda = -\frac{1}{\pi}$ with corresponding eigenfunctions \\
+$y_1(x) = \sin(x) + \cos(x)$ and $y_2(x) = \sin(x) - \cos(x)$, respectively. Then the integral equation
+\begin{align*}
+y(x) = f(x) + \frac{1}{\pi} \int_0^{2\pi} y(t) \sin(x + t)\, dt,\ x \in [0,2\pi]
+\end{align*}
+has a solution when $f(x) =$
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1
+    \item $\cos(x)$
+    \item $\sin(x)$
+    \item $1 + \sin(x) + \cos(x)$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Consider the Neumann problem
+\begin{align*}
+u_{xx} + u_{yy} = 0,\quad 0 < x < \pi,\ -1 < y < 1,
+\end{align*}
+\begin{align*}
+u_y(0, y) = u_y(\pi, y) = 0,
+\end{align*}
+\begin{align*}
+u_y(x, -1) = 0,\quad u_y(x, 1) = \alpha + \beta \sin(x).
+\end{align*}
+The problem admits solution for
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\alpha = 0,\ \beta = 1$
+        \item $\alpha = -1,\ \beta = \dfrac{\pi}{2}$ 
+        \item $\alpha = 1,\ \beta = \dfrac{\pi}{2}$
+        \item $\alpha = 1,\ \beta = -\pi$
+    \end{enumerate}
+    \end{multicols}
+
+
+\item The functional
+\begin{align*}
+\int_0^1 (1+x)(y')^2 \, dx,\quad y(0) = 0,\ y(1) = 1,
+\end{align*}
+possesses
+\hfill{\text{GATE MA 2007}}
+
+    \begin{enumerate}
+        \item strong maxima
+        \item strong minima
+        \item weak maxima but NOT a strong maxima
+        \item weak minima but NOT a strong minima   
+    \end{enumerate}
+  
+
+\item The value of $\alpha$ for which the integral equation
+\begin{align*}
+u(x) = \alpha \int_0^1 e^{xt} u(t)\,dt,
+\end{align*}
+has a non-trivial solution is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item -2
+    \item -1
+    \item 1
+    \item 2
+\end{enumerate}
+\end{multicols}
+
+
+
+\item Let $P_n(x)$ be the Legendre polynomial of degree $n$ and let
+\begin{align*}
+P_{n+1}(0) = -\frac{m}{m+1} P_{n-1}(0), \quad m = 1, 2, \ldots
+\end{align*}
+If $P_2(0) = -\dfrac{5}{16}$ then $\int_{-1}^1 \left[P_2^2(x)\right] dx =$
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\dfrac{2}{13}$
+    \item $\dfrac{2}{9}$
+    \item $\dfrac{5}{16}$ 
+    \item $\dfrac{2}{5}$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item For which of the following pair of functions $y_1(x)$ and $y_2(x)$, continuous functions $p(x)$ and $q(x)$ can be determined on $[-1, 1]$ such that $y_1(x)$ and $y_2(x)$ give two linearly independent solutions of \hfill{\text{GATE MA 2007}}
+\begin{align*}
+y'' + p(x)y' + q(x)y = 0,\quad x \in [-1, 1].
+\end{align*}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $y_1(x) = x \sin(x),\ y_2(x) = \cos(x)$
+        \item $y_1(x) = x e^x,\ y_2(x) = \sin(x)$ 
+        \item $y_1(x) = e^{-x},\ y_2(x) = e^{-1}$
+        \item $y_1(x) = x^2,\ y_2(x) = \cos(x)$
+    \end{enumerate}
+    \end{multicols}
+ 
+
+
+
+\item Let $J_0(s)$ and $J_1(s)$ be the Bessel functions of the first kind of orders zero and one, respectively. If
+\begin{align*}
+\mathcal{L}(J_0)(s) = \frac{1}{\sqrt{s^2 + 1}},
+\end{align*}
+then $\mathcal{L}(J_1)(s) =$
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\dfrac{s}{\sqrt{s^2 + 1}}$
+        \item $\dfrac{1}{\sqrt{s^2 + 1}}$
+        \item $1 - \dfrac{1}{\sqrt{s^2 + 1}}$
+        \item $\dfrac{1}{\sqrt{s^2 + 1}} - 1$
+    \end{enumerate}
+    \end{multicols}
+ 
+\bigskip
+
+\begin{center}
+    \textbf{Common Data Questions}
+\end{center}
+
+\textbf{Common Data for Questions 71, 72, 73:}
+
+Let $P[0,1] = \{p : p \text{ is a polynomial function on } [0,1]\}$. For $p \in P[0,1]$, define
+\begin{align*}
+\|p\| = \sup \{|p(x)| : 0 \leq x \leq 1\}.
+\end{align*}
+Consider the map $T : P[0,1] \rightarrow P[0,1]$ defined by
+\begin{align*}
+(Tp)(x) = \frac{d}{dx} \left(p(x)\right).
+\end{align*}
+Then $P[0,1]$ is a normed linear space and $T$ is a linear map. The map $T$ is said to be closed if the set $G = \{(p, Tp) : p \in P[0,1]\}$ is a closed subset of $P[0,1] \times P[0,1]$.
+
+\vspace{1em}
+
+\item The linear map $T$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item one to one and onto
+        \item one to one but NOT onto
+        \item onto but NOT one to one
+        \item neither one to one nor onto
+    \end{enumerate}
+    \end{multicols}
+
+
+
+
+\item The normed linear space $P[0,1]$ is
+\hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+   
+    \item a finite dimensional normed linear space which is NOT a Banach space
+    \item a finite dimensional Banach space
+    \item an infinite dimensional normed linear space which is NOT a Banach space
+    \item an infinite dimensional Banach space
+\end{enumerate}
+
+
+
+\item The map $T$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item closed and continuous
+        \item neither continuous nor closed
+        \item continuous but NOT closed
+        \item closed but NOT continuous
+    \end{enumerate}
+    \end{multicols}
+
+\bigskip
+
+\textbf{Common Data for Questions 74, 75:}
+\bigskip
+
+Let $X$ and $Y$ be jointly distributed random variables such that the conditional distribution of $Y$, given $X = x$, is uniform on the interval $(x - 1, x + 1)$. Suppose $\mathbb{E}(X) = 1$ and $\text{Var}(X) = \dfrac{5}{3}$.
+
+
+
+\item The mean of the random variable $Y$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item  $\dfrac{1}{2}$
+        \item $1$
+        \item $\dfrac{3}{2}$
+        \item 2
+    \end{enumerate}
+    \end{multicols}
+\newpage
+
+\item The variance of the random variable $Y$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\dfrac{1}{2}$
+        \item $\dfrac{2}{3}$
+        \item 1
+        \item 2
+    \end{enumerate}
+    \end{multicols}
+
+
+\bigskip
+\begin{center}
+ \textbf{Linked Answer Questions: Q.76 to Q.85 carry two marks each.}   
+\end{center}
+\vspace{1em}
+
+\textbf{Statement for Linked Answer Questions 76 \& 77:}  
+
+Suppose the equation  
+\begin{align*}
+x^2 y'' - x y' + (1 + x^2) y = 0
+\end{align*}
+has a solution of the form  
+\begin{align*}
+y = x^r \sum_{n=0}^{\infty} c_n x^n,\quad c_0 \neq 0.
+\end{align*}
+
+\item The indicial equation for $r$ is
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item  $r^2 - 1 = 0$
+        \item $(r - 1)^2 = 0$
+        \item $(r + 1)^2 = 0$ 
+        \item $r^2 + 1 = 0$
+    \end{enumerate}
+    \end{multicols}
+
+
+
+
+\item For $n \geq 2$, the coefficients $c_n$ will satisfy the relation
+\hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item  $n^2 c_n - c_{n-2} = 0$
+        \item $c_n - n^2 c_{n-2} = 0$
+        \item $c_n - n^2 c_{n-2} = 0$
+        \item $c_n + n^2 c_{n-2} = 0$
+    \end{enumerate}
+    \end{multicols}
+
+ 
+
+\textbf{Statement for Linked Answer Questions 78 \& 79:} 
+\newline \vspace{1em}
+A particle of mass $m$ slides down without friction along a curve $z = 1 + \dfrac{x^2}{2}$ in the $xz$-plane under the action of constant gravity. Suppose the $z$-axis points vertically upwards. Let $\dot{x}$ and $\ddot{x}$ denote $\dfrac{dx}{dt}$ and $\dfrac{d^2x}{dt^2}$ respectively.
+
+\item The Lagrangian of the motion is      \hfill{\text{GATE MA 2007}}     
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\dfrac{1}{2} m \dot{x}^2 (1 + x^2) - mg \left(1 + \dfrac{x^2}{2} \right)$
+        \item $\dfrac{1}{2} m \dot{x}^2 (1 + x^2) + mg \left(1 + \dfrac{x^2}{2} \right)$
+        \item $\dfrac{1}{2} m x^2 \dot{x}^2 - mg \left(1 + \dfrac{x^2}{2} \right)$
+        \item $\dfrac{1}{2} m \dot{x}^2 (1 - x^2) - mg \left(1 + \dfrac{x^2}{2} \right)$
+    \end{enumerate}
+    \end{multicols}
+
+    
+\item The Lagrangian equation of motion is    \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    
+
+    \item $\ddot{x}(1 + x^2) = -x(g + \dot{x}^2)$
+    \item $\ddot{x}(1 + x^2) = x(g - \dot{x}^2)$
+   
+    \item $\ddot{x} = -g x$ 
+    \item $\ddot{x}(1 - x^2) = -x(g - \dot{x}^2)$
+    
+\end{enumerate}
+
+\newpage
+
+\textbf{Statement for Linked Answer Questions 80 \& 81:}
+
+Let $u(x,t)$ be the solution of the one dimensional wave equation
+\begin{align*}
+u_{tt} = 4u_{xx}, \quad -\infty < x < \infty,\ t > 0,
+\end{align*}
+\begin{align*}
+u(x,0) =
+\begin{cases}
+16 - x^2, & |x| \leq 4, \\
+0, & \text{otherwise},
+\end{cases}
+\quad \text{and} \quad
+u_t(x,0) =
+\begin{cases}
+1, & |x| \leq 2, \\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+\item For $1 < t < 3$, $u(2,t) =$   \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item $\left[16 - (2 - 2t)^2\right]^+ + \dfrac{1}{2}\left[1 - \min\{1, t - 1\}\right]$
+    \item $\left[32 - (2 - 2t)^2 - (2 + 2t)^2\right]^+ + t$
+    \item $\left[32 - (2 - 2t)^2 - (2 + 2t)^2\right]^+ + 1$
+    \item $\left[16 - (2 - 2t)^2\right]^+ + \dfrac{1}{2}\left[1 - \max\{1, t - 1\}\right]$
+\end{enumerate}
+
+
+
+\item The value of $u(2,2)$         \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item equals $15$
+    \item equals $16$
+    \item equals $0$
+    \item does NOT exist
+\end{enumerate}
+
+\bigskip
+
+\textbf{Statement for Linked Answer Questions 82 \& 83:}
+\bigskip
+Suppose $E = \{(x, y): xy \ne 0\}$. Let $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ be defined by  
+\begin{align*}
+f(x, y) =
+\begin{cases}
+0, & \text{if } xy = 0, \\
+y \sin\left(\frac{1}{x}\right) + x \sin\left(\frac{1}{y}\right), & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+Let $S_1$ be the set of points in $\mathbb{R}^2$ where $f_x$ exists and $S_2$ be the set of points in $\mathbb{R}^2$ where $f_y$ exists. Also, let $E_1$ be the set of points where $f_x$ is continuous and $E_2$ be the set of points where $f_y$ is continuous.
+
+\item $S_1$ and $S_2$ are given by      \hfill{\text{GATE MA 2007}}
+\begin{enumerate}
+    \item $S_1 = E \cup \{(x, y): y = 0\},\quad S_2 = E \cup \{(x, y): x = 0\}$
+    \item $S_1 = E \cup \{(x, y): x = 0\},\quad S_2 = E \cup \{(x, y): y = 0\}$
+    \item $S_1 = S_2 = \mathbb{R}^2$
+    \item $S_1 = S_2 = E \cup \{(0, 0)\}$
+\end{enumerate}
+
+
+
+
+\item $E_1$ and $E_2$ are given by      \hfill{\text{GATE MA 2007}}
+
+\begin{enumerate}
+    \item $E_1 = S_1,\quad E_2 = S_1 \cap S_2$
+    \item $E_1 = S_1 \cap S_2 \setminus \{(0,0)\},\quad E_2 = S_1$
+    \item $E_1 = S_2,\quad E_2 = S_1$
+    \item $E_1 = S_2,\quad E_2 = S_2$
+\end{enumerate}
+
+\newpage
+
+\textbf{Statement for Linked Answer Questions 84 \& 85:}
+
+Let
+\begin{align*}
+A = \myvec{
+3 & 0 & 0 \\
+0 & 6 & 2 \\
+0 & 2 & 6
+}
+\end{align*}
+and let $\lambda_1 \geq \lambda_2 \geq \lambda_3$ be the eigenvalues of $A$.
+
+\item The triple $(\lambda_1, \lambda_2, \lambda_3)$ equals    \hfill{\text{GATE MA 2007}}
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $(9, 4, 2)$
+        \item $(8, 4, 3)$
+        \item $(9, 3, 3)$
+        \item $(7, 5, 3)$
+    \end{enumerate}
+    \end{multicols}
+
+
+
+
+\item The matrix $P$ such that   \hfill{\text{GATE MA 2007}}
+\[
+	P^{-1} A P = \myvec{
+\lambda_1 & 0 & 0 \\
+0 & \lambda_2 & 0 \\
+0 & 0 & \lambda_3
+}
+ \]
+is 
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item  $\myvec{
+    \dfrac{1}{\sqrt{3}} & 0 & \dfrac{-2}{\sqrt{6}} \\
+    \dfrac{1}{\sqrt{3}} & \dfrac{1}{\sqrt{2}} & \dfrac{1}{\sqrt{6}} \\
+    \dfrac{1}{\sqrt{3}} & \dfrac{-1}{\sqrt{2}} & \dfrac{1}{\sqrt{6}}
+    }$
+        \item $\myvec{
+    \dfrac{1}{\sqrt{3}} & \dfrac{-2}{\sqrt{6}} & 0 \\
+    \dfrac{1}{\sqrt{3}} & \dfrac{1}{\sqrt{6}} & \dfrac{1}{\sqrt{2}} \\
+    \dfrac{1}{\sqrt{3}} & \dfrac{1}{\sqrt{6}} & \dfrac{-1}{\sqrt{2}}
+    }$
+        \item $\myvec{
+    0 & 0 & 1 \\
+    \dfrac{1}{\sqrt{2}} & \dfrac{1}{\sqrt{2}} & 0 \\
+    \dfrac{1}{\sqrt{2}} & \dfrac{-1}{\sqrt{2}} & 0
+   }$
+        \item $\myvec{
+    0 & 1 & 0 \\
+    \dfrac{1}{\sqrt{2}} & 0 & \dfrac{1}{\sqrt{2}} \\
+    \dfrac{1}{\sqrt{2}} & 0 & \dfrac{-1}{\sqrt{2}}
+    }$
+    \end{enumerate}
+    \end{multicols}
+
+
+
+
+\vspace{5em}
+\begin{center}
+    \textbf{END OF THE QUESTION PAPER}
+\end{center}
+
+\end{enumerate}
+
+\end{document}

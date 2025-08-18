@@ -1,0 +1,28 @@
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+
+  % Dimensions
+  \def\width{5}
+  \def\height{4}
+  \def\margin{0.5}
+
+  % Outer rectangle
+  \draw[thick] (0,0) rectangle (\width,\height);
+
+  % Top and bottom shaded regions
+  \fill[pattern=north east lines] (0,\height-\margin) rectangle (\width,\height);
+  \fill[pattern=north east lines] (0,0) rectangle (\width,\margin);
+
+  % Dashed horizontal axis
+  \draw[dashed, thick] (0,\height/2) -- (\width,\height/2);
+
+  % Moment arrows
+  \draw[->, thick] (-1,\height/2+1) arc[start angle=90,end angle=-90,radius=1] node[midway,left] {\large M};
+  \draw[->, thick] (\width+1,\height/2-1) arc[start angle=-90,end angle=90,radius=1] node[midway,right] {\large M};
+
+  % Label Eθ
+  \node at (\width/2,\height/2) {\large $E\theta$};
+
+\end{tikzpicture}
+\end{document}
