@@ -1,0 +1,21 @@
+\documentclass{}
+\usepackage{}
+\usetikzlibrary{shapes, arrows.meta}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.5]
+
+\draw[thick] (0,0) -- (6,0);
+
+\draw[thick] (0,0) -- (-0.5,-0.5) -- (0.5,-0.5) -- cycle;
+\draw[-{Latex}, thick] (-0.3,-0.5) -- (-0.3,-1); % vertical reaction
+
+\draw[thick] (6,0) -- (5.5,-0.5) -- (6.5,-0.5) -- cycle;
+\draw[thick] (5.7,-0.5) circle (0.2);
+\draw[thick] (6.3,-0.5) circle (0.2);
+\draw[-{Latex}, thick] (6.3,-0.7) -- (6.3,-1.2); % vertical reaction
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,979 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\usepackage{float}
+
+\theoremstyle{remark}
+\usepackage{ circuitikz }
+
+
+
+\title{GATE-IN-2024}
+\author{EE25BTECH11002 - Achat Parth Kalpesh }
+\date{}
+
+\begin{document}
+
+\maketitle
+\section*{Q.1-Q.5 carry one mark each. }
+
+\begin{enumerate}
+    \item If `$\rightarrow$' denotes increasing order of intensity, then the meaning of the words
+    $\sbrak{drizzle \rightarrow rain \rightarrow downpour }$ is analogous to \sbrak{ \underline{\hspace{2cm}} \rightarrow quarrel \rightarrow feud}.
+    Which one of the given options is appropriate to fill the blank?
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item bicker
+            \item bog
+            \item dither
+            \item dodge
+        \end{multicols}
+    \end{enumerate}
+
+    \item Statements:
+    \begin{enumerate}
+        \item All heroes are winners.
+        \item All winners are lucky people.
+    \end{enumerate}
+    Inferences:
+    \begin{enumerate}
+        \item All lucky people are heroes.
+        \item Some lucky people are heroes.
+        \item Some winners are heroes.
+    \end{enumerate}
+    Which of the above inferences can be logically deduced from statements 1 and 2?
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item Only I and II
+            \item Only II and III
+            \item Only I and III
+            \item Only III
+        \end{multicols}
+    \end{enumerate}
+
+    \item A student was supposed to \textbf{multiply} a positive real number $p$ with another positive
+    real number $q$. Instead, the student \textbf{divided} $p$ by $q$. If the percentage error in the
+    student's answer is 80\%, the value of $q$ is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 5
+            \item $\sqrt{2}$
+            \item 2
+            \item $\sqrt{5}$
+        \end{multicols}
+    \end{enumerate}
+
+    \item If the sum of the first 20 consecutive positive odd numbers is divided by $20^2$, the
+    result is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 1
+            \item 20
+            \item 2
+            \item 1/2
+        \end{multicols}
+    \end{enumerate}
+
+    \item The ratio of the number of girls to boys in class VIII is the same as the ratio of the
+    number of boys to girls in class IX. The total number of students \brak{\text{boys and girls}} in
+    classes VIII and IX is 450 and 360, respectively. If the number of girls in classes
+    VIII and IX is the same, then the number of girls in each class is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 150
+            \item 200
+            \item 250
+            \item 175
+        \end{multicols}
+    \end{enumerate}
+
+    \textbf{Q.6 - Q.10 carry two marks each.}
+
+    \item In the given text, the blanks are numbered \brak{\text{i}}--\brak{\text{iv}}. Select the best match for
+    all the blanks.
+    
+    Yoko Roi stands \rule{1.5cm}{0.4pt} \brak{\text{i}} as an author for standing \rule{1.5cm}{0.4pt} \brak{\text{ii}} as an honorary
+    fellow, after she stood \rule{1.5cm}{0.4pt} \brak{\text{iii}} her writings that stand \rule{1.5cm}{0.4pt} \brak{\text{iv}} the freedom of
+    speech.
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item \brak{\text{i}} out  \brak{\text{ii}} down  \brak{\text{iii}} in  \brak{\text{iv}} for
+        \item \brak{\text{i}} down  \brak{\text{ii}} out  \brak{\text{iii}} by  \brak{\text{iv}} in
+        \item \brak{\text{i}} down  \brak{\text{ii}} out  \brak{\text{iii}} for  \brak{\text{iv}} in
+        \item \brak{\text{i}} out  \brak{\text{ii}} down  \brak{\text{iii}} by  \brak{\text{iv}} for
+    \end{enumerate}
+
+    \item Seven identical cylindrical chalk-sticks are fitted tightly in a cylindrical container.
+    The figure below\figref{fig:p1} shows the arrangement of the chalk-sticks inside the cylinder.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\columnwidth]{figs/p1.jpg}
+        \caption*{}
+        \label{fig:p1}
+    \end{figure}
+    The length of the container is equal to the length of the chalk-sticks. The ratio of
+    the occupied space to the empty space of the container is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+    \begin{multicols}{4}
+        \item 5/2
+        \item 7/2
+        \item 9/2
+        \item 3
+    \end{multicols}
+    \end{enumerate}
+
+    \item The plot below\figref{fig:p2}  shows the relationship between the mortality risk of cardiovascular
+    disease and the number of steps a person walks per day. Based on the data, which
+    one of the following options is true?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.35\columnwidth]{figs/p2.jpg}
+        \caption*{}
+        \label{fig:p2}
+    \end{figure}
+
+\newpage
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item The risk reduction on increasing the steps/day from 0 to 10000 is less than the risk
+        reduction on increasing the steps/day from 10000 to 20000.
+        \item The risk reduction on increasing the steps/day from 0 to 5000 is less than the risk
+        reduction on increasing the steps/day from 15000 to 20000.
+        \item For any 5000 increment in steps/day the largest risk reduction occurs on going from
+        0 to 5000.
+        \item For any 5000 increment in steps/day the largest risk reduction occurs on going from
+        15000 to 20000.
+    \end{enumerate}
+
+    \item Five cubes of identical size and another smaller cube are assembled as shown in
+    Figure A.\figref{fig:p3}  If viewed from direction X, the planar image of the assembly appears as
+    Figure B.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{figs/p3.jpg}
+        \caption*{}
+        \label{fig:p3}
+    \end{figure}
+    If viewed from direction Y, the planar image of the assembly \brak{\text{Figure A}} will
+    appear as
+    
+    \hfill{(GATE IN 2024)}
+     \begin{multicols}{2}
+    \begin{enumerate} 
+        \item  
+            
+       \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/p4.jpg}
+    \caption{}
+    \label{fig:p4}
+\end{figure}
+        \item  
+
+           \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/p5.jpg}
+    \caption{}
+    \label{fig:p5}
+\end{figure}
+        \item  
+
+          \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/p6.jpg}
+    \caption{}
+    \label{fig:p6}
+\end{figure}
+        \item 
+
+           \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/p7.jpg}
+    \caption{}
+    \label{fig:p7}
+\end{figure}
+    \end{enumerate}
+    \end{multicols}
+    
+    \item Visualize a cube that is held with one of the four body diagonals aligned to the
+    vertical axis. Rotate the cube about this axis such that its view remains unchanged.
+    The magnitude of the minimum angle of rotation is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $120\degree$
+            \item $60\degree$
+            \item $90\degree$
+            \item $180\degree$
+        \end{multicols}
+    \end{enumerate}
+
+    \item Let $z = x + iy$ be a complex variable and $\bar{z}$ be its complex conjugate. The equation $z^2 + \bar{z}^2 = 2$ represents a
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item parabola
+            \item hyperbola
+            \item ellipse
+            \item circle
+        \end{multicols}
+    \end{enumerate}
+    
+    \item The pressure drop across a control valve is constant. The control valve with inherent characteristic has decreasing sensitivity. If $x$ represents the fraction of maximum stem position of the control valve, then the function $f\brak{x}$ representing the fraction of maximum flow is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\alpha^{x-1}$, where $\alpha$ is constant
+            \item $\sqrt{x}$
+            \item $x$
+            \item $x^2$
+        \end{multicols}
+    \end{enumerate}
+    
+    \item A discrete-time sequence is given by $x\sbrak{n} = \sbrak{1,2,3,4}$ for $0 \leq n \leq 3$. The zero
+    lag auto-correlation value of $x\sbrak{n}$ is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 1
+            \item 10
+            \item 20
+            \item 30
+        \end{multicols}
+    \end{enumerate}
+
+    \item Match the following measuring devices with their principle of measurement.
+
+
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Measuring Device} & \textbf{Principle of Measurement} \\
+            \hline
+            \brak{\text{P}} Optical pyrometer & \brak{\text{I}} Variation in mutual inductance \\
+            \brak{\text{Q}} Thermocouple & \brak{\text{II}} Change in resistance \\
+            \brak{\text{R}} Strain gauge & \brak{\text{III}} Wavelength of radiated energy \\
+            \brak{\text{S}} Linear variable & \brak{\text{IV}} Electromotive force generated by two \\
+            differential transformer &  dissimilar metals \\
+            \hline
+        \end{tabular}
+        \caption*{}
+        \label{tab:1}
+    \end{table}
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item \brak{P} -- \brak{III}, \brak{Q} -- \brak{IV}, \brak{R} -- \brak{\text{II}}, \brak{S} -- \brak{I}
+        \item \brak{P} -- \brak{IV}, \brak{Q} -- \brak{III}, \brak{R} -- \brak{II}, \brak{S} -- \brak{I}
+        \item \brak{P} -- \brak{III}, \brak{Q} -- \brak{I}, \brak{R} -- \brak{IV}, \brak{S} -- \brak{II}
+        \item \brak{P} -- \brak{II}, \brak{Q} -- \brak{IV}, \brak{R} -- \brak{I}, \brak{S} -- \brak{III}
+    \end{enumerate}
+
+    \item The capacitor shown in the figure\figref{fig:p8}  has parallel plates, with each plate having an
+    area $A$. The thickness of the dielectric materials are $d_1$ and $d_2$ and their relative
+    permittivities are $\varepsilon_1$ and $\varepsilon_2$, respectively. Assume that the fringing field effects are
+    negligible and $\varepsilon_0$ is the permittivity of free space.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{figs/p8.jpg}
+        \caption*{}
+        \label{fig:p8}
+    \end{figure}
+    If $d_1$ is decreased by $\delta d_1$, the resultant capacitance becomes
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item $\frac{\varepsilon_0 A}{d_1 - \delta d_1 + \frac{d_2}{\varepsilon_2}}$
+        \item $\frac{\varepsilon_0 A}{\frac{d_1}{\varepsilon_1} + \frac{d_2}{\varepsilon_2}}$
+        \item $\frac{\varepsilon_0 A}{d_2 - \delta d_2 + \frac{d_1}{\varepsilon_1}}$
+        \item $\frac{\varepsilon_0 A}{d_1 + \delta d_1 + \frac{d_2}{\varepsilon_2}}$
+    \end{enumerate}
+    
+    \item Among the given options, the simplified form of the Boolean function $F = \brak{A + \bar{A} \cdot B} + \bar{A} \cdot \brak{A+B} \cdot C$ is
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $A+B+C$
+            \item $A \cdot B \cdot C$
+            \item $B+A \cdot C$
+            \item $A+B \cdot C$
+        \end{multicols}
+    \end{enumerate}
+    
+    \item Consider the state-space representation of a system
+    \begin{align*}
+        \dot{x} = Ax + Bu
+    \end{align*}
+    where $x$ is the state vector, $u$ is the input, $A$ is the system matrix and $B$ is the input matrix. Choose the matrix $A$ from the following options such that the system has a pole at the origin.
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item
+            \begin{align*}
+            \myvec{0 & 1 \\ -2 & -3}
+            \end{align*}
+            \item 
+            \begin{align*}
+            \myvec{1 & -1.5 \\ -2 & 3}
+            \end{align*}
+            \item 
+            \begin{align*}
+            \myvec{1 & 1.5 \\ 2 & -3}
+            \end{align*}
+            \item
+            \begin{align*}
+            \myvec{0 & 1 \\ -2 & 3}
+            \end{align*}
+        \end{multicols}
+    \end{enumerate}
+
+    \item The sinusoidal transfer function corresponding to the polar plot shown in the figure,\figref{fig:p9}  for $T > 0$, is
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{figs/p9.jpg}
+        \caption*{}
+        \label{fig:p9}
+    \end{figure}
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $1 - j\omega T$
+            \item $\frac{1 - j\omega T}{1 + j\omega T}$
+            \item $1 + j\omega T$
+            \item $\frac{1}{1 + j\omega T}$
+        \end{multicols}
+    \end{enumerate}
+    
+    \item A matrix $M$ is constructed by stacking three column vectors $v_1, v_2, v_3$ as
+    \begin{align*}
+        M = \sbrak{v_1 \ v_2 \ v_3}.
+    \end{align*}
+    Choose the set of vectors from the following options such that $rank\brak{M} = 3$.
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item 
+        \begin{align*}
+        v_1 = \myvec{1 \\ 0 \\ 1}, v_2 = \myvec{0 \\ -1 \\ 0}, v_3 = \myvec{1 \\ -1 \\ 1}
+        \end{align*}
+        \item 
+        \begin{align*}
+        v_1 = \myvec{1 \\ 1 \\ 1}, v_2 = \myvec{-1 \\ 0 \\ 1}, v_3 = \myvec{0 \\ 0 \\ 0}
+        \end{align*}
+        \item
+        \begin{align*}
+        v_1 = \myvec{1 \\ 0 \\ 1}, v_2 = \myvec{-1 \\ 0 \\ 1}, v_3 = \myvec{1 \\ -1 \\ 1}
+        \end{align*}
+        \item
+        \begin{align*}
+        v_1 = \myvec{1 \\ 1 \\ 1}, v_2 = \myvec{-1 \\ -1 \\ -1}, v_3 = \myvec{0 \\ 0 \\ 0}
+        \end{align*}
+    \end{enumerate}
+    
+    \item The capacitance formed between two concentric spherical metal shells having radii $x$ and $y$ with $y > x$ is
+    
+    Note: $\epsilon$ is the permittivity of the medium between the shells.
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $4\pi\epsilon \brak{\frac{xy}{y-x}}$
+            \item $4\pi\epsilon \brak{\frac{x^2}{y-x}}$
+            \item $4\pi\epsilon \brak{\frac{y^2}{y-x}}$
+            \item $4\pi\epsilon \brak{\frac{y^2-xy}{x}}$
+        \end{multicols}
+    \end{enumerate}
+    
+    \item A linear transducer is calibrated for the ranges shown in the figure.\figref{fig:p10}  The gain of the transducer is \underline{\hspace{2cm}} mA/$\degree$C \brak{\text{rounded off to two decimal places}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figs/p10.jpg}
+        \caption*{}
+        \label{fig:p10}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Consider a filter defined by the difference equation
+    \begin{align*}
+        y\sbrak{n} - 0.5 y\sbrak{n-2} = a x\sbrak{n-4}
+    \end{align*}
+    where $x\sbrak{n}$ and $y\sbrak{n}$ represent the input and output, respectively. If the magnitude response of the filter at $\omega = \frac{\pi}{2}$ is $\abs{H\brak{\frac{\pi}{2}}} = 0.5$, the value of $a$ is \underline{\hspace{2cm}} \brak{\text{rounded off to two decimal places}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \item Consider the circuit shown in the figure.\figref{fig:11}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p11.jpg}
+        \caption*{}
+        \label{fig:p11}
+    \end{figure}
+    The CMOS digital logic circuit has infinite input impedance. Assume the opamp is ideal. A 1.8 V Zener diode with a minimum Zener current of 2 mA is used. The corresponding maximum value of resistance $R_z$ is \underline{\hspace{2cm}} k$\ohm$. \brak{\text{rounded off to one decimal place}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \item Figure\figref{fig:12} shows an amplifier using an NMOS transistor. Assume that the transistor is in saturation with device parameters, $\mu_n C_{ox} = 250$ $\mu$A/V$^2$, threshold voltage $V_T = 0.65$ V and $W/L=4$. Ignore the channel length modulation effect. The drain current of the transistor at the operating point is \underline{\hspace{2cm}} $\mu$A \brak{\text{rounded off to nearest integer}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p12.jpg}
+        \caption*{}
+        \label{fig:p12}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+
+    \item The number of complex multiplications required for computing a 16-point DFT using the decimation-in-time radix-2 FFT is \underline{\hspace{2cm}} \brak{\text{in integer}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \item A $3 \times 3$ matrix $P$ with all real elements has eigenvalues $\frac{1}{4}$, $1$, and $-2$. The value of $\abs{P^{-1}}$ is \underline{\hspace{2cm}} \brak{\text{rounded off to nearest integer}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \item The Nyquist sampling frequency for $x\brak{t} = 10 \sin^2\brak{200\pi t}$ is \underline{\hspace{2cm}} Hz \brak{\text{rounded off to nearest integer}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item The resistance of a 20 k$\ohm$ resistor is measured six consecutive times using an LCR meter. The first five readings are 19 k$\ohm$, 18 k$\ohm$, 23 k$\ohm$, 21 k$\ohm$ and 17 k$\ohm$. If the mean of the measurements and the true value are equal, the last reading is \underline{\hspace{2cm}} k$\ohm$ \brak{\text{rounded off to nearest integer}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Consider the readout circuit of a piezoelectric sensor shown in the figure.\figref{fig:13}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figs/p13.jpg}
+        \caption*{}
+        \label{fig:p13}
+    \end{figure}
+    When the piezoelectric sensor generates a charge $q_p$, the resulting change in voltage $V_x$ is $-2$ V. Then the corresponding change in the voltage $V_{out}$ is \underline{\hspace{2cm}} V \brak{\text{rounded off to nearest integer}}.
+    
+    Note: Assume all components are ideal.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item The voltage applied and the current drawn by a circuit are
+    \begin{align*}
+        v\brak{t} &= 95 + 200 \cos\brak{120\pi t} + 90 \cos\brak{360\pi t - 60\degree} \text{ V} \\
+        i\brak{t} &= 4 \cos\brak{120\pi t - 60\degree} + 1.5 \cos\brak{240\pi t - 75\degree} \text{ A}
+    \end{align*}
+    The average power absorbed by the circuit is \underline{\hspace{2cm}} W \brak{\text{rounded off to nearest integer}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item The current $i\brak{t}$ drawn by a circuit is given as
+    \begin{align*}
+        i\brak{t} = 4 + 30 \cos\brak{t} - 20 \sin\brak{t} + 15 \cos\brak{3t} - 10 \sin\brak{3t} \text{ A}
+    \end{align*}
+    The root-mean-square value of $i\brak{t}$ is \underline{\hspace{2cm}} A \brak{\text{rounded off to one decimal place}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \item A linear potentiometer \brak{\text{0 -- 10 k$\ohm$}} is used to measure the water level as shown in the figure.\figref{fig:14} The resistance between A and C varies linearly from 0 to 10 k$\ohm$ for a change in water level from 0 to 20 cm. The sensor is excited using a DC voltage source, $V_s = 10$ V with an internal resistance, $R_s = 200 \ohm$. If $V_{out} = 5$ V, the water level is \underline{\hspace{2cm}} cm \brak{\text{rounded off to one decimal place}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p14.jpg}
+        \caption*{}
+        \label{fig:p14}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item The switch in the following figure\figref{fig:15} has been closed for a long time \brak{\text{$t < 0$}}. It is opened at $t = 0$ seconds. The value of $dv_c/dt$ at $t = 0^+$ is \underline{\hspace{2cm}} V/s \brak{\text{rounded off to nearest integer}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figs/p15.jpg}
+        \caption*{}
+        \label{fig:p15}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Consider a system given by the following first order differential equation:
+    \begin{align*}
+        \frac{dy}{dt} = y + 2t - t^2
+    \end{align*}
+    where, $y\brak{0} = 1$ and $0 \leq t < \infty$. Using a step size $h = 0.1$ for the improved Euler method, the value of $y\brak{t}$ at $t = 0.1$ is \underline{\hspace{2cm}} \brak{\text{rounded off to two decimal places}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Indian Premier League has divided the sixteen cricket teams into two equal pools: Pool-A and Pool-B. Four teams of Pool-A have blue logo jerseys while the rest four have red logo jerseys. Five teams of Pool-B have blue logo jerseys while the rest three have red logo jerseys.
+    
+    If one team from each pool reaches the final, the probability that one team has a blue logo jersey and another has a red logo jersey is \underline{\hspace{2cm}} \brak{\text{rounded off to one decimal place}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \item A wire of circular cross section with radius $a$ is shown in the figure.\figref{fig:16} The current density is given by $J=ks^2$, where $k$ is a constant, $s$ is the radial distance from the axis and $0 \leq s \leq a$. The total current $I$ in the wire is
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p16.jpg}
+        \caption*{}
+        \label{fig:p16}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $\frac{\pi k a^4}{2}$
+            \item $\frac{2\pi k a^3}{3}$
+            \item $\frac{\pi k a^3}{2}$
+            \item $\frac{\pi k a^4}{4}$
+        \end{multicols}
+    \end{enumerate}
+
+    \item The measured values from a flow instrument,\figref{fig:17} whose range is between 0 and 2 flow units, are shown in the histogram. The systematic error \brak{\text{bias}} and the maximum error \brak{\text{in flow units}}, respectively are
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\columnwidth]{figs/p17.jpg}
+        \caption*{}
+        \label{fig:p17}
+    \end{figure}
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 0.12 and 0.14
+            \item 0.01 and 0.10
+            \item 0.10 and 0.14
+            \item 0.04 and 0.12
+        \end{multicols}
+    \end{enumerate}
+    
+    \item Consider a discrete-time sequence
+    \begin{align*}
+        x\sbrak{n} = 
+        \begin{cases}
+            \brak{0.2}^n, & 0 \leq n \leq 7 \\
+            0, & \text{otherwise}
+        \end{cases}
+    \end{align*}
+    The region of convergence of $X\brak{z}$, the z-transform of $x\sbrak{n}$, consists of
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item all values of z except $z = 0.2$
+        \item all values of z
+        \item all values of z except $z = 0$
+        \item all values of z except $z = \infty$
+    \end{enumerate}
+
+    \item In the bridge circuit shown in the figure,\figref{fig:18} under balanced condition, the values of R and C respectively, are
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.22\columnwidth]{figs/p18.jpg}
+        \caption*{}
+        \label{fig:p18}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item 1.010 $\ohm$ and 19.802 $\mu$F
+            \item 9.901 $\ohm$ and 0.505 $\mu$F
+            \item 19.802 $\ohm$ and 1.01 $\mu$F
+            \item 39.604 $\ohm$ and 2.02 $\mu$F
+        \end{multicols}
+    \end{enumerate}
+
+    \item Laplace transform of a signal $x\brak{t}$ is
+    \begin{align*}
+        X\brak{s} = \frac{1}{s^2 + 13s + 42}
+    \end{align*}
+    Let $u\brak{t}$ be the unit step function. Choose the signal $x\brak{t}$ from the following options if the region of convergence is $-7 < \text{Re \brak{s}} < -6$.
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item $-e^{-6t}u\brak{t} - e^{-7t}u\brak{-t}$
+        \item $-e^{-6t}u\brak{-t} - e^{-7t}u\brak{t}$
+        \item $e^{-6t}u\brak{t} - e^{-7t}u\brak{-t}$
+        \item $-e^{-6t}u\brak{-t} - e^{-7t}u\brak{-t}$
+    \end{multicols}
+    \end{enumerate}
+
+    \item In the figure shown,\figref{fig:19} both the opamps A$_1$ and A$_2$ are ideal, except that the opamp A$_1$ has an offset voltage \brak{V_{os}} of 1 mV. For $V_{in} = 0$ V, the values of the output voltages $V_{out1}$ and $V_{out2}$, respectively, are
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figs/p19.jpg}
+        \caption*{}
+        \label{fig:p19}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item 3 mV and -1 mV
+            \item 1 mV and 0 mV
+            \item 1 mV and -1 mV
+            \item 2 mV and 0 mV
+        \end{multicols}
+    \end{enumerate}
+
+    \item In the figure shown,\figref{fig:20} the positive edge triggered D flip-flops are initially reset to Q = 0. The logic gates and the multiplexers have no propagation delay. After reset, a train of clock pulses \brak{CLK} are applied. The logic-states of the inputs DIN, S and the clock pulses are also shown in the figure. Assuming no timing violations, the sequence of output Y from the 3$^{rd}$ clock to the 5$^{th}$ clock, $Y_3$ $Y_4$ $Y_5$ is
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{figs/p20.jpg}
+        \caption*{}
+        \label{fig:p20}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 001
+            \item 010
+            \item 000
+            \item 011
+        \end{multicols}
+    \end{enumerate}
+
+    \item In the figure shown,\figref{fig:21}  R = 1 k$\ohm$ and C = 0.1 $\mu$F. For a dc gain of $-10$, the 3 dB cut-off frequency \brak{\text{rounded off to one decimal place}} is
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p21.jpg}
+        \caption*{}
+        \label{fig:p21}
+    \end{figure}
+    Assume the opamp is ideal.
+
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item 159.1 Hz
+            \item 1591.5 Hz
+            \item 1750.7 Hz
+            \item 175.0 Hz
+        \end{multicols}
+    \end{enumerate}
+
+    \item Consider the feedback control system shown in the figure.\figref{fig:22}  The steady-state error $e_{ss} = \lim_{t \to \infty} \brak{r\brak{t} - y\brak{t}}$ due to unit step reference $r\brak{t}$ is
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p22.jpg}
+        \caption*{}
+        \label{fig:p22}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{4}
+            \item $\frac{K-1}{K}$
+            \item $\frac{1}{2}$
+            \item $0$
+            \item $\frac{1-K}{K}$
+        \end{multicols}
+    \end{enumerate}
+
+    \item The transfer function of a system is
+    \begin{align*}
+        G\brak{s} = \frac{\omega_n^2}{s^2 + 2\xi\omega_n s + \omega_n^2}
+    \end{align*}
+    Choose the range of $\xi$ and $\omega_n$ \brak{\text{in rad/s}} from the following options such that the poles lie on the shaded region of the s-plane as shown in the figure.\figref{fig:23} 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{figs/p23.jpg}
+        \caption*{}
+        \label{fig:p23}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+    \begin{multicols}{2}
+        \item $\xi \geq \frac{1}{2}$ and $ \omega_n \geq 2$
+        \item $\xi \geq \frac{1}{4}$ and $\omega_n \geq 2$
+        \item $\xi \geq \frac{1}{2}$ and $\omega_n \geq \sqrt{3}$
+        \item $\xi \geq \dfrac{1}{4}$ and $\omega_n \geq \sqrt{3}$
+    \end{multicols}
+    \end{enumerate}
+
+    \item Let C be the closed curve in the xy-plane, traversed in the counterclockwise direction along the boundary of the rectangle with vertices at \brak{\text{0,0}}, \brak{\text{2,0}}, \brak{\text{2,1}}, \brak{\text{0,1}}. The value of the line integral
+    \begin{align*}
+        \oint_C \brak{-e^y dx + e^x dy}
+    \end{align*}
+    is
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $e^2 + 2e - 3$
+            \item $e^2 - 2e - 3$
+            \item $e^2 + e - 1$
+            \item $e^2 + e + 1$
+        \end{multicols}
+    \end{enumerate}
+    
+    \item In the figure shown,\figref{fig:24}  assume
+    \begin{itemize}
+        \item $\alpha$ is the phase angle between the load current and the load voltage
+        \item $\beta$ is the phase angle by which pressure coil current lags the pressure coil voltage of the wattmeter
+        \item $\gamma$ is the phase angle between currents in the pressure coil and the current coil of the wattmeter
+        \item $\delta$ is the phase angle of the voltage transformer
+        \item $\theta$ is the phase angle of the current transformer
+    \end{itemize}
+    When the load has a lagging phase angle of $\alpha$, which one of the following options is correct?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\columnwidth]{figs/p24.jpg}
+        \caption*{}
+        \label{fig:p24}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \item $\alpha = -\gamma \underset{-}{+} \delta \underset{-}{+} \theta - \beta$
+        \item $\alpha = -\gamma \underset{-}{+} \delta \underset{-}{+} \theta + \beta$
+        \item $\alpha = \gamma \underset{-}{+} \delta \underset{-}{+} \theta + \beta$
+        \item $\alpha = \gamma \underset{-}{+} \delta \underset{-}{+} \theta - \beta$
+    \end{enumerate}
+
+    \item Consider an ultrasonic measurement system shown in the figure.\figref{fig:25}  The ultrasonic transmitter \brak{t} sends a continuous wave signal $x\brak{t} = \cos\brak{2\pi f_1 t}$ volts towards an object whose vibration is modeled as $m\brak{t} = 0.5 \sin\brak{2\pi f_2 t}$ volts. Neglecting the phase shift due to any other effect, the received signal at the receiver \brak{R} is $y\brak{t} = \cos\brak{2\pi f_1 t + \beta \cos\brak{2\pi f_2 t}}$ volts.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\columnwidth]{figs/p25.jpg}
+        \caption*{}
+        \label{fig:p25}
+    \end{figure}
+    
+    Assuming the frequency sensitivity factor as 500 Hz/volt, $f_1 = 40$ kHz, $f_2 = 1$ kHz, the modulation index \brak{\beta} and the frequency deviation in $y\brak{t}$, respectively, are
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item 0.25 and $\underset{-}{+}$ 250 Hz
+            \item 0.5 and $\underset{-}{+}$ 500 Hz
+            \item 1 and $\underset{-}{+}$ 1000 Hz
+            \item 0.75 and $\underset{-}{+}$ 1000 Hz
+        \end{multicols}
+    \end{enumerate}
+    
+    \item The complex functions $f\brak{z} = u\brak{x, y} + i v\brak{x, y}$ and $\overline{f\brak{z}} = u\brak{x, y} - i v\brak{x, y}$ are both analytic in a given domain. Choose the correct option\brak{s} from the following.
+    
+    \hfill{(GATE IN 2024)}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} = 0$
+            \item $\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} \ne 0$
+            \item $\frac{df\brak{z}}{dz} = 0$
+            \item $\frac{df\brak{z}}{dz} \neq 0$
+        \end{multicols}
+    \end{enumerate}
+    
+    \item The readings recorded from a 20-psig pressure gauge are given in the Table. The regression line obtained for the data is $y = 0.04 x + 10.32$. The regression coefficient of determination, $R^2 = $ \underline{\hspace{2cm}} \brak{\text{rounded off to three decimal places}}.
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            x & 1 & 2 & 3 & 4 & 5 \\
+            \hline
+            y \brak{psig} & 10.3 & 10.5 & 10.4 & 10.5 & 10.5 \\
+            \hline
+        \end{tabular}
+        \caption*{}
+        \label{tab:2}
+    \end{table}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item In the figure shown,\figref{fig:26}  $R = 4.5$ k$\ohm$, $\Delta R = 1.5$ k$\ohm$, and INA is assumed to be ideal. The equivalent resistance between A and B is \underline{\hspace{2cm}} k$\ohm$ \brak{\text{rounded off to nearest integer}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\columnwidth]{figs/p26.jpg}
+        \caption*{}
+        \label{fig:p26}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Consider the capacitive sensor circuit and its output voltage shown in the figure.\figref{fig:27}  The circuit is switched ON at $t = 0$. Assuming the opamp to be ideal, the frequency of the output voltage $V_o$ is \underline{\hspace{2cm}} kHz \brak{\text{rounded off to two decimal places}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\columnwidth]{figs/p27.jpg}
+        \caption*{}
+        \label{fig:p27}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item The 4-point DFTs of two sequences $x\sbrak{n}$ and $y\sbrak{n}$ are $X\sbrak{k} = \brak{1, -j, 1, j}$ and $Y\sbrak{k} = \sbrak{1, 3j, 1, -3j}$, respectively. Assuming $z\sbrak{n}$ represents the 4-point circular convolution of $x\sbrak{n}$ and $y\sbrak{n}$, the value of $z\sbrak{0}$ is \underline{\hspace{2cm}} \brak{\text{rounded off to nearest integer}}.
+    
+    Note: The DFT of a N-point sequence $x\sbrak{n}$ is defined as
+    \begin{align*}
+        X\sbrak{k} = \sum_{n=0}^{N-1} x\sbrak{n} e^{\frac{-j2\pi nk}{N}}
+    \end{align*}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Consider the figure shown.\figref{fig:28}  For zero deflection in the galvanometer, the required value of resistor $R_x$ is \underline{\hspace{2cm}} $\ohm$ \brak{\text{rounded off to nearest integer}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{figs/p28.jpg}
+        \caption*{}
+        \label{fig:p28}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Consider a unity negative feedback system with its open-loop pole-zero map as shown in the figure.\figref{fig:29}  If the point $s = j\alpha$, $\alpha > 0$, lies on the root locus, the value of $\alpha$ is \underline{\hspace{2cm}} \brak{\text{rounded off to nearest integer}}.
+    
+    Note: The poles are marked with $\times$ in the figure.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figs/p29.jpg}
+        \caption*{}
+        \label{fig:p29}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item A shielded cable with $C_{stray} = 20$ pF and $R_{wire} = 10 \ohm$ is used to connect the inductive sensors as shown in the figure.\figref{fig:30}  The RMS value of $V_{out}$ is \underline{\hspace{2cm}} V \brak{\text{rounded off to two decimal places}}.
+    
+    Note: Assume all components are ideal, and sensors are not magnetically coupled.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{figs/p30.jpg}
+        \caption*{}
+        \label{fig:p30}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item In the figure shown,\figref{fig:31} the diode current is given by $I_D = I_s e^{\alpha V_D / T}$. $V_D$ is the diode voltage in volts, $T$ is the absolute temperature in Kelvin, $\alpha = 1.16 \times 10^4$ K/V, and $I_s = 10^{-15}$ A is the saturation current. The dc current source, opamp and the resistors are ideal, and are assumed to be temperature independent. The change in the output voltage \brak{V_{out}} per Kelvin change in temperature is \underline{\hspace{2cm}} mV \brak{\text{rounded off to one decimal place}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\columnwidth]{figs/p31.jpg}
+        \caption*{}
+        \label{fig:p31}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item An ADC has a full scale voltage of 1.4 V, resolution of 200 mV, and produces binary output data. The input signal of the ADC has a bandwidth of 500 MHz, and it samples the data at the Nyquist rate. The parallel data output is converted to a serial bit stream using a parallel-to-serial converter. The data rate at the output of the parallel-to-serial converter is \underline{\hspace{2cm}} Gbps \brak{\text{rounded off to nearest integer}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item In the circuit shown,\figref{fig:32} assume the opamp is ideal and the initial charge on the capacitor is zero. The output voltage at time $t=2$ ms is \underline{\hspace{2cm}} V \brak{\text{rounded off to one decimal place}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\columnwidth]{figs/p32.jpg}
+        \caption*{}
+        \label{fig:p32}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item In the figure shown,\figref{fig:33} Sw is a switch whose position changes from 1 to 0 when $V_c$ changes from logic HIGH to LOW and vice versa. The bandwidth of the permanent magnet moving coil \brak{PMMC} type voltmeter is 1 Hz. If $V_{sense} = 2 \sin\brak{4000\pi t}$ V and $V_{ref} = 4 \sin\brak{2000\pi t}$ V, the voltmeter reading is \underline{\hspace{2cm}} V \brak{\text{rounded off to nearest integer}}.
+    
+    Note: Assume all components are ideal.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\columnwidth]{figs/p33.jpg}
+        \caption*{}
+        \label{fig:p33}
+    \end{figure}
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item A 50 kVA transformer has an efficiency of 95\% at full load and unity power factor. Assume the core losses are negligible. The efficiency of the transformer at 75\% of the full load and 0.8 power factor is \underline{\hspace{2cm}} \% \brak{\text{rounded off to one decimal place}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item A three-phase squirrel-cage induction motor has a starting torque of 100\% of the full load torque and a maximum torque of 300\% of the full load torque. Neglecting the stator impedance, the slip at the maximum torque is \underline{\hspace{2cm}} \% \brak{\text{rounded off to two decimal places}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item Two magnetically coupled coils, when connected in series-aiding configuration, have a total inductance of 500 mH. When connected in series-opposing configuration, the coils have a total inductance of 300 mH. If the self-inductance of both the coils are equal, then the coupling coefficient is \underline{\hspace{2cm}} \brak{\text{rounded off to two decimal places}}.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item The solution of an ordinary differential equation $y''' + 3y'' + 3y' + y = 30e^{-t}$ is
+    \begin{align*}
+        y\brak{t} = \brak{c_0 + c_1 t + c_2 t^2 + c_3 t^3}e^{-t}
+    \end{align*}
+    Given $y\brak{0} = 3$, $y'\brak{0} = -3$ and $y''\brak{0} = -47$, the value of $\brak{c_0 + c_1 + c_2 + c_3}$ is \underline{\hspace{2cm}} \brak{\text{rounded off to nearest integer}}.
+    
+    Note: $y''' = d^3y/dt^3$, $y'' = d^2y/dt^2$, $y' = dy/dt$ and $c_0, c_1, c_2, c_3$ are constants.
+    
+    \hfill{(GATE IN 2024)}
+    
+    \item A random variable X has a probability density function
+    \begin{align*}
+        f_X\brak{x} = 
+        \begin{cases}
+            e^{-x}, & x \geq 0 \\
+            0, & \text{otherwise}
+        \end{cases}
+    \end{align*}
+    The probability of $X > 2$ is \underline{\hspace{2cm}} \brak{\text{rounded off to three decimal places}}.
+    
+    \hfill{(GATE IN 2024)}
+
+    \section*{End of the Question Paper.}
+    
+\end{enumerate}
+
+\end{document}

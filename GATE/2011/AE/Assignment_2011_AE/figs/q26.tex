@@ -1,0 +1,22 @@
+\documentclass{}
+\usepackage{}
+\begin{document}
+\begin{tikzpicture}[thick]
+
+\fill[pattern=north east lines] (-0.5,-0.5) rectangle (0,0.5);
+
+\fill[gray!40] (0,-0.25) rectangle (8,0.25);
+\draw (0,-0.25) rectangle (8,0.25);
+
+\draw[->,very thick] (4,1) -- (4,0.25) node[midway,right] {$P$};
+
+\draw[<->] (0,-0.6) -- (8,-0.6) node[midway,below] {$L$};
+
+\draw[<->] (0,-1.2) -- (4,-1.2) node[midway,below] {$L/2$};
+
+\draw (0,-0.25) -- (0,-1.2);
+\draw (4,-0.25) -- (4,-1.2);
+\draw (8,-0.25) -- (8,-0.6);
+
+\end{tikzpicture}
+\end{document}
