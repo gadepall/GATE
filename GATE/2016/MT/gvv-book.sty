@@ -1,0 +1,1995 @@
+%\usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage[left=1.5in,right=1in]{geometry}
+
+%\usepackage{geometry}
+\makeatletter%
+%\textheight     243.5mm
+%\textwidth      183.0mm
+%\textwidth=31pc%
+%\textheight=48pc
+\usepackage{lipsum}% this package is included to get dummy paragraphs for sample purpose.
+\usepackage{ulem}
+\usepackage{alltt}
+\usepackage[anticlockwise,figuresright]{rotating}
+%\usepackage{epsf}
+%\usepackage{subfigure}
+\usepackage{pstricks}
+\usepackage{wrapfig}
+\usepackage{pstcol,pst-grad}
+ \usepackage{bm}
+\usepackage{enumitem}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{xparse}
+    \usepackage{import}
+    \usepackage{hhline} 
+    \usepackage{circuitikz}                                          %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+    \usepackage{gensymb}     
+\usepackage{tikz, pgfplots}
+
+
+\newif\ifbibunnumbered\global\bibunnumberedtrue%
+%\DeclareOption{number}{\xdef\@biboptions{numbers}}%
+%\DeclareOption{numbers}{\xdef\@biboptions{numbers}}%
+
+\bibliographystyle{plainnat}% this can be used both for numerical and authoryear citations.
+
+\def\ttag#1{}
+\newdimen\hsizevalue%
+\newdimen\vsizevalue%
+\columnseprule\z@%
+
+\def\feafxdCatgrychk{}%
+
+\def\baselinestretch{1.25}
+
+
+\definecolor{figurecolor}{cmyk}{0,0,0,0.3}
+
+\definecolor{bordcolor}{cmyk}{.5,.3,0,0}
+\definecolor{startbordcolor}{cmyk}{.5,.3,0,0}
+\definecolor{endbordcolor}{cmyk}{.2,.1,0,0}
+
+\let\topborder\relax%
+\let\botborder\relax%
+
+\newif\ifAuthorManual%
+\global\AuthorManualfalse%
+
+\AtBeginDocument{\ifAuthorManual\else%
+\def\ps@plain{\let\@mkboth\@gobbletwo
+     \let\@oddhead\@empty\def\@oddfoot{\reset@font\rmfamily\hfil{\normalsize\thepage}\hfil}
+\let\@evenhead\@empty\let\@evenfoot\@oddfoot}
+\usepackage{setspace}\doublespacing\pagestyle{plain}\fi}
+
+%% to avoid Too deeply nested error, made \@toodeep{} %%
+%% but the xml conversion is okay %%
+\def\@toodeep{}%
+
+\def\bibr#1{#1}%
+
+\newif\ifPreprocessCompleted% \PreprocessCompletedtrue will be inserted while running preprocess script %%
+\frenchspacing%
+
+\gdef\StepUpCounter#1{\global\advance#1by 1\relax}%
+\gdef\StepDownCounter#1{\global\advance#1by -1\relax}%
+
+\def\minustocounter#1#2{%
+  \@ifundefined{c@#1}%
+    {\@nocounterr{#1}}%
+    {\global\advance\csname c@#1\endcsname -#2\relax}}%
+
+\def\stepdowncounter#1{%
+  \minustocounter{#1}\@ne
+  \begingroup
+    \let\@elt\@stpelt
+    \csname cl@#1\endcsname
+  \endgroup}%
+
+\def\refstepdowncounter#1{\stepdowncounter{#1}%
+    \protected@edef\@currentlabel
+       {\csname p@#1\endcsname\csname the#1\endcsname}%
+}%
+
+\newcounter{temp}%
+
+\let\LWref\ref%
+\def\LWlabel#1{\label{#1}}%
+\usepackage{ifthen}%
+\usepackage{amsmath}%
+\usepackage{color}%
+\usepackage{float}%
+%\usepackage{graphicx}%
+%\usepackage[right]{showlabels}%
+\usepackage{boites}%
+\usepackage{boites_exemples}%
+\usepackage{graphicx,pstricks}
+%\usepackage{enumerate}%
+\usepackage{latexsym}
+\usepackage[fleqn]{mathtools}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage{mathrsfs,makeidx,listings,verbatim,moreverb}
+%%\usepackage{amsthm,mathrsfs,makeidx,listings,verbatim,moreverb}
+%\let\eqref\ref%  updated on 20th April 2017
+
+\usepackage{hyperref}%
+%\usepackage[dvips]{hyperref}%
+\hypersetup{bookmarksopen=false}%
+\usepackage{breakurl}%
+\urlstyle{same}%
+\@ifpackageloaded{enumerate}{%
+%%
+%\iffalse
+%\def\@@enum@[#1]{%
+%  \@enLab{}\let\@enThe\@enQmark
+%  \@enloop#1\@enum@
+%  \ifx\@enThe\@enQmark\@warning{The counter will not be printed.%
+%   ^^J\space\@spaces\@spaces\@spaces The label is: \the\@enLab}\fi
+%  \expandafter\edef\csname label\@enumctr\endcsname{\the\@enLab}%
+%  \expandafter\let\csname the\@enumctr\endcsname\@enThe
+%%  \if!#2!\relax\csname c@\@enumctr\endcsname7\else\csname c@\@enumctr\endcsname#2\fi%
+%  \expandafter\settowidth
+%            \csname leftmargin\romannumeral\@enumdepth\endcsname
+%            {\the\@enLab\hspace{\labelsep}}%
+%  \@enum@}
+%\fi
+%%
+\newif\ifRoundPunctuation%
+\RoundPunctuationfalse%
+\newif\ifSquarePunctuation%
+\SquarePunctuationfalse%
+\newif\ifDotPunctuation%
+\DotPunctuationfalse%
+%%
+\def\bpunct{}
+\def\epunct{}
+%%
+\newif\ifParaList%This check was added by DEVI G. on 13th Feb 2017
+\ParaListfalse%
+%%
+\def\@enum@{
+\list{\csname label\@enumctr\endcsname}%
+           {\usecounter{\@enumctr}
+\setlength{\rightmargin}{0pt}%
+\setlength{\topsep}{6pt}%
+\setlength{\itemsep}{0pt}%
+\setlength{\partopsep}{0pt}%
+\setlength{\parsep}{0pt}%
+\ifParaList%
+\setlength{\leftmargin}{0pt}%
+\setlength{\itemindent}{1em}%
+\advance\itemindent by \labelwidth% 
+\advance\itemindent by \labelsep% 
+\fi%
+\ifRoundPunctuation%
+\def\makelabel##1{\hss\llap{(##1)}}%
+\else%
+\ifSquarePunctuation%
+\def\makelabel##1{\hss\llap{[##1]}}%
+\else%
+\ifDotPunctuation%
+\def\makelabel##1{\hss\llap{##1.}}%
+\else%
+\def\makelabel##1{\hss\llap{##1}}%
+\fi\fi\fi}
+}
+%%
+}{}%
+
+\newif\iffigruleins
+\global\figruleinstrue%
+
+
+\@ifpackageloaded{showlabels}{%
+%%
+\ifSL@AMS
+%%  \let\SL@maketag@@@=\maketag@@@
+  \def\maketag@@@#1{%
+  \SL@maketag@@@{#1}%
+  \ifx\df@label\@empty%
+      \ifx\SL@labelname\relax%
+        \SL@eqnlrtext{Missing}%
+    \else
+        \SL@eqnlrtext{\SL@labelname}%
+      \fi
+    \else
+      \SL@eqnlrtext{\df@label}%
+    \fi
+    \global\let\SL@labelname\relax
+  }
+\else
+  \let\SL@eqnnum=\@eqnnum
+  \def\@eqnnum{%
+    \SL@eqnnum
+    \ifx\SL@labelname\relax
+    % do nothing
+    \else
+      \SL@eqnlrtext{\SL@labelname}%
+    \fi
+    \global\let\SL@labelname\relax
+  }
+\fi
+%%
+\providecommand{\showlabelsetlabel}[1]{\normalfont\showlabelfont\iffigruleins\color{blue}#1\color{black}\fi}%
+%%
+\def\showlabels#1{%
+\ifmmode% updated by SUJATHA
+  \@temptokena=\expandafter{\csname #1\endcsname}
+  \expandafter\edef\csname SL@init#1\endcsname{%
+    \let\csname SL@orig#1\endcsname\the\@temptokena
+    \let\the\@temptokena\csname SL@#1\endcsname}
+  \AtBeginDocument{\csname SL@init#1\endcsname}%
+  \expandafter\def\csname SL@#1\endcsname{\SL@showlabels{#1}}
+\fi}
+%%
+\let\SL@initmakecaption\relax%
+%%
+\def\SL@margintext#1{{\showlabelsetlabel{\SL@prlabelname{#1}}}} 
+%%
+\def\SL@eqnrighttext#1{\rlap{\quad\ifthenelse{\equal{#1}{Missing}}{\iffigruleins\textcolor{red}{\LARGE EQN. Label Missing}\fi }{\SL@margintext{#1}}}}
+%%
+}{}
+
+%\setlength\oddsidemargin{5cm}
+\setlength\oddsidemargin{1in}
+
+\newskip\outermargin%
+\outermargin=\paperwidth%
+\advance\outermargin by -\textwidth%
+\advance\outermargin by -\oddsidemargin%
+\setlength{\outermargin}{\evensidemargin}
+
+%%Null Section%%
+%\def\sieqn#1{#1}%
+\newif\ifNumberedExercise%
+\NumberedExercisefalse%
+
+\def\endash{--}
+\def\emdash{---}
+
+\newif\iffirstsection
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+%      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+ %     \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\bfseries \partname~\thepart\par
+       \vskip 3\p@%
+     \fi%
+     \Huge \bfseries #2\par}%
+%    \@endpart
+}
+
+%% Part %%%
+
+\renewcommand\part{%
+  \secdef\@part\@spart}
+
+%% Chapter %%
+
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 2\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+
+\def\@makeschapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \sf\bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+
+
+\def\subtitle#1{\bgroup\par\huge\textbf{#1}\par\nointerlineskip\vskip12pt\noindent\ignorespaces\egroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%Chapter Opening Contents--Chapter/Author/Address/Abstract/KeyWords..%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcount\emailcount%
+\newcount\punctcount%
+
+\def\jmkLabel#1{\@bsphack\protected@write\@auxout{}{\string\Newlabel{#1}{\@currentlabel}}\@esphack}%
+\def\Newlabel#1#2{\expandafter\xdef\csname X@#1\endcsname{#2}}%
+\def\jmkRef#1{\@ifundefined{X@#1}{0}{\csname X@#1\endcsname}}%
+
+\newcommand{\orgdiv}[1]{#1}%
+\newcommand{\orgname}[1]{#1}%
+\newcommand{\orgaddress}[1]{#1}%
+\newcommand{\street}[1]{#1}%
+\newcommand{\postcode}[1]{#1}%
+\newcommand{\city}[1]{#1}%
+\newcommand{\state}[1]{#1}%
+\newcommand{\country}[1]{#1}%
+
+\let\sep\@empty%
+\let\authorsep\@empty%
+\let\emailsep\@empty%
+
+\newcount\aucount%
+\newcount\corrauthcount%
+
+%\def\au@and{\unskip\advance\punctcount by -1, }%
+\def\au@and{\ifnum\punctcount=1\else\ifnum\punctcount=2\ and\advance\punctcount by -1\else\advance\punctcount by -1 \fi \fi}%
+\def\artauthors{}
+
+\newif\if@auemail%
+
+\newcommand{\thecorrauthcount}{\the\corrauthcount}%
+\newcommand{\theaucount}{\the\aucount}%
+\newcommand{\thefnmCnt}{\the\fnmCnt}%
+
+\def\author{\advance\aucount\@ne\@ifstar{\@@corrauthor}{\@@author}}%
+
+\newcommand{\@@corrauthor}[2][]{\g@addto@macro\artauthors{%
+\renewcommand{\email}[1]{}%
+\hsize=\textwidth\raggedright%
+\global\advance\aucount\@ne%%
+\global\advance\corrauthcount\@ne%%
+\def\@currentlabel{#2}
+\jmkLabel{corrauth\thecorrauthcount}%
+\Authorfont%
+\def\baselinestretch{1}%
+\authorsep{#2\ifnum\aucount=2\else\ifnum\punctcount=2,\else\ifnum\punctcount=1\relax\else\ifnum\punctcount=0\relax\else,\fi\fi\fi\fi}%
+\unskip\ifx#1\empty\else\textsuperscript{\smash{{%
+\@for\@@affmark:=#1\do{\edef\affnum{\@ifundefined{X@\@@affmark}{1}{\jmkRef{\@@affmark}}}%
+\unskip\sep\affnum\let\sep=,}}}*}\fi%
+\def\authorsep{\au@and~}%
+\global\let\sep\@empty%
+}}%
+
+\def\Authorfont{\reset@font\fontfamily{\rmdefault}\fontsize{11pt}{13pt}\selectfont\bfseries\raggedright}%
+\def\addressfont{\reset@font\fontfamily{\rmdefault}\fontsize{9pt}{11pt}\selectfont\itshape\raggedright}%
+\def\corresfont{\reset@font\fontfamily{\rmdefault}\fontsize{9pt}{11pt}\selectfont\raggedright}%
+\def\AbsTxtfont{\reset@font\fontfamily{\rmdefault}\fontsize{9pt}{11pt}\selectfont\raggedright}%
+
+%\newcommand{\@@author}[2][]{%\showthe\aucount%
+\def\@@author[#1]#2{%
+\g@addto@macro\artauthors{%%
+\renewcommand{\email}[1]{}%
+\hsize=\textwidth\raggedright%
+\Authorfont%
+\def\baselinestretch{1}%
+\authorsep{#2\ifnum\aucount=2\ \else\ifnum\punctcount=2,\else\ifnum\punctcount=1\relax\else\ifnum\punctcount=0\relax\else,\fi\fi\fi\fi}%
+\unskip\ifx#1\empty\else\textsuperscript{\smash{{%
+\@for\@@affmark:=#1\do{\edef\affnum{\@ifundefined{X@\@@affmark}{1}{\jmkRef{\@@affmark}}}%
+\unskip\sep\affnum\let\sep=,}}}}\fi%
+\def\authorsep{\au@and~}%
+\global\let\sep\@empty}}%
+
+%%\if@purexml\else%
+%
+\newcounter{affn}%
+\renewcommand\theaffn{\arabic{affn}}%
+%
+\def\jmkaddress{}%
+\def\miscjmkaddress{}%
+\def\addsep{\par\vskip0pt}%
+%
+\newcount\addcount% To check the count of address
+%
+\def\address{\advance\addcount\@ne\@ifstar\@@corraddress\@@address}%
+%
+\newcommand{\@@corraddress}[2][]{\gdef\@corresinfo{*#2}}%
+%
+\newcommand{\@@address}[2][]{\def\temp{#1}%
+\g@addto@macro\jmkaddress{\hsize=\textwidth%
+%%\removelastskip\nointerlineskip\vskip-3pt\nointerlineskip%
+\def\baselinestretch{1}%
+\stepcounter{affn}%
+\xdef\@currentlabel{\theaffn}%
+\jmkLabel{#1}%
+\addressfont\ifx#1\empty\else\@hangfrom{\textsuperscript{\smash{\theaffn}}}\fi%
+#2\vphantom{Thy}\par%
+}}%
+
+\newcommand{\corresinfo}{{\hsize=\textwidth\corresfont\@corresinfo\par}}%
+
+\renewcommand{\maketitle}{\par%
+  \@afterindentfalse%
+  \begingroup
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}%
+    \def\@makefnmark{\hbox to\z@{$\m@th^{\@thefnmark}$\hss}}%
+    \long\def\@makefntext##1{\parindent 1em\noindent
+            \hbox to1.8em{\hss$\m@th^{\@thefnmark}$}##1}%
+      \global\@topnum\z@   % Prevents figures from going at top of page.
+      \@maketitle
+    \thispagestyle{empty}\@thanks
+  \endgroup
+  %%\setcounter{footnote}{0}%
+  \let\thanks\relax
+  \let\maketitle\relax\let\@maketitle\relax
+  \gdef\@thanks{}\gdef\@author{}\gdef\@title{}
+  \@afterheading%
+}
+
+\newskip\adjtitleskip%
+
+\newcommand{\@maketitle}{{%\unskip%
+\hsize=\textwidth\parindent=0pt%
+\thispagestyle{empty}%
+\let\footnote\thanks%
+\ifnum\aucount>0%
+   \global\punctcount\aucount%
+   {\artauthors\par}%
+   \removelastskip\vskip12pt%\vskip0pt\nointerlineskip%
+   {\jmkaddress\par}%
+\fi%
+   \removelastskip\vskip9pt%
+   \ifx\jmkemail\empty\else{\corresinfo\par}\fi%
+   \vspace*{33pt plus8.25pt minus4.125pt}%
+   \removelastskip\vskip\adjtitleskip%
+}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newenvironment{absgroup}%
+               {\begingroup}%
+               {\endgroup\vskip18pt}%
+
+\newenvironment{abstract}[1]{\begingroup%
+\removelastskip\nointerlineskip\vskip18pt\nointerlineskip
+  \reset@font\AbsTxtfont\hsize=\textwidth\leftskip=36pt\rightskip36pt%
+  \parskip=3pt\parindent=10pt%
+\if!#1!%
+  \noindent%
+\else%
+  \noindent\textbf{#1:}%
+\fi}%
+ {\par\endgroup}
+
+
+\def\keywords#1{\begingroup\par\vskip\baselineskip
+\removelastskip\nointerlineskip\vskip18pt\nointerlineskip
+  \reset@font\AbsTxtfont\hsize=\textwidth\leftskip=36pt\rightskip36pt%
+  \parskip=3pt\parindent=1em%
+  \if!#1!%
+    \noindent%
+  \else%
+    \vbox{\noindent\textbf{Keywords:}\ #1}\par%
+  \fi%
+\endgroup}%
+
+\def\key#1{#1}
+
+\def\fnm#1{#1}%
+\def\sur#1{#1}%
+\def\email#1{#1}%
+\def\phone#1{#1}%
+\def\street#1{#1}%
+\def\city#1{#1}%
+\def\postcode#1{#1}%
+\def\country#1{#1}%
+\def\countrypart#1{#1}%
+
+%\newcommand\fnm[1]{{\StepUpCounter{\fnmCnt}#1\addtocontents{aq}{\protect{\bfseries Author\ \thefnmCnt}\hfill\protect\break Given Names: #1\hfill\protect\break}}}%
+%\newcommand\sur[1]{{#1\addtocontents{aq}{Last Name: #1\protect\par}}}%
+
+
+\def\raggedcenter{\leftskip=0pt plus 0.5fil\rightskip=0pt plus 0.5fil%
+\parfillskip=0pt\let\hb=\break}%
+
+\long\def\dedication#1{\begingroup\parindent=0pt%
+\vbox{\par\vbox{\bgroup\parindent=0pt\par\egroup}%
+\raggedcenter\huge\itshape#1%
+\par\vbox{\bgroup\noindent\par\egroup}%
+}%
+\endgroup}
+
+\def\contributors{\chapter*{Contributors}
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{Contributors}
+\vskip1sp
+\leftskip=10pt
+\parindent-10pt
+\vskip-2pt
+\everypar={}
+\def\footnote##1{\hskip-10pt\savefootnote{##1}\hskip10pt}
+\setcounter{page}{5}
+\global\titletrue
+}
+
+\def\name#1{\vskip2pt\textsc{#1}\hskip10pt}
+
+\def\endcontributors{\newpage\markboth{}{}}
+
+
+\def\preface{\startonoddpage
+\chapter*{Preface}
+\global\titletrue
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{Preface}}
+
+\def\prefacefirst{\startonoddpage
+\chapter*{Preface to the First Edition}
+\global\titletrue
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{\protect\numberline{\ }\string\rlap{Preface to First Edition}}}
+
+\let\endprefacefirst\endpreface
+
+\def\endpreface{\newpage\markboth{}{}}
+
+\def\prefaceauthor#1{\vskip14pt\hbox to\textwidth{\hfill\small\sc #1}}
+
+
+\def\acronyms{\startonoddpage
+\global\titletrue
+\chapter*{Acronyms}
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{Acronyms}}
+
+\def\introduction{\startonoddpage
+\global\titletrue
+\chapter*{Introduction}
+\renewcommand{\thechapter}{I}
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{Introduction}}
+
+\def\acknowledgments{\startonoddpage
+\global\titletrue
+\chapter*{Acknowledgments}
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{Acknowledgments}}
+
+\let\acknowledgements\acknowledgments
+
+\def\acro#1#2{\vskip4pt\hbox to\textwidth{\large
+\hbox to5pc{#1\hfill}\vtop{\advance\hsize by
+-5pc\raggedright\noindent#2}}}
+
+\def\authorinitials#1{\vskip12pt
+\hbox to\textwidth{\hfill#1}\newpage}
+
+
+\def\where#1{\vskip4pt\vtop{\parindent=0pt \normalsize #1}}
+
+\def\startonoddpage{\clearpage
+\ifodd\c@page\else\null\thispagestyle{empty}\newpage\fi}
+
+\def\foreword{\startonoddpage
+\chapter*{Foreword}
+\global\titletrue
+\addtocontents{toc}{\vskip-8pt}
+\addcontentsline{toc}{schapter}{Foreword}}
+
+\let\endforeword\endpreface
+
+\def\l@schapter#1#2{%
+  \ifnum \c@tocdepth >1
+    \addpenalty{-\@highpenalty}%
+    \vskip 6pt \@plus\p@
+     \setlength\@tempdima{2.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode 
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+%\chaptocfont 
+#1\nobreak\hfil \nobreak\hbox 
+to\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+\vskip1sp
+  \fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\numbered{\setcounter{secnumdepth}{3}}% 
+\def\unnumbered{\setcounter{secnumdepth}{0}}%
+\numbered%
+
+\def\@seccntformat#1{\csname the#1\endcsname.\hskip0.5em}
+%
+\renewcommand\thesection      {\thechapter.\@arabic\c@section}%
+\renewcommand\thesubsection   {\thesection.\@arabic\c@subsection}%
+\renewcommand\thesubsubsection{\thesubsection.\@arabic\c@subsubsection}%
+\renewcommand\theparagraph    {(\@arabic\c@paragraph)}%
+\renewcommand\thesubparagraph {\theparagraph\@arabic\c@subparagraph}%
+%
+\renewcommand\section{\@startsection{section}{1}{\z@}{-27pt \@plus -2pt \@minus -2pt}{6\p@}{\sf\huge\bfseries\let\sectitle=A}}%
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-23pt \@plus -2pt \@minus -2pt}{5\p@}{\sf\LARGE\bfseries\let\subsectitle=A}}%
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{-20pt \@plus -2pt \@minus -2pt}{2\p@}{\sf\Large\bfseries\let\subsubsectitle=A}}%
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{-12pt \@plus -2pt \@minus -2pt}{-0.5em}{\sf\large\bfseries\let\paratitle=A}}%
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}{-12pt \@plus -2pt \@minus -2pt}{-0.5em}{\sf\large\itshape\let\subparatitle=A}}%
+
+\def\@sect#1#2#3#4#5#6[#7]#8{%
+  \ifnum #2>\c@secnumdepth
+    \let\@svsec\@empty
+  \else
+    \refstepcounter{#1}%
+    \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+  \fi
+  \@tempskipa #5\relax
+  \ifdim \@tempskipa>\z@
+    \begingroup
+      #6{%
+        \@hangfrom{\hskip #3\relax\@svsec}%
+          \interlinepenalty \@M #8\@@par}%
+    \endgroup
+    \csname #1mark\endcsname{#7}%
+    \addcontentsline{toc}{#1}{%
+      \ifnum #2>\c@secnumdepth \else
+        \protect\numberline{\csname the#1\endcsname}%
+      \fi
+      #7}%
+  \else
+    \def\@svsechd{%
+      #6{\hskip #3\relax
+      \@svsec #8.}%
+      \csname #1mark\endcsname{#7}%
+      \addcontentsline{toc}{#1}{%
+        \ifnum #2>\c@secnumdepth \else
+          \protect\numberline{\csname the#1\endcsname}%
+        \fi
+        #7}}%
+  \fi
+  \@xsect{#5}}
+
+\def\@ssect#1#2#3#4#5{\@tempskipa #3\relax
+   \ifdim \@tempskipa>\z@
+     \begingroup #4\@hangfrom{\hskip #1}{\interlinepenalty \@M #5\par}%
+     \endgroup%
+   \else \def\@svsechd{#4\hskip #1\relax #5}\fi%
+      \addcontentsline{toc}{section}{#5}%
+    \@xsect{#3}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{objectives}[1]%
+               {\begingroup\parindent=0pt\parskip=0pt\leftskip=24pt%
+                \hbox{\rule{\textwidth}{1pt}}%  
+                \removelastskip\nointerlineskip\vskip-6pt\vskip0pt\nointerlineskip%
+		\begin{itemize}
+                }%
+               {\end{itemize}%
+                \removelastskip\nointerlineskip\vskip6pt\nointerlineskip%
+                \hbox{\rule{\textwidth}{1pt}}\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%           EXTRACT            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\extractname{extract}%
+\def\versename{poetry}%
+\def\quotename{quote}%
+\def\pullquotename{pullquote}%
+\def\epigraphname{epigraph}%
+
+\newskip\QELftRghtDimen%
+\QELftRghtDimen=36pt%
+
+\long\def\source#1{\par\vskip2pt#1}%
+%\def\source#1{\raggedright#1}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Extsource#1{\par\bgroup\leftskip=36pt plus 1fil\parfillskip=0pt\relax\reset@font\normalfont\bfseries\itshape#1\par%
+\removelastskip\nointerlineskip\vskip12pt\egroup}%
+\def\Versesource#1{\par\bgroup\leftskip=36pt plus 1fil\parfillskip=0pt\relax#1b\par\egroup}%
+
+\newenvironment{xextract}{\begingroup\parindent=0pt\parskip=0pt\par%
+\hsize=\textwidth\linewidth=\textwidth%
+\let\source\Extsource%
+\gdef\QELftRghtDimen{36pt}
+\vskip18pt%
+\leftskip\QELftRghtDimen\rightskip\QELftRghtDimen\itshape}{\vskip18pt\endgroup}%
+
+\def\extractHd#1{\removelastskip\nointerlineskip\vskip12pt\nointerlineskip%
+                 \bgroup\leftskip=36pt\rightskip=36pt plus 1fil\parfillskip=0pt\relax%
+                         \textbf{#1}\par\egroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\QEsource#1{\par\bgroup\leftskip=36pt plus 1fil\parfillskip=0pt\relax\reset@font\normalfont\bfseries\itshape#1\par%
+\removelastskip\nointerlineskip\vskip12pt\egroup}%
+
+\newenvironment{QE}{\begingroup\parindent=0pt\parskip=0pt\par%
+\hsize=\textwidth\linewidth=\textwidth%
+\let\source\Extsource%
+\gdef\QELftRghtDimen{24pt}
+\vskip18pt%
+\leftskip\QELftRghtDimen\rightskip\QELftRghtDimen}{\vskip18pt\endgroup}%
+
+\def\QuoteHd#1{\removelastskip\nointerlineskip\vskip12pt\nointerlineskip%
+                 \bgroup\leftskip=24pt\rightskip=24pt plus 1fil\parfillskip=0pt\relax%
+                         \textbf{#1}\par\egroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Versesource#1{\par\bgroup\rightskip=0pt\leftskip=36pt plus 1fil\parfillskip=0pt\relax\reset@font\normalfont\bfseries#1\par%
+\removelastskip\nointerlineskip\vskip12pt\egroup}%
+
+%\def\PoetryHd##1{\bgroup\noindent\centering\fontsize{18}{20}\selectfont\textbf{##1}\par\nointerlineskip\vskip12pt\ignorespaces\egroup}%
+
+\def\PoetryHd#1{\removelastskip\nointerlineskip\vskip12pt\nointerlineskip%
+                 \bgroup\leftskip=24pt plus 1fil\parfillskip=0pt\rightskip=24pt plus 1fil\parfillskip=0pt\relax%
+                         \fontsize{18}{20}\selectfont\textbf{#1}\par\egroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{epigraph}{\begingroup\parindent=0pt\parskip=3pt\vskip-\parskip%
+\vskip12pt%
+\def\source##1{\par\vskip6pt\bgroup\hfill{##1}\rlap{\vphantom{Ay}}\egroup}%
+\leftskip=24pt\rightskip=24pt%
+\itshape\noindent{}}{\vskip12pt\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{pullquote}%
+               {\begingroup\medskip\centerline{\hbox to 5pc{\hrulefill}}\parindent=0pt\itshape\leftskip=7.5pc\rightskip=7.5pc\centering}%
+               {\par\endgroup\centerline{\hbox to 5pc{\hrulefill}}\medskip}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewenvironment{quote}[2][quote]{\begingroup%
+  \gdef\quotetype{#1}%%(\quotetype)
+  \ifx\quotetype\extractname%%
+     \let\title\extractHd%
+     \begin{xextract}%
+  \else%
+  \ifx\quotetype\quotename%%
+     \let\title\QuoteHd%
+     \begin{QE}%
+  \else%
+  \ifx\quotetype\versename%%
+     \let\source\Versesource%
+     \let\title\PoetryHd%
+     \begin{verse}%
+  \else%
+  \ifx\quotetype\epigraphname%%
+     \let\source\Versesource%
+     \begin{epigraph}%
+  \else%
+  \ifx\quotetype\pullquotename%%
+     \let\source\Versesource%
+     \let\title\QuoteHd%
+     \begin{pullquote}%
+  \else%
+     \begingroup%
+  \fi\fi\fi\fi\fi}{%
+  \ifx\quotetype\pullquotename%%
+      \end{pullquote}%
+  \else%
+  \ifx\quotetype\epigraphname%%
+      \end{epigraph}%
+  \else%
+  \ifx\quotetype\versename%%
+      \end{verse}%
+  \else%
+  \ifx\quotetype\quotename%%
+      \end{QE}%
+  \else%
+  \ifx\quotetype\extractname%%
+      \end{xextract}%
+  \else%
+      \endgroup%
+  \fi\fi\fi\fi\fi%
+  \endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\itemize{%
+  \ifnum \@itemdepth >3 \@toodeep\else \advance\@itemdepth \@ne
+  \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
+  \list{\csname\@itemitem\endcsname}%
+       {\setlength{\labelsep}{6pt}%
+        \setlength\leftmargin{6pt}%
+        \advance\leftmargin by \labelsep% 
+        \setlength\itemsep{0pt}
+        \setlength{\partopsep}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\listparindent}{0pt}%
+        \def\makelabel##1{\hss{##1}}}\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- DIAGLOGUE == DEVI (16/02/16)%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\speakertitle#1#2{\bgroup\vglue12pt\vbox{\parindent=0pt\textbf{#1: #2}\par}\vskip-12pt\vskip0pt\egroup}%
+
+%\iffalse
+%\newenvironment{speakers}{\par\begingroup\parindent=0pt\parskip=0pt\parsep=0pt%
+%\begin{enumerate}[Speaker A:]}{\end{enumerate}\endgroup}
+%		\fi
+
+\newenvironment{dialogue}{\begingroup\parindent=0pt\parskip=0pt\parsep=0pt\begin{speakers}}{\end{speakers}\endgroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- Title Definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\typetext#1{\bgroup\noindent{type=`#1'}\par\egroup}%
+\def\Featurefixedtypetext#1{\bgroup\noindent{featureFixed type=`#1'}\par\egroup}%
+\def\Mathstatementtypetext#1{\bgroup\noindent{mathStatement type=`#1'}\par\egroup}%
+
+%\def\title#1#2\par{\bgroup\typetext{#1}\noindent\textbf{#2}\par\nointerlineskip\vskip12pt\noindent\ignorespaces\egroup}%
+\def\title#1{\bgroup\noindent\textbf{#1}\par\nointerlineskip\vskip12pt\noindent\ignorespaces\egroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END -- Title Definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- Feature Fixed Definition%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\feanameTip{tip}%
+\def\feanameNote{note}%
+\def\feanameWarning{warning}%
+
+\newenvironment{tip}{\begingroup\parindent=0pt\parskip=0pt%
+\bigskip\begin{breakbox}\ignorespaces\noindent}{\end{breakbox}\endgroup}%
+
+\newenvironment{warning}{\begingroup\parindent=0pt\parskip=0pt%
+\bigskip\begin{breakbox}\ignorespaces\noindent}{\end{breakbox}\endgroup}%
+
+\newenvironment{featureFxd}{\begingroup\parindent=0pt\parskip=0pt%
+\bigskip\begin{breakbox}\ignorespaces\noindent}{\end{breakbox}\endgroup}%
+
+\def\FeaFxdHd#1{\removelastskip%\vskip12pt%
+                \bgroup\parindent=0pt\parskip=0pt%
+                  \leftskip=0pt\rightskip=24pt plus 1fil\parfillskip=0pt\relax%
+                         \fontsize{18}{20}\selectfont\textbf{#1}\par%
+\vskip6pt\noindent\egroup}%
+
+
+\newenvironment{featureFixed}[2][featureFxd]%
+               {\begingroup\fboxsep=9pt%
+                \let\title\FeaFxdHd%
+                \gdef\feafxdtype{#1}%
+                 \ifx\feafxdtype\feanameTip%
+                   \begin{tip}%
+                   \noindent%
+                 \else%
+                   \begin{featureFxd}%
+                 \fi%
+		}%
+                {\ifx\feafxdtype\feanameTip%
+                   \end{tip}%
+                 \else%
+                   \end{featureFxd}%
+                 \fi%
+                 \bigskip\endgroup}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END -- Feature Fixed Definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- Feature Definition%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcount\featuretitcnt%
+\featuretitcnt=0\relax%
+
+\def\feasection#1{\bgroup\vskip6pt\parindent=0pt\fontsize{20}{22}\sf\bfseries{#1}\egroup}%
+
+\def\feasubsection#1{\bgroup\vskip6pt\parindent=0pt\fontsize{18}{20}\sf\bfseries{#1}\par\vskip6pt\egroup\noindent\ignorespaces}%
+
+\long\def\featuretitle#1\par{\begingroup\parindent=0pt\parskip=0pt%
+\def\raggedright{\leftskip=0pc\rightskip3pc\advance\rightskip by 0pt plus 1fil\parfillskip=0pt\relax}%
+\StepUpCounter{\featuretitcnt}%
+\removelastskip\vskip6pt\nointerlineskip%
+{\Huge\sf\bfseries\raggedright#1\ \thechapter.\the\featuretitcnt\par\nointerlineskip\vskip2pt}%
+\nointerlineskip\vskip12pt\nointerlineskip%
+\endgroup\noindent}%
+
+\def\@feaenum@{\list{\csname label\@enumctr\endcsname}%
+           {\usecounter{\@enumctr}
+\setlength{\rightmargin}{-0.95pt}%
+\setlength{\topsep}{6pt}%
+\setlength{\itemsep}{0pt}%
+\setlength{\partopsep}{0pt}%
+\setlength{\parsep}{0pt}%
+\ifRoundPunctuation%
+\def\makelabel##1{\hss\llap{(##1)}}%
+\else%
+\ifSquarePunctuation%
+\def\makelabel##1{\hss\llap{[##1]}}%
+\else%
+\ifDotPunctuation%
+\def\makelabel##1{\hss\llap{##1.}}%
+\else%
+\def\makelabel##1{\hss\llap{##1}}%
+\fi\fi\fi}}
+
+\def\feanameBox{Box}%
+\def\feanameGeneral{FeaBox}%
+
+\newenvironment{BoxI}{\begingroup\parindent=0pt\parskip=0pt%
+\bigskip\begin{boitecoloriee}\ignorespaces\noindent}{\end{boitecoloriee}\endgroup}%
+
+\newenvironment{FeaBox}{\begingroup\parindent=0pt\parskip=0pt%
+\bigskip\begin{boitecoloriee}\ignorespaces\noindent}{\end{boitecoloriee}\endgroup}%
+
+\newenvironment{feature}[2][FeaBox]{\begingroup\vskip24pt\fboxsep=6pt
+\parskip=0pt%\parindent=0pt%
+\let\title\featuretitle%
+\let\section\feasection%
+\let\subsection\feasubsection%
+\let\@enum@\@feaenum@%
+\advance\rightmargin by -36pt%
+\fontsize{12}{14}\selectfont\sf%
+\gdef\featuretype{#1}%
+\ifx\featuretype\feanameGeneral%
+   \begin{BoxI}%
+\else%
+   \begin{FeaBox}%
+\fi%
+}{\par
+\ifx\featuretype\feanameGeneral%
+   \end{Box}%
+\else%
+   \end{FeaBox}%
+\fi%
+\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END -- Feature Definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- Numbered Figure With Caption%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip%
+    \global\@minipagefalse%
+    {\raggedright#1: #2}%
+  \vskip\belowcaptionskip}%
+
+\def\fps@scheme{btph}%
+\def\ftype@scheme{3}
+\newcounter{scheme}[chapter]
+\renewcommand\thescheme{\thechapter.\@arabic\c@scheme}%
+\newcommand\schemename{Scheme}% 
+\def\fnum@scheme{\schemename~\thescheme}%
+
+\long\def\Schemecaption#1{\begingroup%
+\refstepcounter{scheme}
+   \@parboxrestore
+    \normalsize
+%    \begin{center}\includegraphics{#2}\end{center}%
+    \@makecaption{\fnum@scheme}{#1}\par%
+  \endgroup}
+
+\newenvironment{scheme}{%
+\let\caption\Schemecaption\@float{scheme}%
+\small}{\end@float}%
+
+
+\long\def\unnumfigcaption#1{\begingroup%
+   \@parboxrestore%
+\fontsize{8}{10}\selectfont\baselineskip=10pt%
+\vskip12pt%
+\par\vbox{#1}\par%
+  \endgroup}%
+
+%\def\SPIFIG#1#2{\vbox{\centering\hbox{#1}\par#2}}%
+
+\newenvironment{unnumfigure}{\begingroup\parskip=0pt%%
+\removelastskip\nointerlineskip\vskip12pt\nointerlineskip%
+\let\caption\unnumfigcaption%
+}{\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%END -- Unnumbered Figure == DEVI (16/02/16)%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\long\def\unnumtabcaption#1#2#3{\begingroup%
+\@parboxrestore%
+\vbox{#1}\par%
+\nointerlineskip\vskip3pt\nointerlineskip%
+\vbox{#2}\par%
+\nointerlineskip\vskip3pt\nointerlineskip%
+\vbox{#3}\par%
+\endgroup}%
+
+\newenvironment{unnumtable}{\begingroup\parskip=0pt%%
+\removelastskip\vskip\textfloatsep%
+\def\arraystretch{1.2}%
+\let\caption\unnumtabcaption%
+}{\removelastskip\vskip\textfloatsep\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END -- Unnum tab %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\fnum@table{\tablename~\thetable}
+\def\fnum@figure{\figurename~\thefigure}
+
+\def\firsttablerule{\\[-6pt]\hline\\}%
+\def\lasttablerule{\\\hline}%
+\def\tablerule{\\[-6pt]\hline}%
+
+\def\eqnarray{%
+%% updated by suj %%
+\def\label##1{\@bsphack
+  \protected@write\@auxout{}%
+         {\string\newlabel{##1}{{\@currentlabel}{\thepage}{}{}{}}}%
+\gdef\df@label{##1}\@esphack}%
+   \stepcounter{equation}%
+   \def\@currentlabel{\p@equation\theequation}%
+   \global\@eqnswtrue%
+   \m@th%
+   \global\@eqcnt\z@%
+   \tabskip\@centering%
+   \let\\\@eqncr%
+   $$\everycr{}\halign to\displaywidth\bgroup%
+       \hskip\@centering$\displaystyle\tabskip\z@skip{##}$\@eqnsel%
+      &\global\@eqcnt\@ne\hskip \eqnarraycolsep \hfil${##}$\hfil%
+      &\global\@eqcnt\tw@ \hskip \eqnarraycolsep%
+         $\displaystyle{##}$\hfil\tabskip\@centering%
+      &\global\@eqcnt\thr@@ \hbox to\z@\bgroup\hss##\egroup%
+         \tabskip\z@skip%
+      \cr%
+}
+
+\def\endeqnarray{%
+      \@@eqncr%
+      \egroup%
+      \global\advance\c@equation\m@ne%
+   $$\global\@ignoretrue%
+   \global\let\df@label\@empty%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- Enunciation Definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{plain}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {1em}% space after theorem head; " " = normal interword space
+  {\thmname{#1\ }\thmnumber{#2}\thmnote{\textit{(#3)}}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+
+\newtheoremstyle{spplain}% name of the style to be used
+  {12pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {\normalfont}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {1em}% space after theorem head; " " = normal interword space
+  {\thmname{#1\ }\thmnumber{#2}\thmnote{\textit{(#3)}}}
+
+\theoremstyle{spplain}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+
+\newtheorem{exer}{Exercise}[chapter]
+
+%\renewenvironment{proof}{\begingroup\parskip=0pt%%
+%\indent\textit{Proof.\quad}\ignorespaces}{\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\long\def\solution#1\par{\begingroup\parindent=0pt\parskip=0pt%
+%\def\title##1{\bgroup\noindent\textbf{\textit{##1}}\ignorespaces\egroup}%
+%\vskip18pt\nointerlineskip%
+%\def\raggedright{\leftskip=0pc\rightskip3pc\advance\rightskip by 0pt plus 1fil\parfillskip=0pt\relax}%
+%\StepUpCounter{\featuretitcnt}%
+%#1\par\endgroup\noindent}%
+
+%\iffalse
+%\newenvironment{problems}[1][]{\begingroup%
+%\if!#1!\section*{Problems}\else\section*{#1}\fi\par%
+%\begin{enumerate}[1.]}{\end{enumerate}\endgroup}
+%
+%%\newenvironment{exercise}{\begingroup\begin{enumerate}[a.]}{\end{enumerate}\endgroup}
+%
+%\newif\ifExersResumeNumberLabel%
+%%\ExersResumeNumberLabel
+%\ExersResumeNumberLabelfalse%
+%\fi
+
+%\iffalse
+%\newenvironment{exercises}[1][problems]{\begingroup%
+%    	        \if!#1!\def\exerssectitle{}\else\section*{#1}\fi%
+%%	        \if!#2!%
+%%                   \def\exersseclabeltext{}\def\exersresumelabeltext{}%
+%%                \else%
+%% 		   \ifExersResumeNumberLabel%
+%%		      \def\exersresumelabeltext{#2}
+%%		      \def\exersseclabeltext{}%
+%%                   \else%
+%%		      \def\exersresumelabeltext{}%
+%%		      \def\exersseclabeltext{#2}%
+%%	           \fi%
+%%                \fi%
+%%\if!#3!\def\exersecextralabel{}\else\def\exersecextralabel{#3}\fi%
+%\NumberedExercisetrue%
+%%\begin{enumerate}[1.]%
+%%                }%
+%%               {\end{enumerate}\endgroup}%
+%\fi
+
+\long\def\ques#1{\item #1}%
+
+\long\def\exerIns#1{\vskip9pt\vbox{#1}}%
+
+\long\def\hint#1{\par\bgroup%\par
+%\vskip-9pt\vskip0pt%
+\item[]  \textit{Hint:}\ #1\par
+\egroup}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			Numbered table with float                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifNumberedTableExists%
+
+\newbox\tabbodybox
+
+\let\toprule\hline
+\let\botrule\hline
+\let\midrule\hline
+
+\newbox\chktabbodywdbox%
+
+\def\xcopyrightpage#1#2\end#3{\scriptsize\parindent=0pt
+Copyright \copyright{#1}
+by G. V. V. Sharma. 
+%All rights reserved
+\vskip6.5pt
+%Published by John Wiley \& Sons, Inc., Hoboken, New Jersey.\\
+%Published simultaneously in Canada.
+\vskip6.5pt
+
+https://creativecommons.org/licenses/by-sa/3.0/
+\\
+and
+\\
+https://www.gnu.org/licenses/fdl-1.3.en.html
+
+%No part of this publication may be reproduced, stored in a retrieval
+%system, or transmitted in any form\\ or by any means, electronic,
+%mechanical, photocopying, recording, scanning, or otherwise, except
+%as\\ permitted under Section 107 or 108 of the 1976 United States
+%Copyright Act, without either the prior\\ written permission of the
+%Publisher, or authorization through payment of the appropriate
+%per-copy fee to\\ the Copyright Clearance Center, Inc., 222 Rosewood
+%Drive, Danvers, MA 01923, (978) 750-8400,\\ fax (978) 646-8600, or on
+%the web at www.copyright.com. Requests to the Publisher for
+%permission should\\ be addressed to the Permissions Department, John
+%Wiley \& Sons, Inc., 111 River Street, Hoboken, NJ\\ 07030, (201)
+%748-6011, fax (201) 748-6008.  \vskip10pt
+%
+%Limit of Liability/Disclaimer of Warranty: While the publisher and
+%author have used their best efforts in\\ preparing this book, they
+%make no representations or warranties with respect to the accuracy
+%or\\ completeness of the contents of this book and specifically
+%disclaim any implied warranties of\\ merchantability or fitness for a
+%particular purpose.  No warranty may be created or extended by
+%sales\\ representatives or written sales materials.  The advice and strategies contained herin may not be\\
+%suitable for your situation. You should consult with a professional
+%where appropriate.  Neither the\\
+%publisher nor author shall be liable for any loss of profit or any other commercial damages, including\\
+%but not limited to special, incidental, consequential, or other damages.
+%\vskip10pt
+%For general information on our other products and services please contact our Customer Care\\ Department with the U.S. at 877-762-2974, outside the U.S. at
+%317-572-3993 or fax 317-572-4002.
+%\vskip10pt
+%Wiley also publishes its books in a variety of electronic formats. Some content that appears in print,\\
+%however, may not be available in electronic format.
+%\vskip10pt
+%{\bfseries Library of Congress Cataloging-in-Publication Data:}
+%\vskip8pt
+%#2
+%Printed in the United States of America.\\
+%
+%10\ \ 9\ \ 8\ \ 7\ \ 6\ \ 5\ \  4\ \ 3\ \ 2\ \ 1 
+\vskip24pt
+\egroup\let\@badend\relax\endgroup}
+
+\def\copyrightpage{\thispagestyle{empty}%
+\vbox to\textheight\bgroup\vfill\obeylines\obeyspaces\xcopyrightpage}
+\let\endcopyrightpage\egroup
+
+\long\def\tabcaption#1#2#3{\par\parindent=0pt%
+\refstepcounter{table}%
+\setlength{\tabcolsep}{6pt}%
+\def\footnotemark[##1]{\textsuperscript{{##1}}}%
+\renewcommand\footnotetext[2][]{{\noindent\if!##1!\else\hbox to 12pt{\hfil\textsuperscript{##1}\hskip3.5pt}\fi##2\par}}%
+\setbox\chktabbodywdbox\hbox{#2}%
+\setbox\tabbodybox=\vbox{\hsize=\wd\chktabbodywdbox%
+{\setlength\abovecaptionskip{0pt}%
+\small%
+   \@makecaption{\bfseries\fnum@table}{\if!#1!\else\ignorespaces\quad\ignorespaces\small #1\fi}\par%
+\removelastskip\vskip6pt%
+}%
+\hbox to\hsize{#2}\par%
+    \if!#3!\vskip0pt\else\nointerlineskip\vskip6pt\nointerlineskip%
+    \vbox{\par#3}%
+  \fi}%
+\copy\tabbodybox%
+}
+
+%\renewenvironment{table}
+%               {\let\caption\tabcaption\@float{table}}
+%               {\end@float}
+
+\renewenvironment{table*}
+               {\let\caption\tabcaption\@dblfloat{table}}
+               {\end@dblfloat}
+
+\def\sidewaystable{\let\caption\tabcaption\@rotfloat{table}}
+\let\endsidewaystable\end@rotfloat
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\MathStatResumeNumber{}%
+
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{2.3em}}
+
+\setcounter{tocdepth}{1}
+
+\def\@dottedtocline#1#2#3#4#5{\ifnum #1>\c@tocdepth \else
+  \vskip3pt \@plus.2\p@
+  {\sf\bfseries\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+    \parindent #2\relax\@afterindenttrue
+   \interlinepenalty\@M
+   \leavevmode
+   \@tempdima #3\relax
+   \advance\leftskip \@tempdima\hbox{}\hskip -\leftskip
+    {#4}\nobreak\leaders\hbox{$\m@th \mkern \@dotsep mu.\mkern \@dotsep
+       mu$}\hfill \nobreak
+           \hbox to\@pnumwidth{%
+             \hfil\reset@font\rmfamily \normalcolor #5}\par}\fi}
+
+
+\newenvironment{mathStatement}[1]%
+               {\begingroup\def\mathstattag{#1}\begin{boitenumeroteeavecunedoublebarre}{}\let\typetext\Mathstatementtypetext\list{}{\rightmargin=0pt\leftmargin=0pt}%
+                \item\relax}%
+               {\endlist\end{boitenumeroteeavecunedoublebarre}\endgroup}%
+
+\newenvironment{mmathStatement}[1]%
+               {\let\typetext\Mathstatementtypetext\list{}{\rightmargin\leftmargin}%
+                \item\relax}%
+               {\endlist}%
+
+\def\ieqn#1{#1}%
+
+\long\def\termdef#1{\begingroup%
+#1%
+\endgroup}%
+
+\newenvironment{floatquote}%
+               {\list{}{\rightmargin\leftmargin}%
+                \item\relax}%
+               {\endlist}%
+
+\newenvironment{blkbox}%
+               {\list{}{\rightmargin\leftmargin}%
+                \item\relax}%
+               {\endlist}%
+
+\newenvironment{blkfxdbox}[1]%
+               {\begingroup\bigskip\fboxsep=9pt\begin{breakbox}\let\typetext\Featurefixedtypetext%
+                \if!#1!\def\feafxdcatgry{}\else\def\feafxdcatgry{#1}\feafxdCatgrychk{#1}\fi%
+		\noindent\ignorespaces}%
+                {\end{breakbox}\bigskip\endgroup}%
+
+\def\drule{\centerline{\hbox to 5pc{\hrulefill}}\par\nointerlineskip\vskip4pt\centerline{\hbox to 5pc{\hrulefill}}}%
+
+\newenvironment{sidebar}%
+               {\begingroup\medskip\hrule\medskip\parindent=0pt}%
+               {\par\endgroup\medskip\hrule\medskip}%
+
+
+\long\def\answer#1{\bgroup #1\egroup}%
+\long\def\sol#1{\bgroup#1\egroup}%
+
+\long\def\explanation#1{\bgroup #1\egroup}%
+
+\def\MultipleBibSection{}
+
+\newenvironment{biography}%
+               {\begingroup\vskip\baselineskip%
+               \vbox{\bgroup\noindent{$<$biographyInfo ...$>$}\par\egroup}%
+               \def\authorimage##1{\par\noindent\includegraphics{##1}}%
+               \ignorespaces\noindent\ignorespaces}%
+               {\par\vbox{\bgroup\noindent{$<$/biographyInfo ...$>$}\par\egroup}%
+\endgroup\vskip\baselineskip}%
+
+\long\def\textbreak{\begingroup\vskip\baselineskip%
+\vbox{\bgroup\egroup}\par%
+\hbox to \textwidth{\hfill\noindent{$<$Text Break$>$}$\bullet\bullet\bullet\bullet\bullet$\noindent{$<$/Text Break$>$}\hfill}%
+\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- Affiliation == DEVI (15/02/16)%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\long\gdef\AuthandAff#1#2{\begingroup\parindent=0pt\raggedright%
+\vbox{{#1\par\nointerlineskip}{#2}}
+\endgroup}
+
+\def\auth#1{#1}%
+%\def\fn#1{#1}%
+\def\authnote#1{$^{#1}$}%
+\def\contactdetails#1{,\ #1\par}%
+\def\and{and\par}
+\def\url#1{\texttt{#1}}%
+
+\long\gdef\aff#1{%
+%\StepUpCounter{\affcnt}%\StoreAuthAffTxt{\the\affcnt}
+%$^{#1}$
+{%
+\def\email{\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+\def\url{\expandafter\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+\def\phone{\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+\def\fax{\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+\def\textbf{\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+\def\textit{\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+\def\textrm{\@latexerr{WARNING: Do not use this tag inside affiliation tag}\@eha}%
+#1}%\global\OrgDivExistsfalse
+\vskip24pt%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%BEGIN -- SignatureBlock == DEVI (16/02/16)%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{signature}%
+               {\begingroup\parindent=0pt\let\\\par
+                \begin{flushright}}{\end{flushright}\endgroup}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%END -- DIAGLOGUE == DEVI (16/02/16)%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\ulntext#1{\underline{#1}}% 
+\def\dulntext#1{\underline{\underline{#1}}}% 
+\def\olntext#1{$\overline{#1}$}% 
+\def\stlntext#1{$\not{#1}$}% 
+\def\code#1{\texttt{#1}}%
+\def\tt#1{\texttt{#1}}%
+\def\monotext#1{\texttt{#1}}%
+\def\sanseriftext#1{\textsf{#1}}%
+\def\seriftext#1{\textrm{#1}}%
+\def\bkcolortext#1{\colorbox{red}{#1}}%
+\def\colortext#1#2{\bgroup\textcolor{#1}{#2}\egroup}%
+\def\monocolortext#1#2{\textcolor{#1}{\texttt{#2}}}%
+\def\sanscolortext#1#2{\textcolor{#1}{\textsf{#2}}}%
+\def\hltext#1{\colorbox{red}{#1}}%
+\def\latexieqn#1{#1}%
+\def\texieqn#1{#1}%
+\def\warningtxt#1{#1}%
+\def\onlinetext#1{#1}%
+\def\printtext#1{#1}%
+\def\ichemeqn#1{#1}%
+
+\def\salutation#1{#1}%
+
+
+%%%%%%%%%%%%%%%%%%Note Group%%%%%%%%%%%%%%%%%%%%%
+
+\def\mnote#1{\marginpar{#1}}%
+\def\tfn#1#2{$^#1$#2}%
+\def\tfnr#1{#1}%
+\def\chapfootnotetext#1{{}}%
+\let\vfootnote\footnote%
+\let\hvfootnote\footnote%
+
+\newenvironment{Endnotes}[1]%
+               {\begingroup\parindent=0pt\parskip=6pt
+                \section*{#1}}%
+               {\endgroup}%
+
+\def\note#1{#1}%
+
+%%%%%%%%%%%%%%%%%%Note%%%%%%%%%%%%%%%%%%%%%
+
+\def\pgs#1#2{#1 #2}%
+
+\newenvironment{LTE}%
+               {\begingroup\parindent=0pt\parskip=6pt}%
+               {\endgroup}%
+
+\newenvironment{matchcandidates}%
+               {\begingroup\parindent=0pt\parskip=3pt}%
+               {\endgroup}%
+
+\def\ExtraLabelExists{}
+\def\eqlabel#1{}
+\def\eqextlabel{}
+
+\newskip\eqnarraycolsep%
+\eqnarraycolsep=6pt%
+
+\def\ResumeEqnNumber{}
+
+\def\accndoi#1{#1}
+\def\accnnormno#1{#1}
+\def\accnpatno#1{#1}
+\def\accnissn#1{#1}
+\def\accnisbn#1{#1}
+
+\newif\ifborderrule%
+\borderruletrue%
+
+\topmargin=5pc
+
+\newdimen\safetymargin%
+\safetymargin=18pt%
+
+\newdimen\safetypaperheight%
+\safetypaperheight=\paperheight%
+\advance\safetypaperheight by -2\safetymargin%
+
+\newdimen\safetypaperwidth
+\safetypaperwidth=\paperwidth
+\advance\safetypaperwidth by -2\safetymargin%
+
+\def\safetyimagemarks{%
+\nointerlineskip%
+\moveright\safetymargin\vbox to 0pt{\vskip\safetymargin%
+\nointerlineskip%
+\vbox to\safetypaperheight{\trimhrule\vss%
+\hbox to\safetypaperwidth{\trimvrule%
+\vbox to\safetypaperheight{%
+\hbox to\safetypaperwidth{\hss}%
+\vss%
+\hbox to\safetypaperwidth{\hss}%
+\vss%
+\hbox to\safetypaperwidth{\hss}%
+}\hss\trimvrule}%
+\trimhrule}%
+\vss}}%
+
+\newif\ifpagebody%
+\pagebodyfalse%
+
+\newif\ifNoMajorMinor%
+\NoMajorMinorfalse%
+
+\newif\ifMajorMinor%
+\MajorMinorfalse%
+
+\newif\ifOutsideMinor
+\OutsideMinortrue%
+
+\def\borderrule{%
+  \def\trimvrule{\vrule width0pt}%
+  \def\trimhrule{\hrule height0pt}%
+}%
+
+\def\nullborderrule{%
+  \def\trimvrule{\vrule width0pt}%Rule is not required
+  \def\trimhrule{\hrule height0pt}%Rule is not required
+}%
+
+\newif\iffigruleins%
+\figruleinsfalse%
+
+\def\figrule{%
+\def\fighrule{\hrule height0.1pt}%
+\def\figvrule{\vrule width0.1pt}%
+}%
+
+\def\nullfigrule{%
+\def\fighrule{\hrule height0pt}%
+\def\figvrule{\vrule width0pt}%
+}%
+
+\iffigruleins\figrule\else\nullfigrule\fi% To see the FIGURES in the PREVIEW as a FRAMED BOX%
+
+\newif\iftrimmarks\trimmarkstrue%\trimmarksfalse%
+
+\newskip\blrlwd%
+\blrlwd=24pt%
+
+\newdimen\bleed
+\bleed=18pt
+
+\newskip\bleedruleht%
+\bleedruleht=0.5pt%
+
+\newskip\brlmvdn%
+\brlmvdn=\blrlwd%
+\advance\brlmvdn by \bleed%
+
+\def\tlmark{}%\smash{\hbox{\rule{\blrlwd}{0.5pt}\hskip\bleed\rule[\bleed]{0.5pt}{\blrlwd}}}}%
+\def\trmark{}%\smash{\hbox{\rule[\bleed]{0.5pt}{\blrlwd}\hskip\bleed\rule{\blrlwd}{0.5pt}}}}%
+\def\brmark{}%\smash{\hbox{\rule[-\brlmvdn]{0.5pt}{\blrlwd}\hskip\bleed\rule{\blrlwd}{0.5pt}}}}%
+\def\blmark{}%\smash{\hbox{\rule{\blrlwd}{0.5pt}\hskip\bleed\rule[-\brlmvdn]{0.5pt}{\blrlwd}}}}%
+
+\def\regcropmark{}%\bgroup\setlength{\unitlength}{.1in}%
+%\linethickness{0.4pt}%
+%\put(-1.25,0){\line(1,0){2.5}}%
+%\put(0,-1.25){\line(0,1){2.5}}%
+%\put(0,0){\circle{1.6}}%
+%\egroup}%
+
+\newskip\cropraisedimen%
+\cropraisedimen=\bleed%
+\advance\cropraisedimen by 0.5\bleed%
+
+\def\hcropmark{\leavevmode\smash{\raise\cropraisedimen\hbox{\regcropmark}}}%
+\def\bhcropmark{\leavevmode\smash{\lower\cropraisedimen\hbox{\regcropmark}}}%
+\def\vcropmark{\leavevmode\hbox{\regcropmark}}%
+
+\def\imagemarks{%
+\nointerlineskip%
+\vbox to 0pt{\moveleft\bleed\vbox to 0pt{\parskip=0pt\parindent=0pt\leftskip=0pt\rightskip=0pt\vskip-\bleed\topborder}%
+\nointerlineskip%
+\vbox to\paperheight{\trimhrule
+\vss%
+\hbox to \paperwidth{\trimvrule%
+\vbox to \paperheight{\hbox to \paperwidth{\llap{\tlmark}\hss\hcropmark\hss\rlap{\trmark}}\vss%
+\hbox to \paperwidth{\llap{\vcropmark\hskip\bleed\hskip9.5pt}\hss\rlap{\hskip9.5pt\hskip\bleed\vcropmark}}\vss%
+\hbox to \paperwidth{\llap{\blmark}\hss\bhcropmark\hss\rlap{\brmark}}\moveleft\bleed\vbox to 0pt{\parskip=0pt\parindent=0pt\leftskip=0pt\rightskip=0pt\vskip-\bleed\botborder}}\hss\trimvrule}%
+		\trimhrule}\vss}}%
+
+\newdimen\margwidth\margwidth=0pt
+
+\headheight=36pt
+\headsep=36pt
+\footskip=24pt
+
+\setlength{\skip\footins}{24pt}%
+
+\def\ps@plain{\let\@mkboth\@gobbletwo
+     \let\@oddhead\@empty\def\@oddfoot{\reset@font\rmfamily\hfil{\sf\huge\thepage}
+     \hfil}\let\@evenhead\@empty\let\@evenfoot\@oddfoot}
+
+\def\ps@headings{%
+      \let\@oddfoot\@empty\let\@evenfoot\@empty
+      \def\@evenhead{\vbox{\parskip=0pt\parindent=0pt\leftskip=0pt\rightskip=0pt\hbox to \hsize{\sf\huge\hfill Manuscript Preparation in \LaTeX\hfill \thepage}\par\nointerlineskip\vskip3pt%
+\hbox to \textwidth{\hrulefill}}}%
+      \def\@oddhead{\vbox{\parskip=0pt\parindent=0pt\leftskip=0pt\rightskip=0pt\hbox to \hsize{\sf\huge\hfill Manuscript Preparation in \LaTeX\hfill\thepage}\par\nointerlineskip\vskip3pt%
+\hbox to \hsize{\hrulefill}}}%
+      \let\@mkboth\markboth
+}
+
+\def\symbols{\startonoddpage\global\titletrue
+\markboth{Symbols}{Symbols}
+\chapter*{Symbols}
+\addcontentsline{toc}{schapter}{Symbols}
+\everypar={}
+\bgroup\leftskip=1pc \parindent=-1pc
+\def\term##1{\vskip2pt${##1}$\hskip1em\relax}}
+\def\endsymbols{\vskip12pt\egroup}
+
+\pagestyle{headings}
+
+\def\@outputpage{%
+\ifborderrule\borderrule\else\nullborderrule\fi%
+  \let \protect \noexpand%
+  \shipout \vbox{%
+    \set@typeset@protect%
+    \aftergroup\set@typeset@protect%
+    \@shipoutsetup%
+    \@begindvi%
+\iftrimmarks%
+\imagemarks%
+\fi%
+\nointerlineskip%
+    \vspace{\topmargin}%
+\nointerlineskip%
+    \moveright\@themargin \vbox {%
+      \setbox\@tempboxa \vbox to\headheight{%
+        \vfil%
+        \color@hbox%
+          \normalcolor%
+          \hbox to\textwidth {%
+            \let \label \@gobble%
+            \let \index \@gobble%
+            \let \glossary \@gobble%% 21 Jun 91
+            \@thehead%
+            }%
+        \color@endbox%
+        }%                        %% 22 Feb 87
+      \dp\@tempboxa \z@%
+\nointerlineskip%
+      \box\@tempboxa%
+\nointerlineskip%
+      \vskip\headsep%
+\ifpagebody%
+\ifNoMajorMinor\else\ifMajorMinor\moveright\margwidth\else\ifOutsideMinor\relax\ifodd\count0\relax\else\moveright\margwidth\fi\else\fi\fi\fi\vbox{\hrule\hbox{\vrule\box\@outputbox\vrule}\hrule}%
+\else%
+\ifNoMajorMinor\else\ifMajorMinor\moveright\margwidth\else\ifOutsideMinor\relax\ifodd\count0\relax\else\moveright\margwidth\fi\else\fi\fi\fi\box\@outputbox%
+\fi%
+      \baselineskip \footskip%
+      \color@hbox%
+        \normalcolor%
+        \hbox to\textwidth{%
+          \let \label \@gobble%
+          \let \index \@gobble%% 22 Feb 87
+          \let \glossary \@gobble%% 21 Jun 91
+          \@thefoot%
+          }%
+      \color@endbox%
+      }%
+    }%
+  \global \@colht \textheight%
+  \stepcounter{page}%
+  \let\firstmark\botmark%
+}%
+\def \@shipoutsetup {%
+     \@resetactivechars%
+     \let\-\@dischyph%
+     \let\'\@acci\let\`\@accii\let\=\@acciii%
+     \if@specialpage%
+       \global\@specialpagefalse\@nameuse{ps@\@specialstyle}%
+     \fi%
+     \if@twoside%
+       \ifodd\count\z@ \let\@thehead\@oddhead \let\@thefoot\@oddfoot%
+            \let\@themargin\oddsidemargin%
+       \else \let\@thehead\@evenhead%
+          \let\@thefoot\@evenfoot \let\@themargin\evensidemargin%
+       \fi%
+     \fi%
+     \reset@font%
+     \normalsize%
+     \baselineskip\z@skip \lineskip\z@skip \lineskiplimit\z@%
+     \let\par\@@par%% 15 Sep 87
+}%
+
+\newcount\pagecntcntr%
+
+\def\shipout@PageObjects{%
+\special{ps: \pdf@page@parameters}%
+\StepUpCounter{\pagecntcntr}%
+\ifnum\pagecntcntr=1\relax%
+\ifthenelse{\equal{\@roman\c@page}{\thepage}}{%
+\special{ps:SDict begin [ {Catalog} << /PageLabels<</Nums[0<</S/r /St \arabic{page}>>]>> >> /PUT pdfmark end}}{\special{ps:SDict begin [ {Catalog} << /PageLabels<</Nums[0<</S/D /St \arabic{page}>>]>> >> /PUT pdfmark end}}\fi}%%
+
+\renewcommand\contentsname{Contents}
+
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue%\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname}\par%
+   \thispagestyle{empty}
+ \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%END %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newenvironment{LOBJ}[1]%
+               {\begingroup\begin{boitecoloriee}%
+	        \if!#1!\def\feafxdcatgry{}\else\def\feafxdcatgry{#1}\feafxdCatgrychk{#1}\fi%
+		}%
+                {\end{boitecoloriee}\endgroup}%
+
+
+\newenvironment{supmat}%
+               {\def\caption##1{##1\par}%
+                \begingroup\parindent=0pt\parskip=0pt\small%
+               }%
+               {\endgroup}%
+
+\def\ChLWref#1{#1}%
+
+
+\long\gdef\abbrev#1{\begingroup%
+\def\LWlabel##1{\label{##1}}%
+\def\LWref##1{\ref{##1}}%
+#1%
+\endgroup}%
+
+\long\def\para#1{#1}%
+
+\setlength{\itemsep}{0in}%
+
+%% Macros for Bibliography %%
+
+\@ifpackageloaded{natbib}{%
+\@namedef{thebibliography*}{\def\bibsection{}\thebibliography}
+\@namedef{endthebibliography*}{\endthebibliography}
+}
+{
+\@namedef{thebibliography*}{\def\refname{}\thebibliography}
+\@namedef{endthebibliography*}{\endthebibliography}
+}
+%
+\def\@bibtype{}
+\def\bibtype#1{\gdef\@bibtype{#1}}
+%
+%\bibsep=0pt%
+%\bibhang=0pt%
+\def\bibfont{\reset@font\fontfamily{\rmdefault}\fontsize{9bp}{10.5}\selectfont}%  17Dec2016
+%
+\DeclareTextFontCommand{\emph}{\itshape}%
+%
+\newif\ifbackmatter%
+\renewcommand{\backmatter}{\global\backmattertrue}%
+
+%\def\booktitle#1#2{\vbox to \vsize{\thispagestyle{empty}\vglue5pc\begin{center}\LARGE\bfseries#1\par\vskip3pc\Large\itshape#2\end{center}\vfill}\par\clearpage\thispagestyle{empty}}%
+
+%
+%% Macros for Author query %%
+%
+
+\newif\ifAQ%
+\global\AQtrue%
+
+\newcount\temQEcnt%
+\temQEcnt=0\relax%
+
+\def\StepUpCounter#1{\global\advance#1by 1\relax}%
+\def\StepDownCounter#1{\global\advance#1by -1\relax}%
+
+\def\aquery{\reset@font\fontsize{7}{0}\selectfont}%
+\def\aqueryinText{\reset@font\fontsize{10}{0}\selectfont\bfseries}%
+
+\newdimen\authhsize%
+\authhsize=32mm% 
+%%\advance\authhsize1.25in%
+
+\newcount\QueryCnt%
+\QueryCnt=0%
+
+\def\befQuery{\leavevmode Q}%
+
+\newdimen\aqadjdim%
+
+\newcommand\newauthquery[2][]{\leftskip=5pc%%
+\StepUpCounter{\QueryCnt}%
+\vadjust{\aquery\smash{\lower\if!#1!0\p@\else#1\fi\hbox{\hspace*{-\aqadjdim}\llap{\vbox{\parindent=0\p@%
+%%\check_authhsize_and_place_the_query_marker_outside_the_trim
+\hsize=\authhsize%%
+{\aqueryinText\befQuery \the\QueryCnt}}}\hfill}}}%
+\StoreQueryNoandTxt{\the\QueryCnt}{#2}%
+}%
+
+\newcommand\spnewauthquery[2][]{\leftskip=0\p@%%
+\StepUpCounter{\QueryCnt}%
+\vbox{\aquery\smash{\lower\if!#1!0\p@\else#1\p@\fi%
+\hbox{\hspace*{-2pc}\llap{\vbox{\parindent=0\p@%
+\hsize=\authhsize%
+{\aqueryinText\befQuery \the\QueryCnt}}}\hfill}}}%
+\StoreQueryNoandTxt{\the\QueryCnt}{#2}%
+}%
+
+\gdef\StoreQueryNoandTxt#1#2{%
+\edef\GetRoman{\romannumeral#1}%
+\expandafter\gdef\csname\GetRoman QueryNoandTxt\endcsname{\hsize=\textwidth#2}}%
+
+\newcommand\AQ[2][]{\begingroup%
+%\global\AQtrue%
+\ifAQ\newauthquery[#1]{#2}\fi%
+\endgroup}%
+
+%%Defined to get author query inside verbatim%%
+\newcommand\spAQ[2][]{\begingroup%
+%\global\AQtrue%
+\ifAQ\spnewauthquery[#1]{#2}\fi%
+\endgroup}%
+
+\newcommand\AAQ[2][]{\begingroup%
+%\global\AQtrue%
+\ifAQ\newauthquery[#1]{#2}\fi%
+\endgroup}%
+
+\newcommand\rnewauthquery[2][]{%%
+\StepUpCounter{\QueryCnt}%
+\vadjust{\aquery\smash{\lower\if!#1!0pt\else#1pt\fi%
+\hbox{\rlap{\hskip\hsize\hskip2pt\vbox{\parindent=0pt%
+{\aqueryinText\befQuery \the\QueryCnt}}}}}}%
+\StoreQueryNoandTxt{\the\QueryCnt}{#2}%
+}%
+
+\newcommand\rAQ[2][]{\begingroup%
+%\global\AQtrue%
+\ifAQ\rnewauthquery[#1]{#2}\fi%
+\endgroup}%
+
+\newcount\LASTPAGENO%
+
+\newcount\TmpCnt%
+\TmpCnt=1%
+
+\def\Qheadfnt{\LARGE}%
+\def\Qsubheadfnt{\Large}%
+
+\def\qhead{\centerline{\Qheadfnt\bf AUTHOR QUERY}}%
+\def\qsubhead{\vbox{\Qsubheadfnt\bf\noindent AUTHOR PLEASE ANSWER BELOW QUERIES}\par}%
+\def\qendhead{\vbox{\Qsubheadfnt\bf\noindent END OF QUERY}\par}%
+
+\def\minustocounter#1#2{%
+  \@ifundefined{c@#1}%
+    {\@nocounterr{#1}}%
+    {\global\advance\csname c@#1\endcsname -#2\relax}}%
+
+\def\stepdowncounter#1{%
+  \minustocounter{#1}\@ne
+  \begingroup
+    \let\@elt\@stpelt
+    \csname cl@#1\endcsname
+  \endgroup}%
+
+\def\refstepdowncounter#1{\stepdowncounter{#1}%
+    \protected@edef\@currentlabel
+       {\csname p@#1\endcsname\csname the#1\endcsname}%
+}%
+
+\long\def\PutQueries{\begingroup\parindent=0\p@\parskip=3\p@%
+\hsize=\textwidth%\leftskip=-2.25in%
+%%\let\LLIltmargindim\spLLIltmargindim%
+\vfill\eject%\ifodd\count0\relax\else\blankpageoutput\fi%%included by suj
+\removelastskip\vskip42pt\nointerlineskip%
+\qhead\par%
+\vspace*{25pt}%
+\qsubhead\par%
+\vspace*{17pt}%
+\vbox{\noindent During the preparation of your manuscript, the question listed below arose. Kindly supply the necessary information.}\par%
+\vspace*{16pt}%
+\loop\ifnum \QueryCnt>0%
+\@hangfrom{Q\the\TmpCnt\quad}\csname\romannumeral\TmpCnt QueryNoandTxt\endcsname\par%
+\StepDownCounter{\QueryCnt}%
+\StepUpCounter{\TmpCnt}%
+\repeat%
+\vspace*{24pt}%
+\refstepdowncounter{page}%
+\qendhead\par%
+\endgroup%
+\thispagestyle{empty}}%
+
+\long\def\NoPutQueries{\begingroup\parindent=0\p@\parskip=3\p@%
+\hsize=\textwidth%\leftskip=-2.25in%
+%%\let\LLIltmargindim\spLLIltmargindim%
+\vfill\eject%\ifodd\count0\relax\else\blankpageoutput\fi%%included by suj
+\removelastskip\vskip42pt\nointerlineskip%
+\qhead\par%
+\removelastskip\vskip24pt\nointerlineskip%
+No query.\par%
+\endgroup%
+\thispagestyle{empty}}%
+
+%\def\Queries{\clearpage\thispagestyle{empty}\ifAQ\PutQueries\else\fi}%
+%\def\Queries{\ifAQ\global\APutQuerytrue\PutQueries\else\global\APutQueryfalse%\lastpagedefn
+%\fi}%
+
+\AtEndDocument{\clearpage\thispagestyle{empty}%
+%\ifAQ\PutQueries\fi
+}%
+
+\newcommand\authquery[2][]{\begingroup%
+%\global\AQtrue%
+\ifAQ\newauthquery[#1]{#2}\fi%
+\endgroup}%
+
+\newif\iftitle
+
+\def\AuAff#1{\g@addto@macro\AuthandAffil{\def\\{\vskip-12pt\itshape}\vbox{#1}\par\vskip18pt}}%
+
+\def\AuthandAffil{}
+
+\def\booktitle#1{\def\thetitle{\uppercase{#1}}}
+\def\subtitle#1{\def\thesubtitle{#1}}
+\def\affil#1{\def\theaffil{\vbox{\huge\raggedright\itshape#1}\par\vskip18pt}}
+
+%\let\authors\author
+\def\editionstatement#1{\def\theeditionstatement{#1}}
+
+\booktitle{}
+\subtitle{}
+\editionstatement{}
+
+
+\def\halftitlepage{\thispagestyle{empty}
+  \vspace*{2pc}%
+  {\parindent \z@ 
+    \interlinepenalty\@M
+\LARGE
+\hyphenpenalty10000
+\bfseries 
+%\def\\ {\vskip6pt}
+\noindent\thetitle\vskip 1sp
+}
+\newpage
+}
+
+
+\def\titlepage{\ifodd\c@page\else\thispagestyle{empty}\null\newpage\fi
+\thispagestyle{empty}
+\vbox to\vsize{\vspace*{36pt}%
+\hrule height3pt
+\vskip2pc
+\parindent \z@ 
+\interlinepenalty\@M
+\Huge
+\hyphenpenalty10000
+\bfseries%\titlefont 
+\uppercase{\thetitle}\par
+\ifx\subtitle\empty\else
+\vbox{\vskip6pt\baselineskip22pt
+\vrule height2pc width0pt\thesubtitle\vskip1sp}\fi
+\vskip1pc
+\hrule
+\ifx\theeditionstatement\empty\else
+\vskip36pt
+\vbox{\editionfont \theeditionstatement}\fi
+\vskip6.5pc
+\vbox{\baselineskip=14pt\raggedright
+\huge\bfseries\AuthandAffil\par}\par
+\vfill
+
+\noindent{{\includegraphics[scale=0.2]{figs/logo.jpg}}}
+%\noindent{{LOGO}}
+
+%\vskip-8pt
+%{A JOHN WILEY \& SONS, INC., PUBLICATION}
+\vskip0pt}\newpage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Index ===>>>
+
+% latex default
+%% Use \latexprintindex instead of \printindex to
+%% get the default latex index.
+
+%% Contents of makeidx.sty contained in \latexprintindex command.
+%% This is because \printindex is defined in this package so
+%% user doing \usepackage{makeidx} will get error message.
+
+\providecommand*\seealso[2]{\emph{\alsoname} #1}
+\providecommand*\alsoname{see also}
+
+\newcommand\latexprintindex{\startonoddpage
+\def\see##1##2{\emph{\seename} ##1}
+\def\seename{see}
+\@input@{\jobname.ind}}
+
+\renewenvironment{theindex}
+               {\def\indexname{Index}
+\if@twocolumn
+                  \@restonecolfalse
+                \else
+                  \@restonecoltrue
+                \fi
+                \columnseprule \z@
+                \columnsep 35\p@
+                \twocolumn[\@makeschapterhead{\indexname}]%
+                \@mkboth{\uppercase{\indexname}}%
+                        {\uppercase{\indexname}}%
+ \addcontentsline{toc}{schapter}{Index}
+\global\titletrue%\dooffprintinfo
+\parindent\z@
+    \parskip\z@ \@plus .3\p@\relax
+    \let\item\@idxitem
+\spaceskip=3pt plus 2pt minus 1pt\xspaceskip=\spaceskip
+\footnotesize\baselineskip=10pt plus 1pt minus 1pt}
+               {\pagestyle{plain}
+\if@restonecol\onecolumn\else
+\clearpage\fi}
+\renewcommand{\@idxitem}  {\par\hangindent 40\p@}
+\renewcommand{\subitem}   {\par\hangindent 40\p@ \hspace*{20\p@}}
+\renewcommand{\subsubitem}{\par\hangindent 40\p@ \hspace*{30\p@}}
+\renewcommand{\indexspace}{\par\vskip 10\p@ \@plus0\p@ \@minus3\p@\relax}
+
+%%% <<<=== end latex default Index
+
+\newskip\iletterskip
+\iletterskip=8pt plus .1pt minus 2pt
+\def\iletter#1{\goodbreak\vskip\iletterskip{\sectionfont\uppercase{#1}\vrule depth 8pt width0pt}\nobreak}
+
+%%%%%%% Index Formatting
+
+\makeatother%
