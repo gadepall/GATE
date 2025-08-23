@@ -1,0 +1,1174 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{multicol}
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\begin{center}
+    \LARGE \textbf{GATE 2012 MA}\\[0.5em]
+    \large \textbf{EE25BTECH11001 - AARUSH DILAWRI}
+\end{center}
+\begin{center}
+ \textbf{Q.1-Q.25 carry one mark each.}
+\end{center}
+\vspace{0.25em}
+
+\begin{enumerate}
+
+\item
+The straight lines $L_1: x = 0$, $L_2: y = 0$, and $L_3: x + y = 1$ are mapped by the transformation $w = z^2$ into the curves $C_1$, $C_2$, and $C_3$ respectively. The angle of intersection between the curves at $w = 0$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $0$
+  \item $\dfrac{\pi}{4}$
+  \item $\dfrac{\pi}{2}$
+  \item $\pi$
+\end{enumerate}
+\end{multicols}
+
+\item
+In a topological space, which of the following statements is NOT always true:
+
+\hfill{\text{GATE MA 2012}}
+
+\begin{enumerate}
+  \item Union of any finite family of compact sets is compact.
+  \item Union of any family of closed sets is closed.
+  \item Union of any family of connected sets having a non empty intersection is connected.
+  \item Union of any family of dense subsets is dense.
+\end{enumerate}
+
+
+\item
+Consider the following statements:
+P: The family of subsets $A_n = \cbrak{-n, -n+1, \ldots, n}$ for $n=1,2,\ldots$ satisfies the finite intersection property.
+
+Q: On an infinite set $X$ define the metric $d: X \times X \to \mathbb{R}$ as
+\begin{align}
+d(x, y) =
+\begin{cases}
+0, & \text{if } x = y \\
+1, & \text{if } x \ne y
+\end{cases}
+\end{align}
+The metric space $(X, d)$ is compact.
+
+R: In a Frechet ($T_1$) topological space, every finite set is closed.
+
+S: If $f: \mathbb{R} \to X$ is continuous, where $\mathbb{R}$ has the usual topology and $(X, \tau)$ is a Hausdorff ($T_2$) space, then $f$ is a one-one function.
+
+Which of the above statements are correct?
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item P and R
+  \item P and S
+  \item R and S
+  \item Q and S
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $H$ be a Hilbert space and $S^\perp$ denote the orthogonal complement of a set $S \subseteq H$. Which of the following is INCORRECT?
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item For $S_1 \subseteq S_2 \subseteq H$, we have $S_2^\perp \subseteq S_1^\perp$.
+  \item $(S^\perp)^\perp \subseteq S$
+  \item $\{0\}^\perp = H$
+  \item $S^\perp$ is always closed.
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $H$ be a complex Hilbert space, $T: H \to H$ a bounded linear operator and $T^*$ its adjoint. Which of the following statements are always TRUE?
+P: $\langle Tx, y \rangle = \langle x, T^*y \rangle$ for all $x, y \in H$
+
+Q: $\langle x, Ty \rangle = T \langle x, y \rangle$ for all $x, y \in H$
+
+R: $\langle x, Ty \rangle = \langle x, T^*y \rangle$ for all $x, y \in H$
+
+S: $\langle Tx, Ty \rangle = T^* \langle x, Ty \rangle$ for all $x, y \in H$
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item P and Q
+  \item P and R
+  \item Q and S
+  \item P and S
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $X = \cbrak{a, b, c}$ and $\mathcal{T} = \cbrak{\phi, \cbrak{a}, \cbrak{b}, \cbrak{a, b}, X}$ be a topology defined on $X$. Which statements are TRUE?
+P: $(X, \mathcal{T})$ is a Hausdorff space.
+
+Q: $(X, \mathcal{T})$ is a regular space.
+
+R: $(X, \mathcal{T})$ is a normal space.
+
+S: $(X, \mathcal{T})$ is a connected space.
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item P and Q
+  \item Q and R
+  \item R and S
+  \item P and S
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider the statements:
+
+P: If $X$ is a normed linear space and $M \subseteq X$ is a subspace, then the closure $\bar{M}$ is also a subspace of $X$.
+
+Q: If $X$ is a Banach space and $\sum x_n$ is an absolutely convergent series in $X$, then $\sum x_n$ is convergent.
+
+R: Let $M_1$ and $M_2$ be subspaces of an inner product space such that $M_1 \cap M_2 = \phi$. Then for all $m_1 \in M_1, m_2 \in M_2$: $\| m_1 + m_2 \|^2 = \| m_1 \|^2 + \| m_2 \|^2$.
+
+S: Let $f: X \to Y$ be a linear transformation from the Banach Space $X$ into the Banach space $Y$. If $f$ is continuous, then the graph of $f$ is always compact.
+
+The correct statements amongst the above are:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item P and R only
+  \item Q and R only
+  \item P and Q only
+  \item R and S only
+\end{enumerate}
+\end{multicols}
+
+\item
+A continuous random variable $X$ has the probability density function
+\begin{align}
+f(x) = 
+\begin{cases}
+\frac{3}{5} x^3 e^{-x^5/5}, & x > 0 \\
+0, & x \leq 0
+\end{cases}
+\end{align}
+The probability density function of $Y = 2X + 3$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $\frac{1}{5} (y-2)^3 e^{-(y-2)^5/5}, \quad y>2$
+  \item $\frac{2}{5} (y-2)^3 e^{-2(y-2)^5/5}, \quad y>2$
+  \item $\frac{3}{5} (y-2)^3 e^{-3(y-2)^5/5}, \quad y>2$
+  \item $\frac{4}{5} (y-2)^3 e^{-4(y-2)^5/5}, \quad y>2$
+\end{enumerate}
+\end{multicols}
+
+\item
+A simple random sample of size $10$ from $N(\mu, \sigma^2)$ gives $98\%$ confidence interval $(20.49, 23.51)$. Then the null hypothesis $H_0: \mu = 20.5$ against $H_A: \mu \neq 20.5$
+
+\hfill{\text{GATE MA 2012}}
+
+\begin{enumerate}
+  \item can be rejected at $2\%$ level of significance
+  \item cannot be rejected at $5\%$ level of significance
+  \item can be rejected at $10\%$ level of significance
+  \item cannot be rejected at any level of significance
+\end{enumerate}
+
+
+\item
+For the linear programming problem
+\begin{align}
+\text{Maximize} \qquad & z = x_1 + 2x_2 + 3x_3 - 4x_4 \\
+\text{Subject to} \qquad & x_1 + 2x_2 - 3x_3 - x_4 = 15 \\
+& x_1 + 6x_2 + 3x_3 - x_4 = 21 \\
+& x_1 + 8x_2 + 2x_3 - 4x_4 = 30 \\
+& x_1, x_2, x_3, x_4 \geq 0
+\end{align}
+and $x_1 = 4$, $x_2 = 3$, $x_3 = 0$, $x_4 = 2$ is
+\hfill{\text{GATE MA 2012}}
+
+\begin{enumerate}
+  \item an optimal solution
+  \item a degenerate basic feasible solution
+  \item a non-degenerate basic feasible solution
+  \item a non-basic feasible solution
+\end{enumerate}
+
+
+
+\item
+Which one of the following statements is TRUE?
+\hfill{\text{GATE MA 2012}}
+
+\begin{enumerate}
+  \item A convex set cannot have infinitely many extreme points.
+  \item A linear programming problem can have infinitely many extreme points.
+  \item A linear programming problem can have exactly two different optimal solutions.
+  \item A linear programming problem can have a non-basic optimal solution.
+\end{enumerate}
+
+
+\item
+Let $\alpha = e^{2 \pi i/5}$ and the matrix
+\begin{align}
+M = \myvec{
+\alpha & \alpha^2 & \alpha^3 & 4 \\
+\alpha^2 & \alpha^3 & \alpha^4 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+}
+\end{align}
+Then the trace of the matrix $I + M + M^2$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $5$
+  \item $0$
+  \item $3$
+  \item $-5$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $V = \mathbb{C}^2$ be the vector space over the complex numbers and $B = \{(1, i), (i, 1)\}$ be a given ordered basis of $V$. Then which of the following pairs $\{f_1, f_2\}$ is a dual basis of $B$ over $\mathbb{C}$?
+\hfill{\text{GATE MA 2012}}
+
+\begin{enumerate}
+  \item $f_1(z_1, z_2) = \frac{z_1 - z_2}{2}, \quad f_2(z_1, z_2) = \frac{z_1 + z_2}{2}$
+  \item $f_1(z_1, z_2) = \frac{z_1 + z_2}{2}, \quad f_2(z_1, z_2) = \frac{z_1 + z_2 i}{2}$
+  \item $f_1(z_1, z_2) = \frac{z_1 - z_2}{2}, \quad f_2(z_1, z_2) = \frac{z_1 - z_2 i}{2}$
+  \item $f_1(z_1, z_2) = \frac{z_1 + z_2}{2}, \quad f_2(z_1, z_2) = \frac{z_1 - z_2}{2}$
+\end{enumerate}
+
+
+\item
+Let $R = \mathbb{Z} \times \mathbb{Z} \times \mathbb{Z}$ and $I = \mathbb{Z} \times \mathbb{Z} \times \{0\}$. Which of the following statements is correct?
+\hfill{\text{GATE MA 2012}}
+
+\begin{enumerate}
+  \item $I$ is a maximal ideal but not a prime ideal of $R$.
+  \item $I$ is a prime ideal but not a maximal ideal of $R$.
+  \item $I$ is both a maximal ideal as well as a prime ideal of $R$.
+  \item $I$ is neither a maximal ideal nor a prime ideal of $R$.
+\end{enumerate}
+
+
+\item
+The function $u(r, \theta)$ satisfying the Laplace equation
+\begin{align}
+\frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} = 0, \quad 0 < r < e, \quad 0 < \theta < 2\pi
+\end{align}
+subject to the conditions
+\begin{align}
+u(e, \theta) = 1, \quad u(e, \theta) = 0
+\end{align}
+is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $\ln \frac{r}{e}$
+  \item $2 \ln \frac{r}{e}$
+  \item $\ln \left(\frac{r}{e}\right)^2$
+  \item $\sum_{n=1}^\infty \frac{1}{n} \sin(n \theta) \left(\frac{r}{e}\right)^n$
+\end{enumerate}
+\end{multicols}
+
+\item
+The functional
+\begin{align}
+J[y] = \int_0^1 \left(y'^2 + 2kxyy' + y^2 + y' + y\right) dx,
+\end{align}
+with boundary conditions $y(0) = 0$, $y(1) = 1$, $y'(0) = 2$, $y'(1) = 3$ is path independent if $k$ equals
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $1$
+  \item $2$
+  \item $3$
+  \item $4$
+\end{enumerate}
+\end{multicols}
+
+\item
+If the transformation $y = uv$ transforms the differential equation
+\begin{align}
+f''(x) - f'(x) + g(x) = 0
+\end{align}
+into the equation of the form 
+\begin{align}
+v'' + h(x) v = 0,
+\end{align}
+then $u$ must be
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $\frac{1}{\sqrt{f}}$
+  \item $x f$
+  \item $\frac{1}{2 f}$
+  \item $f^2$
+\end{enumerate}
+\end{multicols}
+
+\item
+The expression
+\begin{align}
+D = \frac{\partial^2}{\partial x^2} - 2\frac{\partial^2}{\partial x \partial y} - \frac{\partial^2}{\partial y^2}
+\end{align}
+is equal to
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $\cos(x - y)$
+  \item $\sin(x - y) + \cos(x + y)$
+  \item $\cos(x - y) + \sin(x + y)$
+  \item $3 \sin(x - y)$
+\end{enumerate}
+\end{multicols}
+
+\item
+The function $\phi(x)$ satisfying the integral equation
+\begin{align}
+\phi(x) = 2 \int_0^x e^{-\xi^2} \phi(\xi) d\xi
+\end{align}
+is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $e^{x^2}$
+  \item $e^{x^2} + x$
+  \item $e^{x^2} - x$
+  \item $x^2 + \frac{1}{2}$
+\end{enumerate}
+\end{multicols}
+
+\item
+Given data:
+\input{tables/table1}
+
+If the derivative of $y(x)$ is approximated as
+\begin{align}
+y'(x_k) \approx \frac{1}{2h} \left(-y_{k+2} + 4 y_{k+1} - 3 y_k\right),
+\end{align}
+then the value of $y'(2)$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $4$
+  \item $8$
+  \item $12$
+  \item $16$
+\end{enumerate}
+\end{multicols}
+
+
+\item
+If 
+\begin{align}
+A = \myvec{
+1 & 0 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 0
+},
+\end{align}
+then $A^{50}$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $\myvec{
+1 & 0 & 0 \\
+50 & 1 & 0 \\
+50 & 0 & 1
+}$
+  \item $\myvec{
+1 & 0 & 0 \\
+48 & 1 & 0 \\
+48 & 0 & 1
+}$
+  \item $\myvec{
+1 & 0 & 0 \\
+25 & 1 & 0 \\
+25 & 0 & 1
+}$
+  \item $\myvec{
+1 & 0 & 0 \\
+24 & 1 & 0 \\
+24 & 0 & 1
+}$
+\end{enumerate}
+\end{multicols}
+
+\item
+If
+\begin{align}
+y = \sum_{m=0}^\infty c_m x^{m+r}
+\end{align}
+is assumed to be a solution of the differential equation
+\begin{align}
+x^2 y'' - 3 x y' - x y = 0,
+\end{align}
+then the values of $r$ are
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $1$ and $3$
+  \item $-1$ and $3$
+  \item $1$ and $-3$
+  \item $-1$ and $-3$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let the linear transformation 
+\begin{align}
+T : F^2 \to F^3
+\end{align}
+be defined by
+\begin{align}
+T(x_1, x_2) = (x_1 + x_2, x_1, x_2).
+\end{align}
+Then the nullity of $T$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $0$
+  \item $1$
+  \item $2$
+  \item $3$
+\end{enumerate}
+\end{multicols}
+
+\item
+The approximate eigenvalue of the matrix
+\begin{align}
+A = \myvec{
+15 & 4 & 3 \\
+10 & 12 & 6 \\
+20 & 4 & 2
+}
+\end{align}
+obtained after two iterations of the Power method, with the initial vector $(1,1,1)^T$, is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $7.768$
+  \item $9.468$
+  \item $10.548$
+  \item $19.468$
+\end{enumerate}
+\end{multicols}
+
+\item
+The root of the equation $x e^x = 1$ between 0 and 1, obtained by using two iterations of the bisection method, is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+  \item $0.25$
+  \item $0.50$
+  \item $0.75$
+  \item $0.65$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let
+\begin{align}
+\int_C \frac{a\,dz}{(z^2-4)(z-2)} = \pi,
+\end{align}
+where the closed curve $C$ is the triangle with vertices at $-1$, $i$, $-i$ and the integral is taken in anti-clockwise direction. Then one value of $a$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1+i$
+\item $2+i$
+\item $3+i$
+\item $4+i$
+\end{enumerate}
+\end{multicols}
+
+\item
+The Lebesgue measure of the set
+\begin{align}
+A = \cbrak{x:\ \sin x < x,\ 0 < x \leq 1}
+\end{align}
+is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $0$
+\item $1$
+\item $\ln 2$
+\item $1 - \ln 2$
+\end{enumerate}
+\end{multicols}
+
+\item
+Which of the following statements are TRUE?
+
+P.\ The set $\cbrak{x \in \mathbb{R}: \cos x \leq 1}$ is compact.
+
+Q.\ The set $\cbrak{x \in \mathbb{R}: \tan x \text{ is not differentiable}}$ is complete.
+
+R.\ The set $\cbrak{x \in \mathbb{R}: \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!}\ \text{is convergent}}$ is bounded.
+
+S.\ The set $\cbrak{x \in \mathbb{R}: f(x) = \cos x\ \text{has local maxima}}$ is closed.
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item P and Q
+\item R and S
+\item Q and S
+\item P and S
+\end{enumerate}
+\end{multicols}
+
+\item
+If a random variable $X$ assumes only positive integer values, with probability
+\begin{align}
+P(X=x) = \frac{1}{2}\frac{1}{3^{x-1}},\quad x=1,2,3,\ldots
+\end{align}
+then $\mathbb{E}[X]$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\dfrac{2}{9}$
+\item $\dfrac{2}{3}$
+\item $1$
+\item $\dfrac{3}{2}$
+\end{enumerate}
+\end{multicols}
+
+\item
+The probability density function of the random variable $X$ is
+\begin{align}
+f(x)=
+\begin{cases}
+\lambda e^{-\lambda x},& x>0\\
+0,& x \leq 0
+\end{cases}
+\end{align}
+where $\lambda>0$. For testing the hypothesis $H_0: \lambda=3$ against $H_A: \lambda=5$, a test is given as "Reject $H_0$ if $X \geq 4.5$". The probability of type I error and power of this test are, respectively,
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $0.1353,\ 0.4966$
+\item $0.1827,\ 0.379$
+\item $0.2021,\ 0.4493$
+\item $0.2231,\ 0.4066$
+\end{enumerate}
+\end{multicols}
+
+\item
+The order of the smallest possible non-trivial group containing elements $x$ and $y$ such that $x^7 = y^2 = e$ and $yx = x^4 y$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1$
+\item $2$
+\item $7$
+\item $14$
+\end{enumerate}
+\end{multicols}
+
+\item
+The number of 5-Sylow subgroups in a group of order $45$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+\end{multicols}
+
+\item
+The solution of the initial value problem
+\begin{align}
+y'' + 10y' + 6y = \delta(t), \quad y(0) = 0, \quad y'(0) = 0
+\end{align}
+where $\delta(t)$ denotes the Dirac delta function, is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $2 e^{-3t} \sin t$
+\item $6 e^{-3t} \sin t$
+\item $2 e^{-t} \sin 3t$
+\item $6 e^{-t} \sin 3t$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $\omega = \cos \frac{2\pi}{3} + i \sin \frac{2\pi}{3}$, $M = \begin{pmatrix} 0 & 0 \\ i & 0 \end{pmatrix}$, $N = \begin{pmatrix} 0 & i \\ \omega & 0 \end{pmatrix}$, and $G = \myvec{M \\ N}$ be the group generated by $M$ and $N$ under multiplication. Then
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $C_6$
+\item $S_3$
+\item $C_2$
+\item $C_4$
+\end{enumerate}
+\end{multicols}
+
+\item
+The flux of the vector field $u = x \hat{i} + y \hat{j} + z \hat{k}$ flowing out through the surface of the ellipsoid
+\begin{align}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1, \quad a,b,c > 0,
+\end{align}
+is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $abc \pi$
+\item $2 abc \pi$
+\item $3 abc \pi$
+\item $4 abc \pi$
+\end{enumerate}
+\end{multicols}
+
+\item
+The integral surface satisfying the partial differential equation
+\begin{align}
+\frac{\partial z}{\partial x} + \frac{\partial z}{\partial y} = z^2
+\end{align}
+and passing through the line $x=1$, $y=1$, $z=1$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x - z^2 + y = 1$
+\item $x^2 + y^2 - z^2 = 1$
+\item $y - z^2 + x = 1$
+\item $x - z^2 + y = 1$
+\end{enumerate}
+\end{multicols}
+
+\item
+The diffusion equation
+\begin{align}
+u_{xx} = u_t, \quad u(x,0) = \cos x + \sin 5x
+\end{align}
+admits the solution
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $e^{-36t} \sin 6x + e^{-20t} \sin 4x$
+\item $e^{-36t} \sin 4x + e^{-20t} \sin 6x$
+\item $e^{-20t} \sin 3x + e^{-15t} \sin 5x$
+\item $e^{-36t} \sin 5x + e^{-20t} \sin x$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $f(x)$ and $x f(x)$ be particular solutions of the differential equation
+\begin{align}
+y'' + R(x)y' + S(x)y = 0.
+\end{align}
+Then the solution of
+\begin{align}
+y'' + R(x) y' + S(x) y = f(x)
+\end{align}
+is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $y = -\frac{1}{2} x^2 f(x) + \alpha x + \beta$
+\item $y = \frac{1}{2} x^2 f(x) + \alpha x + \beta$
+\item $y = - x^2 f(x) + \alpha x + \beta$
+\item $y = 3 x^2 f(x) + \alpha x + \beta$
+\end{enumerate}
+\end{multicols}
+
+\item
+Let the Legendre equation
+\begin{align}
+(1 - x^2) y'' - 2x y' + n(n+1) y = 0
+\end{align}
+have a $n$th degree polynomial solution $y_n(x)$ such that $y_n(1) = 3$. If
+\begin{align}
+\int_{-1}^1 y_n(x) y_n(x) dx = \frac{144}{15},
+\end{align}
+then $n$ is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+\end{multicols}
+
+\item
+The maximum value of the function $f(x,y,z) = xyz$ subject to the constraint $xy + yz + zx = a$, $a > 0$, is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{a^2}{3}$
+\item $\frac{a^2}{3^3}$
+\item $\frac{a^2}{3}(3)$
+\item $\frac{2 a^2}{3}$
+\end{enumerate}
+\end{multicols}
+
+\item
+The functional
+\begin{align}
+J[y] = \int_0^1 \Big( y'^4 + 4 y^3 y' + 4 y^2 e^{y'} \Big) \, dx,
+\end{align}
+with boundary conditions $y(0) = -1$, $y(1) = -1$, possesses:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item strong minima on $x = \frac{1}{3} y e = -1$
+\item strong minima on $x = \frac{4}{3} y e = -1$
+\item weak maxima on $x = \frac{1}{3} y e = -1$
+\item strong maxima on $x = \frac{4}{3} y e = -1$
+\end{enumerate}
+\end{multicols}
+
+\item
+A particle of mass $m$ constrained to move on a circle of radius $a$, rotating about its vertical diameter with constant angular velocity $\omega$. Initial angular velocity zero, $g$ gravitational acceleration. With $\theta$ inclination and $\dot{\theta} = \frac{d\theta}{dt}$, the Lagrangian is
+\begin{align}
+L = \frac{1}{2} m a^2 \brak{\dot{\theta}^2 + \omega^2 \sin^2 \theta} + m g a \cos \theta,
+\end{align}
+or one of the options:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\frac{1}{2} m a^2 \brak{\dot{\theta}^2 + \omega^2 \sin^2 \theta} + m g a \cos \theta$
+\item $\frac{1}{2} m a^2 \brak{\dot{\theta}^2 + 2 \omega \sin \theta} - m g a \sin \theta$
+\item $\frac{1}{2} m a^2 \brak{\dot{\theta}^2 + 2 \omega \cos \theta} - m g a \sin \theta$
+\item $\frac{1}{2} m a^2 \brak{\dot{\theta}^2 + \sin 2\theta} + m g a \sin \theta$
+\end{enumerate}
+\end{multicols}
+
+\item
+For the matrix
+\begin{align}
+    M = \myvec{
+2+3i & 4 - 3i & 2 + 5i \\
+6 + 4i & 6 - 3i & \phantom{-}0
+}
+\end{align}
+
+
+which of the following statements are correct?\\
+P: $M$ is skew-Hermitian and $iM$ is Hermitian\\
+Q: $M$ is Hermitian and $iM$ is skew-Hermitian\\
+R: Eigenvalues of $M$ are real\\
+S: Eigenvalues of $iM$ are real
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item P and R only
+\item Q and R only
+\item P and S only
+\item Q and S only
+\end{enumerate}
+\end{multicols}
+
+\item
+Let $T: P_3 \to P_3$ be the map defined by
+\begin{align}
+    T(p)(x) = \int_0^x p(t) \, dt.
+\end{align}
+
+If the matrix of $T$ relative to the standard basis $\cbrak{1, x, x^2, x^3}$ is $M$ and $M'$ denotes transpose of $M$, then $M + M'$ is
+\hfill{\text{GATE MA 2012}}
+\begin{enumerate}
+\item $\myvec{
+0 & 1 & 1 & 1 \\
+1 & 2 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 2
+}$
+\item $\myvec{
+1 & 0 & 0 & 2 \\
+0 & 1 & 1 & 0 \\
+0 & 1 & 2 & 0 \\
+2 & 0 & 0 & 1
+}$
+\item $\myvec{
+2 & 0 & 0 & 1 \\
+0 & 2 & 1 & 0 \\
+1 & 1 & 0 & 1 \\
+0 & 1 & -1 & 0
+}$
+\item $\myvec{
+0 & 2 & 2 & 2 \\
+2 & 1 & 0 & 0 \\
+2 & 0 & 1 & 0 \\
+2 & 0 & 0 & 1
+}$
+\end{enumerate}
+
+\item
+Using Eulers method with step size $h=0.1$, the approximate value of $y$ at $x=0.2$ for the initial value problem
+\begin{align}
+    \frac{dy}{dx} = x^2 + y^2, \quad y(0) = 1
+\end{align}
+
+is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 1.322
+\item 1.122
+\item 1.222
+\item 1.110
+\end{enumerate}
+\end{multicols}
+
+\item
+Transportation problem data:
+
+
+\input{tables/table2}
+
+Basic feasible solution:
+\begin{align}
+    x_{12}=60, x_{22}=10, x_{23}=50, x_{24}=20, x_{31}=40, x_{34}=60.
+\end{align}
+
+The variables entering and leaving the basis are:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x_{11}$ and $x_{24}$
+\item $x_{13}$ and $x_{23}$
+\item $x_{14}$ and $x_{24}$
+\item $x_{33}$ and $x_{24}$
+\end{enumerate}
+\end{multicols}
+
+\item
+System of equations
+\begin{align}
+    \myvec{
+5 & 1 & 1 \\
+10 & 2 & 4 \\
+0 & 12 & 1
+}
+\myvec{x \\ y \\ z} =
+\myvec{1 \\ 1 \\ 5}.
+\end{align}
+
+
+Using Jacobis method with initial guess $\myvec{2.0 \\ 3.0 \\ 0.0}$, the approximate solution after two iterations is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\myvec{2.64 \\ -1.70 \\ -1.12}$
+\item $\myvec{2.64 \\ 1.70 \\ -1.12}$
+\item $\myvec{2.64 \\ 1.70 \\ 1.12}$
+\item $\myvec{2.64 \\ -1.70 \\ 1.12}$
+\end{enumerate}
+\end{multicols}
+
+\item
+For the primal linear programming problem:
+\begin{align}
+    \text{Maximize}\ z = 6x_1 + 12x_2 + 12x_3 + 6x_4,
+\end{align}
+
+subject to
+\begin{align}
+    x_1 + x_2 + x_3 + x_4 = 3, \quad x_i \geq 0,
+\end{align}
+
+with optimal basic variables $x_1, x_2, x_3, x_4$ having RHS constants $3/4, 0, 1, -1/4$ and $1/4, 1, 0, 1/4$ respectively and given $\boldsymbol{z} = 48$, then:
+
+If $y_1$ and $y_2$ are dual variables for constraints 1 and 2, their values in the optimal dual solution are:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $0$ and $6$
+\item $12$ and $0$
+\item $6$ and $3$
+\item $4$ and $4$
+\end{enumerate}
+\end{multicols}
+
+\item
+If the right hand side of the second constraint changes from $8$ to $20$, the basic variables in the primal optimal solution will be:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x_1$ and $x_2$
+\item $x_1$ and $x_3$
+\item $x_2$ and $x_3$
+\item $x_2$ and $x_4$
+\end{enumerate}
+\end{multicols}
+
+\item
+Consider the Fredholm integral equation:
+\begin{align}
+    u(x) + \lambda \int_0^1 e^{x t} u(t) dt = x.
+\end{align}
+
+The resolvent kernel $R(x,t;\lambda)$ is:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $t e^{-\lambda x}$
+\item $t e^{\lambda x + 1}$
+\item $t e^{\lambda x + 2}$
+\item $t e^{-\lambda x + 2}$
+\end{enumerate}
+\end{multicols}
+
+\item
+The solution $u(x)$ of the above integral equation is:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\displaystyle \frac{x + 1}{1 - \lambda}$
+\item $\displaystyle \frac{x - 1}{1 - \lambda^2}$
+\item $\displaystyle \frac{x + 2}{1 + \lambda}$
+\item $\displaystyle \frac{x - 1}{1 - \lambda}$
+\end{enumerate}
+\end{multicols}
+
+\item
+Given the joint pdf of two variables $X$ and $Y$:
+\begin{align}
+    f_{X,Y}(x,y) = \begin{cases}
+2(x+y), & 0 \leq x \leq 1, 0 \leq y \leq 1, x + y \leq 1, \\
+0, & \text{otherwise}.
+\end{cases}
+\end{align}
+
+Then,
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\mathbb{E}[X] = \frac{2}{3}$ and $\mathbb{E}[Y] = \frac{5}{5}$
+\item $\mathbb{E}[X] = 1$ and $\mathbb{E}[Y] = 1$
+\item $\mathbb{E}[X] = \frac{3}{6}$ and $\mathbb{E}[Y] = \frac{5}{5}$
+\item $\mathbb{E}[X] = \frac{4}{6}$ and $\mathbb{E}[Y] = \frac{5}{5}$
+\end{enumerate}
+\end{multicols}
+
+\item
+The covariance $\operatorname{Cov}(X,Y)$ is:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-0.01$
+\item $0$
+\item $0.01$
+\item $0.02$
+\end{enumerate}
+\end{multicols}
+
+\item
+Given functions
+\begin{align}
+f(z) = \frac{z^2}{z + \alpha}, \quad g(z) = \sinh \left( \frac{z}{\pi \alpha} \right), \quad \alpha \neq 0,
+\end{align}
+
+the residue of $f(z)$ at its pole equals 1, then the value of $\alpha$ is:
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $-1$
+\item $1$
+\item $2$
+\item $3$
+\end{enumerate}
+\end{multicols}
+
+\item
+For the value of $\alpha$ obtained above, $g(z)$ is not conformal at the point:
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\frac{i \pi}{6} + 3$
+\item $\frac{i \pi}{6} + 1$
+\item $\frac{2\pi}{3}$
+\item $2 i \pi$
+\end{enumerate}
+\end{multicols}
+
+\item
+Choose the most appropriate word to complete the sentence:
+
+Given the seriousness of the situation that he had to face, his \_\_\_ was impressive.
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item beggary
+\item nomenclature
+\item jealousy
+\item nonchalance
+\end{enumerate}
+\end{multicols}
+
+\item
+Choose the most appropriate alternative to complete the sentence:
+
+If the tired soldier wanted to lie down, he \_\_\_ the mattress out on the balcony.
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item should take
+\item shall take
+\item should have taken
+\item will have taken
+\end{enumerate}
+\end{multicols}
+
+\item
+If \((1.001)^{1259} = 3.52\) and \((1.001)^{2062} = 7.85\), then \((1.001)^{3321} =\)
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 2.23
+\item 4.33
+\item 11.37
+\item 27.64
+\end{enumerate}
+\end{multicols}
+
+\item
+One of the parts (A, B, C, D) in the sentence below contains an ERROR. Identify the incorrect part:
+
+I requested that he should be given the driving test today instead of tomorrow.
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item requested that
+\item should be given
+\item the driving test
+\item instead of tomorrow
+\end{enumerate}
+\end{multicols}
+
+\item
+Which is the closest in meaning to the word "Latitude"?
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item Eligibility
+\item Freedom
+\item Coercion
+\item Meticulousness
+\end{enumerate}
+\end{multicols}
+
+\item
+There are eight bags of rice looking alike, seven have equal weight and one is slightly heavier. Using a weighing balance of unlimited capacity, the minimum number of weighings required to identify the heavier bag is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 2
+\item 3
+\item 4
+\item 8
+\end{enumerate}
+\end{multicols}
+
+\item
+Raju has 14 currency notes, consisting of only Rs. 20 and Rs. 10 notes. The total money value is Rs. 230. The number of Rs. 10 notes Raju has is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 5
+\item 6
+\item 9
+\item 10
+\end{enumerate}
+\end{multicols}
+
+\item
+One legacy of Roman legions was discipline. Military law prevailed and discipline was brutal. Discipline kept units obedient, intact, and fighting even in adverse odds and conditions.
+
+The best summary of this passage is:
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{2}
+\begin{enumerate}
+\item Thorough regimentation was the main reason for efficiency in adverse circumstances.
+\item The legions were treated inhumanly as if the men were animals.
+\item Discipline was the armies inheritance from their seniors.
+\item The harsh discipline led to the odds and conditions being against them.
+\end{enumerate}
+\end{multicols}
+
+\item
+A and B decide to meet between 1 PM and 2 PM. The first to arrive will wait no more than 15 minutes. The probability that they will meet is
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item \(\frac{1}{4}\)
+\item \(\frac{1}{16}\)
+\item \(\frac{7}{16}\)
+\item \(\frac{9}{16}\)
+\end{enumerate}
+\end{multicols}
+
+\item
+The table shows the monthly budget of an average household:
+
+\input{tables/table3}
+
+What is the approximate percentage of the monthly budget NOT spent on savings?
+
+\hfill{\text{GATE MA 2012}}
+\begin{multicols}{4}
+\begin{enumerate}
+\item 10\%
+\item 14\%
+\item 81\%
+\item 86\%
+\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+
+\end{document}
