@@ -1,0 +1,1040 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+
+
+\title{\LARGE \textbf{MA - 2010}}
+\author{\Large EE25BTECH11061 Vankudoth Sainadh}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{flushleft}
+\begin{enumerate}
+\item Let $E$ and $F$ be any two events with $P(E \cup F) = 0.8$, $P(E)=0.4$ and $P(E|F)=0.3$. Then $P(F)$ is \underline{\hspace{2cm}}.
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{3}{7}$
+\item $\dfrac{4}{7}$
+\item $\dfrac{1}{5}$
+\item $\dfrac{2}{5}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $X$ have a binomial distribution with parameters $n$ and $p$, where $n$ is an integer greater than $1$ and $0<p<1$. If $P(X=0)=P(X=1)$, then the value of $p$ is \underline{\hspace{2cm}}.
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{1}{n-1}$
+\item $\dfrac{n}{n+1}$
+\item $\dfrac{1}{n+1}$
+\item $\dfrac{1}{1+n\sqrt{n}}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $u(x,y)=2x(1-y)$ for all real $x$ and $y$. Then a function $v(x,y)$, so that $f(z)=u(x,y)+iv(x,y)$ is analytic, is \underline{\hspace{2cm}}.
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $(x^{2}-(y-1)^{2})$
+\item $(x-1)^{2}-y^{2}$
+\item $(x-1)^{2}+y^{2}$
+\item $x^{2}+(y-1)^{2}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $f(z)$ be analytic on $D=\{z\in \mathbb{C}:|z-1|<1\}$ such that $f(1)=1$. If $f(z)=f(z^{2})$ for all $z\in D$, then which one of the following statements is NOT correct? \underline{\hspace{2cm}}
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\item $f(z)=[f(z)]^{2}$ for all $z \in D$
+\item $f\left(\dfrac{z}{2}\right)=\dfrac{1}{2}f(z)$ for all $z \in D$
+\item $f(z^{2})=[f(z)]^{2}$ for all $z \in D$
+\item $f'(1)=0$
+\end{enumerate}
+
+\item The maximum number of linearly independent solutions of the differential equation
+\begin{align*}
+\dfrac{d^{4}y}{dx^{4}}=0,
+\end{align*}
+with the condition $y(0)=1$, is \underline{\hspace{2cm}}.
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 4
+\item 3
+\item 2
+\item 1
+\end{multicols}
+\end{enumerate}
+
+\item Which one of the following sets of functions is NOT orthogonal (with respect to the $L^{2}$ inner product) over the given interval? \underline{\hspace{2cm}}
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\item $\{\sin ax: a \in \mathbb{N}\}, \quad -\pi < x < \pi$
+\item $\{\cos ax: a \in \mathbb{N}\}, \quad -\pi < x < \pi$
+\item $\{x^{2n}: n \in \mathbb{N}\}, \quad -1 < x < 1$
+\item $\{x^{2n+1}: n \in \mathbb{N}\}, \quad -1 < x < 1$
+\end{enumerate}
+
+\item If $f:[1,2]\to \mathbb{R}$ is a non-negative Riemann-integrable function such that
+\begin{align*}
+\int_{1}^{2}\sqrt{x}f(x)\,dx = k \int_{1}^{2}f(x)\,dx \neq 0,
+\end{align*}
+then $k$ belongs to the interval \underline{\hspace{2cm}}.
+
+\hfill (GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\left[0,\dfrac{1}{\sqrt{2}}\right]$
+\item $\left(\dfrac{1}{\sqrt{2}},\dfrac{2}{\sqrt{3}}\right]$
+\item $\left(\dfrac{2}{\sqrt{3}},1\right]$
+\item $\left(1,\dfrac{4}{3}\right]$
+\end{multicols}
+\end{enumerate}
+
+\item The set $X=\mathbb{R}$ with the metric $d(x,y)=\dfrac{|x-y|}{1+|x-y|}$ is \underline{\hspace{2cm}}. 
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item bounded but not compact
+\item bounded but not complete
+\item complete but not bounded
+\item compact but not complete
+\end{multicols}
+\end{enumerate}
+
+\item Let 
+\begin{align*}
+f(x,y)=
+\begin{cases}
+\dfrac{xy}{(x^2+y^2)^{k/2}}\left[1-\cos(x^2+y^2)\right], & (x,y)\neq(0,0), \\[8pt]
+0, & (x,y)=(0,0).
+\end{cases}
+\end{align*}
+Then the value of $k$ for which $f(x,y)$ is continuous at $(0,0)$ is \underline{\hspace{2cm}}.
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $0$
+\item $\dfrac{1}{2}$
+\item $1$
+\item $\dfrac{3}{2}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $A$ and $B$ be disjoint subsets of $\mathbb{R}$ and let $m^*$ denote the Lebesgue outer measure on $\mathbb{R}$.  
+Consider the statements:  
+$P$: $m^*(A\cup B)=m^*(A)+m^*(B)$  
+$Q$: Both $A$ and $B$ are Lebesgue measurable  
+$R$: One of $A$ and $B$ is Lebesgue measurable  
+
+Which one of the following is correct? \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item If $P$ is true, then $Q$ is true
+\item If $P$ is NOT true, then $R$ is true
+\item If $R$ is true, then $P$ is NOT true
+\item If $R$ is true, then $P$ is true
+\end{enumerate}
+
+\item Let $f:\mathbb{R}\to [0,\infty)$ be a Lebesgue measurable function and $E$ be a Lebesgue measurable subset of $\mathbb{R}$ such that 
+\[
+\int_E f\,dm=0,
+\]
+where $m$ is the Lebesgue measure on $\mathbb{R}$. Then \underline{\hspace{2cm}}.
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item $m(E)=0$
+\item $\{x\in E:f(x)=0\}=E$
+\item $m(\{x\in E:f(x)\neq 0\})=0$
+\item $m(\{x\in E:f(x)=0\})=0$
+\end{enumerate}
+\newpage
+\item If the nullity of the matrix 
+\[
+\myvec{ k & 1 & 2 \\ 1 & -1 & -2 \\ 1 & 1 & 4 }
+\]
+is $1$, then the value of $k$ is \underline{\hspace{2cm}}.
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $-1$
+\item $0$
+\item $1$
+\item $2$
+\end{multicols}
+\end{enumerate}
+
+\item If a $3\times 3$ real skew-symmetric matrix has an eigenvalue $2i$, then one of the remaining eigenvalues is \underline{\hspace{2cm}}.
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{1}{2i}$
+\item $-\dfrac{1}{2i}$
+\item $0$
+\item $1$
+\end{multicols}
+\end{enumerate}
+\item For the linear programming problem  
+Minimize $z = x-y$, subject to $2x+3y\leq 6, \; 0\leq x \leq 3,\; 0\leq y \leq 3$,  
+the number of extreme points of its feasible region and the number of basic feasible solutions respectively, are \underline{\hspace{2cm}}.  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 3 and 3
+\item 4 and 4
+\item 3 and 5
+\item 4 and 5
+\end{multicols}
+\end{enumerate}
+
+\item Which one of the following statements is correct? \underline{\hspace{2cm}}  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item If a Linear Programming Problem (LPP) is infeasible, then its dual is also infeasible  
+\item If an LPP is infeasible, then its dual always has unbounded solution  
+\item If an LPP has unbounded solution, then its dual also has unbounded solution  
+\item If an LPP has unbounded solution, then its dual is infeasible  
+\end{enumerate}
+
+\item Which one of the following groups is simple? \underline{\hspace{2cm}}  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $S_3$
+\item $GL(2,\mathbb{R})$
+\item $\mathbb{Z}_2 \times \mathbb{Z}_2$
+\item $A_5$
+\end{multicols}
+\end{enumerate}
+
+\item Consider the algebraic extension $E=\mathbb{Q}(\sqrt{2},\sqrt{3},\sqrt{5})$ of the field $\mathbb{Q}$ of rational numbers.  
+Then $[E:\mathbb{Q}]$, the degree of $E$ over $\mathbb{Q}$, is \underline{\hspace{2cm}}.  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 3
+\item 4
+\item 7
+\item 8
+\end{multicols}
+\end{enumerate}
+
+\item The general solution of the partial differential equation  
+\[
+\frac{\partial^2 z}{\partial x \partial y} = x+y
+\]  
+is of the form \underline{\hspace{2cm}}.  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item $\dfrac{1}{2}xy(x+y)+F(x)+G(y)$  
+\item $\dfrac{1}{2}xy(x-y)+F(x)+G(y)$  
+\item $\dfrac{1}{2}xy(x-y)+F(x)G(y)$  
+\item $\dfrac{1}{2}xy(x+y)+F(x)G(y)$  
+\end{enumerate}
+
+\item The numerical value obtained by applying the two-point trapezoidal rule to the integral  
+\begin{align*}
+\int_0^1 \frac{\ln(1+x)}{x} dx
+\end{align*}
+is \underline{\hspace{2cm}}.  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{1}{2}(\ln 2+1)$  
+\item $\dfrac{1}{2}$  
+\item $\dfrac{1}{2}(\ln 2-1)$  
+\item $\dfrac{1}{2}\ln 2$  
+\end{multicols}
+\end{enumerate}
+
+\item Let $\ell_k(x), k=0,1,\dots,n$ denote the Lagrange's fundamental polynomials of degree $n$ for the nodes $x_0,x_1,\dots,x_n$.  
+Then the value of $\sum_{k=0}^n \ell_k(x)$ is \underline{\hspace{2cm}}.  
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 0
+\item $n$
+\item $x+1$
+\item $x-1$
+\end{multicols}
+\end{enumerate}
+\item Let $X$ and $Y$ be normed linear spaces and $\{T_n\}$ be a sequence of bounded linear operators from $X$ to $Y$. Consider the statements: \\
+$P\colon \{\lVert T_n x\rVert \colon n\in\mathbb{N}\}$ is bounded for each $x\in X$. \\
+$Q\colon \{\lVert T_n\rVert \colon n\in\mathbb{N}\}$ is bounded. \\
+Which one of the following is correct? \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item If $P$ implies $Q$, then both $X$ and $Y$ are Banach spaces
+\item If $P$ implies $Q$, then only one of $X$ and $Y$ is a Banach space
+\item If $X$ is a Banach space, then $P$ implies $Q$
+\item If $Y$ is a Banach space, then $P$ implies $Q$
+\end{multicols}
+\end{enumerate}
+
+\item Let $X=C[0,1]$ with the norm $\lVert x\rVert_1=\displaystyle\int_{0}^{1}\lvert x(t)\rvert\,dt$, $x\in C[0,1]$, and $\Omega=\{f\in X' \colon \lVert f\rVert=1\}$, where $X'$ denotes the dual space of $X$. Let $C(\Omega)$ be the linear space of continuous functions on $\Omega$ with the norm $\lVert u\rVert_\infty=\sup_{f\in\Omega}\lvert u(f)\rvert$, $u\in C(\Omega)$. Then \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item $X$ is linearly isometric with $C(\Omega)$
+\item $X$ is linearly isometric with a proper subspace of $C(\Omega)$
+\item there does not exist a linear isometry from $X$ into $C(\Omega)$
+\item every linear isometry from $X$ to $C(\Omega)$ is onto
+\end{enumerate}
+
+\item Let $X=\mathbb{R}$ equipped with the topology generated by open intervals of the form $(a,b)$ and sets of the form $(a,b)\setminus\mathbb{Q}$. Which one of the following statements is correct? \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $X$ is regular
+\item $X$ is normal
+\item $X\setminus\mathbb{Q}$ is dense in $X$
+\item $\mathbb{Q}$ is dense in $X$
+\end{multicols}
+\end{enumerate}
+
+\item Let $H,T$ and $V$ denote the Hamiltonian, the kinetic energy and the potential energy respectively of a mechanical system at time $t$. If $H$ contains $t$ explicitly, then $\dfrac{dH}{dt}$ is equal to \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\dfrac{\partial T}{\partial t}$
+\item $\dfrac{\partial T}{\partial t}-\dfrac{\partial V}{\partial t}$
+\item $\dfrac{\partial T}{\partial t}+\dfrac{\partial V}{\partial t}$
+\item $-\dfrac{\partial V}{\partial t}$
+\end{multicols}
+\end{enumerate}
+
+\item The Euler's equation for the variational problem  
+\begin{align*}
+\text{Minimize}\quad I(y(x))=\int_{a}^{b}\big(x^{2}-xy-y'^{2}\big)\,dx
+\end{align*}
+is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $2y''-y=2$
+\item $2y'+y=2$
+\item $2y''-y=0$
+\item $2y'-y=0$
+\end{multicols}
+\end{enumerate}
+\item Let $X$ have a binomial distribution with parameters $n$ and $p$, $n=3$. For testing the hypothesis $H_0\colon p=\tfrac{2}{3}$ against $H_1\colon p=\tfrac{1}{3}$, let a test be: "Reject $H_0$ if $X\geq 2$ and accept $H_0$ if $X\leq 1$." Then the probabilities of Type I and Type II errors respectively are \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{20}{27}$ and $\dfrac{20}{27}$
+\item $\dfrac{7}{27}$ and $\dfrac{20}{27}$
+\item $\dfrac{20}{27}$ and $\dfrac{7}{27}$
+\item $\dfrac{7}{27}$ and $\dfrac{7}{27}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $I=\int\limits_{C}\dfrac{f(z)}{z(z-1)(z-2)}\,dz$, where $f(z)=\sin\dfrac{\pi z}{2}+\cos\dfrac{\pi z}{2}$ and $C$ is the curve $\lvert z\rvert=3$ oriented anti-clockwise. Then the value of $I$ is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $4\pi i$
+\item $0$
+\item $-2\pi i$
+\item $-4\pi i$
+\end{multicols}
+\end{enumerate}
+
+\item Let $\sum\limits_{n=-\infty}^{\infty} b_n z^n$ be the Laurent series expansion of the function $\dfrac{1}{z\sinh z}$, $0<\lvert z\rvert<\pi$. Then which one of the following is correct? \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item $b_{-2}=1,\; b_0=-\dfrac{1}{6},\; b_2=\dfrac{7}{360}$
+\item $b_{-1}=1,\; b_1=-\dfrac{1}{6},\; b_3=\dfrac{7}{360}$
+\item $b_2=0,\; b_0=-\dfrac{1}{6},\; b_2=\dfrac{7}{360}$
+\item $b_0=1,\; b_2=-\dfrac{1}{6},\; b_4=\dfrac{7}{360}$
+\end{enumerate}
+
+\item Under the transformation $w=\dfrac{1-iz}{z-i}$, the region $D=\{z\in\mathbb{C}\colon\lvert z\rvert<1\}$ is transformed to \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\{z\in\mathbb{C}\colon 0<\arg z<\pi\}$
+\item $\{z\in\mathbb{C}\colon -\pi<\arg z<0\}$
+\item $\{z\in\mathbb{C}\colon 0<\arg z<\tfrac{\pi}{2}\;\;\text{or}\;\;\pi<\arg z<\tfrac{3\pi}{2}\}$
+\item $\{z\in\mathbb{C}\colon \tfrac{\pi}{2}<\arg z<\pi\;\;\text{or}\;\; \tfrac{3\pi}{2}<\arg z<2\pi\}$
+\end{multicols}
+\end{enumerate}
+\newpage
+\item Let $y(x)$ be the solution of the initial value problem
+\begin{align*}
+y'''-y''+4y'-4y=0,\quad y(0)=y'(0)=2,\; y''(0)=0.
+\end{align*}
+Then the value of $y\left(\tfrac{\pi}{2}\right)$ is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\dfrac{1}{5}\left(4e^{\tfrac{\pi}{2}}-6\right)$
+\item $\dfrac{1}{5}\left(e^{\tfrac{\pi}{2}}-4\right)$
+\item $\dfrac{1}{5}\left(8e^{\tfrac{\pi}{2}}-2\right)$
+\item $\dfrac{1}{5}\left(8e^{\tfrac{\pi}{2}}+2\right)$
+\end{multicols}
+\end{enumerate}
+\item Let $y(x)$ be the solution of the initial value problem
+\begin{align*}
+x^2y''+xy'+y=x,\quad y(0)=y'(0)=1.
+\end{align*}
+Then the value of $y(e^{\tfrac{\pi i}{2}})$ is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\dfrac{1}{2}(1-e^{\tfrac{\pi i}{2}})$
+\item $\dfrac{1}{2}(1+e^{\tfrac{\pi i}{2}})$
+\item $\dfrac{1}{2}+\dfrac{\pi i}{4}$
+\item $\dfrac{1}{2}-\dfrac{\pi i}{4}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $T:\mathbb{R}^3\to\mathbb{R}^3$ be a linear transformation defined by $T(x,y,z)=(x+y,\,y+z,\,z-x)$. Then, an orthonormal basis for the range of $T$ is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+    \item $\left\{\myvec{\tfrac{1}{\sqrt{2}},\tfrac{1}{\sqrt{2}},0},\;\myvec{\tfrac{1}{\sqrt{3}},-\tfrac{1}{\sqrt{3}},\tfrac{1}{\sqrt{3}}}\right\}$
+
+\item $\left\{\myvec{\tfrac{1}{\sqrt{2}},-\tfrac{1}{\sqrt{2}},0},\;\myvec{\tfrac{1}{\sqrt{6}},\tfrac{1}{\sqrt{6}},\tfrac{2}{\sqrt{6}}}\right\}$
+
+\item $\left\{\myvec{\tfrac{1}{\sqrt{2}},\tfrac{1}{\sqrt{2}},0},\;\myvec{\tfrac{1}{\sqrt{6}},-\tfrac{1}{\sqrt{6}},-\tfrac{2}{\sqrt{6}}}\right\}$
+
+\item $\left\{\myvec{\tfrac{1}{\sqrt{2}},-\tfrac{1}{\sqrt{2}},0},\;\myvec{\tfrac{1}{\sqrt{3}},\tfrac{1}{\sqrt{3}},\tfrac{1}{\sqrt{3}}}\right\}$
+\end{multicols}
+
+\end{enumerate}
+
+\item Let $T:P_3[0,1]\to P_3[0,1]$ be defined by $(Tp)(x)=p''(x)+p'(x)$. Then the matrix representation of $T$ with respect to the bases $\{1,x,x^2,x^3\}$ and $\{1,x,x^2,x^3\}$ of $P_3[0,1]$ and $P_2[0,1]$ respectively is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\myvec{0&0&0\\1&0&0\\2&2&0\\0&6&3}$
+\item $\myvec{0&1&2&0\\0&0&2&6\\0&0&0&3}$
+\item $\myvec{0&2&1&0\\6&2&0&0\\3&0&0&0}$
+\item $\myvec{0&0&0\\0&0&1\\0&2&2\\3&6&0}$
+\end{multicols}
+\end{enumerate}
+
+\item Consider the basis $\{u_1,u_2,u_3\}$ of $\mathbb{R}^3$, where $u_1=(1,0,0)$, $u_2=(1,1,0)$, $u_3=(1,1,1)$. Let $\{f_1,f_2,f_3\}$ be the dual basis of $\{u_1,u_2,u_3\}$ and $f$ be a linear functional defined by $f(a,b,c)=a+b+c$, $(a,b,c)\in\mathbb{R}^3$. If $f=\alpha_1f_1+\alpha_2f_2+\alpha_3f_3$, then $(\alpha_1,\alpha_2,\alpha_3)$ is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $(1,2,3)$
+\item $(1,3,2)$
+\item $(2,3,1)$
+\item $(3,2,1)$
+\end{multicols}
+\end{enumerate}
+
+\item The following table gives the cost matrix of a transportation problem. 
+
+\begin{align*}
+\begin{array}{|c|c|c|c|}
+4 & 5 & 6 \\
+\hline
+3 & 2 & 2 \\
+\hline
+1 & 1 & 2
+\end{array}
+\end{align*}
+.
+The basic feasible solution given by $x_{11}=3,\;x_{12}=1,\;x_{13}=6,\;x_{21}=2,\;x_{22}=5$ is \underline{\hspace{2cm}}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item degenerate and optimal
+\item optimal but not degenerate
+\item degenerate but not optimal
+\item neither degenerate nor optimal
+\end{multicols}
+\end{enumerate}
+\item If $z^*$ is the optimal value of the linear programming problem
+\begin{align*}
+&\text{Maximize } z=5x_1+9x_2+4x_3,\\
+&\text{subject to } x_1+x_2+x_3\le 5,\\
+&\phantom{\text{subject to }} 4x_1+3x_2+2x_3=12,\\
+& x_1,x_2,x_3\ge 0,
+\end{align*}
+then
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $0\le z^*<10$
+\item $10\le z^*<20$
+\item $20\le z^*<30$
+\item $30\le z^*<40$
+\end{multicols}
+\end{enumerate}
+
+\item Let $G_1$ be an abelian group of order $6$ and $G_2=S_5$. For $j=1,2$, let $P_j$ be the statement: $G_j$ has a unique subgroup of order $2$. Then
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item both $P_1$ and $P_2$ hold
+\item neither $P_1$ nor $P_2$ holds
+\item $P_1$ holds but not $P_2$
+\item $P_2$ holds but not $P_1$
+\end{multicols}
+\end{enumerate}
+
+\item Let $G$ be the group of all symmetries of the square. Then the number of conjugate classes in $G$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $4$
+\item $5$
+\item $6$
+\item $7$
+\end{multicols}
+\end{enumerate}
+
+\item Consider the polynomial ring $\mathbb{Q}[x]$. The ideal of $\mathbb{Q}[x]$ generated by $x^2-3$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item maximal but not prime
+\item prime but not maximal
+\item both maximal and prime
+\item neither maximal nor prime
+\end{multicols}
+\end{enumerate}
+
+\item Consider the wave equation
+\begin{align*}
+\frac{\partial^2 u}{\partial t^2}=4\,\frac{\partial^2 u}{\partial x^2},\quad 0<x<\pi,\ t>0,\\
+u(0,t)=u(\pi,t)=0,\qquad u(x,0)=\sin x,\qquad \frac{\partial u}{\partial t}(x,0)=0.
+\end{align*}
+Then $u\!\left(\frac{\pi}{2},\frac{\pi}{2}\right)$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $2$
+\item $1$
+\item $0$
+\item $-1$
+\end{multicols}
+\end{enumerate}
+
+\item Let $I=\displaystyle\int_C \frac{e^x}{x}\,dx+\left(e^y\ln x+x\right)\,dy$, where $C$ is the positively oriented boundary of the region enclosed by $y=1+x^2$, $y=2x$, $x=\tfrac12$. Then the value of $I$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{1}{8}$
+\item $\dfrac{5}{24}$
+\item $\dfrac{7}{24}$
+\item $\dfrac{3}{8}$
+\end{multicols}
+\end{enumerate}
+\item Let $\{f_n\}$ be a sequence of real valued differentiable functions on $[a,b]$ such that $f_n(x)\to f(x)$ as $n\to\infty$ for every $x\in[a,b]$ and for some Riemann-integrable function $f:[a,b]\to\mathbb{R}$. Consider the statements
+\begin{align*}
+P_1&:\ \{f_n\}\ \text{converges uniformly},\\
+P_2&:\ \{f_n'\}\ \text{converges uniformly},\\
+P_3&:\ \int_a^b f_n(x)\,dx\ \to\ \int_a^b f(x)\,dx,\\
+P_4&:\ f\ \text{is differentiable}.
+\end{align*}
+Then which one of the following need NOT be true
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $P_3$ implies $P_1$
+\item $P_2$ implies $P_1$
+\item $P_2$ implies $P_4$
+\item $P_3$ implies $P_4$
+\end{multicols}
+\end{enumerate}
+\item Let $f_n(x)=\dfrac{x^n}{1+x}$ and $g_n(x)=\dfrac{x^n}{1+n x}$ for $x\in[0,1]$ and $n\in\mathbb{N}$. Then on the interval $[0,1]$,
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item both $\{f_n\}$ and $\{g_n\}$ converge uniformly
+\item neither $\{f_n\}$ nor $\{g_n\}$ converge uniformly
+\item $\{f_n\}$ converges uniformly but $\{g_n\}$ does not converge uniformly
+\item $\{g_n\}$ converges uniformly but $\{f_n\}$ does not converge uniformly
+\end{multicols}
+\end{enumerate}
+
+\item Consider the power series $\sum_{n=1}^{\infty} \dfrac{x^n}{\sqrt{n}}$ and $\sum_{n=1}^{\infty} \dfrac{x^n}{n}$. Then
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item both converge on $(-1,1)$
+\item both converge on $[-1,1)$
+\item exactly one of them converges on $(-1,1)$
+\item none of them converges on $[-1,1)$
+\end{multicols}
+\end{enumerate}
+
+\item Let $X=\mathbb{N}$ be equipped with the topology generated by the basis consisting of sets $A_n=\{n,n+1,n+2,\ldots\}, n\in\mathbb{N}$. Then $X$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item Compact and connected
+\item Hausdorff and connected
+\item Hausdorff and compact
+\item Neither compact nor connected
+\end{multicols}
+\end{enumerate}
+
+\item Four weightless rods form a rhombus $PQRS$ with smooth hinges at the joints. Another weightless rod joins the midpoints $E$ and $F$ of $PQ$ and $PS$ respectively. The system is suspended from $P$ and a weight $2W$ is attached to $R$. If the angle between the rods $PQ$ and $PS$ is $2\theta$, then the thrust in the rod $EF$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $W \tan\theta$
+\item $2W \tan\theta$
+\item $2W \cot\theta$
+\item $4W \tan\theta$
+\end{multicols}
+\end{enumerate}
+\newpage
+\item For a continuous function $f(t)$, $0\leq t\leq 1$, the integral equation 
+\begin{align*}
+y(t)=f(t)+\int_0^1 ts\,y(s)\,ds
+\end{align*}
+has
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item a unique solution if $\int_0^1 s f(s)\,ds \neq 0$
+\item no solution if $\int_0^1 s f(s)\,ds = 0$
+\item infinitely many solutions if $\int_0^1 s f(s)\,ds = 0$
+\item infinitely many solutions if $\int_0^1 s f(s)\,ds \neq 0$
+\end{multicols}
+\end{enumerate}
+\textbf{Common Data for Q.48 and Q.49: }
+
+Let $X$ and $Y$ be continuous random variables with the joint probability density function
+\begin{align*}
+f(x,y)=
+\begin{cases}
+a\,x^{2}e^{-y}, & 0<x<y<\infty,\\
+0, & \text{otherwise}.
+\end{cases}
+\end{align*}
+
+\hfill(GATE MA 2010)
+
+\item The value of $a$ is
+\hfill(GATE MA 2010)
+\begin{enumerate}
+\begin{multicols}{4}
+\item $4$
+\item $2$
+\item $1$
+\item $0.5$
+\end{multicols}
+\end{enumerate}
+
+\item The value of $E[X\,|\,Y=2]$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $4$
+\item $3$
+\item $2$
+\item $1$
+\end{multicols}
+\end{enumerate}
+
+\textbf{Common Data for Q.50 and Q.51:} 
+
+Let $X=\mathbb{N}\times\mathbb{Q}$ with the subspace topology of the usual topology on $\mathbb{R}^{2}$ and $P=\{(n,\tfrac{1}{n}):n\in\mathbb{N}\}$.
+
+
+
+\item In the space $X$,
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item $P$ is closed but not open
+\item $P$ is open but not closed
+\item $P$ is both open and closed
+\item $P$ is neither open nor closed
+\end{multicols}
+\end{enumerate}
+
+\item The boundary of $P$ in $X$ is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item an empty set
+\item a singleton set
+\item $P$
+\item $X$
+\end{multicols}
+\end{enumerate}
+
+\textbf{Linked Answer Questions (Q.52-Q.53):}
+
+For a differentiable function $f(x)$, the integral
+\begin{align*}
+\int_{0}^{1} f(x)\,dx
+\end{align*}
+is approximated by the formula
+\begin{align*}
+h\big[a_{0}f(0)+a_{1}f(1)\big]+h^{2}\big[b_{0}f'(0)+b_{1}f'(1)\big],
+\end{align*}
+which is exact for all polynomials of degree at most $3$.
+\newpage
+
+
+\item The values of $a_{0}$ and $a_{1}$ respectively are
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac12$ and $-\dfrac12$
+\item $\dfrac12$ and $\dfrac12$
+\item $2$ and $\dfrac12$
+\item $-\dfrac12$ and $\dfrac12$
+\end{multicols}
+\end{enumerate}
+
+\item The values of $b_{0}$ and $b_{1}$ respectively are
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{1}{12}$ and $-\dfrac{1}{12}$
+\item $-\dfrac{1}{12}$ and $\dfrac{1}{12}$
+\item $\dfrac{1}{12}$ and $\dfrac{1}{12}$
+\item $-\dfrac{1}{12}$ and $-\dfrac{1}{12}$
+\end{multicols}
+\end{enumerate}
+
+\textbf{Statement for Linked Answer Questions 54 and 55}
+
+Let $X=C[0,1]$ with the inner product
+\begin{align*}
+\langle x,y\rangle=\int_{0}^{1} x(t)\,y(t)\,dt,\qquad x,y\in C[0,1].
+\end{align*}
+Let
+\begin{align*}
+X_{0}=\Big\{x\in X:\int_{0}^{1} t^{2}x(t)\,dt=0\Big\},\qquad
+X_{0}^{\perp}\ \text{be the orthogonal complement of}\ X_{0}.
+\end{align*}
+
+\item Which one of the following statements is correct?
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item Both $X_{0}$ and $X_{0}^{\perp}$ are complete
+\item Neither $X_{0}$ nor $X_{0}^{\perp}$ is complete
+\item $X_{0}$ is complete but $(X_{0})^{\perp}$ is not complete
+\item $X_{0}^{\perp}$ is complete but $X_{0}$ is not complete
+\end{multicols}
+\end{enumerate}
+
+\item Let $y(t)=t^{r}$, $r\in[0,1]$, and let $x_{0}\in X_{0}^{\perp}$ be the best approximation of $y$. Then $x_{0}(t)$, $t\in[0,1]$, is
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\dfrac{4}{5}\,t^{2}$
+\item $\dfrac{5}{6}\,t^{2}$
+\item $\dfrac{6}{7}\,t^{2}$
+\item $\dfrac{7}{8}\,t^{2}$
+\end{multicols}
+\end{enumerate}
+\begin{center}
+    \textbf{GENERAL APTITUDE}
+\end{center}
+\item Which of the following options is the closest in meaning to the word below: 
+
+\textbf{Circumlocution}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item cyclic
+\item indirect
+\item confusing
+\item crooked
+\end{multicols}
+\end{enumerate}
+
+\item The question below consists of a pair of related words followed by four pairs of words. Select the pair that best expresses the relation in the original pair. 
+\textbf{Unemployed : Worker}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item fallow : land
+\item unaware : sleeper
+\item wit : jester
+\item renovated : house
+\end{multicols}
+\end{enumerate}
+\newpage
+\item Choose the most appropriate word from the options given below to complete the following sentence: 
+\textbf{If we manage to \underline{\hspace{2cm}}. our natural resources, we would leave a better planet for our children.}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item uphold
+\item restrain
+\item cherish
+\item conserve
+\end{multicols}
+\end{enumerate}
+
+\item Choose the most appropriate word from the options given below to complete the following sentence: 
+\textbf{His rather casual remarks on politics\underline{\hspace{2cm}}. his lack of seriousness about the subject.}
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item masked
+\item belied
+\item betrayed
+\item suppressed
+\end{multicols}
+\end{enumerate}
+
+\item 25 persons are in a room. 15 of them play hockey, 17 of them play football and 10 of them play both hockey and football. Then the number of persons playing neither hockey nor football is:
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 2
+\item 17
+\item 13
+\item 3
+\end{multicols}
+\end{enumerate}
+\item Modern warfare has changed from large scale clashes of armies to suppression of civilian populations. Chemical agents that do their work silently appear to be suited to such warfare; and regretfully, there exist people in military establishments who think that chemical agents are useful tools for their cause. 
+
+Which of the following statements best sums up the meaning of the above passage:
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\item Modern warfare has resulted in civil strife.
+\item Chemical agents are useful in modern warfare.
+\item Use of chemical agents in warfare would be undesirable.
+\item People in military establishments like to use chemical agents in war.
+\end{enumerate}
+
+\item If 137 + 276 = 435 how much is 731 + 672?
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 534
+\item 1403
+\item 1623
+\item 1513
+\end{multicols}
+\end{enumerate}
+
+\item 5 skilled workers can build a wall in 20 days; 8 semi-skilled workers can build a wall in 25 days; 10 unskilled workers can build a wall in 30 days. If a team has 2 skilled, 6 semi-skilled and 5 unskilled workers, how long will it take to build the wall?
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 20 days
+\item 18 days
+\item 16 days
+\item 15 days
+\end{multicols}
+\end{enumerate}
+
+\item Given digits 2, 3, 3, 3, 4, 4, 4, 4, how many distinct 4 digit numbers greater than 3000 can be formed?
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item 50
+\item 51
+\item 52
+\item 54
+\end{multicols}
+\end{enumerate}
+\newpage
+\item Hari (H), Gita (G), Irfan (I) and Saira (S) are siblings (i.e. brothers and sisters). All were born on 1st January. The age difference between any two successive siblings (that is born one after another) is less than 3 years. Given the following facts:
+
+i. Hari's age + Gita's age = Irfan's age + Saira's age. 
+
+ii. The age difference between Gita and Saira is 1 year. However, Gita is not the oldest and Saira is not the youngest. 
+
+iii. There are no twins. 
+
+In what order were they born (oldest first)?
+
+\hfill(GATE MA 2010)
+
+\begin{enumerate}
+\begin{multicols}{4}
+\item HSIG
+\item SGHI
+\item IGSH
+\item IHSG
+\end{multicols}
+\end{enumerate}
+
+
+\end{enumerate}
+\end{flushleft}
+\end{document}
+
+
