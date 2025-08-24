@@ -1,0 +1,10 @@
+\begin{circuitikz}
+\draw (0,0) node[and port] (and1) {};
+\draw (2,0) node[and port] (and2) {};
+\draw (0,-2) node[and port] (and3) {};
+\draw (2,-2) node[and port] (and4) {};
+\draw (and1.out) to[short,-o] (3,0) node[right] {$B_0$};
+\draw (and2.out) to[short,-o] (3,-2) node[right] {$B_1$};
+\draw (and1.in 1) to[short,-o] (-1,0.3) node[left] {$W_0$};
+\draw (and2.in 1) to[short,-o] (-1,-0.3) node[left] {$W_1$};
+\end{circuitikz}

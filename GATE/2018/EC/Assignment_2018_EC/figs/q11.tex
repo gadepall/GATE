@@ -1,0 +1,10 @@
+\begin{circuitikz}
+\draw (0,0) node[ground] {} to[V=$V_{bias}$] (0,2) to (2,2) node[pmos] (M2) {};
+\draw (M2.S) to (2,4) to[V=$V_D$] (2,5) node[vcc] {};
+\draw (M2.D) to (2,0) node[ground] {};
+\draw (0,2) to (0,4) node[nmos] (M1) {};
+\draw (M1.S) to (0,0) node[ground] {};
+\draw (0,2) to[short,-o] (-1,2) node[left] {G};
+\draw (0,0) to[short,-o] (-1,0) node[left] {S};
+\draw (2,2) to[short,-o] (3,2) node[right] {D};
+\end{circuitikz}

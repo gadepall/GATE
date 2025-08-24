@@ -1,0 +1,14 @@
+\begin{circuitikz}
+\draw (0,0) node[pmos] (p1) {};
+\draw (2,0) node[pmos] (p2) {};
+\draw (0,-2) node[nmos] (n1) {};
+\draw (2,-2) node[nmos] (n2) {};
+\draw (p1.source) -- (p2.source);
+\draw (n1.drain) -- (n2.drain);
+\draw (0,1) node[vcc] {$V_{DD}$};
+\draw (0,-3) node[ground] {};
+\draw (2,-3) node[ground] {};
+\draw (0.5,0) to[short,-o] (0.5,0.5) node[above] {$Y$};
+\draw (1.5,0) to[short,-o] (1.5,0.5) node[above] {$X$};
+\draw (1,-2) to[short,-o] (1,-2.5) node[below] {$f(X,Y)$};
+\end{circuitikz}

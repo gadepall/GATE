@@ -1,0 +1,7 @@
+\begin{circuitikz}
+\draw (0,0) node[op amp] (opamp) {};
+\draw (opamp.+) to[short] (-1,0.5) to[R=1k$\Omega$] (-3,0.5) to[V=15V] (-3,2) node[vcc] {};
+\draw (opamp.-) to[short] (-1,-0.5) to[R=31k$\Omega$] (-3,-0.5) to[V=-15V] (-3,-2) node[ground] {};
+\draw (opamp.out) to[short,-o] (1,0) node[right] {$V_o$};
+\draw (-1,0.5) to[short] (-1,1) node[above] {A};
+\end{circuitikz}

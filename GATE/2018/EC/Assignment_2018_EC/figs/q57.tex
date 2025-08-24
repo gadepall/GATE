@@ -1,0 +1,10 @@
+\begin{circuitikz}
+\draw (0,0) node[and port] (and1) {};
+\draw (2,0) node[or port] (or1) {};
+\draw (0,-2) node[and port] (and2) {};
+\draw (2,-2) node[or port] (or2) {};
+\draw (and1.out) -- (or1.in 1);
+\draw (and2.out) -- (or2.in 1);
+\draw (or1.out) to[short,-o] (3,0) node[right] {$Y$};
+\draw (or2.out) to[short,-o] (3,-2) node[right] {};
+\end{circuitikz}

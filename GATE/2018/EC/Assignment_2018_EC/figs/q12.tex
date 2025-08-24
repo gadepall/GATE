@@ -1,0 +1,7 @@
+\begin{circuitikz}
+\draw (0,0) node[op amp] (opamp) {};
+\draw (opamp.+) to[short,-o] (-1.5,0.5) node[left] {$v_{IN}(t)$};
+\draw (opamp.-) to[short] (-1.5,-0.5) to[R=1k$\Omega$] (-3,-0.5) to[C=1$\mu$F] (-3,-2) node[ground] {};
+\draw (opamp.out) to[short] (1,0) to[zzD] (1,-2) node[ground] {};
+\draw (1,0) to[short,-o] (2,0) node[right] {$v_{OUT}(t)$};
+\end{circuitikz}

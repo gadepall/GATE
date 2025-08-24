@@ -1,0 +1,8 @@
+\begin{circuitikz}
+\draw (0,0) node[nmos] (M1) {$M_1$};
+\draw (2,0) node[nmos] (M2) {$M_2$};
+\draw (M1.source) to (0,-1) node[ground] {};
+\draw (M2.source) to (2,-1) node[ground] {};
+\draw (M1.drain) to (0,1) to (2,1) to (M2.drain);
+\draw (0,1) to[short,-o] (0,2) node[above] {$V_x$};
+\end{circuitikz}

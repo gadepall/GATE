@@ -1,0 +1,6 @@
+\begin{circuitikz}
+\draw (0,0) node[xor port] (xor) {};
+\draw (xor.in 1) to[short,-o] (-1,0.3) node[left] {$D_{in}$};
+\draw (xor.in 2) to[short] (-1,-0.3) to (0,-0.3) node[flipflop] {};
+\draw (xor.out) to[short,-o] (1,0) node[right] {$X$};
+\end{circuitikz}
