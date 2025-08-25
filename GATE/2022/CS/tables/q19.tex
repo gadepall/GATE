@@ -1,0 +1,38 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+T1 & T2 & T3 \\
+\hline
+\begin{minipage}{0.28\linewidth}
+\begin{verbatim}
+while(true){
+ wait(S3);
+ print("C");
+ signal(S2); }
+\end{verbatim}
+\end{minipage}
+&
+\begin{minipage}{0.28\linewidth}
+\begin{verbatim}
+while(true){
+ wait(S1);
+ print("B");
+ signal(S3); }
+\end{verbatim}
+\end{minipage}
+&
+\begin{minipage}{0.28\linewidth}
+\begin{verbatim}
+while(true){
+ wait(S2);
+ print("A");
+ signal(S1); }
+\end{verbatim}
+\end{minipage}
+\\
+\hline
+\end{tabular}
+\caption*{}
+\label{tab:q19}
+\end{table}
