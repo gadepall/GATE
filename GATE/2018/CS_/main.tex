@@ -1,0 +1,1032 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{framed} 
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{romannum}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage{color}        
+\usepackage[utf8]{inputenc}                                     
+\usepackage{array}                                            
+\usepackage{longtable}         
+\usepackage{multicol}                              
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+	\newcommand{\EEQA}{\end{eqnarray}}
+
+\theoremstyle{remark}
+\begin{document}
+		\title{\textbf{GATE CS 2018}}
+	\author{EE25BTECH11052 - Shriyansh Chawda}
+	\maketitle
+	
+	
+\fbox{\large Q.1 to Q.5 Carry one mark each.}
+	\begin{enumerate}
+		\item ``From where are they bringing their books? \underline{\hspace{2cm}} bringing \underline{\hspace{2cm}} books from \underline{\hspace{2cm}}.''
+		
+		The words that best fill the blanks in the above sentence are
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{2}
+				\item Their, they're, there
+				\item They're, their, there
+				\item There, their, they're
+				\item They're, there, there
+			\end{multicols}
+		\end{enumerate}
+		
+		\item ``A \underline{\hspace{2cm}} investigation can sometimes yield new facts, but typically organized ones are more successful.''
+		
+		The word that best fills the blank in the above sentence is
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item meandering
+				\item timely
+				\item consistent
+				\item systematic
+			\end{multicols}
+		\end{enumerate}
+		
+		\item The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item $\pi d$
+				\item $\pi d^2$
+				\item $\frac{1}{4}\pi d^2$
+				\item $\frac{1}{2}\pi d$
+			\end{multicols}
+		\end{enumerate}
+		
+		\item What would be the smallest natural number which when divided either by $20$ or by $42$ or by $76$ leaves a remainder of $7$ in each case?
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item $3047$
+				\item $6047$
+				\item $7987$
+				\item $63847$
+			\end{multicols}
+		\end{enumerate}
+		
+		\item What is the missing number in the following sequence?
+		
+		$2$, $12$, $60$, $240$, $720$, $1440$, \underline{\hspace{2cm}}, $0$
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item $2880$
+				\item $1440$
+				\item $720$
+				\item $0$
+			\end{multicols}
+		\end{enumerate}
+\textbf{\large Q.6 to Q.10 Carry two mark each.}
+		\item In appreciation of the social improvements completed in a town, a wealthy philanthropist decided to gift Rs $750$ to each male senior citizen in the town and Rs $1000$ to each female senior citizen. Altogether, there were $300$ senior citizens eligible for this gift. However, only $8/9^{\text{th}}$ of the eligible men and $2/3^{\text{rd}}$ of the eligible women claimed the gift. How much money \brak{\text{in Rupees}} did the philanthropist give away in total?
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{2}
+				\item $1,50,000$
+				\item $2,00,000$
+				\item $1,75,000$
+				\item $1,51,000$
+			\end{multicols}
+		\end{enumerate}
+		
+		\item If $pqr \ne 0$ and $p^{-x} = \frac{1}{q}$, $q^{-y} = \frac{1}{r}$, $r^{-z} = \frac{1}{p}$, what is the value of the product $xyz$?
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item $-1$
+				\item $\frac{1}{pqr}$
+				\item $1$
+				\item $pqr$
+			\end{multicols}
+		\end{enumerate}
+		
+		\item In a party, $60\%$ of the invited guests are male and $40\%$ are female. If $80\%$ of the invited guests attended the party and if all the invited female guests attended, what would be the ratio of males to females among the attendees in the party?
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item $2:3$
+				\item $1:1$
+				\item $3:2$
+				\item $2:1$
+			\end{multicols}
+		\end{enumerate}
+		
+		\item In the figure below, $\angle DEC + \angle BFC$ is equal to \underline{\hspace{2cm}}.
+		\hfill{\brak{\text{GATE CS 2018}}}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.2\linewidth]{figs/screenshot001}
+			\caption{}
+			\label{fig:screenshot001}
+		\end{figure}
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item $\angle BCD - \angle BAD$
+				\item $\angle BAD + \angle BCF$
+				\item $\angle BAD + \angle BCD$
+				\item $\angle CBA + \angle ADC$
+			\end{multicols}
+		\end{enumerate}
+		
+		\item A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?
+		\hfill{\brak{\text{GATE CS 2018}}}
+		
+		\begin{enumerate}
+			\begin{multicols}{1}
+				\item Three green faces and four red faces.
+				\item Four green faces and three red faces.
+				\item Five green faces and two red faces.
+				\item Six green faces and one red face.
+			\end{multicols}
+		\end{enumerate}
+		\pagebreak
+\end{enumerate}
+\textbf{\LARGE Q.1 to Q.25 Carry one mark each.}\\
+\begin{enumerate}
+	\item Which one of the following is a closed form expression for the generating function of the sequence $\{a_n\}$, where $a_n = 2n + 3$ for all $n=0, 1, 2, \dots$?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item $\frac{3}{\brak{1-x}^2}$
+			\item $\frac{3x}{\brak{1-x}^2}$
+			\item $\frac{2-x}{\brak{1-x}^2}$
+			\item $\frac{3-x}{\brak{1-x}^2}$
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Consider the following C program.
+	\begin{verbatim}
+		#include<stdio.h>
+		struct Ournode{
+			char x,y,z;
+		};
+		
+		int main(){
+			struct Ournode p = {'1', '0', 'a'+2};
+			struct Ournode *q = &p;
+			printf ("%c, %c", *((char*)q+1), *((char*)q+2));
+			return 0;
+		}
+	\end{verbatim}
+	The output of this program is:
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item 0, c
+			\item 0, a+2
+			\item '0', 'a'+2'
+			\item '0', 'c'
+		\end{multicols}
+	\end{enumerate}
+	
+	\item A queue is implemented using a non-circular singly linked list. The queue has a head pointer and a tail pointer, as shown in the figure. Let $n$ denote the number of nodes in the queue. Let \texttt{enqueue} be implemented by inserting a new node at the head, and \texttt{dequeue} be implemented by deletion of a node from the tail.
+	Which one of the following is the time complexity of the most time-efficient implementation of \texttt{enqueue} and \texttt{dequeue}, respectively, for this data structure?
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.39\linewidth]{figs/screenshot002}
+		\caption{}
+		\label{fig:screenshot002}
+	\end{figure}
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item $\theta\brak{1}, \theta\brak{1}$
+			\item $\theta\brak{1}, \theta\brak{n}$
+			\item $\theta\brak{n}, \theta\brak{1}$
+			\item $\theta\brak{n}, \theta\brak{n}$
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Let $\oplus$ and $\odot$ denote the Exclusive OR and Exclusive NOR operations, respectively. Which one of the following is NOT CORRECT?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{2}
+			\item $\overline{P \oplus Q} = P \odot Q$
+			\item $\overline{P} \oplus Q = P \odot Q$
+			\item $\overline{P} \oplus \overline{Q} = P \oplus Q$
+			\item $\brak{P \oplus \overline{P}} \oplus Q = \brak{P \odot \overline{P}} \odot \overline{Q}$
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Consider the following processor design characteristics.
+	\begin{enumerate}[label=\Roman*.]
+		\item Register-to-register arithmetic operations only
+		\item Fixed-length instruction format
+		\item Hardwired control unit
+	\end{enumerate}
+	Which of the characteristics above are used in the design of a RISC processor?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item I and II only
+			\item II and III only
+			\item I and III only
+			\item I, II and III
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Let $N$ be an NFA with $n$ states. Let $k$ be the number of states of a minimal DFA which is equivalent to $N$. Which one of the following is necessarily true?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item $k \geq 2^n$
+			\item $k \geq n$
+			\item $k \leq n^2$
+			\item $k \leq 2^n$
+		\end{multicols}
+	\end{enumerate}
+	
+	\item The set of all recursively enumerable languages is
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\item closed under complementation.
+		\item closed under intersection.
+		\item a subset of the set of all recursive languages.
+		\item an uncountable set.
+	\end{enumerate}
+	
+	\item Which one of the following statements is FALSE?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\item Context-free grammar can be used to specify both lexical and syntax rules.
+		\item Type checking is done before parsing.
+		\item High-level language programs can be translated to different Intermediate Representations.
+		\item Arguments to a function can be passed using the program stack.
+	\end{enumerate}
+	
+	\item The following are some events that occur after a device controller issues an interrupt while process $L$ is under execution.
+	\begin{enumerate}[label=\brak{\Alph*}]
+		\item[(P)] The processor pushes the process status of $L$ onto the control stack.
+		\item[(Q)] The processor finishes the execution of the current instruction.
+		\item[(R)] The processor executes the interrupt service routine.
+		\item[(S)] The processor pops the process status of $L$ from the control stack.
+		\item[(T)] The processor loads the new PC value based on the interrupt.
+	\end{enumerate}
+	Which one of the following is the correct order in which the events above occur?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item QPTRS
+			\item PTRSQ
+			\item TRPQS
+			\item QTPRS
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Consider a process executing on an operating system that uses demand paging. The average time for a memory access in the system is $M$ units if the corresponding memory page is available in memory, and $D$ units if the memory access causes a page fault. It has been experimentally measured that the average time taken for a memory access in the process is $X$ units.
+	Which one of the following is the correct expression for the page fault rate experienced by the process?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{2}
+			\item $\brak{D-M}/\brak{X-M}$
+			\item $\brak{X-M}/\brak{D-M}$
+			\item $\brak{D-X}/\brak{D-M}$
+			\item $\brak{X-M}/\brak{D-X}$
+		\end{multicols}
+	\end{enumerate}
+	
+	\item In an Entity-Relationship \brak{ER} model, suppose $R$ is a many-to-one relationship from entity set E1 to entity set E2. Assume that E1 and E2 participate totally in $R$ and that the cardinality of E1 is greater than the cardinality of E2.
+	Which one of the following is true about $R$?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\item Every entity in E1 is associated with exactly one entity in E2.
+		\item Some entity in E1 is associated with more than one entity in E2.
+		\item Every entity in E2 is associated with exactly one entity in E1.
+		\item Every entity in E2 is associated with at most one entity in E1.
+	\end{enumerate}
+	
+	\item Consider the following two tables and four queries in SQL.
+	\begin{verbatim}
+		Book (isbn, bname), Stock (isbn, copies)
+	\end{verbatim}
+	
+		Query 1:\begin{verbatim} SELECT B.isbn, S.copies
+		FROM Book B INNER JOIN Stock S
+		ON B.isbn = S.isbn;\end{verbatim}
+		
+		Query 2: \begin{verbatim}SELECT B.isbn, S.copies
+		FROM Book B LEFT OUTER JOIN Stock S
+		ON B.isbn = S.isbn;
+	\end{verbatim}
+		Query 3: \begin{verbatim}SELECT B.isbn, S.copies
+		FROM Book B RIGHT OUTER JOIN Stock S
+		ON B.isbn = S.isbn;\end{verbatim}
+		
+		Query 4:\begin{verbatim} SELECT B.isbn, S.copies
+		FROM Book B FULL OUTER JOIN Stock S
+		ON B.isbn = S.isbn;
+	\end{verbatim}
+	Which one of the queries above is certain to have an output that is a superset of the outputs of the other three queries?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item Query 1
+			\item Query 2
+			\item Query 3
+			\item Query 4
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Match the following:
+	
+	\begin{tabular}{ll}
+			\textbf{Field} & \textbf{Length in bits} \\
+			P. UDP Header's Port Number & I. 48 \\
+			Q. Ethernet MAC Address & II. 8 \\
+			R. IPv6 Next Header & III. 32 \\
+			S. TCP Header's Sequence Number & IV. 16
+		\end{tabular}
+		\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{2}
+			\item P-III, Q-IV, R-II, S-I
+			\item P-II, Q-I, R-IV, S-III
+			\item P-IV, Q-I, R-II, S-III
+			\item P-IV, Q-I, R-III, S-II
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Consider the following statements regarding the slow start phase of the TCP congestion control algorithm. Note that $cwnd$ stands for the TCP congestion window and MSS denotes the Maximum Segment Size.
+	\begin{enumerate}[label=\brak{\roman*}]
+		\item The $cwnd$ increases by 2 MSS on every successful acknowledgment.
+		\item The $cwnd$ approximately doubles on every successful acknowledgement.
+		\item The $cwnd$ increases by 1 MSS every round trip time.
+		\item The $cwnd$ approximately doubles every round trip time.
+	\end{enumerate}
+	Which one of the following is correct?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{enumerate}
+		\begin{multicols}{2}
+			\item Only \brak{ii} and \brak{iii} are true
+			\item Only \brak{i} and \brak{iii} are true
+			\item Only \brak{iv} is true
+			\item Only \brak{i} and \brak{iv} are true
+		\end{multicols}
+	\end{enumerate}
+	\item Two people, P and Q, decide to independently roll two identical dice, each with 6 faces, numbered 1 to 6. The person with the lower number wins. In case of a tie, they roll the dice repeatedly until there is no tie. Define a trial as a throw of the dice by P and Q. Assume that all 6 numbers on each dice are equi-probable and that all trials are independent. The probability (rounded to 3 decimal places) that one of them wins on the third trial is \underline{\hspace{2cm}}.
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\item The value of $\int_{0}^{\pi/4} x \cos\brak{x^2} dx$ correct to three decimal places \brak{assuming that} $\pi = 3.14$ is \underline{\hspace{2cm}}.\\
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\item Consider a matrix $A = uv^T$ where $u = \myvec{1 \\ 2}, v = \myvec{1 \\ 1}$. Note that $v^T$ denotes the transpose of $v$. The largest eigenvalue of $A$ is \underline{\hspace{2cm}}.
+	\hfill{\brak{\text{GATE CS 2018}}}\\
+	
+	\item The chromatic number of the following graph is \underline{\hspace{2cm}}. 
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{figs/screenshot003}
+		\caption{}
+		\label{fig:screenshot003}
+	\end{figure}
+	\item Let $G$ be a finite group on $84$ elements. The size of a largest possible proper subgroup of $G$ is \underline{\hspace{2cm}}.
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\item The postorder traversal of a binary tree is $8,9,6,7,4,5,2,3,1$. The inorder traversal of the same tree is $8,6,9,4,7,2,5,1,3$. The height of a tree is the length of the longest path from the root to any leaf. The height of the binary tree above is \underline{\hspace{2cm}}.
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\item Consider the following C program:
+	\begin{verbatim}
+		#include <stdio.h>
+		
+		int counter = 0;
+		
+		int calc(int a, int b) {
+			int c;
+			counter++;
+			if (b==3) return (a*a*a);
+			else {
+				c = calc(a, b/3);
+				return (c*c*c);
+			}
+		}
+		
+		int main() {
+			calc(4, 81);
+			printf("%d", counter);
+		}
+	\end{verbatim}
+	The output of this program is \underline{\hspace{2cm}}.
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\item Consider the sequential circuit shown in the figure, where both flip-flops used are positive edge-triggered D flip-flops.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figs/screenshot007}
+	\caption{}
+	\label{fig:screenshot007}
+\end{figure}
+
+	The number of states in the state transition diagram of this circuit that have a transition back to the same state on some value of "in" is \underline{\hspace{2cm}}.
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\item A $32$-bit wide main memory unit with a capacity of $1$ GB is built using $256$M $\times$ $4$-bit DRAM chips. The number of rows of memory cells in the DRAM chip is $2^{14}$. The time taken to perform one refresh operation is $50$ nanoseconds. The refresh period is $2$ milliseconds. The percentage \brak{\text{rounded to the closest integer}} of the time available for performing the memory read/write operations in the main memory unit is \underline{\hspace{2cm}}.
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\item Consider a system with $3$ processes that share $4$ instances of the same resource type. Each process can request a maximum of $K$ instances. Resource instances can be requested and released only one at a time. The largest value of $K$ that will always avoid deadlock is \underline{\hspace{2cm}}.
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	\item Consider a long-lived TCP session with an end-to-end bandwidth of $1$ Gbps (= $10^9$ bits-per-second). The session starts with a sequence number of $1234$. The minimum time \brak{in seconds, rounded to the closest integer} before this sequence number can be used again is \underline{\hspace{2cm}}.\\
+	\hfill{\brak{\text{GATE CS 2018}}}\\
+	\\
+	\textbf{\large Q.26 to Q.55 Carry one mark each.}
+	\item Consider a matrix $P$ whose only eigenvectors are the multiples of $\myvec{1 \\ 4}$.
+	Consider the following statements.
+	\begin{enumerate}
+		\item[\brak{\text{I}}] $P$ does not have an inverse
+		\item[\brak{\text{II}}] $P$ has a repeated eigenvalue
+		\item[\brak{\text{III}}] $P$ cannot be diagonalized
+	\end{enumerate}
+	Which one of the following options is correct?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\begin{enumerate}
+		\begin{multicols}{2}
+			\item Only I and III are necessarily true
+			\item Only II is necessarily true
+			\item Only I and II are necessarily true
+			\item Only II and III are necessarily true
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Let $N$ be the set of natural numbers. Consider the following sets.
+	\begin{align*}
+		P \colon & \text{ Set of Rational numbers \brak{positive and negative}} \\
+		Q \colon & \text{ Set of functions from } \{0, 1\} \text{ to } N \\
+		R \colon & \text{ Set of functions from } N \text{ to } \{0, 1\} \\
+		S \colon & \text{ Set of finite subsets of } N.
+	\end{align*}
+	Which of the sets above are countable?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\begin{enumerate}
+		\begin{multicols}{4}
+			\item $Q$ and $S$ only
+			\item $P$ and $S$ only
+			\item $P$ and $R$ only
+			\item $P$, $Q$ and $S$ only
+		\end{multicols}
+	\end{enumerate}
+	
+	\item Consider the first-order logic sentence
+	$$ \varphi \equiv \exists s \exists t \exists u \forall v \forall w \forall x \forall y \; \psi \brak{s, t, u, v, w, x, y} $$
+	where $\psi \brak{s, t, u, v, w, x, y}$ is a quantifier-free first-order logic formula using only predicate symbols, and possibly equality, but no function symbols. Suppose $\varphi$ has a model with a universe containing $7$ elements.
+	Which one of the following statements is necessarily true?
+	
+	\hfill{\brak{\text{GATE CS 2018}}}
+	
+	\begin{enumerate}
+		\item There exists at least one model of $\varphi$ with universe of size less than or equal to $3$.
+		\item There exists no model of $\varphi$ with universe of size less than or equal to $3$.
+		\item There exists no model of $\varphi$ with universe of size greater than $7$.
+		\item Every model of $\varphi$ has a universe of size equal to $7$.
+	\end{enumerate}
+    \item Consider the following C program:
+\begin{verbatim}
+	#include<stdio.h>
+	
+	void fun1(char *s1, char *s2) {
+		char *tmp;
+		tmp = s1;
+		s1 = s2;
+		s2 = tmp;
+	}
+	
+	void fun2(char **s1, char **s2) {
+		char *tmp;
+		tmp = *s1;
+		*s1 = *s2;
+		*s2 = tmp;
+	}
+	
+	int main() {
+		char *str1 = "Hi", *str2 = "Bye";
+		fun1(str1, str2); printf("%s %s ", str1, str2);
+		fun2(&str1, &str2); printf("%s %s", str1, str2);
+		return 0;
+	}
+\end{verbatim}
+The output of the program above is
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{4}
+		\item Hi Bye Bye Hi
+		\item Hi Bye Hi Bye
+		\item Bye Hi Hi Bye
+		\item Bye Hi Bye Hi
+	\end{multicols}
+\end{enumerate}
+
+\item Let $G$ be a simple undirected graph. Let $T_D$ be a depth first search tree of $G$. Let $T_B$ be a breadth first search tree of $G$. Consider the following statements.
+\begin{enumerate}
+	\item[\brak{\text{I}}] No edge of $G$ is a cross edge with respect to $T_D$. \brak{\text{A cross edge in } G \text{ is between two nodes neither of which is an ancestor of the other in } T_D.}
+	\item[\brak{\text{II}}] For every edge $\brak{u,v}$ of $G$, if $u$ is at depth $i$ and $v$ is at depth $j$ in $T_B$, then $\abs{i-j} = 1$.
+\end{enumerate}
+Which of the statements above must necessarily be true?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{4}
+		\item I only
+		\item II only
+		\item Both I and II
+		\item Neither I nor II
+	\end{multicols}
+\end{enumerate}
+
+\item Assume that multiplying a matrix $G_1$ of dimension $p \times q$ with another matrix $G_2$ of dimension $q \times r$ requires $pqr$ scalar multiplications. Computing the product of $n$ matrices $G_1 G_2 G_3 \dots G_n$ can be done by parenthesizing in different ways. Define $G_i G_{i+1}$ as an \textbf{explicitly computed pair} for a given parenthesization if they are directly multiplied. For example, in the matrix multiplication chain $G_1 G_2 G_3 G_4 G_5 G_6$ using parenthesization $\brak{G_1\brak{G_2G_3}}\brak{G_4\brak{G_5G_6}}$, $G_2G_3$ and $G_5G_6$ are the only explicitly computed pairs.
+\newline
+Consider a matrix multiplication chain $F_1F_2F_3F_4F_5$, where matrices $F_1, F_2, F_3, F_4$ and $F_5$ are of dimensions $2 \times 25$, $25 \times 3$, $3 \times 16$, $16 \times 1$ and $1 \times 1000$, respectively. In the parenthesization of $F_1F_2F_3F_4F_5$ that minimizes the total number of scalar multiplications, the explicitly computed pairs is/are
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{2}
+		\item $F_1F_2$ and $F_3F_4$ only
+		\item $F_2F_3$ only
+		\item $F_3F_4$ only
+		\item $F_1F_2$ and $F_4F_5$ only
+	\end{multicols}
+\end{enumerate}
+
+\item Consider the following C code. Assume that unsigned long int type length is $64$ bits.
+\begin{verbatim}
+	unsigned long int fun(unsigned long int n) {
+		unsigned long int i, j = 0, sum = 0;
+		for (i = n; i > 1; i = i/2) j++;
+		for ( ; j > 1; j = j/2) sum++;
+		return(sum);
+	}
+\end{verbatim}
+The value returned when we call \texttt{fun} with the input $2^{40}$ is
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{4}
+		\item $4$
+		\item $5$
+		\item $6$
+		\item $40$
+	\end{multicols}
+\end{enumerate}
+
+\item Consider the unsigned $8$-bit fixed point binary number representation below,
+$$ b_7 \ b_6 \ b_5 \ b_4 \ b_3 \cdot b_2 \ b_1 \ b_0 $$
+where the position of the binary point is between $b_3$ and $b_2$. Assume $b_7$ is the most significant bit. Some of the decimal numbers listed below \textbf{cannot} be represented \textbf{exactly} in the above representation:
+\begin{enumerate}
+	\item[\brak{\text{i}}] $31.500$
+	\item[\brak{\text{ii}}] $0.875$
+	\item[\brak{\text{iii}}] $12.100$
+	\item[\brak{\text{iv}}] $3.001$
+\end{enumerate}
+Which one of the following statements is true?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\item None of \brak{\text{i}}, \brak{\text{ii}}, \brak{\text{iii}}, \brak{\text{iv}} can be exactly represented
+	\item Only \brak{\text{ii}} cannot be exactly represented
+	\item Only \brak{\text{iii}} and \brak{\text{iv}} cannot be exactly represented
+	\item Only \brak{\text{i}} and \brak{\text{ii}} cannot be exactly represented
+\end{enumerate}
+
+\item The size of the physical address space of a processor is $2^P$ bytes. The word length is $2^W$ bytes. The capacity of cache memory is $2^N$ bytes. The size of each cache block is $2^M$ words. For a $K$-way set-associative cache memory, the length \brak{\text{in number of bits}} of the tag field is
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{2}
+		\item $P - N - \log_2 K$
+		\item $P - N + \log_2 K$
+		\item $P - N - M - W - \log_2 K$
+		\item $P - N - M - W + \log_2 K$
+	\end{multicols}
+\end{enumerate}
+
+\item Consider the following languages:
+\begin{enumerate}
+	\item[\text{I.}] $\{ a^m b^n c^p d^q \mid m+p = n+q, \text{ where } m,n,p,q \ge 0 \}$
+	\item[\text{II.}] $\{ a^m b^n c^p d^q \mid m=n \text{ and } p=q, \text{ where } m,n,p,q \ge 0 \}$
+	\item[\text{III.}] $\{ a^m b^n c^p d^q \mid m=n=p \text{ and } p \ne q, \text{ where } m,n,p,q \ge 0 \}$
+	\item[\text{IV.}] $\{ a^m b^n c^p d^q \mid mn=p+q, \text{ where } m,n,p,q \ge 0 \}$
+\end{enumerate}
+Which of the languages above are context-free?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{4}
+		\item I and IV only
+		\item I and II only
+		\item II and III only
+		\item II and IV only
+	\end{multicols}
+\end{enumerate}
+
+\item Consider the following problems. $L\brak{G}$ denotes the language generated by a grammar $G$. $L\brak{M}$ denotes the language accepted by a machine $M$.
+\begin{enumerate}
+	\item[\brak{\text{I}}] For an unrestricted grammar $G$ and a string $w$, whether $w \in L\brak{G}$
+	\item[\brak{\text{II}}] Given a Turing machine $M$, whether $L\brak{M}$ is regular
+	\item[\brak{\text{III}}] Given two grammars $G_1$ and $G_2$, whether $L\brak{G_1} = L\brak{G_2}$
+	\item[\brak{\text{IV}}] Given an NFA $N$, whether there is a deterministic PDA $P$ such that $N$ and $P$ accept the same language.
+\end{enumerate}
+Which one of the following statements is correct?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{2}
+		\item Only I and II are undecidable
+		\item Only III is undecidable
+		\item Only II and IV are undecidable
+		\item Only I, II and III are undecidable
+	\end{multicols}
+\end{enumerate}
+
+\item A lexical analyzer uses the following patterns to recognize three tokens $T_1$, $T_2$, and $T_3$ over the alphabet $\{a, b, c\}$.
+\begin{align*}
+	T_1 \colon & \quad a?\brak{b|c}^*a \\
+	T_2 \colon & \quad b?\brak{a|c}^*b \\
+	T_3 \colon & \quad c?\brak{b|a}^*c
+\end{align*}
+Note that '$x?$' means $0$ or $1$ occurrence of the symbol $x$. Note also that the analyzer outputs the token that matches the longest possible prefix.
+\newline
+If the string \texttt{bbaacabc} is processed by the analyzer, which one of the following is the sequence of tokens it outputs?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{4}
+		\item $T_1T_2T_3$
+		\item $T_1T_1T_3$
+		\item $T_2T_1T_3$
+		\item $T_3T_3$
+	\end{multicols}
+\end{enumerate}
+
+\item Consider the following parse tree for the expression \texttt{a\#b\$c\$d\#e\#f}, involving two binary operators \$ and \#.Which one of the following is correct for the given parse tree?
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{figs/screenshot004}
+	\caption{}
+	\label{fig:screenshot004}
+\end{figure}
+
+\begin{enumerate}
+	\item \$ has higher precedence and is left associative; \# is right associative
+	\item \# has higher precedence and is left associative; \$ is right associative
+	\item \$ has higher precedence and is left associative; \# is left associative
+	\item \# has higher precedence and is right associative; \$ is left associative
+\end{enumerate}
+    \item In a system, there are three types of resources: $E$, $F$ and $G$. Four processes $P_0, P_1, P_2$ and $P_3$ execute concurrently. At the outset, the processes have declared their maximum resource requirements using a matrix named Max as given below. For example, $\text{Max}[P_2, F]$ is the maximum number of instances of $F$ that $P_2$ would require. The number of instances of the resources allocated to the various processes at any given state is given by a matrix named Allocation.
+\newline
+Consider a state of the system with the Allocation matrix as shown below, and in which $3$ instances of $E$ and $3$ instances of $F$ are the only resources available.
+
+\begin{table}[h]
+	\centering
+	\begin{minipage}{.5\linewidth}
+		\centering
+		
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			& \textbf{E} & \textbf{F} & \textbf{G} \\ \hline
+			$P_0$ & 1 & 0 & 1 \\ \hline
+			$P_1$ & 1 & 1 & 2 \\ \hline
+			$P_2$ & 1 & 0 & 3 \\ \hline
+			$P_3$ & 2 & 0 & 0 \\ \hline
+		\end{tabular}
+		\caption*{\textbf{Allocation}}
+		\label{tab:q39_alloc}
+	\end{minipage}%
+	\begin{minipage}{.5\linewidth}
+		\centering
+		
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			& \textbf{E} & \textbf{F} & \textbf{G} \\ \hline
+			$P_0$ & 4 & 3 & 1 \\ \hline
+			$P_1$ & 2 & 1 & 4 \\ \hline
+			$P_2$ & 1 & 3 & 3 \\ \hline
+			$P_3$ & 5 & 4 & 1 \\ \hline
+		\end{tabular}
+		\caption*{\textbf{Max}}
+		\label{tab:q39_max}
+	\end{minipage}
+\end{table}
+
+From the perspective of deadlock avoidance, which one of the following is true?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\item The system is in \textit{safe} state.
+	\item The system is not in \textit{safe} state, but would be \textit{safe} if one more instance of $E$ were available
+	\item The system is not in \textit{safe} state, but would be \textit{safe} if one more instance of $F$ were available
+	\item The system is not in \textit{safe} state, but would be \textit{safe} if one more instance of $G$ were available
+\end{enumerate}
+
+\item Consider the following solution to the producer-consumer synchronization problem. The shared buffer size is $N$. Three semaphores \textit{empty}, \textit{full} and \textit{mutex} are defined with respective initial values of $0$, $N$ and $1$. Semaphore \textit{empty} denotes the number of available slots in the buffer, for the consumer to read from. Semaphore \textit{full} denotes the number of available slots in the buffer, for the producer to write to. The placeholder variables, denoted by P, Q, R, and S, in the code below can be assigned either \textit{empty} or \textit{full}. The valid semaphore operations are: \texttt{wait()} and \texttt{signal()}.
+
+\begin{center}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Producer:} & \textbf{Consumer:} \\ \hline
+		\begin{minipage}{0.4\textwidth}
+			\begin{verbatim}
+				do{
+					wait(P);
+					wait(mutex);
+					//Add item to buffer
+					signal(mutex);
+					signal(Q);
+				}while(1);
+			\end{verbatim}
+		\end{minipage}
+		& 
+		\begin{minipage}{0.4\textwidth}
+			\begin{verbatim}
+				do{
+					wait(R);
+					wait(mutex);
+					//Consume item from buffer
+					signal(mutex);
+					signal(S);
+				}while(1);
+			\end{verbatim}
+		\end{minipage} 
+		\\ \hline
+	\end{tabular}
+\end{center}
+
+Which one of the following assignments to P, Q, R and S will yield the correct solution?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{2}
+		\item P: \textit{full}, Q: \textit{full}, R: \textit{empty}, S: \textit{empty}
+		\item P: \textit{empty}, Q: \textit{empty}, R: \textit{full}, S: \textit{full}
+		\item P: \textit{full}, Q: \textit{empty}, R: \textit{empty}, S: \textit{full}
+		\item P: \textit{empty}, Q: \textit{full}, R: \textit{full}, S: \textit{empty}
+	\end{multicols}
+\end{enumerate}
+
+\item Consider the relations $r\brak{A, B}$ and $s\brak{B, C}$, where $s.B$ is a primary key and $r.B$ is a foreign key referencing $s.B$. Consider the query
+$$ \text{Q: } r \bowtie \brak{\sigma_{B<5}\brak{s}} $$
+Let $LOJ$ denote the natural left outer-join operation. Assume that $r$ and $s$ contain no null values.
+\newline
+Which one of the following queries is NOT equivalent to Q?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{2}
+		\item $\sigma_{B<5}\brak{r \bowtie s}$
+		\item $\sigma_{B<5}\brak{r \text{ LOJ } s}$
+		\item $r \text{ LOJ } \brak{\sigma_{B<5}\brak{s}}$
+		\item $\sigma_{B<5}\brak{r} \text{ LOJ } s$
+	\end{multicols}
+\end{enumerate}
+    \item Consider the following four relational schemas. For each schema, all non-trivial functional dependencies are listed. The underlined attributes are the respective primary keys.
+
+\textbf{Schema I:} \textit{Registration}(\underline{\textit{rollno}}, \textit{courses})
+\newline
+Field '\textit{courses}' is a set-valued attribute containing the set of courses a student has registered for.
+\newline
+Non-trivial functional dependency:
+\newline
+\textit{rollno} $\rightarrow$ \textit{courses}
+
+\vspace{0.5cm}
+\textbf{Schema II:} \textit{Registration}(\underline{\textit{rollno}}, \underline{\textit{courseid}}, \textit{email})
+\newline
+Non-trivial functional dependencies:
+\newline
+\textit{rollno, courseid} $\rightarrow$ \textit{email}
+\newline
+\textit{email} $\rightarrow$ \textit{rollno}
+
+\vspace{0.5cm}
+\textbf{Schema III:} \textit{Registration}(\underline{\textit{rollno}}, \underline{\textit{courseid}}, \textit{marks, grade})
+\newline
+Non-trivial functional dependencies:
+\newline
+\textit{rollno, courseid} $\rightarrow$ \textit{marks, grade}
+\newline
+\textit{marks} $\rightarrow$ \textit{grade}
+
+\vspace{0.5cm}
+\textbf{Schema IV:} \textit{Registration}(\underline{\textit{rollno}}, \underline{\textit{courseid}}, \textit{credit})
+\newline
+Non-trivial functional dependencies:
+\newline
+\textit{rollno, courseid} $\rightarrow$ \textit{credit}
+\newline
+\textit{courseid} $\rightarrow$ \textit{credit}
+
+\vspace{0.5cm}
+Which one of the relational schemas above is in 3NF but not in BCNF?
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\begin{enumerate}
+	\begin{multicols}{4}
+		\item Schema I
+		\item Schema II
+		\item Schema III
+		\item Schema IV
+	\end{multicols}
+\end{enumerate}
+
+\item Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1,2, \dots, 100$. There is an edge between vertices $u$ and $v$ if and only if the label of $u$ can be obtained by swapping two adjacent numbers in the label of $v$. Let $y$ denote the degree of a vertex in $G$, and $z$ denote the number of connected components in $G$.
+\newline
+Then, $y + 10z = $ \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item Consider Guwahati \brak{G} and Delhi \brak{D} whose temperatures can be classified as high \brak{H}, medium \brak{M} and low \brak{L}. Let $P\brak{H_G}$ denote the probability that Guwahati has high temperature. Similarly, $P\brak{M_G}$ and $P\brak{L_G}$ denotes the probability of Guwahati having medium and low temperatures respectively. Similarly, we use $P\brak{H_D}, P\brak{M_D}$ and $P\brak{L_D}$ for Delhi.
+\newline
+The following table gives the conditional probabilities for Delhi's temperature given Guwahati's temperature.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|ccc|}
+		\hline
+		& $H_D$ & $M_D$ & $L_D$ \\ \hline
+		$H_G$ & $0.40$ & $0.48$ & $0.12$ \\
+		$M_G$ & $0.10$ & $0.65$ & $0.25$ \\
+		$L_G$ & $0.01$ & $0.50$ & $0.49$ \\ \hline
+	\end{tabular}
+	\caption*{}
+	\label{tab:q44_temps}
+\end{table}
+Consider the first row in the table above. The first entry denotes that if Guwahati has high temperature $\brak{H_G}$ then the probability of Delhi also having a high temperature $\brak{H_D}$ is $0.40$; i.e., P$\brak{H_D | H_G}$ = 0.40. Similarly, the next two entries are P$\brak{M_D | H_G} = 0.48$ and P$\brak{L_D | H_G}$ = 0.12. Similarly for the other rows.
+
+If it is known that $P\brak{H_G} = 0.2$, $P\brak{M_G} = 0.5$, and $P\brak{L_G} = 0.3$, then the probability \brak{\text{correct to two decimal places}} that Guwahati has high temperature given that Delhi has high temperature is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item Consider the following program written in pseudo-code. Assume that $x$ and $y$ are integers.
+\begin{verbatim}
+	Count(x,y) {
+		if (y != 1) {
+			if (x != 1) {
+				print("*");
+				Count(x/2, y);
+			}
+			else {
+				y = y-1;
+				Count(1024, y);
+			}
+		}
+	}
+\end{verbatim}
+The number of times that the \texttt{print} statement is executed by the call \texttt{Count(1024,1024)} is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item The number of possible min-heaps containing each value from $\{1, 2, 3, 4, 5, 6, 7\}$ exactly once is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item Consider the following undirected graph G:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\linewidth]{figs/screenshot005}
+	\caption{}
+	\label{fig:screenshot005}
+\end{figure}
+
+Choose a value for $x$ that will maximize the number of minimum weight spanning trees \brak{MWSTs} of G. The number of MWSTs of G for this value of $x$ is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item Consider the weights and values of items listed below. Note that there is only one unit of each item.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Item number} & \textbf{Weight (in Kgs)} & \textbf{Value (in Rupees)} \\ \hline
+		1 & 10 & 60 \\ \hline
+		2 & 7 & 28 \\ \hline
+		3 & 4 & 20 \\ \hline
+		4 & 2 & 24 \\ \hline
+	\end{tabular}
+	\caption*{}
+	\label{tab:q48_items}
+\end{table}
+The task is to pick a subset of these items such that their total weight is no more than $11$ Kgs and their total value is maximized. Moreover, no item may be split. The total value of items picked by an optimal algorithm is denoted by $V_{opt}$. A greedy algorithm sorts the items by their value-to-weight ratios in descending order and packs them greedily, starting from the first item in the ordered list. The total value of items picked by the greedy algorithm is denoted by $V_{greedy}$.
+\newline
+The value of $V_{opt} - V_{greedy}$ is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item Consider the minterm list form of a Boolean function $F$ given below.
+$$ F\brak{P, Q, R, S} = \sum m\brak{0, 2, 5, 7, 9, 11} + d\brak{3, 8, 10, 12, 14} $$
+Here, $m$ denotes a minterm and $d$ denotes a don't care term. The number of essential prime implicants of the function $F$ is \underline{\hspace{2cm}}.
+\hfill{\brak{\text{GATE CS 2018}}}
+
+   \item The instruction pipeline of a RISC processor has the following stages: Instruction Fetch \brak{IF}, Instruction Decode \brak{ID}, Operand Fetch \brak{OF}, Perform Operation \brak{PO} and Writeback \brak{WB}. The IF, ID, OF and WB stages take $1$ clock cycle each for every instruction. Consider a sequence of $100$ instructions. In the PO stage, $40$ instructions take $3$ clock cycles each, $35$ instructions take $2$ clock cycles each, and the remaining $25$ instructions take $1$ clock cycle each. Assume that there are no data hazards and no control hazards.
+
+The number of clock cycles required for completion of execution of the sequence of instructions is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item A processor has $16$ integer registers (R0, R1,..., R15) and $64$ floating point registers \brak{F0, F1, ..., F63}. It uses a $2$-byte instruction format. There are four categories of instructions: Type-1, Type-2, Type-3, and Type-4. Type-1 category consists of four instructions, each with $3$ integer register operands (3Rs). Type-2 category consists of eight instructions, each with $2$ floating point register operands (2Fs). Type-3 category consists of fourteen instructions, each with one integer register operand and one floating point register operand (1R+1F). Type-4 category consists of N instructions, each with a floating point register operand (1F).
+
+The maximum value of N is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+
+\item Given a language $L$, define $L^i$ as follows:
+\begin{align*}
+	L^0 &= \{\varepsilon\} \\
+	L^i &= L^{i-1} \cdot L \text{ for all } i > 0
+\end{align*}
+The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$. Consider the language $L_1$ \brak{\text{over alphabet 0}} accepted by the following automaton.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figs/screenshot006}
+	\caption{}
+	\label{fig:screenshot006}
+\end{figure}
+
+The order of $L_1$ is \underline{\hspace{2cm}}.
+
+\hfill{\brak{\text{GATE CS 2018}}}
+\end{enumerate}	
+	
+\end{document}
