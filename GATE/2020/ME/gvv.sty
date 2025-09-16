@@ -1,0 +1,120 @@
+%\usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+%\usepackage[left=1.5in,right=1in]{geometry}
+%\usepackage{geometry}
+%\makeatletter%
+%\textheight     243.5mm
+%\textwidth      183.0mm
+%\textwidth=31pc%
+%\textheight=48pc
+\usepackage{lipsum}% this package is included to get dummy paragraphs for sample purpose.
+\usepackage{ulem}
+\usepackage{alltt}
+\usepackage[anticlockwise,figuresright]{rotating}
+\usepackage{pstricks}
+\usepackage{wrapfig}
+\usepackage{pstcol,pst-grad}
+ \usepackage{bm}
+\usepackage{enumitem}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+    \usepackage{gensymb}     
+    \usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{ifthen}%
+\usepackage{amsmath}%
+\usepackage{color}%
+\usepackage{float}%
+\usepackage{graphicx}%
+%\usepackage[right]{showlabels}%
+\usepackage{boites}%
+\usepackage{boites_exemples}%
+\usepackage{graphicx,pstricks}
+%\usepackage{enumerate}%
+\usepackage{latexsym}
+\usepackage[fleqn]{mathtools}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage{mathrsfs,makeidx,listings,verbatim,moreverb}
+%%\usepackage{amsthm,mathrsfs,makeidx,listings,verbatim,moreverb}
+%\let\eqref\ref%  updated on 20th April 2017
+
+\usepackage{hyperref}%
+%\usepackage[dvips]{hyperref}%
+\hypersetup{bookmarksopen=false}%
+\usepackage{breakurl}%
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\rank}{\text{rank}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\myaugvec}[2]{\ensuremath{\begin{amatrix}{#1}#2\end{amatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\def\inputGnumericTable{}                                 %%
+%New macro definitions
+\newcounter{matchleft}\newcounter{matchright}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\arabic{matchleft}.}}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}\alph{matchright})}}X%
+    }%
+}{\endtabularx}
